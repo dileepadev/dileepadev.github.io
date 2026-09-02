@@ -1,0 +1,14 @@
+dist/
+.astro/
+node_modules/
+package-lock.json
+
+# Generated data - written by scripts/fetch-github.mjs, never hand-edited.
+src/data/snapshot.json
+data/history/
+
+# Vendored from dileepadev/docs/brand/ - reformatting it would make every
+# re-copy show as a diff.
+src/styles/brand-tokens.css
+docs/
+DESIGN.md
