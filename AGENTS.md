@@ -13,7 +13,7 @@ Canonical instructions for AI coding agents working in this repository.
 visible about the `dileepadev` GitHub account. Repositories, commits, workflow runs, releases,
 deployments, issues, and languages, rendered as one page a visitor can read in thirty seconds.
 
-It answers a question a profile page cannot: *what is actually being built, and is it moving?*
+It answers a question a profile page cannot: _what is actually being built, and is it moving?_
 
 Served from GitHub Pages at `https://dileepadev.github.io`.
 
@@ -36,26 +36,39 @@ Version: none today; the target is `2.0.0`.
 
 ## Layout
 
-Almost none of this exists yet. v1 was three files at the root.
+| Path                                    | Status                                                                      |
+| --------------------------------------- | --------------------------------------------------------------------------- |
+| `src/pages/`                            | **Built.** Overview, repos, activity, CI, deployments, 404                  |
+| `src/components/`                       | **Built.** Stat tiles, heatmap, activity feed, page head, empty state       |
+| `src/layouts/Layout.astro`              | **Built.** Head, nav, footer, theme bootstrap                               |
+| `src/lib/`                              | **Built.** `snapshot.ts` (the single typed read point), `format.ts`         |
+| `src/styles/`                           | **Built.** `global.css`, vendored `brand-tokens.css`, component CSS         |
+| `scripts/fetch-github.mjs`              | **Built.** Build-time data fetch                                            |
+| `src/data/snapshot.json`                | **Generated.** The current state, committed. Never hand-edited              |
+| `data/history/YYYY-MM-DD.json`          | **Generated.** Daily headline records — the time series                     |
+| `public/images/<project>/`              | **v1, still hosted. Migrating out** — 26 folders, hot-linked externally     |
+| `public/assets/`                        | **v1, still hosted.** `github-mark.svg`, `github-mark-white.svg`            |
+| `public/` (root files)                  | **Built.** Favicon set, `og.png`, `manifest.json`, `robots.txt`             |
+| `.github/workflows/`                    | **Built.** `deploy.yml` (Pages) and `refresh-data.yml` (the 6-hourly fetch) |
+| `index.html`, `styles.css`, `script.js` | **Deleted.** The v1 landing page, replaced by the Astro build               |
 
-| Path | Status |
-| --- | --- |
-| `index.html`, `styles.css`, `script.js` | **v1. Replaced** by the Astro build |
-| `images/<project>/` | **v1. Migrating out** — 26 project folders, hot-linked externally |
-| `assets/` | **v1.** `github-mark.svg`, `github-mark-white.svg` |
-| `src/pages/` | Planned. Overview, repos, activity, CI, deployments |
-| `src/components/` | Planned. Stat tiles, tables, heatmap, activity rows |
-| `scripts/fetch-github.mjs` | Planned. Build-time data fetch |
-| `src/data/snapshot.json` | Planned. Generated — the current state, committed |
-| `data/history/YYYY-MM-DD.json` | Planned. Daily snapshots — the time series |
+> [!IMPORTANT]
+> **`images/` and `assets/` live under `public/`, and that is load-bearing.** Astro publishes
+> only what is under `public/`, so anything moved out of it stops being served the moment the
+> site deploys — silently, with no build failure, breaking every README across the account that
+> hot-links a preview. `deploy.yml` fails the build if `dist/images` is ever empty.
 
 ## Toolchain
 
 - Astro 7 + Tailwind CSS 4.3, matching `links-dileepa-dev`. Node 22+, npm.
-- `npm run dev` · `npm run build` · `npm run preview`
-- Deploys to GitHub Pages from `main` via Actions.
+- `npm run dev` · `npm run build` · `npm run preview` · `npm run check` · `npm run format`
+- `npm run fetch` refreshes `src/data/snapshot.json`. The build never calls the API — it reads
+  the committed snapshot, so a build works offline and a GitHub outage cannot fail a deploy.
+- Deploys to GitHub Pages from `main` via Actions. **Pages must be set to build from GitHub
+  Actions, not from a branch** — the legacy branch-root source serves the repository tree rather
+  than the Astro build.
 
-> The v1 rule *"do not add a bundler"* is retired. It was correct for an image host and is wrong
+> The v1 rule _"do not add a bundler"_ is retired. It was correct for an image host and is wrong
 > for a data-rendering site. Astro is the choice because it matches the platform's other static
 > site and gives the design system and token setup for free.
 
@@ -66,14 +79,14 @@ calls, no client-side fetching, and no secrets in the browser. A visitor loads H
 
 ### Sources
 
-| Data | Endpoint | Auth |
-| --- | --- | --- |
-| Repo list, stars, languages, `has_pages`, `homepage` | `GET /users/dileepadev/repos` | none |
-| Contribution calendar, commit/PR/issue totals | GraphQL `user.contributionsCollection` | token |
-| Workflow runs | `GET /repos/{o}/{r}/actions/runs` | none |
-| Deployments | `GET /repos/{o}/{r}/deployments` | none |
-| Releases | `GET /repos/{o}/{r}/releases` | none |
-| Pages status, CNAME, build type | `GET /repos/{o}/{r}/pages` | **PAT** |
+| Data                                                 | Endpoint                               | Auth    |
+| ---------------------------------------------------- | -------------------------------------- | ------- |
+| Repo list, stars, languages, `has_pages`, `homepage` | `GET /users/dileepadev/repos`          | none    |
+| Contribution calendar, commit/PR/issue totals        | GraphQL `user.contributionsCollection` | token   |
+| Workflow runs                                        | `GET /repos/{o}/{r}/actions/runs`      | none    |
+| Deployments                                          | `GET /repos/{o}/{r}/deployments`       | none    |
+| Releases                                             | `GET /repos/{o}/{r}/releases`          | none    |
+| Pages status, CNAME, build type                      | `GET /repos/{o}/{r}/pages`             | **PAT** |
 
 Verified against the live API. Everything except the Pages endpoint reads unauthenticated;
 `/pages` returns **404** without admin on the repo, which `GITHUB_TOKEN` does not have for other
@@ -88,7 +101,7 @@ site to build.
 
 Use a token for rate-limit headroom regardless — unauthenticated is 60 requests/hour, which
 cannot survey 56 repositories. `GITHUB_TOKEN` in Actions gives 5,000/hour and covers everything
-but `/pages`. A fine-grained, **read-only** PAT with metadata access across owned repos unlocks
+but `/pages`. A fine-grained, **read-only** PAT with metadata access across owned repos covers
 the rest.
 
 ### Budget
@@ -122,7 +135,7 @@ edit the past.
   one endpoint moved is worse than one showing yesterday's numbers.
 - Every number on the page traces to a field in the snapshot. No computed-in-template figures
   that cannot be checked against the source.
-- Comments explain *why*, not *what*.
+- Comments explain _why_, not _what_.
 
 ## Brand rules — v2.0.0
 
@@ -134,9 +147,14 @@ Tokens come from `dileepadev/docs/brand/brand-tokens.css`.
 - Sentence case throughout.
 - The `dileepadev /.` lockup in the header; the reduced `/.` mark as the favicon.
 
+The **navbar is ported from `dileepa-dev`** — the pill, the link styling, the Explore dropdown
+and the mobile menu are the same CSS, so a change to one should be considered for the other.
+What differs is content: this site navigates pages, not homepage sections, so there is no
+scroll-spy, and Explore carries the other platform surfaces rather than more of this one.
+
 Vendor the token sheet from `dileepadev/docs/brand/brand-tokens.css` into `src/styles/`. Do not
 hot-link it — `raw.githubusercontent.com` serves CSS as `text/plain` and browsers refuse to apply
-it. Copy the *file*; never copy values out of it into components.
+it. Copy the _file_; never copy values out of it into components.
 
 ### Two rules this site will test
 
@@ -149,13 +167,37 @@ exactly one accent. The resolution:
 
 - Passing, completed, and idle states are **neutral** — `--fg-muted`. The common case needs no
   colour.
-- Failure uses `--error`. In-progress may use `--warning`. Both are *functional* states under
+- Failure uses `--error`. In-progress may use `--warning`. Both are _functional_ states under
   guide §1.3, permitted precisely because they are not brand.
 - **Emerald marks one thing per page** — the single headline number, or the current live state.
   Not every green check.
 
 Fifty green ticks in emerald is not brand compliance; it is the accent diluted until it signals
 nothing. Colour the exceptions, not the norm.
+
+### Charts
+
+Charts are built from three values and nothing else: `--chart-mark` (a neutral, the default fill
+for **every** mark in a chart), `--brand` for the single mark that is the point, and `--error`
+where a state is genuinely bad. Both mixes resolve against the current `--fg` and `--bg`, so one
+declaration is correct in both themes. Measured against the page surface, the neutral is 5.7:1 on
+Carbon and 4.0:1 on Paper — clear of the 3:1 floor for a meaningful graphic.
+
+Three rules that are easy to break here:
+
+- **One colour per chart.** Shading bars darker-where-bigger double-encodes length as tone and
+  spends the only free channel on information the bar already carries. The accent marks meaning,
+  never rank. GitHub's per-language colours are the obvious trap: a dozen languages is a dozen
+  second hues, and the guide permits one.
+- **Only plot a series the snapshot holds completely.** The contribution calendar and repository
+  creation dates are complete. Workflow runs are **not** — the fetch keeps 20 per repository, so
+  a runs-per-week chart would render truncation as a decline that never happened. `/activity`
+  carries stat tiles for that reason, not a time series.
+- **A period still in progress is drawn as unfinished** (hatched), never as a fall.
+
+Charts are HTML and CSS, not SVG and not a charting library: labels stay real text at every
+viewport instead of scaling with a viewBox, and every chart sits on a page that already shows the
+same data as a table or list, so no value is reachable only by hovering.
 
 ## Content and voice
 

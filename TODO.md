@@ -16,47 +16,77 @@ GitHub data. Architecture and rules are in [AGENTS.md](AGENTS.md).
 
 **This repo hosts no brand assets.** They live in `dileepadev/docs/brand/` and only there.
 
-### Foundation
+### Foundation ✅
 
-- [ ] Scaffold Astro 7 + Tailwind CSS 4.3, matching `links-dileepa-dev`
-- [ ] Vendor `brand-tokens.css` from `dileepadev/docs/brand/` into `src/styles/`, recording the source
-- [ ] Manrope + JetBrains Mono, weights 400/500/700 only
-- [ ] Base layout, header with the `dileepadev /.` lockup, reduced-mark favicon
-- [ ] Theme toggle matching the platform's storage key (`dileepa-theme`)
-- [ ] Replace the v1 `index.html`, `styles.css`, `script.js`
-- [ ] Pages deploy workflow for the Astro build
+- [x] Scaffold Astro 7 + Tailwind CSS 4.3, matching `links-dileepa-dev`
+- [x] Vendor `brand-tokens.css` from `dileepadev/docs/brand/` into `src/styles/`, recording the source
+- [x] Manrope + JetBrains Mono, weights 400/500/700 only — mono is the majority face here
+- [x] Base layout, header with the `dileepadev /.` lockup, favicon
+- [x] **The favicon is the portrait, not the reduced mark** — matching `dileepa-dev` and
+      `links-dileepa-dev`, per brand guide §3.2. This line previously said the mark
+- [x] Theme toggle matching the platform's storage key (`dileepa-theme`)
+- [x] Replace the v1 `index.html`, `styles.css`, `script.js` — deleted
+- [x] Pages deploy workflow for the Astro build — `.github/workflows/deploy.yml`
+- [x] **`images/` and `assets/` moved under `public/`.** Astro publishes only what is in
+      `public/`, so without this the switch to an Actions build would have stopped serving every
+      hot-linked project preview — silently, with no failing build. Every URL is unchanged
 
-### Data layer
+### Data layer ✅
 
-- [ ] `scripts/fetch-github.mjs` — build-time fetch, writes `src/data/snapshot.json`
-- [ ] GraphQL for repo metadata and `user.contributionsCollection`
-- [ ] REST per-repo for workflow runs, deployments, releases
-- [ ] Pages detail from `has_pages` + `homepage`; treat `GET /repos/{o}/{r}/pages` as **optional**
-      enrichment — it 404s without a PAT and must never be a hard dependency
-- [ ] **Degrade, never fail the build** — a rate limit, 404, or deleted repo yields a partial
-      snapshot plus a logged warning
-- [ ] Confirm every snapshot field is already public before writing it
-- [ ] Commit a dated snapshot to `data/history/YYYY-MM-DD.json` on each refresh
-- [ ] Scheduled workflow: every 6h + `workflow_dispatch` + push to `main`
-- [ ] Commit refreshes as `chore(data): refresh snapshot` so they can be filtered
+- [x] `scripts/fetch-github.mjs` — build-time fetch, writes `src/data/snapshot.json`
+- [x] GraphQL for `user.contributionsCollection` and batched per-repo language byte counts.
+      **Repo metadata comes from REST**, not GraphQL: `has_pages` is not on the GraphQL
+      Repository type, and it is what the deployments view runs on without a PAT
+- [x] REST per-repo for workflow runs, deployments, releases — 56 repos × 3 calls, inside the
+      documented budget
+- [x] Pages detail from `has_pages` + `homepage`; `GET /repos/{o}/{r}/pages` is **optional**
+      enrichment, requested quietly and falling back without failing
+- [x] **Degrade, never fail the build** — verified by running the whole fetch against a dead
+      host: partial snapshot, five warnings, exit 0, site still builds and says what is missing
+- [x] **Stop when the hourly budget is exhausted** rather than sleeping until it resets. Not in
+      the original plan: an unauthenticated run is 60 requests against ~170 calls, and the
+      back-off alone took the fetch from 0.4s to minutes
+- [x] Confirm every snapshot field is already public before writing it — the token is used and
+      discarded, never written; private work appears only as `restrictedContributionsCount`
+- [x] Commit a dated snapshot to `data/history/YYYY-MM-DD.json` on each refresh — headline
+      figures only, and never rewritten once the day's file exists
+- [x] Scheduled workflow: every 6h + `workflow_dispatch` + push when the fetch script changes
+- [x] Commit refreshes as `chore(data): refresh snapshot` so they can be filtered, and only when
+      something actually changed
 
-### Views
+### Views ✅
 
-- [ ] `/` — headline numbers, contribution heatmap, recent activity
-- [ ] `/repos` — all public repos, sortable and filterable by language, activity, Pages
-- [ ] `/activity` — chronological build log: releases, workflow runs, deployments
-- [ ] `/ci` — workflow health per repo: last run, success rate, duration
-- [ ] `/deployments` — live Pages sites, with links
-- [ ] Every page states when its data was last fetched
+- [x] `/` — headline numbers, contribution heatmap, languages, recent activity
+- [x] `/repos` — all public repos, searchable and filterable by language and live site, sortable
+- [x] `/activity` — chronological build log grouped by day: releases, workflow runs, deployments
+- [x] `/ci` — workflow health per repo: last run, success rate, median duration
+- [x] `/deployments` — live Pages sites and hosts elsewhere, with links
+- [x] Every page states when its data was last fetched
+- [x] Rebranded 404
+- [x] **Navbar and dropdowns ported from `dileepa-dev`** so the two surfaces share one navbar —
+      pill links, Explore dropdown, mobile Pages/Explore menu, active dot, outside-press and
+      Escape to close. No scroll-spy: this site has pages, not homepage sections
+- [x] **Fetched time in both UTC and the visitor's local zone.** Local time is a per-visitor
+      value, so it is filled in on the client; the UTC reading is in the markup either way
+- [x] **Charts** — contributions by month and language share on `/`, repositories created per
+      month on `/repos`, workflow success rate on `/ci`. HTML and CSS, no charting library
+- [x] `/activity` carries stat tiles rather than an events-per-week chart. The obvious chart
+      would lie: the snapshot keeps only 20 runs per repository, so older weeks are truncated
+      and would render as a decline that never happened
 
-### Content rules
+### Content rules ✅
 
-- [ ] **Do not lead with stars** — lead with commits, repositories, deployments, languages
-- [ ] Private contributions as an aggregate count only
-- [ ] Status colour: neutral for passing and idle, `--error` for failures, `--warning` for
-      in-progress, emerald for **one** headline figure per page
-- [ ] No streak flames, trophies, or rank badges
-- [ ] Empty and zero states say so plainly
+- [x] **Do not lead with stars** — the headline is commits, repositories, deployments, languages.
+      Stars appear once, as a sortable column on `/repos`
+- [x] Private contributions as an aggregate count only
+- [x] Status colour: neutral for passing and idle, `--error` for failures, `--warning` for
+      in-progress, emerald for **one** headline figure per page — verified in a browser, where
+      two violations turned up that no build would have caught: fourteen emerald "built" dots on
+      `/deployments`, and GitHub's per-language colours putting a dozen second hues on `/`.
+      Language share is a stepped neutral ramp now
+- [x] No streak flames, trophies, or rank badges
+- [x] Empty and zero states say so plainly — including the 36 repositories with no workflows,
+      listed rather than omitted
 
 ### Image migration — one project at a time
 
@@ -82,18 +112,40 @@ keeps no assets on behalf of another repository.
 
 ### Testing
 
-- [ ] `npm run build` clean
-- [ ] Fetch script run against the live API; snapshot has every field the pages read
-- [ ] **Build succeeds with a deliberately broken endpoint** — partial snapshot, warning, still deploys
-- [ ] Builds successfully **without** a PAT, falling back to `has_pages`
-- [ ] Both themes; 375px width
-- [ ] Lighthouse ≥ 95 across performance, accessibility, best practices, SEO
+- [x] `npm run build` clean; `astro check` reports 0 errors, 0 warnings, 0 hints
+- [x] Fetch script run against the live API; snapshot has every field the pages read —
+      56 repos, 183 runs, 39 releases, 97 deployments, 0 warnings
+- [x] **Build succeeds with a deliberately broken endpoint** — `GITHUB_API_BASE` pointed at a
+      dead host: partial snapshot, warnings recorded, exit 0, all six pages built
+- [x] Builds **without** a PAT, falling back to `has_pages` — `/pages` is requested quietly and
+      its absence costs only CNAME and build-status detail
+- [x] Both themes and 375px, checked in a real browser rather than inferred from the CSS
+- [x] Lighthouse: **accessibility 100, best practices 100, SEO 100**
+- [ ] **Lighthouse performance ≥ 95 — not verifiable from this environment.** Measured 84 and 71
+      on two runs against a local server, and both are dominated by one artefact: the 1.3 KB
+      Google Fonts stylesheet took 7,445 ms to arrive. The site's own payload is 102 KB across
+      9 requests, every local asset under 11 ms, with TBT 0 ms and CLS 0. Re-run against the
+      deployed site before treating this as a real number
+- [ ] If it does fall short in production, the single lever is the render-blocking Google Fonts
+      request. Self-hosting (`@fontsource`) removes the third-party origin entirely — **but it
+      would diverge from `dileepa-dev` and `links-dileepa-dev`, which both load the same
+      `<link>`**, so it is a platform decision rather than a local one
 
 ### Documentation and release
 
-- [ ] Rewrite `README.md` — what the dashboard shows, data sources, refresh, migration status
-- [ ] Add `CHANGELOG.md`
-- [ ] Record version `2.0.0`
+- [x] Rewrite `README.md` — what the dashboard shows, data sources, refresh, migration status
+- [x] Add `CHANGELOG.md`
+- [x] Record version `2.0.0` — in `package.json` and `CHANGELOG.md`
+- [x] Update `AGENTS.md` — the layout table described a repo that did not exist yet
+- [ ] **Switch the Pages source from the legacy branch build to GitHub Actions.** Currently
+      `build_type: "legacy"`, which serves the repository tree rather than the Astro build.
+      Until this changes, merging to `main` will not publish the dashboard
+- [ ] **Let the Actions bot push to `main`, or the scheduled refresh cannot commit.** `main` is
+      protected; `refresh-data.yml` commits the snapshot and pushes. Either add a ruleset bypass
+      for `github-actions[bot]` or move the refresh to a branch and open a PR from it
+- [ ] Add the optional `PAGES_TOKEN` secret (fine-grained, read-only) if the deployments view
+      should show CNAME and build status. Everything works without it
+- [ ] Tag `v2.0.0`
 - [ ] Close [issue #1](https://github.com/dileepadev/dileepadev.github.io/issues/1)
 
 ## Later
