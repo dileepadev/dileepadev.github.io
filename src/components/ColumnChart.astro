@@ -1,0 +1,294 @@
+---
+/**
+ * A column chart for a single series over time.
+ *
+ * HTML and CSS rather than SVG, deliberately: the labels stay real text at
+ * every viewport instead of scaling with a viewBox, and the bars are widths and
+ * heights the browser already knows how to lay out responsively.
+ *
+ * One series, so there is no legend — the section heading names what is
+ * plotted. Marks are neutral by default; `emphasisIndex` spends the accent on
+ * the single column that is the point, which is the one form the brand's
+ * single-hue rule and the dataviz "emphasis" pattern agree on.
+ */
+import { num } from "../lib/format";
+
+interface Point {
+  label: string;
+  value: number;
+  /** Rendered under the value in the hover/focus readout. */
+  note?: string;
+}
+
+interface Props {
+  data: Point[];
+  /** Describes the whole chart for screen readers. */
+  ariaLabel: string;
+  /** Index of the column that carries the accent. Omit for an all-neutral chart. */
+  emphasisIndex?: number;
+  /** A column whose period is not over yet — drawn hatched, never as a fall. */
+  partialIndex?: number;
+  unit?: string;
+}
+
+const {
+  data,
+  ariaLabel,
+  emphasisIndex = -1,
+  partialIndex = -1,
+  unit = "",
+} = Astro.props;
+
+const max = data.reduce((acc, d) => Math.max(acc, d.value), 0);
+
+// Round the top of the scale up to something a reader can hold in their head.
+function nice(value: number): number {
+  if (value <= 0) return 1;
+  const magnitude = 10 ** Math.floor(Math.log10(value));
+  for (const step of [1, 1.5, 2, 2.5, 3, 4, 5, 7.5, 10]) {
+    if (step * magnitude >= value) return step * magnitude;
+  }
+  return 10 * magnitude;
+}
+
+// The ceiling is built from the midpoint outwards rather than rounded down from
+// the top: picking a nice number for half the scale and doubling it guarantees
+// the middle tick is clean too. Rounding the ceiling alone gave a ceiling of 25
+// on a 21-value series, and a midpoint of 13.
+const step = nice(max / 2);
+const top = step * 2;
+const ticks = [top, step, 0];
+---
+
+<figure class="chart">
+  <div class="chart-body">
+    <div class="chart-axis" aria-hidden="true">
+      {ticks.map((t) => <span>{num(Math.round(t))}</span>)}
+    </div>
+
+    <div class="chart-plot" role="img" aria-label={ariaLabel}>
+      <div class="chart-grid" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+
+      <ol class="chart-cols">
+        {
+          data.map((d, i) => (
+            <li class="chart-col">
+              <div
+                class:list={[
+                  "chart-col-mark",
+                  i === emphasisIndex && "is-emphasis",
+                  i === partialIndex && "is-partial",
+                ]}
+                style={`height: ${top > 0 ? (d.value / top) * 100 : 0}%`}
+                tabindex="0"
+                title={`${d.label}: ${num(d.value)}${unit ? ` ${unit}` : ""}${d.note ? ` — ${d.note}` : ""}`}
+              >
+                <span class="chart-readout">
+                  <strong>{num(d.value)}</strong>
+                  {d.label}
+                  {d.note && <em>{d.note}</em>}
+                </span>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </div>
+
+  <ol class="chart-ticks" aria-hidden="true">
+    {data.map((d) => <li>{d.label}</li>)}
+  </ol>
+</figure>
+
+<style>
+  .chart {
+    margin: 0;
+  }
+
+  .chart-body {
+    display: flex;
+    gap: var(--space-3);
+  }
+
+  /* The y-axis carries the values that are not directly labelled. */
+  .chart-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 180px;
+    font-family: var(--font-mono);
+    font-size: var(--text-label);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    color: var(--fg-muted);
+    text-align: right;
+    flex: 0 0 auto;
+    min-width: 2.5ch;
+  }
+
+  /* The axis labels sit on the gridlines, so nudge the first and last half a
+     line-height to centre them on the rule rather than below it. */
+  .chart-axis span:first-child {
+    transform: translateY(-0.5em);
+  }
+
+  .chart-axis span:last-child {
+    transform: translateY(0.5em);
+  }
+
+  .chart-plot {
+    position: relative;
+    flex: 1 1 auto;
+    height: 180px;
+    min-width: 0;
+  }
+
+  /* Hairline, solid, one step off the surface. Never dashed — dashing reads as
+     a threshold when it is only a grid. */
+  .chart-grid {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    pointer-events: none;
+  }
+
+  .chart-grid span {
+    display: block;
+    height: var(--hairline);
+    background: var(--chart-grid);
+  }
+
+  .chart-cols {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    gap: 2px; /* the surface gap — separation by air, never a border */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .chart-col {
+    flex: 1 1 0;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  /* Rounded at the data end, square at the baseline, capped so a wide chart
+     leaves air rather than filling its slot. */
+  .chart-col-mark {
+    position: relative;
+    width: 100%;
+    max-width: 24px;
+    min-height: 2px;
+    background: var(--chart-mark);
+    border-radius: 4px 4px 0 0;
+    transition:
+      background-color var(--dur) var(--ease),
+      opacity var(--dur) var(--ease);
+  }
+
+  .chart-col-mark:hover,
+  .chart-col-mark:focus-visible {
+    background: var(--chart-mark-hover);
+    outline: none;
+  }
+
+  .chart-col-mark.is-emphasis {
+    background: var(--brand);
+  }
+
+  /* A period that has not finished yet is drawn as unfinished, so a partial
+     month never reads as a collapse in output. */
+  .chart-col-mark.is-partial {
+    background: repeating-linear-gradient(
+      135deg,
+      var(--chart-mark) 0 3px,
+      transparent 3px 6px
+    );
+    border: var(--hairline) solid var(--chart-mark);
+  }
+
+  /* The readout. Values lead, labels follow. */
+  .chart-readout {
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    padding: var(--space-2) var(--space-3);
+    background: var(--bg-raised);
+    border: var(--hairline) solid var(--border-strong);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-nav);
+    font-family: var(--font-mono);
+    font-size: var(--text-label);
+    line-height: 1.3;
+    color: var(--fg-muted);
+    white-space: nowrap;
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  .chart-readout strong {
+    color: var(--fg);
+    font-weight: 500;
+    font-size: var(--text-small);
+  }
+
+  .chart-readout em {
+    font-style: normal;
+  }
+
+  .chart-col-mark:hover .chart-readout,
+  .chart-col-mark:focus-visible .chart-readout {
+    display: flex;
+  }
+
+  .chart-ticks {
+    display: flex;
+    gap: 2px;
+    list-style: none;
+    margin: var(--space-2) 0 0;
+    /* Clear the y-axis column so the ticks line up under their columns. */
+    padding: 0 0 0 calc(2.5ch + var(--space-3));
+    font-family: var(--font-mono);
+    font-size: var(--text-label);
+    line-height: 1.2;
+    letter-spacing: var(--track-label);
+    color: var(--fg-muted);
+  }
+
+  .chart-ticks li {
+    flex: 1 1 0;
+    text-align: center;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 640px) {
+    .chart-axis,
+    .chart-plot {
+      height: 140px;
+    }
+
+    /* Every other tick below the point where 12 labels stop fitting. */
+    .chart-ticks li:nth-child(even) {
+      visibility: hidden;
+    }
+  }
+</style>

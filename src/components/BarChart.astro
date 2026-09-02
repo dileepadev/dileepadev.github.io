@@ -1,0 +1,161 @@
+---
+/**
+ * A ranked horizontal bar chart — magnitude against a named thing.
+ *
+ * Horizontal because the categories carry long names, and a name reads better
+ * beside its bar than rotated under a column.
+ *
+ * Every bar is the **same colour**. Shading each bar darker-where-bigger would
+ * double-encode length as tone and spend the only free channel on information
+ * the bar length already carries. Identity comes from the row label, magnitude
+ * from the length, and the accent is spent only where `state` marks something
+ * that genuinely means something — never on rank.
+ */
+import { num } from "../lib/format";
+
+interface Row {
+  label: string;
+  value: number;
+  /** What to print at the bar's tip. Defaults to the value. */
+  display?: string;
+  /** `error` for a genuinely bad state; `brand` for the one row that is the point. */
+  state?: "error" | "brand";
+  note?: string;
+  href?: string;
+}
+
+interface Props {
+  data: Row[];
+  ariaLabel: string;
+  /** Scale ceiling. Defaults to the largest value; pass 100 for percentages. */
+  max?: number;
+}
+
+const { data, ariaLabel, max } = Astro.props;
+const top = max ?? data.reduce((acc, d) => Math.max(acc, d.value), 0) ?? 1;
+---
+
+<ol class="bars" role="img" aria-label={ariaLabel}>
+  {
+    data.map((row) => (
+      <li class="bar-row">
+        <span class="bar-label" title={row.label}>
+          {row.href ? (
+            <a href={row.href} target="_blank" rel="noopener noreferrer">
+              {row.label}
+            </a>
+          ) : (
+            row.label
+          )}
+        </span>
+
+        <span class="bar-track">
+          <span
+            class:list={["bar-mark", row.state && `is-${row.state}`]}
+            style={`width: ${top > 0 ? Math.max((row.value / top) * 100, 0.6) : 0}%`}
+            title={`${row.label}: ${row.display ?? num(row.value)}${row.note ? ` — ${row.note}` : ""}`}
+          />
+        </span>
+
+        <span class="bar-value">{row.display ?? num(row.value)}</span>
+      </li>
+    ))
+  }
+</ol>
+
+<style>
+  .bars {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* The surface gap doing the separating between adjacent bars. */
+    gap: var(--space-2);
+  }
+
+  .bar-row {
+    display: grid;
+    grid-template-columns: minmax(0, 11rem) 1fr auto;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .bar-label {
+    font-family: var(--font-mono);
+    font-size: var(--text-label);
+    letter-spacing: var(--track-label);
+    color: var(--fg-muted);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .bar-label a:hover {
+    color: var(--brand);
+  }
+
+  .bar-track {
+    display: block;
+    min-width: 0;
+  }
+
+  /* Rounded at the data end, square at the baseline it grows from. */
+  .bar-mark {
+    display: block;
+    height: 10px;
+    background: var(--chart-mark);
+    border-radius: 0 4px 4px 0;
+    transition: background-color var(--dur) var(--ease);
+  }
+
+  .bar-row:hover .bar-mark {
+    background: var(--chart-mark-hover);
+  }
+
+  /* Reserved: this means a bad state, not "the smallest bar". */
+  .bar-mark.is-error {
+    background: var(--error);
+  }
+
+  .bar-mark.is-brand {
+    background: var(--brand);
+  }
+
+  /* Text wears text tokens, never the mark's colour. */
+  .bar-value {
+    font-family: var(--font-mono);
+    font-size: var(--text-label);
+    font-variant-numeric: tabular-nums;
+    color: var(--fg);
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 560px) {
+    .bar-row {
+      grid-template-columns: 1fr auto;
+      column-gap: var(--space-3);
+      row-gap: 2px;
+    }
+
+    /* The label takes its own line rather than being squeezed to an ellipsis,
+       and the value stays on that line with it. Without explicit rows,
+       auto-placement follows DOM order and drops the value below the bar,
+       stranding it a full row from the label it belongs to. */
+    .bar-label {
+      grid-row: 1;
+      grid-column: 1;
+    }
+
+    .bar-value {
+      grid-row: 1;
+      grid-column: 2;
+    }
+
+    .bar-track {
+      grid-row: 2;
+      grid-column: 1 / -1;
+    }
+  }
+</style>
