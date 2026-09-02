@@ -1,0 +1,106 @@
+---
+import type { Contributions } from "../lib/snapshot";
+import { level, num } from "../lib/format";
+
+interface Props {
+  contributions: Contributions;
+}
+
+const { contributions } = Astro.props;
+
+// The scale is relative to the busiest day in the range rather than to fixed
+// counts, so the ramp still reads on a quiet year instead of collapsing to
+// one shade.
+const days = contributions.weeks.flat();
+const max = days.reduce((acc, d) => Math.max(acc, d.count), 0);
+
+// Month labels, placed at the week where each month first appears.
+//
+// A label is skipped when it would sit within three columns of the previous
+// one. The first week of the range is almost always a partial week, so
+// without this the range's opening month and the next one land on adjacent
+// columns and render on top of each other.
+const monthLabels: { column: number; label: string }[] = [];
+let lastMonth = -1;
+let lastColumn = -99;
+contributions.weeks.forEach((week, index) => {
+  const first = week[0];
+  if (!first) return;
+  const month = new Date(first.date).getUTCMonth();
+  if (month === lastMonth) return;
+  lastMonth = month;
+  if (index - lastColumn < 3) return;
+  lastColumn = index;
+  monthLabels.push({
+    column: index + 1,
+    label: new Date(first.date).toLocaleDateString("en-GB", {
+      month: "short",
+      timeZone: "UTC",
+    }),
+  });
+});
+---
+
+<div class="heatmap-wrap">
+  <div
+    class="heatmap-months"
+    style={`grid-template-columns: repeat(${contributions.weeks.length}, 11px);`}
+  >
+    {
+      monthLabels.map((m) => (
+        <span style={`grid-column: ${m.column};`}>{m.label}</span>
+      ))
+    }
+  </div>
+
+  <div
+    class="heatmap"
+    role="img"
+    aria-label={`Contribution calendar: ${num(contributions.calendarTotal)} contributions between ${contributions.from.slice(0, 10)} and ${contributions.to.slice(0, 10)}.`}
+  >
+    {
+      contributions.weeks.map((week) =>
+        week.map((day) => (
+          <div
+            class="heatmap-day"
+            data-level={level(day.count, max)}
+            title={`${day.count} on ${day.date}`}
+          />
+        )),
+      )
+    }
+  </div>
+</div>
+
+<div class="heatmap-legend">
+  <span>Less</span>
+  <div class="heatmap-day" data-level="0"></div>
+  <div class="heatmap-day" data-level="1"></div>
+  <div class="heatmap-day" data-level="2"></div>
+  <div class="heatmap-day" data-level="3"></div>
+  <div class="heatmap-day" data-level="4"></div>
+  <span>More</span>
+  <span class="heatmap-peak">Busiest day: {num(max)}</span>
+</div>
+
+<style>
+  .heatmap-months {
+    display: grid;
+    gap: 3px;
+    min-width: max-content;
+    margin-bottom: var(--space-2);
+    font-family: var(--font-mono);
+    font-size: var(--text-label);
+    line-height: 1;
+    letter-spacing: var(--track-label);
+    color: var(--fg-muted);
+  }
+
+  .heatmap-months span {
+    white-space: nowrap;
+  }
+
+  .heatmap-peak {
+    margin-left: auto;
+  }
+</style>

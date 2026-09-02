@@ -1,0 +1,263 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHead from "../components/PageHead.astro";
+import Stat from "../components/Stat.astro";
+import EmptyState from "../components/EmptyState.astro";
+import BarChart from "../components/BarChart.astro";
+import { ci, totals } from "../lib/snapshot";
+import { duration, num, since, stateClass, stateLabel } from "../lib/format";
+
+const withCi = ci.filter((entry) => entry.runs > 0);
+const withoutCi = ci.filter((entry) => entry.runs === 0);
+
+// Weighted across every run held, not an average of per-repo percentages —
+// a repo with two runs should not count as much as one with twenty.
+const rated = withCi.filter((entry) => entry.successRate !== null);
+const totalRuns = rated.reduce((acc, e) => acc + e.runs, 0);
+const weighted =
+  totalRuns > 0
+    ? Math.round(
+        rated.reduce((acc, e) => acc + (e.successRate ?? 0) * e.runs, 0) /
+          totalRuns,
+      )
+    : null;
+
+const durations = withCi
+  .map((e) => e.medianDurationMs)
+  .filter((d): d is number => d !== null)
+  .sort((a, b) => a - b);
+const medianDuration =
+  durations.length > 0 ? durations[Math.floor(durations.length / 2)] : null;
+
+const failing = withCi.filter(
+  (entry) => entry.lastRun?.conclusion === "failure",
+);
+
+// Ranked worst-first: a health chart is read to find what needs attention, so
+// the thing needing attention goes at the top rather than buried under a row
+// of hundreds. `--error` marks a genuinely bad rate, never merely the smallest
+// bar — the colour has to keep meaning "this is wrong".
+// Repositories at 100% are counted, not drawn: a dozen identical full bars is
+// ink that carries no information, and the sentence beside the chart says it
+// more precisely.
+const perfect = rated.filter((entry) => entry.successRate === 100);
+const successRows = rated
+  .filter((entry) => (entry.successRate ?? 100) < 100)
+  .sort((a, b) => (a.successRate ?? 0) - (b.successRate ?? 0))
+  .map((entry) => ({
+    label: entry.repo,
+    value: entry.successRate ?? 0,
+    display: `${entry.successRate}%`,
+    state: (entry.successRate ?? 100) < 50 ? ("error" as const) : undefined,
+    note: `${entry.runs} runs held`,
+    href: entry.url,
+  }));
+---
+
+<Layout
+  title="CI | Build log"
+  description="Workflow health per repository: last run, success rate and median duration."
+>
+  <PageHead
+    title="CI"
+    lead={`Workflow health across ${num(withCi.length)} repositories running GitHub Actions. Success rate is measured over the runs held in the snapshot, not all time.`}
+    path={[{ label: "ci", href: "/ci/" }]}
+  />
+
+  <section class="section" aria-labelledby="ci-headline">
+    <h2 id="ci-headline" class="section-label">Health</h2>
+    <div class="stat-grid">
+      <Stat
+        headline
+        value={weighted === null ? "—" : `${weighted}%`}
+        label="Success rate"
+        note={`Across ${num(totalRuns)} completed runs`}
+      />
+      <Stat
+        value={num(withCi.length)}
+        label="Repos with CI"
+        note={`of ${num(totals.ownedRepos)} repositories`}
+      />
+      <Stat value={duration(medianDuration)} label="Median run" />
+      <Stat
+        value={num(failing.length)}
+        label="Failing now"
+        note={failing.length === 0
+          ? "Last run passed everywhere"
+          : failing
+              .map((f) => f.repo)
+              .slice(0, 2)
+              .join(", ")}
+      />
+    </div>
+  </section>
+
+  {
+    successRows.length > 0 && (
+      <section class="section" aria-labelledby="ci-rates">
+        <div class="section-head">
+          <div>
+            <h2 id="ci-rates" class="section-label">
+              Where runs have failed
+            </h2>
+            <p>
+              The {num(successRows.length)} repositories with at least one
+              failed run, lowest rate first.{" "}
+              {perfect.length > 0 &&
+                `The other ${perfect.length} sit at 100% and are not drawn — a row of identical full bars says nothing this sentence does not.`}{" "}
+              Measured over the runs the snapshot holds, up to 20 per
+              repository, not over all time.
+            </p>
+          </div>
+        </div>
+
+        <BarChart
+          data={successRows}
+          max={100}
+          ariaLabel={`Workflow success rate for the repositories with a failed run, lowest first: ${successRows
+            .map((r) => `${r.label} ${r.display}`)
+            .join(", ")}.`}
+        />
+      </section>
+    )
+  }
+
+  <section class="section" aria-labelledby="ci-table">
+    <div class="section-head">
+      <div>
+        <h2 id="ci-table" class="section-label">Per repository</h2>
+        <p>Ordered by most recent run.</p>
+      </div>
+    </div>
+
+    {
+      withCi.length === 0 ? (
+        <EmptyState
+          title="No workflow runs recorded"
+          hint="No repository on the account has run GitHub Actions within the window the snapshot holds."
+        />
+      ) : (
+        <div class="table-wrap">
+          <table class="data">
+            <thead>
+              <tr>
+                <th scope="col">Repository</th>
+                <th scope="col">Last run</th>
+                <th scope="col">Status</th>
+                <th scope="col" class="num">
+                  Success
+                </th>
+                <th scope="col" class="num">
+                  Median
+                </th>
+                <th scope="col" class="num">
+                  When
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {withCi.map((entry) => (
+                <tr>
+                  <td>
+                    <a
+                      class="repo-name"
+                      href={entry.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {entry.repo}
+                    </a>
+                    <div class="repo-desc">
+                      {entry.workflows.length} workflow
+                      {entry.workflows.length === 1 ? "" : "s"} · {entry.runs}{" "}
+                      run{entry.runs === 1 ? "" : "s"} held
+                    </div>
+                  </td>
+                  <td>
+                    {entry.lastRun?.url ? (
+                      <a
+                        class="run-name"
+                        href={entry.lastRun.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {entry.lastRun.name ?? entry.lastRun.workflow}
+                      </a>
+                    ) : (
+                      <span class="muted">—</span>
+                    )}
+                    {entry.lastRun?.branch && (
+                      <div class="repo-desc mono">{entry.lastRun.branch}</div>
+                    )}
+                  </td>
+                  <td>
+                    <span
+                      class={stateClass(
+                        entry.lastRun?.status === "completed"
+                          ? entry.lastRun?.conclusion
+                          : entry.lastRun?.status,
+                      )}
+                    >
+                      {stateLabel(
+                        entry.lastRun?.status === "completed"
+                          ? entry.lastRun?.conclusion
+                          : entry.lastRun?.status,
+                      )}
+                    </span>
+                  </td>
+                  <td class="num">
+                    {entry.successRate === null ? "—" : `${entry.successRate}%`}
+                  </td>
+                  <td class="num muted">{duration(entry.medianDurationMs)}</td>
+                  <td class="num muted">
+                    {since(entry.lastRun?.updatedAt ?? null)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )
+    }
+  </section>
+
+  {
+    withoutCi.length > 0 && (
+      <section class="section" aria-labelledby="ci-none">
+        <div class="section-head">
+          <div>
+            <h2 id="ci-none" class="section-label">
+              No workflows
+            </h2>
+            <p>
+              {num(withoutCi.length)} repositories run no GitHub Actions. Said
+              plainly rather than left blank.
+            </p>
+          </div>
+        </div>
+        <p class="no-ci mono">
+          {withoutCi.map((entry) => entry.repo).join(" · ")}
+        </p>
+      </section>
+    )
+  }
+</Layout>
+
+<style>
+  .run-name {
+    font-size: var(--text-small);
+    color: var(--fg);
+  }
+
+  .run-name:hover {
+    color: var(--brand);
+  }
+
+  .no-ci {
+    font-size: var(--text-label);
+    line-height: 1.9;
+    letter-spacing: var(--track-label);
+    color: var(--fg-muted);
+    max-width: none;
+  }
+</style>

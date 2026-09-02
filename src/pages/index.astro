@@ -1,0 +1,250 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHead from "../components/PageHead.astro";
+import Stat from "../components/Stat.astro";
+import Heatmap from "../components/Heatmap.astro";
+import Feed from "../components/Feed.astro";
+import EmptyState from "../components/EmptyState.astro";
+import BarChart from "../components/BarChart.astro";
+import ColumnChart from "../components/ColumnChart.astro";
+import { activity, contributions, languages, totals } from "../lib/snapshot";
+import { num } from "../lib/format";
+
+const recent = activity.slice(0, 12);
+
+// The top languages by bytes written, with everything else summed into one
+// remainder rather than dropped — the shares have to add up to 100%.
+const topLanguages = languages.slice(0, 8);
+const remainder = languages.slice(8).reduce((acc, l) => acc + l.share, 0);
+
+const languageRows = [
+  ...topLanguages.map((l) => ({
+    label: l.name,
+    value: l.share,
+    display: `${l.share}%`,
+    note: `${l.repos} repositor${l.repos === 1 ? "y" : "ies"}`,
+  })),
+  ...(remainder > 0
+    ? [
+        {
+          label: `Other (${languages.length - topLanguages.length})`,
+          value: Math.round(remainder * 10) / 10,
+          display: `${Math.round(remainder * 10) / 10}%`,
+        },
+      ]
+    : []),
+];
+
+// Contributions summed by month. The calendar is a complete 12-month series,
+// which is what makes this safe to plot — unlike workflow runs, which the
+// snapshot holds only 20 of per repository.
+const monthTotals = new Map<string, number>();
+for (const day of contributions?.weeks.flat() ?? []) {
+  const key = day.date.slice(0, 7);
+  monthTotals.set(key, (monthTotals.get(key) ?? 0) + day.count);
+}
+
+// Drop the leading empty months so the chart starts where the work does,
+// rather than opening on a run of zeroes from before the account existed.
+const monthEntries = [...monthTotals.entries()].sort((a, b) =>
+  a[0].localeCompare(b[0]),
+);
+const firstActive = monthEntries.findIndex(([, v]) => v > 0);
+const months = (firstActive === -1 ? [] : monthEntries.slice(firstActive)).map(
+  ([key, value]) => ({
+    label: new Date(`${key}-01T00:00:00Z`).toLocaleDateString("en-GB", {
+      month: "short",
+      timeZone: "UTC",
+    }),
+    value,
+    key,
+  }),
+);
+
+// The current month is still filling up, so it is drawn as unfinished rather
+// than left to read as a collapse in output.
+const currentKey = new Date().toISOString().slice(0, 7);
+const partialIndex = months.findIndex((m) => m.key === currentKey);
+---
+
+<Layout>
+  <PageHead title="Build log">
+    <Fragment slot="lead">
+      What is being built across the <a
+        class="link-inline"
+        href="https://github.com/dileepadev"
+        target="_blank"
+        rel="noopener noreferrer">dileepadev</a
+      > account, and whether it is moving. Every figure is read from the public GitHub
+      API at build time.
+    </Fragment>
+  </PageHead>
+
+  <!-- Volume of work leads, not stars. A stars tile on an account with 3 of
+       them invites exactly the wrong comparison and undersells the rest. -->
+  <section class="section" aria-labelledby="headline">
+    <h2 id="headline" class="section-label">Headline</h2>
+    {
+      contributions ? (
+        <div class="stat-grid">
+          <Stat
+            headline
+            value={num(contributions.totalCommits)}
+            label="Commits"
+            note="Last 12 months"
+          />
+          <Stat
+            value={num(totals.ownedRepos)}
+            label="Repositories"
+            note={`${num(totals.liveSites)} with a live site`}
+          />
+          <Stat
+            value={num(totals.deployments)}
+            label="Deployments"
+            note={`Across ${num(totals.reposWithCi)} repos with CI`}
+          />
+          <Stat
+            value={num(totals.languages)}
+            label="Languages"
+            note={topLanguages[0] ? `${topLanguages[0].name} leads` : undefined}
+          />
+          <Stat
+            value={num(contributions.totalPullRequests)}
+            label="Pull requests"
+          />
+          <Stat value={num(totals.releases)} label="Releases" />
+        </div>
+      ) : (
+        <EmptyState
+          title="Contribution totals unavailable"
+          hint="The GraphQL contributions API needs a token. The last refresh ran without one."
+        />
+      )
+    }
+  </section>
+
+  <section class="section" aria-labelledby="contributions">
+    <div class="section-head">
+      <div>
+        <h2 id="contributions" class="section-label">Contributions</h2>
+        {
+          contributions && (
+            <p>
+              {num(contributions.calendarTotal)} contributions in the last year,
+              across {num(contributions.totalRepositories)} repositories.
+              {contributions.privateContributions > 0 && (
+                <>
+                  {" "}
+                  A further {num(contributions.privateContributions)} are in
+                  private repositories and are counted here only as a total.
+                </>
+              )}
+            </p>
+          )
+        }
+      </div>
+    </div>
+
+    {
+      contributions ? (
+        <>
+          <Heatmap contributions={contributions} />
+
+          {months.length > 1 && (
+            <div class="month-chart">
+              <h3 class="chart-title">By month</h3>
+              <ColumnChart
+                data={months}
+                ariaLabel={`Contributions by month: ${months
+                  .map((m) => `${m.label} ${m.value}`)
+                  .join(", ")}.`}
+                partialIndex={partialIndex}
+                unit="contributions"
+              />
+              <p class="chart-note">
+                The same year as the calendar above, read as volume rather than
+                as daily texture.
+                {partialIndex > -1 &&
+                  " The final column is the current month, still in progress — it is hatched rather than drawn as a fall."}
+              </p>
+            </div>
+          )}
+        </>
+      ) : (
+        <EmptyState
+          title="No contribution calendar"
+          hint="This view needs the GraphQL API, which requires a token."
+        />
+      )
+    }
+  </section>
+
+  <section class="section" aria-labelledby="languages">
+    <div class="section-head">
+      <div>
+        <h2 id="languages" class="section-label">Languages</h2>
+        <p>By bytes of code across public repositories.</p>
+      </div>
+    </div>
+
+    {
+      languages.length === 0 ? (
+        <EmptyState title="No language data" />
+      ) : (
+        <>
+          <BarChart
+            data={languageRows}
+            ariaLabel={`Share of code by language: ${languageRows
+              .map((l) => `${l.label} ${l.display}`)
+              .join(", ")}.`}
+          />
+          <p class="chart-note">
+            Share of {num(languages.length)} languages by bytes of code, across
+            every public repository.
+          </p>
+        </>
+      )
+    }
+  </section>
+
+  <section class="section" aria-labelledby="recent">
+    <div class="section-head">
+      <div>
+        <h2 id="recent" class="section-label">Recent activity</h2>
+        <p>Releases, workflow runs and deployments, newest first.</p>
+      </div>
+      <a class="section-more" href="/activity/">All activity →</a>
+    </div>
+
+    <Feed events={recent} />
+  </section>
+</Layout>
+
+<style>
+  .month-chart {
+    margin-top: var(--space-10);
+  }
+
+  .chart-title {
+    margin-bottom: var(--space-4);
+    font-family: var(--font-mono);
+    font-size: var(--text-label);
+    line-height: var(--lh-label);
+    font-weight: 500;
+    letter-spacing: var(--track-label);
+    text-transform: uppercase;
+    color: var(--fg-muted);
+  }
+
+  .section-more {
+    font-family: var(--font-mono);
+    font-size: var(--text-label);
+    letter-spacing: var(--track-label);
+    color: var(--fg-muted);
+    white-space: nowrap;
+  }
+
+  .section-more:hover {
+    color: var(--brand);
+  }
+</style>

@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Not found | Build log"
+  description="That page does not exist on the build log."
+>
+  <div class="error-page">
+    <p class="error-code">404</p>
+    <h1 class="page-title">That page does not exist</h1>
+    <p class="muted">
+      The build log has five views: overview, repositories, activity, CI and
+      deployments.
+    </p>
+    <p class="links mono">
+      <a href="/">Overview</a>
+      <span aria-hidden="true">/</span>
+      <a href="/repos/">Repos</a>
+      <span aria-hidden="true">/</span>
+      <a href="/activity/">Activity</a>
+      <span aria-hidden="true">/</span>
+      <a href="/ci/">CI</a>
+      <span aria-hidden="true">/</span>
+      <a href="/deployments/">Deployments</a>
+    </p>
+  </div>
+</Layout>
+
+<style>
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-3);
+    font-size: var(--text-small);
+    letter-spacing: var(--track-label);
+    color: var(--fg-muted);
+  }
+
+  .links a:hover {
+    color: var(--brand);
+  }
+</style>

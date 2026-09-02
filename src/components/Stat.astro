@@ -1,0 +1,17 @@
+---
+interface Props {
+  value: string;
+  label: string;
+  note?: string;
+  /** The one emerald figure on a page. At most one per surface. */
+  headline?: boolean;
+}
+
+const { value, label, note, headline = false } = Astro.props;
+---
+
+<div class:list={["stat", headline && "stat--headline"]}>
+  <div class="stat-value">{value}</div>
+  <div class="stat-label">{label}</div>
+  {note && <div class="stat-note">{note}</div>}
+</div>
