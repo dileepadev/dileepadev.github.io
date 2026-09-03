@@ -74,8 +74,8 @@ over the account's public GitHub data.
   much larger emerald-bright margin hides it. Fixed by removing the background from both
   `.nav-link.is-active` and `.nav-mobile-link.is-active`, which also brings the rule back in line
   with design-system.md §Navigation ("colour only, never a weight change") — the background was
-  never part of that spec. The identical bug shipped in `dileepa-dev`, this navbar's origin;
-  fixed there too.
+  never part of that spec. The identical rule exists verbatim in `dileepa-dev`, this navbar's
+  origin; out of scope for this repository, not touched here.
 
 ### Removed
 

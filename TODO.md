@@ -148,7 +148,8 @@ keeps no assets on behalf of another repository.
       and `.nav-mobile-link.is-active` (the mobile one shares the identical bug, uncaught by
       Lighthouse only because the mobile menu is collapsed at page load) — this is a contrast fix
       and a return to the documented spec at once. **The identical bug exists verbatim in
-      `dileepa-dev`**, which this navbar was ported from; fixed there too, same commit style
+      `dileepa-dev`**, which this navbar was ported from — out of scope for this repository, not
+      touched here
 
 ### Documentation and release
 
