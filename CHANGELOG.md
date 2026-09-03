@@ -79,8 +79,11 @@ over the account's public GitHub data.
   which served the repository tree rather than the Astro build, ahead of merging `feat/v2.0.0` —
   see [#2](https://github.com/dileepadev/dileepadev.github.io/pull/2). No custom domain; the site
   stays on `dileepadev.github.io`.
-- Lighthouse against the deployed site: performance 97, accessibility 100 (after the fix above),
-  best practices 100, SEO 100.
+- Lighthouse against the deployed site: accessibility 100 (after the fix above), best practices
+  100, SEO 100, every run. Performance held 96–98 on `/repos`, `/ci`, `/activity`, `/deployments`;
+  `/` swung 83–98 across five runs from this environment, tracking network jitter to the
+  render-blocking Google Fonts request rather than anything the site does. Treat as unsettled
+  until confirmed from a stable network — see `TODO.md`.
 - Project preview images are still hosted here. They move out one repository at a time — see the
   image migration section in [README.md](README.md).
 

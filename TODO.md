@@ -120,16 +120,22 @@ keeps no assets on behalf of another repository.
 - [x] Builds **without** a PAT, falling back to `has_pages` — `/pages` is requested quietly and
       its absence costs only CNAME and build-status detail
 - [x] Both themes and 375px, checked in a real browser rather than inferred from the CSS
-- [x] Lighthouse, **against the deployed `dileepadev.github.io`**: performance **97**,
-      accessibility **96 → 100** (see below), best practices 100, SEO 100. The 71–84 range seen
-      earlier was a local-network artefact of the Google Fonts request, not a real number — moot
-      now that production measures 97; self-hosting via `@fontsource` is not needed
-- [x] **Accessibility regression found by that run, fixed.** `<ol class="bars">` (`BarChart`) and
-      `<ol class="chart-cols">` (`ColumnChart`) both use `list-style: none`, which strips the
-      implicit list role in Chromium and orphans every `<li>`. Fixed with `role="list"` on both —
-      not `aria-hidden` on the rows, which was tried first and reverted: `/ci`'s bar rows carry a
-      real `href` per repo, and hiding the row would have hidden that link from a screen reader.
-      Verified 100 on all five routes locally after the fix
+- [x] Lighthouse, **against the deployed `dileepadev.github.io`**: accessibility **100** on all
+      five routes (see the fix below), best practices 100, SEO 100 — every run agreed
+- [x] **Accessibility regression found by the first deployed-site run, fixed.** `<ol class="bars">`
+      (`BarChart`) and `<ol class="chart-cols">` (`ColumnChart`) both use `list-style: none`,
+      which strips the implicit list role in Chromium and orphans every `<li>`. Fixed with
+      `role="list"` on both — not `aria-hidden` on the rows, which was tried first and reverted:
+      `/ci`'s bar rows carry a real `href` per repo, and hiding the row would have hidden that
+      link from a screen reader. Verified 100 on all five routes locally and live after the fix
+- [ ] **Performance ≥ 95 — inconclusive from this environment, not settled.** Five runs against
+      the deployed `/` gave 97, 83, 98, 85, 86: TBT 0 ms and CLS 0 every time, but FCP/LCP swing
+      1.9 s–3.3 s, tracking the render-blocking Google Fonts request. That variance is this
+      environment's network path to Google's CDN, not the site — nothing in the merged fix
+      touches loading, and `/repos`, `/ci`, `/activity`, `/deployments` held 96–98 consistently.
+      Get an authoritative reading from [PageSpeed Insights](https://pagespeed.web.dev/) (runs
+      from Google's own network) before deciding whether the Google Fonts self-hosting question
+      needs revisiting at all
 
 ### Documentation and release
 
