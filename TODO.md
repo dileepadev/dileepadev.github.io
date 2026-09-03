@@ -137,14 +137,18 @@ keeps no assets on behalf of another repository.
 - [x] Add `CHANGELOG.md`
 - [x] Record version `2.0.0` — in `package.json` and `CHANGELOG.md`
 - [x] Update `AGENTS.md` — the layout table described a repo that did not exist yet
-- [ ] **Switch the Pages source from the legacy branch build to GitHub Actions.** Currently
-      `build_type: "legacy"`, which serves the repository tree rather than the Astro build.
-      Until this changes, merging to `main` will not publish the dashboard
-- [ ] **Let the Actions bot push to `main`, or the scheduled refresh cannot commit.** `main` is
-      protected; `refresh-data.yml` commits the snapshot and pushes. Either add a ruleset bypass
-      for `github-actions[bot]` or move the refresh to a branch and open a PR from it
+- [x] **Switch the Pages source from the legacy branch build to GitHub Actions.** Was
+      `build_type: "legacy"`, serving the repository tree instead of the Astro build. Switched via
+      the API to `"workflow"`; `cname` stays `null` — no custom domain, by decision
+- [x] **Actions-bot push to `main` — checked, not actually blocked.** `main` carries no branch
+      protection and no ruleset (`protected: false`, empty ruleset list), and `refresh-data.yml`
+      already declares `permissions: contents: write`, which overrides the repo's read-only
+      default. This line previously assumed protection that was never configured
 - [ ] Add the optional `PAGES_TOKEN` secret (fine-grained, read-only) if the deployments view
-      should show CNAME and build status. Everything works without it
+      should show CNAME and build status. Everything works without it — needs a PAT minted by
+      hand (Settings → Developer settings → Fine-grained tokens), then `gh secret set`
+- [ ] **Merge `feat/v2.0.0` into `main`.** 16 commits, 175 files. The Pages source switch has no
+      effect until this lands — `main` still serves the v1 site
 - [ ] Tag `v2.0.0`
 - [ ] Close [issue #1](https://github.com/dileepadev/dileepadev.github.io/issues/1)
 
