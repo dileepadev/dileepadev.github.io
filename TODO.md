@@ -121,21 +121,34 @@ keeps no assets on behalf of another repository.
       its absence costs only CNAME and build-status detail
 - [x] Both themes and 375px, checked in a real browser rather than inferred from the CSS
 - [x] Lighthouse, **against the deployed `dileepadev.github.io`**: accessibility **100** on all
-      five routes (see the fix below), best practices 100, SEO 100 — every run agreed
-- [x] **Accessibility regression found by the first deployed-site run, fixed.** `<ol class="bars">`
+      five routes (see the fixes below), best practices 100, SEO 100 — every run agreed
+- [x] **List-role regression found by the first deployed-site run, fixed.** `<ol class="bars">`
       (`BarChart`) and `<ol class="chart-cols">` (`ColumnChart`) both use `list-style: none`,
       which strips the implicit list role in Chromium and orphans every `<li>`. Fixed with
       `role="list"` on both — not `aria-hidden` on the rows, which was tried first and reverted:
       `/ci`'s bar rows carry a real `href` per repo, and hiding the row would have hidden that
       link from a screen reader. Verified 100 on all five routes locally and live after the fix
-- [ ] **Performance ≥ 95 — inconclusive from this environment, not settled.** Five runs against
-      the deployed `/` gave 97, 83, 98, 85, 86: TBT 0 ms and CLS 0 every time, but FCP/LCP swing
-      1.9 s–3.3 s, tracking the render-blocking Google Fonts request. That variance is this
-      environment's network path to Google's CDN, not the site — nothing in the merged fix
-      touches loading, and `/repos`, `/ci`, `/activity`, `/deployments` held 96–98 consistently.
-      Get an authoritative reading from [PageSpeed Insights](https://pagespeed.web.dev/) (runs
-      from Google's own network) before deciding whether the Google Fonts self-hosting question
-      needs revisiting at all
+- [x] **Performance, authoritative reading from PageSpeed Insights** (Google's own network, not
+      this environment): desktop **99**, mobile **91**. Both clear "good"; only mobile misses the
+      ≥ 95 bar, tracking the same render-blocking Google Fonts + first-party CSS request this
+      TODO already flagged — est. savings 250 ms (desktop) / 1,670 ms (mobile, slow-4G
+      throttling). Not pursued further: fixing it means either self-hosting fonts
+      (`dileepa-dev`/`links-dileepa-dev` platform decision, still open) or inlining/deferring the
+      layout stylesheet, and 91 on a throttled mobile emulation isn't worth chasing alone
+- [x] **Second, real accessibility regression found by that same PageSpeed run: desktop
+      accessibility 96, contrast failure on `.nav-link.is-active`.** Root cause computed exactly:
+      `--brand` (emerald-deep) is documented at 4.7:1 against the plain page background, but
+      `.is-active` composited it on `--surface-hover` instead (`color-mix(in srgb, var(--fg) 7%,
+      var(--bg-surface))` — `#eeeeee` in light theme) — **4.312:1**, under the 4.5:1 AA floor.
+      Dark theme's much larger emerald-bright margin (8.0:1) survives the same composition, which
+      is why this never surfaced in any earlier check, all of which happened to run dark.
+      **The background was never part of the spec** — design-system.md §Navigation says the
+      current-page indicator is "colour only, never a weight change," and doesn't mention a
+      background at all. Removed `background: var(--surface-hover)` from both `.nav-link.is-active`
+      and `.nav-mobile-link.is-active` (the mobile one shares the identical bug, uncaught by
+      Lighthouse only because the mobile menu is collapsed at page load) — this is a contrast fix
+      and a return to the documented spec at once. **The identical bug exists verbatim in
+      `dileepa-dev`**, which this navbar was ported from; fixed there too, same commit style
 
 ### Documentation and release
 
