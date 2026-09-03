@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import PageHead from "../components/PageHead.astro";
 import EmptyState from "../components/EmptyState.astro";
 import ColumnChart from "../components/ColumnChart.astro";
+import Dropdown from "../components/Dropdown.astro";
 import { repos, totals } from "../lib/snapshot";
 import { num, since } from "../lib/format";
 
@@ -41,11 +42,34 @@ if (createdKeys.length > 0) {
   }
 }
 
-const languageOptions = [
-  ...new Set(
-    rows.map((r) => r.primaryLanguage).filter((l): l is string => Boolean(l)),
-  ),
-].sort((a, b) => a.localeCompare(b));
+const languageCounts = new Map<string, number>();
+for (const repo of rows) {
+  if (!repo.primaryLanguage) continue;
+  languageCounts.set(
+    repo.primaryLanguage,
+    (languageCounts.get(repo.primaryLanguage) ?? 0) + 1,
+  );
+}
+
+// The menu names how many repositories sit behind each option, so a filter
+// that would empty the table can be seen for what it is before it is chosen.
+const languageOptions = [...languageCounts.entries()]
+  .sort((a, b) => a[0].localeCompare(b[0]))
+  .map(([value, count]) => ({ value, label: value, count }));
+
+const withSite = rows.filter((r) => r.hasPages || r.homepage).length;
+
+const siteOptions = [
+  { value: "pages", label: "With a live site", count: withSite },
+  { value: "nopages", label: "Without a site", count: rows.length - withSite },
+];
+
+const sortOptions = [
+  { value: "pushed", label: "Recently pushed" },
+  { value: "created", label: "Newest" },
+  { value: "name", label: "Name" },
+  { value: "stars", label: "Stars" },
+];
 ---
 
 <Layout
@@ -90,26 +114,29 @@ const languageOptions = [
       autocomplete="off"
     />
 
-    <label class="sr-only" for="repo-language">Filter by language</label>
-    <select id="repo-language" class="control-select">
-      <option value="">All languages</option>
-      {languageOptions.map((l) => <option value={l}>{l}</option>)}
-    </select>
+    <Dropdown
+      id="repo-language"
+      label="Language"
+      options={languageOptions}
+      allLabel="All languages"
+      value=""
+    />
 
-    <label class="sr-only" for="repo-pages">Filter by site</label>
-    <select id="repo-pages" class="control-select">
-      <option value="">All repositories</option>
-      <option value="pages">With a live site</option>
-      <option value="nopages">Without a site</option>
-    </select>
+    <Dropdown
+      id="repo-pages"
+      label="Site"
+      options={siteOptions}
+      allLabel="All repositories"
+      value=""
+    />
 
-    <label class="sr-only" for="repo-sort">Sort</label>
-    <select id="repo-sort" class="control-select">
-      <option value="pushed">Recently pushed</option>
-      <option value="created">Newest</option>
-      <option value="name">Name</option>
-      <option value="stars">Stars</option>
-    </select>
+    <Dropdown
+      id="repo-sort"
+      variant="sort"
+      label="Sort repositories"
+      options={sortOptions}
+      value="pushed"
+    />
 
     <span class="control-count" id="repo-count"></span>
   </div>
@@ -198,13 +225,12 @@ const languageOptions = [
   const search = document.getElementById(
     "repo-search",
   ) as HTMLInputElement | null;
-  const language = document.getElementById(
-    "repo-language",
-  ) as HTMLSelectElement | null;
-  const pages = document.getElementById(
-    "repo-pages",
-  ) as HTMLSelectElement | null;
-  const sort = document.getElementById("repo-sort") as HTMLSelectElement | null;
+  // The three dropdowns carry their selection on the root element rather than
+  // in a form control, so the page reads `data-value` where it used to read
+  // `select.value`.
+  const language = document.getElementById("repo-language");
+  const pages = document.getElementById("repo-pages");
+  const sort = document.getElementById("repo-sort");
 
   if (body) {
     const rows = Array.from(body.querySelectorAll("tr"));
@@ -215,8 +241,8 @@ const languageOptions = [
 
     function apply() {
       const term = (search?.value ?? "").trim().toLowerCase();
-      const lang = language?.value ?? "";
-      const site = pages?.value ?? "";
+      const lang = language?.dataset.value ?? "";
+      const site = pages?.dataset.value ?? "";
 
       let visible = 0;
       for (const row of rows) {
@@ -231,7 +257,7 @@ const languageOptions = [
         if (show) visible += 1;
       }
 
-      const order = sort?.value ?? "pushed";
+      const order = sort?.dataset.value ?? "pushed";
       const sorted = [...rows].sort((a, b) => {
         switch (order) {
           case "name":
@@ -257,9 +283,9 @@ const languageOptions = [
     }
 
     search?.addEventListener("input", apply);
-    language?.addEventListener("change", apply);
-    pages?.addEventListener("change", apply);
-    sort?.addEventListener("change", apply);
+    for (const control of [language, pages, sort]) {
+      control?.addEventListener("change", apply);
+    }
     apply();
   }
 </script>
