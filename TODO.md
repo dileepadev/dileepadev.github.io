@@ -152,9 +152,10 @@ keeps no assets on behalf of another repository.
       default. This line previously assumed protection that was never configured
 - [x] **Merge `feat/v2.0.0` into `main`.** [#2](https://github.com/dileepadev/dileepadev.github.io/pull/2),
       16 commits, 175 files. Deploy workflow ran and `dileepadev.github.io` serves the new build
-- [ ] Add the optional `PAGES_TOKEN` secret (fine-grained, read-only) if the deployments view
-      should show CNAME and build status. Everything works without it — needs a PAT minted by
-      hand (Settings → Developer settings → Fine-grained tokens), then `gh secret set`
+- [x] **`PAGES_TOKEN` secret added and verified.** The refresh workflow now fetches `/pages` for
+      all 14 repositories with `has_pages: true`, 0 falling back — `deployments.astro`'s
+      `missingPagesDetail` notice won't render on the next build. CNAME, status, and build type
+      confirmed populated in the committed snapshot
 - [x] **Tag `v2.0.0`** — released as
       [v2.0.0](https://github.com/dileepadev/dileepadev.github.io/releases/tag/v2.0.0)
 - [x] **Close [issue #1](https://github.com/dileepadev/dileepadev.github.io/issues/1)** —
