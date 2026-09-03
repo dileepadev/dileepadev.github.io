@@ -155,8 +155,11 @@ keeps no assets on behalf of another repository.
 - [ ] Add the optional `PAGES_TOKEN` secret (fine-grained, read-only) if the deployments view
       should show CNAME and build status. Everything works without it — needs a PAT minted by
       hand (Settings → Developer settings → Fine-grained tokens), then `gh secret set`
-- [ ] Tag `v2.0.0`
-- [ ] Close [issue #1](https://github.com/dileepadev/dileepadev.github.io/issues/1)
+- [x] **Tag `v2.0.0`** — released as
+      [v2.0.0](https://github.com/dileepadev/dileepadev.github.io/releases/tag/v2.0.0)
+- [x] **Close [issue #1](https://github.com/dileepadev/dileepadev.github.io/issues/1)** —
+      referencing #2, #3, and the release; the performance re-check above is carried forward
+      here, not left dangling on the closed issue
 
 ## Later
 
