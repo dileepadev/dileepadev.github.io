@@ -1,0 +1,301 @@
+---
+// A custom dropdown, ported from dileepa-dev's FilterSelect and SortSelect so
+// the two surfaces share one control. A native <select> renders its menu with
+// the operating system's own chrome, which ignores the brand tokens entirely —
+// on dark mode it arrives as a white OS list beside a dark page. This replaces
+// it with a button + listbox built from the same tokens as everything else.
+//
+// The two variants differ the way they do in dileepa-dev: `filter` names its
+// dimension ("Language: Dart") and lights an active dot once something is
+// chosen; `sort` shows only the selected option's label.
+
+export interface DropdownOption {
+  value: string;
+  label: string;
+  count?: number;
+}
+
+interface Props {
+  id: string;
+  /** Dimension name for `filter`; accessible name for `sort`. */
+  label: string;
+  variant?: "filter" | "sort";
+  options: DropdownOption[];
+  /** Initially selected value. */
+  value?: string;
+  /** `filter` only: label for the unset state, prepended as an option. */
+  allLabel?: string;
+  class?: string;
+}
+
+const {
+  id,
+  label,
+  variant = "filter",
+  options,
+  value,
+  allLabel,
+  class: className,
+} = Astro.props;
+
+// The "all" row belongs to the filter variant only, and it carries the empty
+// value so the page's filter logic can treat it as "no criterion".
+const items: DropdownOption[] =
+  variant === "filter" && allLabel
+    ? [{ value: "", label: allLabel }, ...options]
+    : options;
+
+const selectedValue = value ?? items[0]?.value ?? "";
+const selected = items.find((o) => o.value === selectedValue) ?? items[0];
+
+// A value with no matching option still has to name itself, rather than
+// falling back to the "all" label beside a lit active dot.
+const displayLabel = selected?.label ?? selectedValue;
+const isActive = variant === "filter" && selectedValue !== "";
+---
+
+<div
+  id={id}
+  class:list={["dropdown", `dropdown-${variant}`, className]}
+  data-dropdown
+  data-value={selectedValue}
+>
+  <button
+    type="button"
+    class="dropdown-trigger"
+    role="combobox"
+    aria-label={variant === "filter" ? `Filter by ${label}` : label}
+    aria-haspopup="listbox"
+    aria-expanded="false"
+    aria-controls={`${id}-listbox`}
+  >
+    {
+      variant === "filter" ? (
+        <svg
+          class="dropdown-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.75"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M10 5H3" />
+          <path d="M12 19H3" />
+          <path d="M14 3v4" />
+          <path d="M16 17v4" />
+          <path d="M21 12h-9" />
+          <path d="M21 19h-5" />
+          <path d="M21 5h-7" />
+          <path d="M8 10v4" />
+          <path d="M8 12H3" />
+        </svg>
+      ) : (
+        <svg
+          class="dropdown-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.75"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="m21 16-4 4-4-4" />
+          <path d="M17 20V4" />
+          <path d="m3 8 4-4 4 4" />
+          <path d="M7 4v16" />
+        </svg>
+      )
+    }
+
+    {variant === "filter" && <span class="dropdown-dimension">{label}:</span>}
+    <span class="dropdown-value">{displayLabel}</span>
+    {
+      variant === "filter" && (
+        <span class="dropdown-dot" aria-hidden="true" hidden={!isActive} />
+      )
+    }
+
+    <svg
+      class="dropdown-chevron"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.75"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <path d="m6 9 6 6 6-6"></path>
+    </svg>
+  </button>
+
+  <ul
+    id={`${id}-listbox`}
+    class="dropdown-menu"
+    role="listbox"
+    aria-label={variant === "filter" ? `Filter options for ${label}` : label}
+    hidden
+  >
+    {
+      items.map((item) => (
+        <li
+          class:list={[
+            "dropdown-item",
+            item.value === selectedValue && "is-selected",
+          ]}
+          role="option"
+          data-value={item.value}
+          aria-selected={item.value === selectedValue ? "true" : "false"}
+        >
+          <span class="dropdown-item-text">{item.label}</span>
+          <span class="dropdown-item-meta">
+            {item.count !== undefined && (
+              <span class="dropdown-item-count">{item.count}</span>
+            )}
+            <svg
+              class="dropdown-check"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </span>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<script>
+  // One listener set per dropdown on the page. The behaviour is dileepa-dev's:
+  // the menu closes on an outside pointer press, on Escape and on Tab, and the
+  // arrow keys walk the options with wraparound.
+  for (const root of document.querySelectorAll<HTMLElement>(
+    "[data-dropdown]",
+  )) {
+    const trigger = root.querySelector<HTMLButtonElement>(".dropdown-trigger");
+    const menu = root.querySelector<HTMLElement>(".dropdown-menu");
+    const valueLabel = root.querySelector<HTMLElement>(".dropdown-value");
+    const dot = root.querySelector<HTMLElement>(".dropdown-dot");
+    if (!trigger || !menu || !valueLabel) continue;
+
+    const items = Array.from(
+      menu.querySelectorAll<HTMLElement>(".dropdown-item"),
+    );
+    if (items.length === 0) continue;
+
+    const indexOfValue = () =>
+      Math.max(
+        0,
+        items.findIndex((item) => item.dataset.value === root.dataset.value),
+      );
+
+    let highlighted = indexOfValue();
+
+    function paintHighlight() {
+      items.forEach((item, i) => {
+        item.classList.toggle("is-highlighted", i === highlighted);
+      });
+      items[highlighted]?.scrollIntoView({ block: "nearest" });
+    }
+
+    const isOpen = () => trigger!.getAttribute("aria-expanded") === "true";
+
+    function open() {
+      highlighted = indexOfValue();
+      trigger!.setAttribute("aria-expanded", "true");
+      menu!.hidden = false;
+      paintHighlight();
+    }
+
+    function close(focusTrigger = true) {
+      trigger!.setAttribute("aria-expanded", "false");
+      menu!.hidden = true;
+      if (focusTrigger) trigger!.focus();
+    }
+
+    function select(index: number) {
+      const item = items[index];
+      if (!item) return;
+
+      root.dataset.value = item.dataset.value ?? "";
+      valueLabel!.textContent =
+        item.querySelector(".dropdown-item-text")?.textContent ?? "";
+
+      items.forEach((other) => {
+        const chosen = other === item;
+        other.classList.toggle("is-selected", chosen);
+        other.setAttribute("aria-selected", chosen ? "true" : "false");
+      });
+
+      // The active dot marks a filter that is narrowing the list, so the
+      // unset option ("All languages") leaves it dark.
+      if (dot) dot.hidden = !root.dataset.value;
+
+      root.dispatchEvent(new CustomEvent("change", { bubbles: true }));
+    }
+
+    trigger.addEventListener("click", () => (isOpen() ? close() : open()));
+
+    for (const [index, item] of items.entries()) {
+      item.addEventListener("click", () => {
+        select(index);
+        close();
+      });
+      item.addEventListener("mouseenter", () => {
+        highlighted = index;
+        paintHighlight();
+      });
+    }
+
+    root.addEventListener("keydown", (event) => {
+      if (!isOpen()) {
+        if (["ArrowDown", "ArrowUp", "Enter", " "].includes(event.key)) {
+          event.preventDefault();
+          open();
+        }
+        return;
+      }
+
+      switch (event.key) {
+        case "Escape":
+          event.preventDefault();
+          close();
+          break;
+        case "ArrowDown":
+          event.preventDefault();
+          highlighted = (highlighted + 1) % items.length;
+          paintHighlight();
+          break;
+        case "ArrowUp":
+          event.preventDefault();
+          highlighted = (highlighted - 1 + items.length) % items.length;
+          paintHighlight();
+          break;
+        case "Enter":
+        case " ":
+          event.preventDefault();
+          select(highlighted);
+          close();
+          break;
+        case "Tab":
+          close(false);
+          break;
+      }
+    });
+
+    const closeOnOutside = (event: Event) => {
+      if (isOpen() && !root.contains(event.target as Node)) close(false);
+    };
+    document.addEventListener("mousedown", closeOnOutside);
+    document.addEventListener("touchstart", closeOnOutside);
+  }
+</script>

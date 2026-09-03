@@ -1181,6 +1181,212 @@ a.feed-title:hover {
   box-shadow: 0 0 0 var(--ring-width) var(--ring);
 }
 
+/* --- Custom dropdowns ----------------------------------------------------
+   Ported from dileepa-dev's FilterSelect and SortSelect. A native <select>
+   draws its menu with the OS's own chrome, which cannot be reached by the
+   brand tokens; these are built from the same tokens as the rest of the page,
+   so the open menu matches the theme instead of fighting it.
+
+   Both variants sit at --control-h so they line up flush with the search
+   input on the same row, per the one-control-height rule.
+   ------------------------------------------------------------------------ */
+
+.dropdown {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: var(--control-h);
+  padding: 0 var(--space-3);
+  background: var(--bg-surface);
+  border: var(--hairline) solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--fg-muted);
+  font-family: var(--font-sans);
+  font-size: var(--text-small);
+  font-weight: 500;
+  line-height: normal;
+  outline: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background-color var(--dur) var(--ease),
+    border-color var(--dur) var(--ease),
+    color var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease);
+}
+
+.dropdown-trigger:hover {
+  background: var(--surface-hover);
+  color: var(--fg);
+  border-color: var(--brand);
+}
+
+.dropdown-trigger:focus-visible,
+.dropdown-trigger[aria-expanded="true"] {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 var(--ring-width) var(--ring);
+}
+
+/* A filter that is narrowing the table says so before it is opened. */
+.dropdown-filter[data-value=""] .dropdown-trigger {
+  background: var(--bg-surface);
+}
+
+.dropdown-filter:not([data-value=""]) .dropdown-trigger {
+  background: var(--surface-hover);
+  border-color: var(--brand);
+  color: var(--fg);
+}
+
+.dropdown-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  color: var(--fg-muted);
+  transition: color var(--dur) var(--ease);
+}
+
+.dropdown-trigger:hover .dropdown-icon,
+.dropdown-trigger[aria-expanded="true"] .dropdown-icon,
+.dropdown-filter:not([data-value=""]) .dropdown-icon {
+  color: var(--brand);
+}
+
+.dropdown-dimension {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  letter-spacing: var(--track-label);
+  color: var(--fg-muted);
+}
+
+.dropdown-value {
+  color: var(--fg);
+}
+
+.dropdown-dot {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--brand);
+}
+
+.dropdown-chevron {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  margin-left: var(--space-1);
+  color: var(--fg-muted);
+  transition: transform var(--dur) var(--ease);
+}
+
+.dropdown-trigger[aria-expanded="true"] .dropdown-chevron {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + var(--space-2));
+  left: 0;
+  z-index: 50;
+  min-width: 190px;
+  max-height: 260px;
+  overflow-y: auto;
+  padding: var(--space-1);
+  margin: 0;
+  list-style: none;
+  background: var(--bg-surface);
+  border: var(--hairline) solid var(--border-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-nav);
+  animation: dropdown-in var(--dur) var(--ease);
+}
+
+/* The sort menu hangs from the trigger's right edge, as it does on
+   dileepa-dev where sort sits at the end of the toolbar. */
+.dropdown-sort .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+.dropdown-menu[hidden] {
+  display: none;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--fg-muted);
+  cursor: pointer;
+  transition:
+    background-color var(--dur) var(--ease),
+    color var(--dur) var(--ease);
+}
+
+.dropdown-item.is-highlighted {
+  background: var(--surface-hover);
+  color: var(--fg);
+}
+
+.dropdown-item.is-selected {
+  color: var(--brand);
+}
+
+.dropdown-item-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dropdown-item-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+.dropdown-item-count {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  letter-spacing: var(--track-label);
+  color: var(--fg-muted);
+}
+
+.dropdown-check {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: var(--brand);
+  visibility: hidden;
+}
+
+.dropdown-item.is-selected .dropdown-check {
+  visibility: visible;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dropdown-menu {
+    animation: none;
+  }
+
+  .dropdown-chevron {
+    transition: none;
+  }
+}
+
 .control-count {
   font-family: var(--font-mono);
   font-size: var(--text-label);
