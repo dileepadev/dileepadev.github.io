@@ -67,6 +67,15 @@ over the account's public GitHub data.
   briefly gone through `aria-hidden` on each row instead; that was reverted before it shipped,
   since `/ci`'s rows carry a real `href` per repository and hiding the row would have hidden that
   link from a screen reader too.
+- **Contrast failure on the active nav link.** `.nav-link.is-active` composited `--brand` on
+  `--surface-hover` rather than the plain page background — 4.312:1 in light theme, under the
+  4.5:1 AA floor (`--brand` alone measures 5.0:1). Caught by PageSpeed Insights' desktop run,
+  which measures light theme by default; every earlier check happened to run dark, where the
+  much larger emerald-bright margin hides it. Fixed by removing the background from both
+  `.nav-link.is-active` and `.nav-mobile-link.is-active`, which also brings the rule back in line
+  with design-system.md §Navigation ("colour only, never a weight change") — the background was
+  never part of that spec. The identical bug shipped in `dileepa-dev`, this navbar's origin;
+  fixed there too.
 
 ### Removed
 
@@ -79,11 +88,11 @@ over the account's public GitHub data.
   which served the repository tree rather than the Astro build, ahead of merging `feat/v2.0.0` —
   see [#2](https://github.com/dileepadev/dileepadev.github.io/pull/2). No custom domain; the site
   stays on `dileepadev.github.io`.
-- Lighthouse against the deployed site: accessibility 100 (after the fix above), best practices
-  100, SEO 100, every run. Performance held 96–98 on `/repos`, `/ci`, `/activity`, `/deployments`;
-  `/` swung 83–98 across five runs from this environment, tracking network jitter to the
-  render-blocking Google Fonts request rather than anything the site does. Treat as unsettled
-  until confirmed from a stable network — see `TODO.md`.
+- Lighthouse against the deployed site: accessibility 100 (after the fixes above), best
+  practices 100, SEO 100, every run. Performance, from PageSpeed Insights (Google's own network,
+  authoritative over this environment's earlier, noisier local readings): desktop 99, mobile 91 —
+  both "good," mobile short of the ≥ 95 target, tracking the same render-blocking Google Fonts
+  and layout-CSS requests. See `TODO.md` for why that's not being chased further right now.
 - Project preview images are still hosted here. They move out one repository at a time — see the
   image migration section in [README.md](README.md).
 
