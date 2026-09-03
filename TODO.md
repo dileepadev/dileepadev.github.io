@@ -120,16 +120,16 @@ keeps no assets on behalf of another repository.
 - [x] Builds **without** a PAT, falling back to `has_pages` — `/pages` is requested quietly and
       its absence costs only CNAME and build-status detail
 - [x] Both themes and 375px, checked in a real browser rather than inferred from the CSS
-- [x] Lighthouse: **accessibility 100, best practices 100, SEO 100**
-- [ ] **Lighthouse performance ≥ 95 — not verifiable from this environment.** Measured 84 and 71
-      on two runs against a local server, and both are dominated by one artefact: the 1.3 KB
-      Google Fonts stylesheet took 7,445 ms to arrive. The site's own payload is 102 KB across
-      9 requests, every local asset under 11 ms, with TBT 0 ms and CLS 0. Re-run against the
-      deployed site before treating this as a real number
-- [ ] If it does fall short in production, the single lever is the render-blocking Google Fonts
-      request. Self-hosting (`@fontsource`) removes the third-party origin entirely — **but it
-      would diverge from `dileepa-dev` and `links-dileepa-dev`, which both load the same
-      `<link>`**, so it is a platform decision rather than a local one
+- [x] Lighthouse, **against the deployed `dileepadev.github.io`**: performance **97**,
+      accessibility **96 → 100** (see below), best practices 100, SEO 100. The 71–84 range seen
+      earlier was a local-network artefact of the Google Fonts request, not a real number — moot
+      now that production measures 97; self-hosting via `@fontsource` is not needed
+- [x] **Accessibility regression found by that run, fixed.** `<ol class="bars">` (`BarChart`) and
+      `<ol class="chart-cols">` (`ColumnChart`) both use `list-style: none`, which strips the
+      implicit list role in Chromium and orphans every `<li>`. Fixed with `role="list"` on both —
+      not `aria-hidden` on the rows, which was tried first and reverted: `/ci`'s bar rows carry a
+      real `href` per repo, and hiding the row would have hidden that link from a screen reader.
+      Verified 100 on all five routes locally after the fix
 
 ### Documentation and release
 
@@ -144,11 +144,11 @@ keeps no assets on behalf of another repository.
       protection and no ruleset (`protected: false`, empty ruleset list), and `refresh-data.yml`
       already declares `permissions: contents: write`, which overrides the repo's read-only
       default. This line previously assumed protection that was never configured
+- [x] **Merge `feat/v2.0.0` into `main`.** [#2](https://github.com/dileepadev/dileepadev.github.io/pull/2),
+      16 commits, 175 files. Deploy workflow ran and `dileepadev.github.io` serves the new build
 - [ ] Add the optional `PAGES_TOKEN` secret (fine-grained, read-only) if the deployments view
       should show CNAME and build status. Everything works without it — needs a PAT minted by
       hand (Settings → Developer settings → Fine-grained tokens), then `gh secret set`
-- [ ] **Merge `feat/v2.0.0` into `main`.** 16 commits, 175 files. The Pages source switch has no
-      effect until this lands — `main` still serves the v1 site
 - [ ] Tag `v2.0.0`
 - [ ] Close [issue #1](https://github.com/dileepadev/dileepadev.github.io/issues/1)
 
