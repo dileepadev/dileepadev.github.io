@@ -1,0 +1,70 @@
+name: Refresh snapshot
+
+# Every 6 hours, on demand, and on a push that changes the fetch script itself.
+# The commit this produces lands on `main`, which triggers the deploy workflow -
+# so the data refresh and the publish stay two separate, individually
+# debuggable steps.
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - "scripts/fetch-github.mjs"
+      - ".github/workflows/refresh-data.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: "refresh"
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    name: Fetch public GitHub data
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      # GITHUB_TOKEN gives 5,000 requests/hour and reads every public endpoint
+      # this needs except `/repos/{owner}/{repo}/pages`, which requires admin on
+      # each repository. PAGES_TOKEN is an optional fine-grained, read-only PAT
+      # that adds CNAME and build-status detail. Without it the script warns
+      # and falls back to `has_pages` - it is enrichment, never a dependency.
+      - name: Fetch snapshot
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAGES_TOKEN || secrets.GITHUB_TOKEN }}
+        run: npm run fetch
+
+      - name: Report what changed
+        run: |
+          node -e '
+            const s = require("./src/data/snapshot.json");
+            console.log(`fetched ${s.meta.fetchedAt}`);
+            console.log(`repos ${s.totals.repos}, runs ${s.totals.workflowRuns}, releases ${s.totals.releases}`);
+            console.log(`partial: ${s.meta.partial}`);
+            for (const w of s.meta.warnings) console.log(`  warning: ${w}`);
+          '
+
+      # A refresh that changed nothing must not produce a commit - the schedule
+      # runs four times a day and would otherwise bury the human history under
+      # empty ones.
+      - name: Commit the snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/snapshot.json data/history/
+          if git diff --staged --quiet; then
+            echo "No change in the snapshot - nothing to commit."
+            exit 0
+          fi
+          git commit -m "chore(data): refresh snapshot (refs #1)"
+          git push

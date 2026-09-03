@@ -1,0 +1,1355 @@
+/* The cascade order, declared before anything else so this is the order that
+   holds - a layer's position is fixed by where it is first named. `brand`
+   sits between Tailwind's `base` and `components`, matching dileepa-dev and
+   links-dileepa-dev: the token sheet is a base layer that has to lose to a
+   utility. */
+@layer theme, base, brand, components, utilities;
+
+@import "tailwindcss";
+
+/* The vendored canonical token sheet - dileepadev/docs/brand/brand-tokens.css.
+   Every colour, type step, space and motion value in this app resolves
+   through it. Never declare a colour here or in a component. */
+@import "./brand-tokens.css" layer(brand);
+
+/* ============================================================
+   Tailwind theme - the semantic tokens, and only those.
+   ============================================================ */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-surface: var(--bg-surface);
+  --color-bg-raised: var(--bg-raised);
+  --color-surface-hover: var(--surface-hover);
+  --color-border-hairline: var(--border);
+  --color-border-strong: var(--border-strong);
+
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+
+  --color-brand: var(--brand);
+  --color-brand-fill: var(--brand-fill);
+  --color-on-brand: var(--on-brand);
+
+  --color-success: var(--success);
+  --color-error: var(--error);
+  --color-warning: var(--warning);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  --text-display: var(--text-display);
+  --text-display--line-height: var(--lh-display);
+  --text-h1: var(--text-h1);
+  --text-h1--line-height: var(--lh-h1);
+  --text-h2: var(--text-h2);
+  --text-h2--line-height: var(--lh-h2);
+  --text-h3: var(--text-h3);
+  --text-h3--line-height: var(--lh-h3);
+  --text-body: var(--text-body);
+  --text-body--line-height: var(--lh-body);
+  --text-small: var(--text-small);
+  --text-small--line-height: var(--lh-small);
+  --text-label: var(--text-label);
+  --text-label--line-height: var(--lh-label);
+
+  --radius-sm: var(--radius-sm);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+
+  --ease-brand: var(--ease);
+}
+
+/* Tailwind 4 keeps bare `rounded` as a 0.25rem legacy alias and does not read
+   it from the theme, so every `rounded` would otherwise draw 4px against a
+   token that says 8px. */
+@utility rounded {
+  border-radius: var(--radius);
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Radial spotlight theme transition - matches dileepa-dev. The toggle's
+   script drives the circle animation; these rules only stop the View
+   Transitions API's default cross-fade from fighting it. */
+::view-transition-old(root) {
+  animation: none;
+  mix-blend-mode: normal;
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+  z-index: 9999;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+
+@layer brand {
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--dur) var(--ease);
+  }
+
+  h1,
+  h2,
+  .display {
+    letter-spacing: var(--track-tight);
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+a,
+button,
+[role="button"],
+select,
+summary {
+  cursor: pointer;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--brand) 28%, transparent);
+  color: inherit;
+}
+
+/* ============================================================
+   Layout - the single container measure, design-system.md §10.
+   ============================================================ */
+
+.container {
+  width: min(100% - var(--space-8), 1020px);
+  max-width: none;
+  margin-inline: auto;
+}
+
+main {
+  flex: 1 0 auto;
+  padding-bottom: var(--space-16);
+}
+
+.section {
+  padding-top: var(--space-12);
+  scroll-margin-top: 80px;
+}
+
+.section + .section {
+  border-top: var(--hairline) solid var(--border);
+  margin-top: var(--space-12);
+}
+
+/* A section label is a word, not a number. Numbering claims an order the
+   page does not have and breaks when a section is added in the middle. */
+.section-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  line-height: var(--lh-label);
+  font-weight: 500;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-bottom: var(--space-3);
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-6);
+}
+
+.section-head p {
+  color: var(--fg-muted);
+  font-size: var(--text-small);
+  line-height: var(--lh-small);
+  margin: var(--space-2) 0 0;
+}
+
+/* --- Logo lockup -------------------------------------------------------- */
+
+.lockup {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.34em;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.lockup .wordmark {
+  font-family: var(--font-sans);
+  font-size: var(--text-h3);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--fg);
+  letter-spacing: var(--track-tight);
+}
+
+.lockup .mark {
+  font-family: var(--font-sans);
+  font-size: var(--text-h3);
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1;
+  color: var(--brand);
+  letter-spacing: var(--track-tight);
+}
+
+.lockup .mark::after {
+  content: "";
+  display: inline-block;
+  width: 0.22em;
+  height: 0.22em;
+  margin-right: 0.1em;
+  border-radius: 50%;
+  background: var(--brand);
+  vertical-align: baseline;
+}
+
+/* --- Header & navigation ------------------------------------------------
+   Ported from dileepa-dev's globals.css so the two surfaces share one navbar:
+   the floating pill, the pill-shaped links, the Explore dropdown and the
+   mobile menu all behave the same. What differs is the content — this site
+   has pages rather than homepage sections, so there is no scroll-spy.
+   ------------------------------------------------------------------------ */
+
+.site-header {
+  position: sticky;
+  top: 1rem;
+  z-index: 40;
+  padding-top: 0.75rem;
+  margin-bottom: var(--space-8);
+}
+
+.nav-wrapper {
+  position: relative;
+}
+
+.nav {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: 0 var(--space-4);
+  background: var(--bg-surface);
+  border: var(--hairline) solid var(--border-strong);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-nav);
+  transition:
+    background-color var(--dur) var(--ease),
+    border-color var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.nav-links {
+  display: none;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+  }
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--space-3);
+  height: 36px;
+  border-radius: var(--radius);
+  border: var(--hairline) solid transparent;
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: var(--text-small);
+  font-weight: 500;
+  letter-spacing: var(--track-label);
+  color: var(--fg-muted);
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    color var(--dur) var(--ease),
+    background-color var(--dur) var(--ease),
+    transform var(--dur) var(--ease);
+}
+
+.nav-link:hover {
+  color: var(--fg);
+  background: var(--surface-hover);
+}
+
+.nav-link:active {
+  background: var(--raised-hover);
+  transform: scale(0.96);
+}
+
+.nav-link.is-active,
+.nav-link[aria-current="true"],
+.nav-link[aria-current="page"] {
+  color: var(--brand);
+  font-weight: 500;
+  background: var(--surface-hover);
+}
+
+.nav-link:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 var(--ring-width) var(--ring);
+}
+
+/* --- Explore dropdown (desktop) ----------------------------------------- */
+
+.nav-explore {
+  position: relative;
+}
+
+.nav-explore-trigger {
+  gap: var(--space-1);
+  cursor: pointer;
+}
+
+.nav-explore-trigger svg {
+  width: 14px;
+  height: 14px;
+  transition: transform var(--dur) var(--ease);
+}
+
+.nav-explore-trigger[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+.nav-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + var(--space-2));
+  z-index: 50;
+  width: 12rem;
+  padding: var(--space-2);
+  background: var(--bg-surface);
+  border: var(--hairline) solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-nav);
+  animation: dropdown-in var(--dur) var(--ease);
+}
+
+.nav-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--fg-muted);
+  transition:
+    background-color var(--dur) var(--ease),
+    color var(--dur) var(--ease);
+}
+
+.nav-menu-item:hover {
+  background: var(--surface-hover);
+  color: var(--fg);
+}
+
+.nav-menu-item svg {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+/* --- Mobile toggle & menu ------------------------------------------------ */
+
+.nav-mobile-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: var(--hairline) solid transparent;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--fg-muted);
+  cursor: pointer;
+  transition:
+    background-color var(--dur) var(--ease),
+    color var(--dur) var(--ease),
+    transform var(--dur) var(--ease);
+}
+
+@media (min-width: 768px) {
+  .nav-mobile-toggle {
+    display: none;
+  }
+}
+
+.nav-mobile-toggle:hover,
+.nav-mobile-toggle.is-open {
+  background: var(--surface-hover);
+  color: var(--fg);
+}
+
+.nav-mobile-toggle:active {
+  background: var(--raised-hover);
+  transform: scale(0.96);
+}
+
+.nav-mobile-toggle:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 var(--ring-width) var(--ring);
+}
+
+.nav-mobile-toggle svg {
+  width: 16px;
+  height: 16px;
+}
+
+.nav-mobile-toggle .icon-close {
+  display: none;
+}
+
+.nav-mobile-toggle[aria-expanded="true"] .icon-close {
+  display: block;
+}
+
+.nav-mobile-toggle[aria-expanded="true"] .icon-open {
+  display: none;
+}
+
+.nav-mobile-menu {
+  position: absolute;
+  top: calc(100% + var(--space-2));
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding: var(--space-3);
+  background: var(--bg-surface);
+  border: var(--hairline) solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-nav);
+  animation: dropdown-in var(--dur) var(--ease);
+}
+
+@media (min-width: 768px) {
+  .nav-mobile-menu {
+    display: none !important;
+  }
+}
+
+.nav-mobile-section-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  line-height: var(--lh-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  padding: var(--space-1) var(--space-2);
+  margin-bottom: var(--space-1);
+}
+
+.nav-mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.nav-mobile-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius);
+  font-size: var(--text-body);
+  font-weight: 500;
+  color: var(--fg-muted);
+  text-decoration: none;
+  transition:
+    background-color var(--dur) var(--ease),
+    color var(--dur) var(--ease);
+}
+
+.nav-mobile-link:hover {
+  background: var(--surface-hover);
+  color: var(--fg);
+}
+
+.nav-mobile-link.is-active,
+.nav-mobile-link[aria-current="page"] {
+  color: var(--brand);
+  font-weight: 500;
+  background: var(--surface-hover);
+}
+
+.nav-mobile-divider {
+  height: var(--hairline);
+  background: var(--border);
+  margin: var(--space-3) 0;
+}
+
+.nav-mobile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-1);
+}
+
+.nav-mobile-sublink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius);
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--fg-muted);
+  text-decoration: none;
+  transition:
+    background-color var(--dur) var(--ease),
+    color var(--dur) var(--ease);
+}
+
+.nav-mobile-sublink:hover {
+  background: var(--surface-hover);
+  color: var(--fg);
+}
+
+.nav-mobile-sublink svg {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.nav-active-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--brand);
+  box-shadow: 0 0 6px color-mix(in srgb, var(--brand) 60%, transparent);
+  flex-shrink: 0;
+}
+
+@keyframes dropdown-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Page heading & breadcrumb ------------------------------------------ */
+
+.page-head {
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-8);
+}
+
+.page-path {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  line-height: var(--lh-label);
+  letter-spacing: var(--track-label);
+  color: var(--fg-muted);
+  margin-bottom: var(--space-4);
+}
+
+.page-path a:hover {
+  color: var(--brand);
+}
+
+.page-path [aria-current="page"] {
+  color: var(--fg);
+}
+
+.page-title {
+  font-size: var(--text-h1);
+  line-height: var(--lh-h1);
+  font-weight: 700;
+  letter-spacing: var(--track-tight);
+}
+
+.page-lead {
+  margin-top: var(--space-3);
+  color: var(--fg-muted);
+}
+
+/* An inline mention in running prose — one of the few places the guide lets a
+   link carry the accent, because an unstyled one would be invisible inside its
+   own paragraph. The underline is always on: colour alone is not an
+   affordance, and this is the only clickable word in a block of text. */
+.link-inline {
+  color: var(--brand);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  border-radius: var(--radius-sm);
+  transition:
+    color var(--dur) var(--ease),
+    text-decoration-color var(--dur) var(--ease);
+}
+
+.link-inline:hover {
+  text-decoration-thickness: 2px;
+}
+
+.link-inline:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  text-decoration: none;
+}
+
+/* The external arrow, drawn on the link itself rather than by a global
+   `a[target="_blank"]` rule — this site already draws explicit arrows in the
+   Explore menu and opens most of its links in a new tab, so a blanket rule
+   would pepper every table row and card with one. */
+.link-inline::after {
+  content: "";
+  display: inline-block;
+  width: 0.68em;
+  height: 0.68em;
+  margin-left: 0.24em;
+  vertical-align: 0.02em;
+  background-color: currentColor;
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M7 17 17 7'/><path d='M7 7h10v10'/></svg>")
+    no-repeat center / contain;
+  opacity: 0.7;
+  transition:
+    opacity var(--dur) var(--ease),
+    transform var(--dur) var(--ease);
+}
+
+.link-inline:hover::after {
+  opacity: 1;
+  transform: translate(1px, -1px);
+}
+
+/* The freshness line. A dashboard that hides its own staleness is lying, so
+   every page carries this and it is never decorative. */
+.fetched-at {
+  margin-top: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  line-height: var(--lh-label);
+  letter-spacing: var(--track-label);
+  color: var(--fg-muted);
+}
+
+.fetched-at svg {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+}
+
+.fetched-at time {
+  font: inherit;
+}
+
+.fetched-sep {
+  color: var(--border-strong);
+}
+
+/* A partial snapshot says so, in the functional warning colour rather than
+   the accent - it is a state, not a brand moment. */
+.notice {
+  margin-top: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border: var(--hairline) solid var(--border-strong);
+  border-left: 2px solid var(--warning);
+  border-radius: var(--radius);
+  background: var(--bg-surface);
+  font-size: var(--text-small);
+  line-height: var(--lh-small);
+  color: var(--fg-muted);
+}
+
+.notice strong {
+  color: var(--fg);
+  font-weight: 500;
+}
+
+/* ============================================================
+   Stat tiles - the headline numbers
+   ============================================================ */
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-3);
+}
+
+.stat {
+  padding: var(--space-5);
+  background: var(--bg-surface);
+  border: var(--hairline) solid var(--border-strong);
+  border-radius: var(--radius-lg);
+}
+
+.stat-value {
+  font-family: var(--font-mono);
+  font-size: 1.75rem;
+  line-height: 1.1;
+  font-weight: 500;
+  letter-spacing: var(--track-tight);
+  color: var(--fg);
+  font-variant-numeric: tabular-nums;
+}
+
+/* One emerald figure per page - design-system.md §2.6, and the rule this
+   surface most needs. Fifty green numbers is the accent diluted until it
+   signals nothing. */
+.stat--headline .stat-value {
+  color: var(--brand);
+}
+
+.stat-label {
+  margin-top: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  line-height: var(--lh-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.stat-note {
+  margin-top: var(--space-1);
+  font-size: var(--text-label);
+  line-height: var(--lh-label);
+  color: var(--fg-muted);
+}
+
+/* ============================================================
+   Tables - design-system.md §12 / DESIGN.md §12
+   Horizontal dividers only, mono for data, overflow contained.
+   ============================================================ */
+
+.table-wrap {
+  overflow-x: auto;
+  border: var(--hairline) solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
+}
+
+table.data {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-small);
+}
+
+table.data th {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  line-height: var(--lh-label);
+  font-weight: 500;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: var(--hairline) solid var(--border);
+  white-space: nowrap;
+}
+
+table.data td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: var(--hairline) solid var(--border);
+  vertical-align: middle;
+  color: var(--fg);
+}
+
+table.data tbody tr:last-child td {
+  border-bottom: none;
+}
+
+table.data tbody tr {
+  transition: background-color var(--dur) var(--ease);
+}
+
+table.data tbody tr:hover {
+  background: var(--surface-hover);
+}
+
+/* Numbers, dates, durations and SHAs are data - mono, tabular, right-aligned.
+   Names and titles stay in the sans face, left-aligned. */
+.num,
+td.num,
+th.num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  letter-spacing: var(--track-label);
+}
+
+.repo-name {
+  font-weight: 500;
+  color: var(--fg);
+  white-space: nowrap;
+}
+
+a.repo-name:hover {
+  color: var(--brand);
+}
+
+.repo-desc {
+  margin-top: var(--space-1);
+  font-size: var(--text-label);
+  line-height: var(--lh-label);
+  color: var(--fg-muted);
+  max-width: 46ch;
+}
+
+.muted {
+  color: var(--fg-muted);
+}
+
+/* ============================================================
+   Status - neutral is the common case
+   ============================================================ */
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  line-height: 1;
+  letter-spacing: var(--track-label);
+  color: var(--fg-muted);
+  white-space: nowrap;
+}
+
+.status::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  background: var(--fg-muted);
+}
+
+/* Passing and idle are neutral. Only failure and in-progress take colour,
+   and both are functional states, not brand ones. */
+.status--failure::before {
+  background: var(--error);
+}
+
+.status--failure {
+  color: var(--error);
+}
+
+.status--progress::before {
+  background: var(--warning);
+}
+
+.status--progress {
+  color: var(--warning);
+}
+
+.status--live::before {
+  background: var(--brand);
+}
+
+/* ============================================================
+   Contribution heatmap
+   ============================================================ */
+
+.heatmap-wrap {
+  overflow-x: auto;
+  padding-bottom: var(--space-2);
+}
+
+.heatmap {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(7, 11px);
+  gap: 3px;
+  min-width: max-content;
+}
+
+.heatmap-day {
+  width: 11px;
+  height: 11px;
+  border-radius: 2px;
+  background: var(--bg-surface);
+  border: var(--hairline) solid var(--border);
+}
+
+/* Four steps of the one accent, not four hues. Opacity rather than four
+   hand-picked greens keeps it correct in both themes from one declaration. */
+.heatmap-day[data-level="1"] {
+  background: color-mix(in srgb, var(--brand) 28%, var(--bg-surface));
+  border-color: transparent;
+}
+
+.heatmap-day[data-level="2"] {
+  background: color-mix(in srgb, var(--brand) 52%, var(--bg-surface));
+  border-color: transparent;
+}
+
+.heatmap-day[data-level="3"] {
+  background: color-mix(in srgb, var(--brand) 76%, var(--bg-surface));
+  border-color: transparent;
+}
+
+.heatmap-day[data-level="4"] {
+  background: var(--brand);
+  border-color: transparent;
+}
+
+.heatmap-legend {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  letter-spacing: var(--track-label);
+  color: var(--fg-muted);
+}
+
+.heatmap-legend .heatmap-day {
+  cursor: default;
+}
+
+/* ============================================================
+   Chart marks
+
+   Charts get three values and no more. The neutral is the default fill for
+   every mark: one colour per chart, because shading bars by rank would
+   double-encode length as tone. The accent is spent on the single mark that
+   is the point of the chart, and `--error` only where a state is genuinely
+   bad. Both mixes resolve against whatever `--fg` and `--bg` currently are,
+   so one declaration is correct in both themes.
+
+   Measured against the page surface: the neutral is 5.7:1 on Carbon and
+   4.0:1 on Paper, both clear of the 3:1 floor for a meaningful graphic.
+   ============================================================ */
+:root {
+  --chart-mark: color-mix(in srgb, var(--fg) 55%, var(--bg));
+  --chart-mark-hover: color-mix(in srgb, var(--fg) 72%, var(--bg));
+  --chart-grid: color-mix(in srgb, var(--fg) 14%, var(--bg));
+}
+
+/* A caption under a chart, for the thing the marks cannot say themselves —
+   what the window is, or which column is still filling up. */
+.chart-note {
+  margin-top: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  line-height: var(--lh-label);
+  letter-spacing: var(--track-label);
+  color: var(--fg-muted);
+}
+
+/* ============================================================
+   Language bar
+   ============================================================ */
+
+.lang-bar {
+  display: flex;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  background: var(--bg-surface);
+  border: var(--hairline) solid var(--border);
+}
+
+.lang-bar span {
+  display: block;
+  height: 100%;
+}
+
+.lang-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  margin-top: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  letter-spacing: var(--track-label);
+  color: var(--fg-muted);
+}
+
+.lang-legend li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.lang-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
+
+/* ============================================================
+   Activity feed
+   ============================================================ */
+
+.feed {
+  border: var(--hairline) solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
+  overflow: hidden;
+}
+
+.feed-row {
+  display: grid;
+  grid-template-columns: 92px 1fr auto;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: var(--hairline) solid var(--border);
+  transition: background-color var(--dur) var(--ease);
+}
+
+.feed-row:last-child {
+  border-bottom: none;
+}
+
+.feed-row:hover {
+  background: var(--surface-hover);
+}
+
+.feed-kind {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.feed-main {
+  min-width: 0;
+}
+
+.feed-title {
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--fg);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.feed-title:hover {
+  color: var(--brand);
+}
+
+.feed-meta {
+  margin-top: 2px;
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  letter-spacing: var(--track-label);
+  color: var(--fg-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.feed-when {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  letter-spacing: var(--track-label);
+  color: var(--fg-muted);
+  white-space: nowrap;
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .feed-row {
+    grid-template-columns: 1fr auto;
+    row-gap: var(--space-1);
+  }
+
+  .feed-kind {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ============================================================
+   Filters & controls
+   ============================================================ */
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.control-select {
+  height: var(--control-h);
+  padding: 0 var(--space-3);
+  background: var(--bg-surface);
+  border: var(--hairline) solid var(--border-input);
+  border-radius: var(--radius);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: var(--text-small);
+  outline: none;
+  transition:
+    border-color var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease);
+}
+
+.control-select:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 var(--ring-width) var(--ring);
+}
+
+.control-count {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  letter-spacing: var(--track-label);
+  color: var(--fg-muted);
+  margin-left: auto;
+}
+
+/* ============================================================
+   Empty states - a zero says so plainly
+   ============================================================ */
+
+.empty {
+  padding: var(--space-12) var(--space-6);
+  text-align: center;
+  color: var(--fg-muted);
+}
+
+.empty h3 {
+  color: var(--fg);
+  font-size: var(--text-h3);
+  font-weight: 500;
+}
+
+.empty p {
+  margin: var(--space-2) auto 0;
+  font-size: var(--text-small);
+  max-width: 44ch;
+}
+
+/* ============================================================
+   Cards & links out
+   ============================================================ */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-3);
+}
+
+.site-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  background: var(--bg-surface);
+  border: var(--hairline) solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  transition:
+    background var(--dur) var(--ease),
+    border-color var(--dur) var(--ease);
+}
+
+a.site-card:hover {
+  background: var(--surface-hover);
+  border-color: var(--brand);
+}
+
+.site-card-host {
+  font-family: var(--font-mono);
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--fg);
+  overflow-wrap: anywhere;
+}
+
+a.site-card:hover .site-card-host {
+  color: var(--brand);
+}
+
+.site-card-repo {
+  font-size: var(--text-label);
+  color: var(--fg-muted);
+}
+
+.site-card-foot {
+  margin-top: auto;
+  padding-top: var(--space-3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  letter-spacing: var(--track-label);
+  color: var(--fg-muted);
+}
+
+/* --- Footer ------------------------------------------------------------- */
+
+.site-footer {
+  border-top: var(--hairline) solid var(--border);
+  padding: var(--space-8) 0;
+  margin-top: auto;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  text-align: center;
+  color: var(--fg-muted);
+  font-size: var(--text-small);
+}
+
+.footer-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  letter-spacing: var(--track-label);
+}
+
+.footer-meta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.footer-meta a:hover {
+  color: var(--brand);
+}
+
+.footer-meta svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.footer-sep {
+  color: var(--border-strong);
+}
+
+/* --- 404 ---------------------------------------------------------------- */
+
+.error-page {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--space-4);
+  padding: var(--space-16) 0;
+}
+
+.error-code {
+  font-family: var(--font-mono);
+  font-size: var(--text-display);
+  line-height: 1;
+  color: var(--brand);
+}
+
+@media (max-width: 720px) {
+  .page-title {
+    font-size: 2.125rem;
+  }
+
+  .section {
+    padding-top: var(--space-10);
+  }
+
+  .section + .section {
+    margin-top: var(--space-10);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

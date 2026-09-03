@@ -1,0 +1,116 @@
+---
+import { meta } from "../lib/snapshot";
+import { dateTime } from "../lib/format";
+
+interface Props {
+  title: string;
+  lead?: string;
+  /** Breadcrumb segments after `home`. */
+  path?: { label: string; href: string }[];
+}
+
+const { title, lead, path = [] } = Astro.props;
+---
+
+<div class="page-head">
+  <nav class="page-path" aria-label="Breadcrumb">
+    <a href="/">home</a>
+    {
+      path.map((seg, i) => (
+        <>
+          <span aria-hidden="true">/</span>
+          <a
+            href={seg.href}
+            aria-current={i === path.length - 1 ? "page" : undefined}
+          >
+            {seg.label}
+          </a>
+        </>
+      ))
+    }
+  </nav>
+
+  <h1 class="page-title">{title}</h1>
+  {
+    /* A `lead` slot for the pages whose lead carries a link; the string prop
+       stays for the pages whose lead is plain text. */
+    Astro.slots.has("lead") ? (
+      <p class="page-lead">
+        <slot name="lead" />
+      </p>
+    ) : (
+      lead && <p class="page-lead">{lead}</p>
+    )
+  }
+
+  <!-- Every page states when its data was last fetched. A dashboard that
+       hides its own staleness is lying. -->
+  <p class="fetched-at">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.75"
+      stroke-linecap="round"
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="9"></circle>
+      <path d="M12 7v5l3 2"></path>
+    </svg>
+    <span>
+      Fetched <time datetime={meta.fetchedAt}>{dateTime(meta.fetchedAt)}</time>
+    </span>
+    <!-- The same instant in the visitor's own zone. Rendered empty and
+         revealed by script: only the browser knows where the reader is, so
+         a build-time render would have to guess. Without JavaScript the UTC
+         reading above stands on its own and no empty separator appears. -->
+    <span class="fetched-sep" aria-hidden="true" hidden>/</span>
+    <span class="fetched-local" data-iso={meta.fetchedAt} hidden></span>
+  </p>
+
+  {
+    meta.partial && (
+      <p class="notice">
+        <strong>Partial snapshot.</strong> Some sources did not answer on the
+        last refresh, so figures below may be incomplete:{" "}
+        {meta.warnings.slice(0, 3).join("; ")}
+        {meta.warnings.length > 3 && ` (+${meta.warnings.length - 3} more)`}
+      </p>
+    )
+  }
+</div>
+
+<script>
+  // Local time is a per-visitor value, so it is filled in on the client. The
+  // UTC reading stays in the markup either way — this adds a second reading,
+  // it never replaces the first.
+  for (const el of document.querySelectorAll<HTMLElement>(".fetched-local")) {
+    const iso = el.dataset.iso;
+    if (!iso) continue;
+
+    const when = new Date(iso);
+    if (Number.isNaN(when.getTime())) continue;
+
+    try {
+      const zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      const stamp = new Intl.DateTimeFormat(undefined, {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false,
+      }).format(when);
+
+      el.textContent = zone
+        ? `${stamp} your time (${zone})`
+        : `${stamp} your time`;
+      el.hidden = false;
+
+      const sep = el.previousElementSibling as HTMLElement | null;
+      if (sep?.classList.contains("fetched-sep")) sep.hidden = false;
+    } catch {
+      // An environment without a resolvable zone keeps the UTC reading only.
+    }
+  }
+</script>

@@ -1,0 +1,7053 @@
+{
+  "meta": {
+    "fetchedAt": "2026-09-02T15:44:10.349Z",
+    "login": "dileepadev",
+    "source": "GitHub REST + GraphQL, public data only",
+    "durationMs": 10422,
+    "authenticated": true,
+    "partial": false,
+    "warnings": [],
+    "rateLimit": {
+      "limit": 5000,
+      "remaining": 5000,
+      "resetAt": "2026-09-02T16:44:10.000Z"
+    }
+  },
+  "profile": {
+    "login": "dileepadev",
+    "name": "Dileepa Bandara",
+    "bio": "AI Engineer • Gold Microsoft Student Ambassador (Alumni)",
+    "company": "Random Software Ltd.",
+    "location": "Sri Lanka",
+    "blog": "https://dileepa.dev",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/251038784?v=4",
+    "htmlUrl": "https://github.com/dileepadev",
+    "publicRepos": 56,
+    "followers": 4,
+    "following": 0,
+    "createdAt": "2025-12-22T17:19:29Z"
+  },
+  "contributions": {
+    "from": "2025-08-30T18:30:00Z",
+    "to": "2026-09-02T18:29:59Z",
+    "totalCommits": 1837,
+    "totalPullRequests": 66,
+    "totalIssues": 39,
+    "totalRepositories": 56,
+    "privateContributions": 25,
+    "calendarTotal": 2035,
+    "weeks": [
+      [
+        {
+          "date": "2025-08-31",
+          "count": 0,
+          "weekday": 0
+        },
+        {
+          "date": "2025-09-01",
+          "count": 0,
+          "weekday": 1
+        },
+        {
+          "date": "2025-09-02",
+          "count": 0,
+          "weekday": 2
+        },
+        {
+          "date": "2025-09-03",
+          "count": 0,
+          "weekday": 3
+        },
+        {
+          "date": "2025-09-04",
+          "count": 0,
+          "weekday": 4
+        },
+        {
+          "date": "2025-09-05",
+          "count": 0,
+          "weekday": 5
+        },
+        {
+          "date": "2025-09-06",
+          "count": 0,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2025-09-07",
+          "count": 0,
+          "weekday": 0
+        },
+        {
+          "date": "2025-09-08",
+          "count": 0,
+          "weekday": 1
+        },
+        {
+          "date": "2025-09-09",
+          "count": 0,
+          "weekday": 2
+        },
+        {
+          "date": "2025-09-10",
+          "count": 0,
+          "weekday": 3
+        },
+        {
+          "date": "2025-09-11",
+          "count": 0,
+          "weekday": 4
+        },
+        {
+          "date": "2025-09-12",
+          "count": 0,
+          "weekday": 5
+        },
+        {
+          "date": "2025-09-13",
+          "count": 0,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2025-09-14",
+          "count": 0,
+          "weekday": 0
+        },
+        {
+          "date": "2025-09-15",
+          "count": 0,
+          "weekday": 1
+        },
+        {
+          "date": "2025-09-16",
+          "count": 0,
+          "weekday": 2
+        },
+        {
+          "date": "2025-09-17",
+          "count": 0,
+          "weekday": 3
+        },
+        {
+          "date": "2025-09-18",
+          "count": 0,
+          "weekday": 4
+        },
+        {
+          "date": "2025-09-19",
+          "count": 0,
+          "weekday": 5
+        },
+        {
+          "date": "2025-09-20",
+          "count": 0,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2025-09-21",
+          "count": 0,
+          "weekday": 0
+        },
+        {
+          "date": "2025-09-22",
+          "count": 0,
+          "weekday": 1
+        },
+        {
+          "date": "2025-09-23",
+          "count": 0,
+          "weekday": 2
+        },
+        {
+          "date": "2025-09-24",
+          "count": 0,
+          "weekday": 3
+        },
+        {
+          "date": "2025-09-25",
+          "count": 0,
+          "weekday": 4
+        },
+        {
+          "date": "2025-09-26",
+          "count": 0,
+          "weekday": 5
+        },
+        {
+          "date": "2025-09-27",
+          "count": 0,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2025-09-28",
+          "count": 0,
+          "weekday": 0
+        },
+        {
+          "date": "2025-09-29",
+          "count": 0,
+          "weekday": 1
+        },
+        {
+          "date": "2025-09-30",
+          "count": 0,
+          "weekday": 2
+        },
+        {
+          "date": "2025-10-01",
+          "count": 0,
+          "weekday": 3
+        },
+        {
+          "date": "2025-10-02",
+          "count": 0,
+          "weekday": 4
+        },
+        {
+          "date": "2025-10-03",
+          "count": 0,
+          "weekday": 5
+        },
+        {
+          "date": "2025-10-04",
+          "count": 0,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2025-10-05",
+          "count": 0,
+          "weekday": 0
+        },
+        {
+          "date": "2025-10-06",
+          "count": 0,
+          "weekday": 1
+        },
+        {
+          "date": "2025-10-07",
+          "count": 0,
+          "weekday": 2
+        },
+        {
+          "date": "2025-10-08",
+          "count": 0,
+          "weekday": 3
+        },
+        {
+          "date": "2025-10-09",
+          "count": 0,
+          "weekday": 4
+        },
+        {
+          "date": "2025-10-10",
+          "count": 0,
+          "weekday": 5
+        },
+        {
+          "date": "2025-10-11",
+          "count": 0,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2025-10-12",
+          "count": 0,
+          "weekday": 0
+        },
+        {
+          "date": "2025-10-13",
+          "count": 0,
+          "weekday": 1
+        },
+        {
+          "date": "2025-10-14",
+          "count": 0,
+          "weekday": 2
+        },
+        {
+          "date": "2025-10-15",
+          "count": 0,
+          "weekday": 3
+        },
+        {
+          "date": "2025-10-16",
+          "count": 0,
+          "weekday": 4
+        },
+        {
+          "date": "2025-10-17",
+          "count": 0,
+          "weekday": 5
+        },
+        {
+          "date": "2025-10-18",
+          "count": 0,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2025-10-19",
+          "count": 0,
+          "weekday": 0
+        },
+        {
+          "date": "2025-10-20",
+          "count": 0,
+          "weekday": 1
+        },
+        {
+          "date": "2025-10-21",
+          "count": 0,
+          "weekday": 2
+        },
+        {
+          "date": "2025-10-22",
+          "count": 0,
+          "weekday": 3
+        },
+        {
+          "date": "2025-10-23",
+          "count": 0,
+          "weekday": 4
+        },
+        {
+          "date": "2025-10-24",
+          "count": 0,
+          "weekday": 5
+        },
+        {
+          "date": "2025-10-25",
+          "count": 0,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2025-10-26",
+          "count": 0,
+          "weekday": 0
+        },
+        {
+          "date": "2025-10-27",
+          "count": 0,
+          "weekday": 1
+        },
+        {
+          "date": "2025-10-28",
+          "count": 0,
+          "weekday": 2
+        },
+        {
+          "date": "2025-10-29",
+          "count": 0,
+          "weekday": 3
+        },
+        {
+          "date": "2025-10-30",
+          "count": 0,
+          "weekday": 4
+        },
+        {
+          "date": "2025-10-31",
+          "count": 0,
+          "weekday": 5
+        },
+        {
+          "date": "2025-11-01",
+          "count": 0,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2025-11-02",
+          "count": 0,
+          "weekday": 0
+        },
+        {
+          "date": "2025-11-03",
+          "count": 0,
+          "weekday": 1
+        },
+        {
+          "date": "2025-11-04",
+          "count": 0,
+          "weekday": 2
+        },
+        {
+          "date": "2025-11-05",
+          "count": 0,
+          "weekday": 3
+        },
+        {
+          "date": "2025-11-06",
+          "count": 0,
+          "weekday": 4
+        },
+        {
+          "date": "2025-11-07",
+          "count": 0,
+          "weekday": 5
+        },
+        {
+          "date": "2025-11-08",
+          "count": 0,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2025-11-09",
+          "count": 0,
+          "weekday": 0
+        },
+        {
+          "date": "2025-11-10",
+          "count": 0,
+          "weekday": 1
+        },
+        {
+          "date": "2025-11-11",
+          "count": 0,
+          "weekday": 2
+        },
+        {
+          "date": "2025-11-12",
+          "count": 0,
+          "weekday": 3
+        },
+        {
+          "date": "2025-11-13",
+          "count": 0,
+          "weekday": 4
+        },
+        {
+          "date": "2025-11-14",
+          "count": 0,
+          "weekday": 5
+        },
+        {
+          "date": "2025-11-15",
+          "count": 0,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2025-11-16",
+          "count": 0,
+          "weekday": 0
+        },
+        {
+          "date": "2025-11-17",
+          "count": 0,
+          "weekday": 1
+        },
+        {
+          "date": "2025-11-18",
+          "count": 0,
+          "weekday": 2
+        },
+        {
+          "date": "2025-11-19",
+          "count": 0,
+          "weekday": 3
+        },
+        {
+          "date": "2025-11-20",
+          "count": 0,
+          "weekday": 4
+        },
+        {
+          "date": "2025-11-21",
+          "count": 0,
+          "weekday": 5
+        },
+        {
+          "date": "2025-11-22",
+          "count": 0,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2025-11-23",
+          "count": 0,
+          "weekday": 0
+        },
+        {
+          "date": "2025-11-24",
+          "count": 0,
+          "weekday": 1
+        },
+        {
+          "date": "2025-11-25",
+          "count": 0,
+          "weekday": 2
+        },
+        {
+          "date": "2025-11-26",
+          "count": 0,
+          "weekday": 3
+        },
+        {
+          "date": "2025-11-27",
+          "count": 0,
+          "weekday": 4
+        },
+        {
+          "date": "2025-11-28",
+          "count": 0,
+          "weekday": 5
+        },
+        {
+          "date": "2025-11-29",
+          "count": 0,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2025-11-30",
+          "count": 0,
+          "weekday": 0
+        },
+        {
+          "date": "2025-12-01",
+          "count": 0,
+          "weekday": 1
+        },
+        {
+          "date": "2025-12-02",
+          "count": 0,
+          "weekday": 2
+        },
+        {
+          "date": "2025-12-03",
+          "count": 0,
+          "weekday": 3
+        },
+        {
+          "date": "2025-12-04",
+          "count": 0,
+          "weekday": 4
+        },
+        {
+          "date": "2025-12-05",
+          "count": 0,
+          "weekday": 5
+        },
+        {
+          "date": "2025-12-06",
+          "count": 0,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2025-12-07",
+          "count": 0,
+          "weekday": 0
+        },
+        {
+          "date": "2025-12-08",
+          "count": 0,
+          "weekday": 1
+        },
+        {
+          "date": "2025-12-09",
+          "count": 0,
+          "weekday": 2
+        },
+        {
+          "date": "2025-12-10",
+          "count": 0,
+          "weekday": 3
+        },
+        {
+          "date": "2025-12-11",
+          "count": 0,
+          "weekday": 4
+        },
+        {
+          "date": "2025-12-12",
+          "count": 0,
+          "weekday": 5
+        },
+        {
+          "date": "2025-12-13",
+          "count": 0,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2025-12-14",
+          "count": 0,
+          "weekday": 0
+        },
+        {
+          "date": "2025-12-15",
+          "count": 0,
+          "weekday": 1
+        },
+        {
+          "date": "2025-12-16",
+          "count": 0,
+          "weekday": 2
+        },
+        {
+          "date": "2025-12-17",
+          "count": 0,
+          "weekday": 3
+        },
+        {
+          "date": "2025-12-18",
+          "count": 0,
+          "weekday": 4
+        },
+        {
+          "date": "2025-12-19",
+          "count": 0,
+          "weekday": 5
+        },
+        {
+          "date": "2025-12-20",
+          "count": 0,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2025-12-21",
+          "count": 0,
+          "weekday": 0
+        },
+        {
+          "date": "2025-12-22",
+          "count": 5,
+          "weekday": 1
+        },
+        {
+          "date": "2025-12-23",
+          "count": 4,
+          "weekday": 2
+        },
+        {
+          "date": "2025-12-24",
+          "count": 5,
+          "weekday": 3
+        },
+        {
+          "date": "2025-12-25",
+          "count": 4,
+          "weekday": 4
+        },
+        {
+          "date": "2025-12-26",
+          "count": 9,
+          "weekday": 5
+        },
+        {
+          "date": "2025-12-27",
+          "count": 17,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2025-12-28",
+          "count": 15,
+          "weekday": 0
+        },
+        {
+          "date": "2025-12-29",
+          "count": 11,
+          "weekday": 1
+        },
+        {
+          "date": "2025-12-30",
+          "count": 10,
+          "weekday": 2
+        },
+        {
+          "date": "2025-12-31",
+          "count": 43,
+          "weekday": 3
+        },
+        {
+          "date": "2026-01-01",
+          "count": 13,
+          "weekday": 4
+        },
+        {
+          "date": "2026-01-02",
+          "count": 5,
+          "weekday": 5
+        },
+        {
+          "date": "2026-01-03",
+          "count": 6,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-01-04",
+          "count": 6,
+          "weekday": 0
+        },
+        {
+          "date": "2026-01-05",
+          "count": 8,
+          "weekday": 1
+        },
+        {
+          "date": "2026-01-06",
+          "count": 8,
+          "weekday": 2
+        },
+        {
+          "date": "2026-01-07",
+          "count": 5,
+          "weekday": 3
+        },
+        {
+          "date": "2026-01-08",
+          "count": 5,
+          "weekday": 4
+        },
+        {
+          "date": "2026-01-09",
+          "count": 9,
+          "weekday": 5
+        },
+        {
+          "date": "2026-01-10",
+          "count": 5,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-01-11",
+          "count": 13,
+          "weekday": 0
+        },
+        {
+          "date": "2026-01-12",
+          "count": 5,
+          "weekday": 1
+        },
+        {
+          "date": "2026-01-13",
+          "count": 7,
+          "weekday": 2
+        },
+        {
+          "date": "2026-01-14",
+          "count": 11,
+          "weekday": 3
+        },
+        {
+          "date": "2026-01-15",
+          "count": 16,
+          "weekday": 4
+        },
+        {
+          "date": "2026-01-16",
+          "count": 6,
+          "weekday": 5
+        },
+        {
+          "date": "2026-01-17",
+          "count": 6,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-01-18",
+          "count": 11,
+          "weekday": 0
+        },
+        {
+          "date": "2026-01-19",
+          "count": 12,
+          "weekday": 1
+        },
+        {
+          "date": "2026-01-20",
+          "count": 9,
+          "weekday": 2
+        },
+        {
+          "date": "2026-01-21",
+          "count": 7,
+          "weekday": 3
+        },
+        {
+          "date": "2026-01-22",
+          "count": 8,
+          "weekday": 4
+        },
+        {
+          "date": "2026-01-23",
+          "count": 7,
+          "weekday": 5
+        },
+        {
+          "date": "2026-01-24",
+          "count": 5,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-01-25",
+          "count": 5,
+          "weekday": 0
+        },
+        {
+          "date": "2026-01-26",
+          "count": 8,
+          "weekday": 1
+        },
+        {
+          "date": "2026-01-27",
+          "count": 6,
+          "weekday": 2
+        },
+        {
+          "date": "2026-01-28",
+          "count": 5,
+          "weekday": 3
+        },
+        {
+          "date": "2026-01-29",
+          "count": 10,
+          "weekday": 4
+        },
+        {
+          "date": "2026-01-30",
+          "count": 10,
+          "weekday": 5
+        },
+        {
+          "date": "2026-01-31",
+          "count": 5,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-02-01",
+          "count": 11,
+          "weekday": 0
+        },
+        {
+          "date": "2026-02-02",
+          "count": 12,
+          "weekday": 1
+        },
+        {
+          "date": "2026-02-03",
+          "count": 9,
+          "weekday": 2
+        },
+        {
+          "date": "2026-02-04",
+          "count": 15,
+          "weekday": 3
+        },
+        {
+          "date": "2026-02-05",
+          "count": 8,
+          "weekday": 4
+        },
+        {
+          "date": "2026-02-06",
+          "count": 8,
+          "weekday": 5
+        },
+        {
+          "date": "2026-02-07",
+          "count": 5,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-02-08",
+          "count": 7,
+          "weekday": 0
+        },
+        {
+          "date": "2026-02-09",
+          "count": 9,
+          "weekday": 1
+        },
+        {
+          "date": "2026-02-10",
+          "count": 5,
+          "weekday": 2
+        },
+        {
+          "date": "2026-02-11",
+          "count": 5,
+          "weekday": 3
+        },
+        {
+          "date": "2026-02-12",
+          "count": 5,
+          "weekday": 4
+        },
+        {
+          "date": "2026-02-13",
+          "count": 5,
+          "weekday": 5
+        },
+        {
+          "date": "2026-02-14",
+          "count": 8,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-02-15",
+          "count": 5,
+          "weekday": 0
+        },
+        {
+          "date": "2026-02-16",
+          "count": 8,
+          "weekday": 1
+        },
+        {
+          "date": "2026-02-17",
+          "count": 5,
+          "weekday": 2
+        },
+        {
+          "date": "2026-02-18",
+          "count": 15,
+          "weekday": 3
+        },
+        {
+          "date": "2026-02-19",
+          "count": 14,
+          "weekday": 4
+        },
+        {
+          "date": "2026-02-20",
+          "count": 17,
+          "weekday": 5
+        },
+        {
+          "date": "2026-02-21",
+          "count": 6,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-02-22",
+          "count": 5,
+          "weekday": 0
+        },
+        {
+          "date": "2026-02-23",
+          "count": 6,
+          "weekday": 1
+        },
+        {
+          "date": "2026-02-24",
+          "count": 5,
+          "weekday": 2
+        },
+        {
+          "date": "2026-02-25",
+          "count": 5,
+          "weekday": 3
+        },
+        {
+          "date": "2026-02-26",
+          "count": 8,
+          "weekday": 4
+        },
+        {
+          "date": "2026-02-27",
+          "count": 5,
+          "weekday": 5
+        },
+        {
+          "date": "2026-02-28",
+          "count": 9,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-03-01",
+          "count": 7,
+          "weekday": 0
+        },
+        {
+          "date": "2026-03-02",
+          "count": 19,
+          "weekday": 1
+        },
+        {
+          "date": "2026-03-03",
+          "count": 7,
+          "weekday": 2
+        },
+        {
+          "date": "2026-03-04",
+          "count": 10,
+          "weekday": 3
+        },
+        {
+          "date": "2026-03-05",
+          "count": 8,
+          "weekday": 4
+        },
+        {
+          "date": "2026-03-06",
+          "count": 8,
+          "weekday": 5
+        },
+        {
+          "date": "2026-03-07",
+          "count": 5,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-03-08",
+          "count": 7,
+          "weekday": 0
+        },
+        {
+          "date": "2026-03-09",
+          "count": 5,
+          "weekday": 1
+        },
+        {
+          "date": "2026-03-10",
+          "count": 5,
+          "weekday": 2
+        },
+        {
+          "date": "2026-03-11",
+          "count": 6,
+          "weekday": 3
+        },
+        {
+          "date": "2026-03-12",
+          "count": 5,
+          "weekday": 4
+        },
+        {
+          "date": "2026-03-13",
+          "count": 5,
+          "weekday": 5
+        },
+        {
+          "date": "2026-03-14",
+          "count": 5,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-03-15",
+          "count": 5,
+          "weekday": 0
+        },
+        {
+          "date": "2026-03-16",
+          "count": 5,
+          "weekday": 1
+        },
+        {
+          "date": "2026-03-17",
+          "count": 5,
+          "weekday": 2
+        },
+        {
+          "date": "2026-03-18",
+          "count": 5,
+          "weekday": 3
+        },
+        {
+          "date": "2026-03-19",
+          "count": 5,
+          "weekday": 4
+        },
+        {
+          "date": "2026-03-20",
+          "count": 5,
+          "weekday": 5
+        },
+        {
+          "date": "2026-03-21",
+          "count": 5,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-03-22",
+          "count": 5,
+          "weekday": 0
+        },
+        {
+          "date": "2026-03-23",
+          "count": 5,
+          "weekday": 1
+        },
+        {
+          "date": "2026-03-24",
+          "count": 5,
+          "weekday": 2
+        },
+        {
+          "date": "2026-03-25",
+          "count": 6,
+          "weekday": 3
+        },
+        {
+          "date": "2026-03-26",
+          "count": 5,
+          "weekday": 4
+        },
+        {
+          "date": "2026-03-27",
+          "count": 5,
+          "weekday": 5
+        },
+        {
+          "date": "2026-03-28",
+          "count": 5,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-03-29",
+          "count": 5,
+          "weekday": 0
+        },
+        {
+          "date": "2026-03-30",
+          "count": 5,
+          "weekday": 1
+        },
+        {
+          "date": "2026-03-31",
+          "count": 5,
+          "weekday": 2
+        },
+        {
+          "date": "2026-04-01",
+          "count": 6,
+          "weekday": 3
+        },
+        {
+          "date": "2026-04-02",
+          "count": 5,
+          "weekday": 4
+        },
+        {
+          "date": "2026-04-03",
+          "count": 5,
+          "weekday": 5
+        },
+        {
+          "date": "2026-04-04",
+          "count": 5,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-04-05",
+          "count": 5,
+          "weekday": 0
+        },
+        {
+          "date": "2026-04-06",
+          "count": 7,
+          "weekday": 1
+        },
+        {
+          "date": "2026-04-07",
+          "count": 7,
+          "weekday": 2
+        },
+        {
+          "date": "2026-04-08",
+          "count": 7,
+          "weekday": 3
+        },
+        {
+          "date": "2026-04-09",
+          "count": 10,
+          "weekday": 4
+        },
+        {
+          "date": "2026-04-10",
+          "count": 12,
+          "weekday": 5
+        },
+        {
+          "date": "2026-04-11",
+          "count": 9,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-04-12",
+          "count": 11,
+          "weekday": 0
+        },
+        {
+          "date": "2026-04-13",
+          "count": 6,
+          "weekday": 1
+        },
+        {
+          "date": "2026-04-14",
+          "count": 5,
+          "weekday": 2
+        },
+        {
+          "date": "2026-04-15",
+          "count": 5,
+          "weekday": 3
+        },
+        {
+          "date": "2026-04-16",
+          "count": 10,
+          "weekday": 4
+        },
+        {
+          "date": "2026-04-17",
+          "count": 9,
+          "weekday": 5
+        },
+        {
+          "date": "2026-04-18",
+          "count": 5,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-04-19",
+          "count": 13,
+          "weekday": 0
+        },
+        {
+          "date": "2026-04-20",
+          "count": 8,
+          "weekday": 1
+        },
+        {
+          "date": "2026-04-21",
+          "count": 6,
+          "weekday": 2
+        },
+        {
+          "date": "2026-04-22",
+          "count": 13,
+          "weekday": 3
+        },
+        {
+          "date": "2026-04-23",
+          "count": 8,
+          "weekday": 4
+        },
+        {
+          "date": "2026-04-24",
+          "count": 10,
+          "weekday": 5
+        },
+        {
+          "date": "2026-04-25",
+          "count": 13,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-04-26",
+          "count": 11,
+          "weekday": 0
+        },
+        {
+          "date": "2026-04-27",
+          "count": 5,
+          "weekday": 1
+        },
+        {
+          "date": "2026-04-28",
+          "count": 9,
+          "weekday": 2
+        },
+        {
+          "date": "2026-04-29",
+          "count": 21,
+          "weekday": 3
+        },
+        {
+          "date": "2026-04-30",
+          "count": 33,
+          "weekday": 4
+        },
+        {
+          "date": "2026-05-01",
+          "count": 18,
+          "weekday": 5
+        },
+        {
+          "date": "2026-05-02",
+          "count": 8,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-05-03",
+          "count": 5,
+          "weekday": 0
+        },
+        {
+          "date": "2026-05-04",
+          "count": 12,
+          "weekday": 1
+        },
+        {
+          "date": "2026-05-05",
+          "count": 11,
+          "weekday": 2
+        },
+        {
+          "date": "2026-05-06",
+          "count": 10,
+          "weekday": 3
+        },
+        {
+          "date": "2026-05-07",
+          "count": 6,
+          "weekday": 4
+        },
+        {
+          "date": "2026-05-08",
+          "count": 5,
+          "weekday": 5
+        },
+        {
+          "date": "2026-05-09",
+          "count": 6,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-05-10",
+          "count": 5,
+          "weekday": 0
+        },
+        {
+          "date": "2026-05-11",
+          "count": 13,
+          "weekday": 1
+        },
+        {
+          "date": "2026-05-12",
+          "count": 5,
+          "weekday": 2
+        },
+        {
+          "date": "2026-05-13",
+          "count": 5,
+          "weekday": 3
+        },
+        {
+          "date": "2026-05-14",
+          "count": 6,
+          "weekday": 4
+        },
+        {
+          "date": "2026-05-15",
+          "count": 12,
+          "weekday": 5
+        },
+        {
+          "date": "2026-05-16",
+          "count": 7,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-05-17",
+          "count": 5,
+          "weekday": 0
+        },
+        {
+          "date": "2026-05-18",
+          "count": 5,
+          "weekday": 1
+        },
+        {
+          "date": "2026-05-19",
+          "count": 6,
+          "weekday": 2
+        },
+        {
+          "date": "2026-05-20",
+          "count": 5,
+          "weekday": 3
+        },
+        {
+          "date": "2026-05-21",
+          "count": 8,
+          "weekday": 4
+        },
+        {
+          "date": "2026-05-22",
+          "count": 6,
+          "weekday": 5
+        },
+        {
+          "date": "2026-05-23",
+          "count": 5,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-05-24",
+          "count": 5,
+          "weekday": 0
+        },
+        {
+          "date": "2026-05-25",
+          "count": 6,
+          "weekday": 1
+        },
+        {
+          "date": "2026-05-26",
+          "count": 5,
+          "weekday": 2
+        },
+        {
+          "date": "2026-05-27",
+          "count": 5,
+          "weekday": 3
+        },
+        {
+          "date": "2026-05-28",
+          "count": 5,
+          "weekday": 4
+        },
+        {
+          "date": "2026-05-29",
+          "count": 5,
+          "weekday": 5
+        },
+        {
+          "date": "2026-05-30",
+          "count": 5,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-05-31",
+          "count": 7,
+          "weekday": 0
+        },
+        {
+          "date": "2026-06-01",
+          "count": 7,
+          "weekday": 1
+        },
+        {
+          "date": "2026-06-02",
+          "count": 5,
+          "weekday": 2
+        },
+        {
+          "date": "2026-06-03",
+          "count": 5,
+          "weekday": 3
+        },
+        {
+          "date": "2026-06-04",
+          "count": 5,
+          "weekday": 4
+        },
+        {
+          "date": "2026-06-05",
+          "count": 5,
+          "weekday": 5
+        },
+        {
+          "date": "2026-06-06",
+          "count": 5,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-06-07",
+          "count": 5,
+          "weekday": 0
+        },
+        {
+          "date": "2026-06-08",
+          "count": 5,
+          "weekday": 1
+        },
+        {
+          "date": "2026-06-09",
+          "count": 5,
+          "weekday": 2
+        },
+        {
+          "date": "2026-06-10",
+          "count": 5,
+          "weekday": 3
+        },
+        {
+          "date": "2026-06-11",
+          "count": 5,
+          "weekday": 4
+        },
+        {
+          "date": "2026-06-12",
+          "count": 6,
+          "weekday": 5
+        },
+        {
+          "date": "2026-06-13",
+          "count": 7,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-06-14",
+          "count": 5,
+          "weekday": 0
+        },
+        {
+          "date": "2026-06-15",
+          "count": 5,
+          "weekday": 1
+        },
+        {
+          "date": "2026-06-16",
+          "count": 5,
+          "weekday": 2
+        },
+        {
+          "date": "2026-06-17",
+          "count": 5,
+          "weekday": 3
+        },
+        {
+          "date": "2026-06-18",
+          "count": 5,
+          "weekday": 4
+        },
+        {
+          "date": "2026-06-19",
+          "count": 5,
+          "weekday": 5
+        },
+        {
+          "date": "2026-06-20",
+          "count": 5,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-06-21",
+          "count": 5,
+          "weekday": 0
+        },
+        {
+          "date": "2026-06-22",
+          "count": 5,
+          "weekday": 1
+        },
+        {
+          "date": "2026-06-23",
+          "count": 5,
+          "weekday": 2
+        },
+        {
+          "date": "2026-06-24",
+          "count": 7,
+          "weekday": 3
+        },
+        {
+          "date": "2026-06-25",
+          "count": 9,
+          "weekday": 4
+        },
+        {
+          "date": "2026-06-26",
+          "count": 6,
+          "weekday": 5
+        },
+        {
+          "date": "2026-06-27",
+          "count": 5,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-06-28",
+          "count": 5,
+          "weekday": 0
+        },
+        {
+          "date": "2026-06-29",
+          "count": 5,
+          "weekday": 1
+        },
+        {
+          "date": "2026-06-30",
+          "count": 17,
+          "weekday": 2
+        },
+        {
+          "date": "2026-07-01",
+          "count": 5,
+          "weekday": 3
+        },
+        {
+          "date": "2026-07-02",
+          "count": 5,
+          "weekday": 4
+        },
+        {
+          "date": "2026-07-03",
+          "count": 5,
+          "weekday": 5
+        },
+        {
+          "date": "2026-07-04",
+          "count": 5,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-07-05",
+          "count": 5,
+          "weekday": 0
+        },
+        {
+          "date": "2026-07-06",
+          "count": 5,
+          "weekday": 1
+        },
+        {
+          "date": "2026-07-07",
+          "count": 5,
+          "weekday": 2
+        },
+        {
+          "date": "2026-07-08",
+          "count": 5,
+          "weekday": 3
+        },
+        {
+          "date": "2026-07-09",
+          "count": 5,
+          "weekday": 4
+        },
+        {
+          "date": "2026-07-10",
+          "count": 5,
+          "weekday": 5
+        },
+        {
+          "date": "2026-07-11",
+          "count": 5,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-07-12",
+          "count": 5,
+          "weekday": 0
+        },
+        {
+          "date": "2026-07-13",
+          "count": 5,
+          "weekday": 1
+        },
+        {
+          "date": "2026-07-14",
+          "count": 5,
+          "weekday": 2
+        },
+        {
+          "date": "2026-07-15",
+          "count": 5,
+          "weekday": 3
+        },
+        {
+          "date": "2026-07-16",
+          "count": 5,
+          "weekday": 4
+        },
+        {
+          "date": "2026-07-17",
+          "count": 5,
+          "weekday": 5
+        },
+        {
+          "date": "2026-07-18",
+          "count": 5,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-07-19",
+          "count": 5,
+          "weekday": 0
+        },
+        {
+          "date": "2026-07-20",
+          "count": 5,
+          "weekday": 1
+        },
+        {
+          "date": "2026-07-21",
+          "count": 6,
+          "weekday": 2
+        },
+        {
+          "date": "2026-07-22",
+          "count": 6,
+          "weekday": 3
+        },
+        {
+          "date": "2026-07-23",
+          "count": 5,
+          "weekday": 4
+        },
+        {
+          "date": "2026-07-24",
+          "count": 4,
+          "weekday": 5
+        },
+        {
+          "date": "2026-07-25",
+          "count": 7,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-07-26",
+          "count": 5,
+          "weekday": 0
+        },
+        {
+          "date": "2026-07-27",
+          "count": 5,
+          "weekday": 1
+        },
+        {
+          "date": "2026-07-28",
+          "count": 6,
+          "weekday": 2
+        },
+        {
+          "date": "2026-07-29",
+          "count": 5,
+          "weekday": 3
+        },
+        {
+          "date": "2026-07-30",
+          "count": 10,
+          "weekday": 4
+        },
+        {
+          "date": "2026-07-31",
+          "count": 6,
+          "weekday": 5
+        },
+        {
+          "date": "2026-08-01",
+          "count": 5,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-08-02",
+          "count": 5,
+          "weekday": 0
+        },
+        {
+          "date": "2026-08-03",
+          "count": 5,
+          "weekday": 1
+        },
+        {
+          "date": "2026-08-04",
+          "count": 5,
+          "weekday": 2
+        },
+        {
+          "date": "2026-08-05",
+          "count": 5,
+          "weekday": 3
+        },
+        {
+          "date": "2026-08-06",
+          "count": 9,
+          "weekday": 4
+        },
+        {
+          "date": "2026-08-07",
+          "count": 10,
+          "weekday": 5
+        },
+        {
+          "date": "2026-08-08",
+          "count": 5,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-08-09",
+          "count": 5,
+          "weekday": 0
+        },
+        {
+          "date": "2026-08-10",
+          "count": 10,
+          "weekday": 1
+        },
+        {
+          "date": "2026-08-11",
+          "count": 19,
+          "weekday": 2
+        },
+        {
+          "date": "2026-08-12",
+          "count": 7,
+          "weekday": 3
+        },
+        {
+          "date": "2026-08-13",
+          "count": 29,
+          "weekday": 4
+        },
+        {
+          "date": "2026-08-14",
+          "count": 26,
+          "weekday": 5
+        },
+        {
+          "date": "2026-08-15",
+          "count": 25,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-08-16",
+          "count": 27,
+          "weekday": 0
+        },
+        {
+          "date": "2026-08-17",
+          "count": 11,
+          "weekday": 1
+        },
+        {
+          "date": "2026-08-18",
+          "count": 2,
+          "weekday": 2
+        },
+        {
+          "date": "2026-08-19",
+          "count": 6,
+          "weekday": 3
+        },
+        {
+          "date": "2026-08-20",
+          "count": 24,
+          "weekday": 4
+        },
+        {
+          "date": "2026-08-21",
+          "count": 22,
+          "weekday": 5
+        },
+        {
+          "date": "2026-08-22",
+          "count": 16,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-08-23",
+          "count": 28,
+          "weekday": 0
+        },
+        {
+          "date": "2026-08-24",
+          "count": 16,
+          "weekday": 1
+        },
+        {
+          "date": "2026-08-25",
+          "count": 11,
+          "weekday": 2
+        },
+        {
+          "date": "2026-08-26",
+          "count": 54,
+          "weekday": 3
+        },
+        {
+          "date": "2026-08-27",
+          "count": 5,
+          "weekday": 4
+        },
+        {
+          "date": "2026-08-28",
+          "count": 0,
+          "weekday": 5
+        },
+        {
+          "date": "2026-08-29",
+          "count": 0,
+          "weekday": 6
+        }
+      ],
+      [
+        {
+          "date": "2026-08-30",
+          "count": 0,
+          "weekday": 0
+        },
+        {
+          "date": "2026-08-31",
+          "count": 8,
+          "weekday": 1
+        },
+        {
+          "date": "2026-09-01",
+          "count": 14,
+          "weekday": 2
+        },
+        {
+          "date": "2026-09-02",
+          "count": 8,
+          "weekday": 3
+        }
+      ]
+    ]
+  },
+  "totals": {
+    "repos": 56,
+    "ownedRepos": 56,
+    "forks": 0,
+    "archived": 0,
+    "stars": 3,
+    "languages": 19,
+    "releases": 39,
+    "workflowRuns": 183,
+    "deployments": 97,
+    "liveSites": 32,
+    "reposWithCi": 20
+  },
+  "languages": [
+    {
+      "name": "Python",
+      "bytes": 1580109,
+      "repos": 13,
+      "share": 23.2
+    },
+    {
+      "name": "TypeScript",
+      "bytes": 1578721,
+      "repos": 11,
+      "share": 23.2
+    },
+    {
+      "name": "Dart",
+      "bytes": 1032446,
+      "repos": 10,
+      "share": 15.2
+    },
+    {
+      "name": "Java",
+      "bytes": 905206,
+      "repos": 5,
+      "share": 13.3
+    },
+    {
+      "name": "HTML",
+      "bytes": 341838,
+      "repos": 14,
+      "share": 5
+    },
+    {
+      "name": "CSS",
+      "bytes": 298122,
+      "repos": 18,
+      "share": 4.4
+    },
+    {
+      "name": "Astro",
+      "bytes": 253274,
+      "repos": 5,
+      "share": 3.7
+    },
+    {
+      "name": "JavaScript",
+      "bytes": 201027,
+      "repos": 20,
+      "share": 3
+    },
+    {
+      "name": "C#",
+      "bytes": 194409,
+      "repos": 2,
+      "share": 2.9
+    },
+    {
+      "name": "MDX",
+      "bytes": 142258,
+      "repos": 1,
+      "share": 2.1
+    },
+    {
+      "name": "C++",
+      "bytes": 141904,
+      "repos": 6,
+      "share": 2.1
+    },
+    {
+      "name": "CMake",
+      "bytes": 106100,
+      "repos": 6,
+      "share": 1.6
+    },
+    {
+      "name": "Swift",
+      "bytes": 12421,
+      "repos": 10,
+      "share": 0.2
+    },
+    {
+      "name": "C",
+      "bytes": 8111,
+      "repos": 6,
+      "share": 0.1
+    },
+    {
+      "name": "Shell",
+      "bytes": 4914,
+      "repos": 1,
+      "share": 0.1
+    },
+    {
+      "name": "Kotlin",
+      "bytes": 1216,
+      "repos": 9,
+      "share": 0
+    },
+    {
+      "name": "Jupyter Notebook",
+      "bytes": 1151,
+      "repos": 1,
+      "share": 0
+    },
+    {
+      "name": "Objective-C",
+      "bytes": 342,
+      "repos": 9,
+      "share": 0
+    },
+    {
+      "name": "PowerShell",
+      "bytes": 249,
+      "repos": 1,
+      "share": 0
+    }
+  ],
+  "repos": [
+    {
+      "name": "dileepadev.github.io",
+      "description": "GitHub Pages site for updates.",
+      "url": "https://github.com/dileepadev/dileepadev.github.io",
+      "homepage": "https://dileepadev.github.io/",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 1,
+      "size": 29163,
+      "primaryLanguage": "CSS",
+      "languages": [
+        {
+          "name": "CSS",
+          "bytes": 2978
+        },
+        {
+          "name": "HTML",
+          "bytes": 1402
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 708
+        }
+      ],
+      "topics": [
+        "dileepadev"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2025-12-24T15:24:10Z",
+      "pushedAt": "2026-09-02T14:50:35Z",
+      "updatedAt": "2026-08-22T15:08:09Z",
+      "hasPages": true,
+      "pages": {
+        "status": "built",
+        "cname": null,
+        "htmlUrl": "https://dileepadev.github.io/",
+        "buildType": "legacy",
+        "httpsEnforced": true,
+        "sourceBranch": "main"
+      }
+    },
+    {
+      "name": "links-dileepa-dev",
+      "description": "A simple static website to showcase my social media and other important links.",
+      "url": "https://github.com/dileepadev/links-dileepa-dev",
+      "homepage": "http://links.dileepa.dev/",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 4672,
+      "primaryLanguage": "CSS",
+      "languages": [
+        {
+          "name": "CSS",
+          "bytes": 39136
+        },
+        {
+          "name": "Astro",
+          "bytes": 18105
+        },
+        {
+          "name": "TypeScript",
+          "bytes": 5626
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 320
+        }
+      ],
+      "topics": [
+        "dileepadev",
+        "links",
+        "links-list",
+        "links-page",
+        "links-website"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-02-07T17:24:16Z",
+      "pushedAt": "2026-09-02T14:25:24Z",
+      "updatedAt": "2026-09-02T14:39:49Z",
+      "hasPages": true,
+      "pages": {
+        "status": null,
+        "cname": "links.dileepa.dev",
+        "htmlUrl": "https://links.dileepa.dev/",
+        "buildType": "workflow",
+        "httpsEnforced": true,
+        "sourceBranch": "main"
+      }
+    },
+    {
+      "name": "admin-dileepa-dev",
+      "description": "Admin dashboard for managing personal website and API content.",
+      "url": "https://github.com/dileepadev/admin-dileepa-dev",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 4462,
+      "primaryLanguage": "TypeScript",
+      "languages": [
+        {
+          "name": "TypeScript",
+          "bytes": 466846
+        },
+        {
+          "name": "CSS",
+          "bytes": 66370
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 559
+        }
+      ],
+      "topics": [
+        "dashboard-application",
+        "dileepadev",
+        "nextjs-app"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-01-02T17:25:11Z",
+      "pushedAt": "2026-09-01T19:16:52Z",
+      "updatedAt": "2026-09-01T19:18:07Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "dileepa-dev",
+      "description": "This is my personal website.",
+      "url": "https://github.com/dileepadev/dileepa-dev",
+      "homepage": "https://dileepa.dev",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 16323,
+      "primaryLanguage": "TypeScript",
+      "languages": [
+        {
+          "name": "TypeScript",
+          "bytes": 863472
+        },
+        {
+          "name": "CSS",
+          "bytes": 82002
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 559
+        }
+      ],
+      "topics": [
+        "dileepadev",
+        "nextjs",
+        "nextjs-portfolio",
+        "personal-website",
+        "portfolio",
+        "portfolio-website"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-01-02T17:24:46Z",
+      "pushedAt": "2026-09-01T18:26:48Z",
+      "updatedAt": "2026-09-01T18:53:14Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "api-dileepa-dev",
+      "description": "This API provides access to @dileepadev's personal and other related data.",
+      "url": "https://github.com/dileepadev/api-dileepa-dev",
+      "homepage": "https://api.dileepa.dev",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 766,
+      "primaryLanguage": "Python",
+      "languages": [
+        {
+          "name": "Python",
+          "bytes": 470222
+        }
+      ],
+      "topics": [
+        "api-example",
+        "dileepadev",
+        "nestjs"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-01-02T17:22:16Z",
+      "pushedAt": "2026-08-31T20:05:37Z",
+      "updatedAt": "2026-08-31T20:04:25Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "blog-dileepa-dev",
+      "description": "This is my blog.",
+      "url": "https://github.com/dileepadev/blog-dileepa-dev",
+      "homepage": "https://dileepa.dev/blog",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 19060,
+      "primaryLanguage": "JavaScript",
+      "languages": [
+        {
+          "name": "JavaScript",
+          "bytes": 17138
+        }
+      ],
+      "topics": [
+        "astro",
+        "astro-blog",
+        "astro-template",
+        "astro-theme",
+        "blog",
+        "blog-theme",
+        "dileepadev"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-01-29T14:40:07Z",
+      "pushedAt": "2026-08-31T19:20:05Z",
+      "updatedAt": "2026-08-31T19:20:53Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "dileepadev",
+      "description": "Hi, I'm Dileepa Bandara. This is my new GitHub account.",
+      "url": "https://github.com/dileepadev/dileepadev",
+      "homepage": "https://dileepa.dev",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 1,
+      "size": 10036,
+      "primaryLanguage": null,
+      "languages": [],
+      "topics": [
+        "dileepadev",
+        "github-profile",
+        "github-profile-readme",
+        "profile",
+        "profile-readme"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2025-12-22T17:47:20Z",
+      "pushedAt": "2026-08-26T13:46:30Z",
+      "updatedAt": "2026-08-23T15:07:05Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "ml-dataset-health-api",
+      "description": "A lightweight FastAPI service for profiling datasets and detecting ML data quality issues.",
+      "url": "https://github.com/dileepadev/ml-dataset-health-api",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 1,
+      "size": 140,
+      "primaryLanguage": "Python",
+      "languages": [
+        {
+          "name": "Python",
+          "bytes": 39946
+        }
+      ],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-08-21T17:43:33Z",
+      "pushedAt": "2026-08-24T11:02:37Z",
+      "updatedAt": "2026-08-24T11:02:52Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "gauntlet",
+      "description": "Prove whether your agent setup can actually be exploited",
+      "url": "https://github.com/dileepadev/gauntlet",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 1,
+      "size": 344,
+      "primaryLanguage": "Python",
+      "languages": [
+        {
+          "name": "Python",
+          "bytes": 431838
+        }
+      ],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-08-18T16:46:58Z",
+      "pushedAt": "2026-08-23T12:44:26Z",
+      "updatedAt": "2026-08-23T12:44:45Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "learn-ai",
+      "description": "This repository contains a collection of concepts and resources related to Artificial Intelligence (AI).",
+      "url": "https://github.com/dileepadev/learn-ai",
+      "homepage": "https://dileepadev.github.io/learn-ai/",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 3739,
+      "primaryLanguage": "Astro",
+      "languages": [
+        {
+          "name": "Astro",
+          "bytes": 37008
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 3743
+        },
+        {
+          "name": "TypeScript",
+          "bytes": 2371
+        },
+        {
+          "name": "CSS",
+          "bytes": 346
+        }
+      ],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-01-21T17:49:01Z",
+      "pushedAt": "2026-08-21T19:27:06Z",
+      "updatedAt": "2026-08-21T19:27:14Z",
+      "hasPages": true,
+      "pages": {
+        "status": "built",
+        "cname": null,
+        "htmlUrl": "https://dileepadev.github.io/learn-ai/",
+        "buildType": "workflow",
+        "httpsEnforced": true,
+        "sourceBranch": "copilot/prepare-astro-project-for-deployment"
+      }
+    },
+    {
+      "name": "qa-test-pilot",
+      "description": "An autonomous AI agent for API testing, failure analysis, and QA automation.",
+      "url": "https://github.com/dileepadev/qa-test-pilot",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 1,
+      "size": 2,
+      "primaryLanguage": null,
+      "languages": [],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-08-21T16:45:36Z",
+      "pushedAt": "2026-08-21T17:07:18Z",
+      "updatedAt": "2026-08-21T17:16:47Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "mender",
+      "description": "CI that fixes itself, and proves the fix",
+      "url": "https://github.com/dileepadev/mender",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 1,
+      "size": 19,
+      "primaryLanguage": null,
+      "languages": [],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-08-18T16:48:43Z",
+      "pushedAt": "2026-08-19T15:01:04Z",
+      "updatedAt": "2026-08-19T15:03:47Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "microsoft-agent-framework-workshop",
+      "description": "Hands-on workshop repository for building AI agents and multi-agent workflows using Microsoft Agent Framework.",
+      "url": "https://github.com/dileepadev/microsoft-agent-framework-workshop",
+      "homepage": "https://dileepadev.github.io/microsoft-agent-framework-workshop/",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 1,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 1,
+      "size": 857,
+      "primaryLanguage": "Astro",
+      "languages": [
+        {
+          "name": "Astro",
+          "bytes": 164844
+        },
+        {
+          "name": "Python",
+          "bytes": 133297
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 5008
+        },
+        {
+          "name": "CSS",
+          "bytes": 3966
+        },
+        {
+          "name": "TypeScript",
+          "bytes": 2438
+        }
+      ],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-05-19T16:08:23Z",
+      "pushedAt": "2026-08-17T18:10:08Z",
+      "updatedAt": "2026-08-17T18:11:20Z",
+      "hasPages": true,
+      "pages": {
+        "status": "built",
+        "cname": null,
+        "htmlUrl": "https://dileepadev.github.io/microsoft-agent-framework-workshop/",
+        "buildType": "workflow",
+        "httpsEnforced": true,
+        "sourceBranch": "main"
+      }
+    },
+    {
+      "name": "deploying-agentic-ai-apps-workshop",
+      "description": "Workshop Repo: Deploying Agentic AI Applications",
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop",
+      "homepage": "https://dileepadev.github.io/deploying-agentic-ai-apps-workshop/",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 1,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 1439,
+      "primaryLanguage": "MDX",
+      "languages": [
+        {
+          "name": "MDX",
+          "bytes": 142258
+        },
+        {
+          "name": "HTML",
+          "bytes": 103294
+        },
+        {
+          "name": "Python",
+          "bytes": 83379
+        },
+        {
+          "name": "CSS",
+          "bytes": 30504
+        },
+        {
+          "name": "TypeScript",
+          "bytes": 27714
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 18078
+        },
+        {
+          "name": "Astro",
+          "bytes": 7832
+        }
+      ],
+      "topics": [
+        "ai-agents",
+        "ai-workshop",
+        "ai-workshops-ai-tools",
+        "fastapi",
+        "fastapi-cloud",
+        "llm",
+        "mcp",
+        "pydantic-ai",
+        "uv"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-08-12T16:08:20Z",
+      "pushedAt": "2026-08-14T19:03:13Z",
+      "updatedAt": "2026-08-14T19:01:48Z",
+      "hasPages": true,
+      "pages": {
+        "status": null,
+        "cname": null,
+        "htmlUrl": "https://dileepadev.github.io/deploying-agentic-ai-apps-workshop/",
+        "buildType": "workflow",
+        "httpsEnforced": true,
+        "sourceBranch": "main"
+      }
+    },
+    {
+      "name": "learn-ai-engineering",
+      "description": "A self-paced, build-first roadmap for modern AI engineering.",
+      "url": "https://github.com/dileepadev/learn-ai-engineering",
+      "homepage": "https://dileepadev.github.io/learn-ai-engineering/",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 384,
+      "primaryLanguage": "Python",
+      "languages": [
+        {
+          "name": "Python",
+          "bytes": 166258
+        },
+        {
+          "name": "TypeScript",
+          "bytes": 133340
+        },
+        {
+          "name": "Astro",
+          "bytes": 25485
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 18067
+        },
+        {
+          "name": "CSS",
+          "bytes": 8341
+        }
+      ],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-08-06T18:25:08Z",
+      "pushedAt": "2026-08-11T14:26:36Z",
+      "updatedAt": "2026-08-11T14:30:30Z",
+      "hasPages": true,
+      "pages": {
+        "status": null,
+        "cname": null,
+        "htmlUrl": "https://dileepadev.github.io/learn-ai-engineering/",
+        "buildType": "workflow",
+        "httpsEnforced": true,
+        "sourceBranch": "main"
+      }
+    },
+    {
+      "name": "gnome-bluetooth-headset-monitor",
+      "description": "Bluetooth Headset Monitor is a GNOME Shell extension that adds a headset indicator to the top panel only when at least one compatible Bluetooth audio device is connected.",
+      "url": "https://github.com/dileepadev/gnome-bluetooth-headset-monitor",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 57,
+      "primaryLanguage": "JavaScript",
+      "languages": [
+        {
+          "name": "JavaScript",
+          "bytes": 20347
+        },
+        {
+          "name": "CSS",
+          "bytes": 207
+        }
+      ],
+      "topics": [
+        "bluetooth-headset-monitor",
+        "dileepadev",
+        "gnome-bluetooth-headset-monitor",
+        "gnome-desktop",
+        "gnome-extension",
+        "gnome-shell-extension",
+        "gnome-system-monitor",
+        "resource-monitor"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-06-03T13:42:14Z",
+      "pushedAt": "2026-08-04T14:04:25Z",
+      "updatedAt": "2026-08-04T13:47:19Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "gnome-resource-monitor",
+      "description": "Shows the real‑time usage in the GNOME top bar like CPU, RAM, network (download/upload), etc.",
+      "url": "https://github.com/dileepadev/gnome-resource-monitor",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 53,
+      "primaryLanguage": "JavaScript",
+      "languages": [
+        {
+          "name": "JavaScript",
+          "bytes": 10519
+        },
+        {
+          "name": "CSS",
+          "bytes": 252
+        }
+      ],
+      "topics": [
+        "dileepadev",
+        "gnome-desktop",
+        "gnome-extension",
+        "gnome-shell-extension",
+        "gnome-system-monitor",
+        "resource-monitor"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-01-17T16:53:01Z",
+      "pushedAt": "2026-07-30T18:18:06Z",
+      "updatedAt": "2026-07-30T18:20:15Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "learn-ai900",
+      "description": "Notes & practice tests related to Microsoft Certified: Azure AI Fundamentals ",
+      "url": "https://github.com/dileepadev/learn-ai900",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 1,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 36,
+      "primaryLanguage": null,
+      "languages": [],
+      "topics": [],
+      "license": null,
+      "defaultBranch": "main",
+      "createdAt": "2026-05-01T13:43:22Z",
+      "pushedAt": "2026-06-02T15:39:58Z",
+      "updatedAt": "2026-06-02T15:44:46Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "microsoft-agent-framework-chat-app",
+      "description": "AI chat application built with Microsoft Agent Framework, Chainlit, GitHub Models, MCP, and tool calling.",
+      "url": "https://github.com/dileepadev/microsoft-agent-framework-chat-app",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 11,
+      "primaryLanguage": null,
+      "languages": [],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-05-13T15:50:45Z",
+      "pushedAt": "2026-06-02T14:09:38Z",
+      "updatedAt": "2026-06-02T14:17:40Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "learn-az900",
+      "description": "Notes & practice tests related to Microsoft Certified: Azure Fundamentals",
+      "url": "https://github.com/dileepadev/learn-az900",
+      "homepage": "https://dileepadev.github.io/learn-az900/",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 1,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 692,
+      "primaryLanguage": "JavaScript",
+      "languages": [
+        {
+          "name": "JavaScript",
+          "bytes": 39530
+        },
+        {
+          "name": "CSS",
+          "bytes": 21987
+        },
+        {
+          "name": "HTML",
+          "bytes": 9271
+        }
+      ],
+      "topics": [
+        "az-900",
+        "az-900-2026",
+        "az-900-practice-test",
+        "az900",
+        "azure",
+        "azure-fundamentals",
+        "learn-az900"
+      ],
+      "license": null,
+      "defaultBranch": "main",
+      "createdAt": "2026-03-13T14:43:30Z",
+      "pushedAt": "2026-04-28T18:31:18Z",
+      "updatedAt": "2026-05-21T06:57:12Z",
+      "hasPages": true,
+      "pages": {
+        "status": "built",
+        "cname": null,
+        "htmlUrl": "https://dileepadev.github.io/learn-az900/",
+        "buildType": "legacy",
+        "httpsEnforced": true,
+        "sourceBranch": "main"
+      }
+    },
+    {
+      "name": "context-reader",
+      "description": "A full-stack app where users upload documents and have a natural language conversation with them.",
+      "url": "https://github.com/dileepadev/context-reader",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 1,
+      "size": 79,
+      "primaryLanguage": null,
+      "languages": [],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-03-24T17:44:33Z",
+      "pushedAt": "2026-03-30T17:14:40Z",
+      "updatedAt": "2026-03-30T17:14:44Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "community-standards",
+      "description": "This repository includes community standards that I personally use for my projects on GitHub.",
+      "url": "https://github.com/dileepadev/community-standards",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 33,
+      "primaryLanguage": null,
+      "languages": [],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-01-10T15:50:29Z",
+      "pushedAt": "2026-03-26T16:47:19Z",
+      "updatedAt": "2026-03-26T16:45:20Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "learn-github-copilot",
+      "description": "This project is designed to explore and demonstrate the capabilities of GitHub Copilot.",
+      "url": "https://github.com/dileepadev/learn-github-copilot",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 24,
+      "primaryLanguage": null,
+      "languages": [],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-03-24T17:47:01Z",
+      "pushedAt": "2026-03-26T16:34:02Z",
+      "updatedAt": "2026-03-26T16:34:15Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "learn-python",
+      "description": "This repository contains code examples and exercises for learning Python.",
+      "url": "https://github.com/dileepadev/learn-python",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 47,
+      "primaryLanguage": "Python",
+      "languages": [
+        {
+          "name": "Python",
+          "bytes": 12946
+        }
+      ],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-01-21T17:49:40Z",
+      "pushedAt": "2026-03-18T17:32:54Z",
+      "updatedAt": "2026-03-18T17:36:17Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "learn-microsoft-foundry",
+      "description": "Learn about Microsoft Foundry",
+      "url": "https://github.com/dileepadev/learn-microsoft-foundry",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 21,
+      "primaryLanguage": null,
+      "languages": [],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-02-13T17:34:01Z",
+      "pushedAt": "2026-02-28T16:33:43Z",
+      "updatedAt": "2026-02-28T16:33:46Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "fetch-gitignore",
+      "description": "A terminal/CLI tool using Node.js that allows developers to fetch official .gitignore templates from GitHub.",
+      "url": "https://github.com/dileepadev/fetch-gitignore",
+      "homepage": "https://npmjs.com/package/@dileepadev/fetch-gitignore",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 113,
+      "primaryLanguage": "TypeScript",
+      "languages": [
+        {
+          "name": "TypeScript",
+          "bytes": 21974
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 3437
+        }
+      ],
+      "topics": [
+        "dileepadev",
+        "fetch-gitignore",
+        "gitignore",
+        "gitignore-cli",
+        "gitignore-files",
+        "gitignore-generator"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-02-14T18:26:30Z",
+      "pushedAt": "2026-02-21T16:06:35Z",
+      "updatedAt": "2026-02-21T16:09:37Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "dileepadev-npm",
+      "description": "A npm package about me.",
+      "url": "https://github.com/dileepadev/dileepadev-npm",
+      "homepage": "https://npmjs.com/package/@dileepadev/dileepadev-npm",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 85,
+      "primaryLanguage": "TypeScript",
+      "languages": [
+        {
+          "name": "TypeScript",
+          "bytes": 4975
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 2038
+        }
+      ],
+      "topics": [
+        "dileepadev"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-02-20T14:28:20Z",
+      "pushedAt": "2026-02-20T18:55:21Z",
+      "updatedAt": "2026-02-21T13:29:23Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "youtube",
+      "description": "This repository includes all the code, projects, and resources showcased in my videos.",
+      "url": "https://github.com/dileepadev/youtube",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 0,
+      "primaryLanguage": null,
+      "languages": [],
+      "topics": [],
+      "license": null,
+      "defaultBranch": "main",
+      "createdAt": "2026-02-09T17:25:36Z",
+      "pushedAt": "2026-02-09T17:28:25Z",
+      "updatedAt": "2026-02-09T17:29:28Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "python-certificate-generator",
+      "description": "A simple Python script to generate certificates using a template Word document.",
+      "url": "https://github.com/dileepadev/python-certificate-generator",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 143,
+      "primaryLanguage": "Python",
+      "languages": [
+        {
+          "name": "Python",
+          "bytes": 6171
+        }
+      ],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-02-05T17:40:40Z",
+      "pushedAt": "2026-02-06T17:57:09Z",
+      "updatedAt": "2026-02-06T17:57:14Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "python-markdown-to-pdf",
+      "description": null,
+      "url": "https://github.com/dileepadev/python-markdown-to-pdf",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 60,
+      "primaryLanguage": "Python",
+      "languages": [
+        {
+          "name": "Python",
+          "bytes": 1856
+        },
+        {
+          "name": "CSS",
+          "bytes": 773
+        }
+      ],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-02-06T17:33:15Z",
+      "pushedAt": "2026-02-06T17:55:30Z",
+      "updatedAt": "2026-02-06T17:55:35Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "cinewave-demo-agent-cli",
+      "description": null,
+      "url": "https://github.com/dileepadev/cinewave-demo-agent-cli",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 1,
+      "size": 26,
+      "primaryLanguage": "Python",
+      "languages": [
+        {
+          "name": "Python",
+          "bytes": 30516
+        }
+      ],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-01-24T18:26:04Z",
+      "pushedAt": "2026-01-28T13:53:28Z",
+      "updatedAt": "2026-01-28T13:55:59Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "cinewave-demo-agent-api",
+      "description": null,
+      "url": "https://github.com/dileepadev/cinewave-demo-agent-api",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 1,
+      "size": 27,
+      "primaryLanguage": "Python",
+      "languages": [
+        {
+          "name": "Python",
+          "bytes": 26478
+        }
+      ],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-01-24T18:25:12Z",
+      "pushedAt": "2026-01-28T13:52:45Z",
+      "updatedAt": "2026-01-28T13:52:48Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "cinewave-demo-core-api",
+      "description": null,
+      "url": "https://github.com/dileepadev/cinewave-demo-core-api",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 1,
+      "size": 24,
+      "primaryLanguage": "Python",
+      "languages": [
+        {
+          "name": "Python",
+          "bytes": 16363
+        }
+      ],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-01-24T18:24:57Z",
+      "pushedAt": "2026-01-28T13:52:10Z",
+      "updatedAt": "2026-01-28T13:55:29Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "cinewave-demo-portal",
+      "description": null,
+      "url": "https://github.com/dileepadev/cinewave-demo-portal",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 1,
+      "size": 222,
+      "primaryLanguage": "TypeScript",
+      "languages": [
+        {
+          "name": "TypeScript",
+          "bytes": 48663
+        },
+        {
+          "name": "CSS",
+          "bytes": 12257
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 474
+        }
+      ],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-01-24T18:24:23Z",
+      "pushedAt": "2026-01-28T13:50:48Z",
+      "updatedAt": "2026-01-28T13:50:55Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "terminal-configs",
+      "description": "My custom terminal setup with themes, prompts, and configs.",
+      "url": "https://github.com/dileepadev/terminal-configs",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 61,
+      "primaryLanguage": "Shell",
+      "languages": [
+        {
+          "name": "Shell",
+          "bytes": 4914
+        },
+        {
+          "name": "PowerShell",
+          "bytes": 249
+        }
+      ],
+      "topics": [
+        "dileepadev",
+        "oh-my-posh",
+        "powershell",
+        "terminal",
+        "terminal-configuration"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-01-03T17:42:58Z",
+      "pushedAt": "2026-01-25T15:15:34Z",
+      "updatedAt": "2026-01-25T15:15:38Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "learn-typescript",
+      "description": "This repository contains code examples and exercises for learning TypeScript.",
+      "url": "https://github.com/dileepadev/learn-typescript",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 21,
+      "primaryLanguage": "TypeScript",
+      "languages": [
+        {
+          "name": "TypeScript",
+          "bytes": 1302
+        }
+      ],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-01-21T17:50:15Z",
+      "pushedAt": "2026-01-23T14:21:45Z",
+      "updatedAt": "2026-01-23T14:22:19Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "studentprofiler-demo",
+      "description": "Student behavior and VARK system (SBVARKS AI/ML Project).",
+      "url": "https://github.com/dileepadev/studentprofiler-demo",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 14944,
+      "primaryLanguage": "Python",
+      "languages": [
+        {
+          "name": "Python",
+          "bytes": 160839
+        },
+        {
+          "name": "Dart",
+          "bytes": 112786
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 56750
+        },
+        {
+          "name": "HTML",
+          "bytes": 34134
+        },
+        {
+          "name": "C++",
+          "bytes": 23926
+        },
+        {
+          "name": "CMake",
+          "bytes": 18893
+        },
+        {
+          "name": "Swift",
+          "bytes": 2329
+        },
+        {
+          "name": "C",
+          "bytes": 1425
+        },
+        {
+          "name": "Jupyter Notebook",
+          "bytes": 1151
+        },
+        {
+          "name": "CSS",
+          "bytes": 1077
+        }
+      ],
+      "topics": [
+        "ai-ml",
+        "ai-ml-beginner-projects",
+        "ai-project",
+        "dileepadev",
+        "machine-learning",
+        "student-behavior",
+        "vark",
+        "vark-learning"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-01-04T16:50:13Z",
+      "pushedAt": "2026-01-11T14:05:59Z",
+      "updatedAt": "2026-01-11T14:06:03Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "realtime-car-tracking-web-app",
+      "description": "A real-time car tracking web application built with Flutter.",
+      "url": "https://github.com/dileepadev/realtime-car-tracking-web-app",
+      "homepage": "https://dileepadev.github.io/realtime-car-tracking-web-app/",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 8537,
+      "primaryLanguage": "Dart",
+      "languages": [
+        {
+          "name": "Dart",
+          "bytes": 53319
+        },
+        {
+          "name": "C++",
+          "bytes": 25368
+        },
+        {
+          "name": "CMake",
+          "bytes": 19850
+        },
+        {
+          "name": "Swift",
+          "bytes": 2297
+        },
+        {
+          "name": "C",
+          "bytes": 1488
+        },
+        {
+          "name": "HTML",
+          "bytes": 1468
+        },
+        {
+          "name": "Kotlin",
+          "bytes": 143
+        },
+        {
+          "name": "Objective-C",
+          "bytes": 38
+        }
+      ],
+      "topics": [
+        "car-tracking",
+        "dileepadev",
+        "fluter",
+        "flutter-app",
+        "flutter-examples",
+        "flutter-firebase",
+        "flutter-ui",
+        "flutter-web-app"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2025-12-31T13:10:06Z",
+      "pushedAt": "2026-01-06T15:09:15Z",
+      "updatedAt": "2026-01-06T15:09:20Z",
+      "hasPages": true,
+      "pages": {
+        "status": "built",
+        "cname": null,
+        "htmlUrl": "https://dileepadev.github.io/realtime-car-tracking-web-app/",
+        "buildType": "legacy",
+        "httpsEnforced": true,
+        "sourceBranch": "1.1.0-demo-web-build"
+      }
+    },
+    {
+      "name": "flutter-portfolio-site",
+      "description": "This a personal project to showcase an online personal portfolio.",
+      "url": "https://github.com/dileepadev/flutter-portfolio-site",
+      "homepage": "https://dileepadev.github.io/flutter-portfolio-site/",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 10861,
+      "primaryLanguage": "Dart",
+      "languages": [
+        {
+          "name": "Dart",
+          "bytes": 98776
+        },
+        {
+          "name": "C++",
+          "bytes": 25271
+        },
+        {
+          "name": "CMake",
+          "bytes": 19816
+        },
+        {
+          "name": "Swift",
+          "bytes": 1925
+        },
+        {
+          "name": "C",
+          "bytes": 1488
+        },
+        {
+          "name": "HTML",
+          "bytes": 1463
+        },
+        {
+          "name": "Kotlin",
+          "bytes": 136
+        },
+        {
+          "name": "Objective-C",
+          "bytes": 38
+        }
+      ],
+      "topics": [
+        "dileepadev",
+        "flutter",
+        "flutter-app",
+        "flutter-portfolio",
+        "flutter-template",
+        "flutter-web-app"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2025-12-31T06:28:42Z",
+      "pushedAt": "2026-01-06T15:08:46Z",
+      "updatedAt": "2026-01-06T15:08:50Z",
+      "hasPages": true,
+      "pages": {
+        "status": "built",
+        "cname": null,
+        "htmlUrl": "https://dileepadev.github.io/flutter-portfolio-site/",
+        "buildType": "legacy",
+        "httpsEnforced": true,
+        "sourceBranch": "web-build"
+      }
+    },
+    {
+      "name": "flutter-links-site",
+      "description": "This is a personal project to serves as a central hub for online profiles and web presence.",
+      "url": "https://github.com/dileepadev/flutter-links-site",
+      "homepage": "https://dileepadev.github.io/flutter-links-site/",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 15792,
+      "primaryLanguage": "Dart",
+      "languages": [
+        {
+          "name": "Dart",
+          "bytes": 52153
+        },
+        {
+          "name": "C++",
+          "bytes": 25259
+        },
+        {
+          "name": "CMake",
+          "bytes": 19800
+        },
+        {
+          "name": "Swift",
+          "bytes": 1925
+        },
+        {
+          "name": "C",
+          "bytes": 1488
+        },
+        {
+          "name": "HTML",
+          "bytes": 1452
+        },
+        {
+          "name": "Kotlin",
+          "bytes": 132
+        },
+        {
+          "name": "Objective-C",
+          "bytes": 38
+        }
+      ],
+      "topics": [
+        "dileepadev",
+        "flutter",
+        "flutter-app",
+        "flutter-links-site",
+        "flutter-template",
+        "flutter-web-app",
+        "links-collection"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2025-12-31T06:11:56Z",
+      "pushedAt": "2026-01-06T15:08:18Z",
+      "updatedAt": "2026-01-06T15:08:22Z",
+      "hasPages": true,
+      "pages": {
+        "status": "built",
+        "cname": null,
+        "htmlUrl": "https://dileepadev.github.io/flutter-links-site/",
+        "buildType": "legacy",
+        "httpsEnforced": true,
+        "sourceBranch": "web-build"
+      }
+    },
+    {
+      "name": "flutter-toolkit-site",
+      "description": "This is a personal project to experiment with Flutter and showcase a large collection of tools and technologies in a single-page layout.",
+      "url": "https://github.com/dileepadev/flutter-toolkit-site",
+      "homepage": "https://dileepadev.github.io/flutter-toolkit-site/",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 17116,
+      "primaryLanguage": "Dart",
+      "languages": [
+        {
+          "name": "Dart",
+          "bytes": 85782
+        },
+        {
+          "name": "C++",
+          "bytes": 25265
+        },
+        {
+          "name": "CMake",
+          "bytes": 19808
+        },
+        {
+          "name": "Swift",
+          "bytes": 1925
+        },
+        {
+          "name": "HTML",
+          "bytes": 1505
+        },
+        {
+          "name": "C",
+          "bytes": 1488
+        },
+        {
+          "name": "Kotlin",
+          "bytes": 134
+        },
+        {
+          "name": "Objective-C",
+          "bytes": 38
+        }
+      ],
+      "topics": [
+        "dileepadev",
+        "flutter",
+        "flutter-app",
+        "flutter-template",
+        "flutter-toolkit-site",
+        "flutter-web-app",
+        "toolset"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2025-12-31T05:16:15Z",
+      "pushedAt": "2026-01-06T15:07:46Z",
+      "updatedAt": "2026-01-06T15:07:50Z",
+      "hasPages": true,
+      "pages": {
+        "status": "built",
+        "cname": null,
+        "htmlUrl": "https://dileepadev.github.io/flutter-toolkit-site/",
+        "buildType": "legacy",
+        "httpsEnforced": true,
+        "sourceBranch": "web-build"
+      }
+    },
+    {
+      "name": "ggez",
+      "description": "A social network for gamers. (Demo App)",
+      "url": "https://github.com/dileepadev/ggez",
+      "homepage": "https://youtu.be/fXXrps7qlHM",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 4741,
+      "primaryLanguage": "Dart",
+      "languages": [
+        {
+          "name": "Dart",
+          "bytes": 260825
+        },
+        {
+          "name": "C++",
+          "bytes": 16815
+        },
+        {
+          "name": "CMake",
+          "bytes": 7933
+        },
+        {
+          "name": "HTML",
+          "bytes": 4636
+        },
+        {
+          "name": "C",
+          "bytes": 734
+        },
+        {
+          "name": "CSS",
+          "bytes": 604
+        },
+        {
+          "name": "Swift",
+          "bytes": 404
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 172
+        },
+        {
+          "name": "Kotlin",
+          "bytes": 125
+        },
+        {
+          "name": "Objective-C",
+          "bytes": 38
+        }
+      ],
+      "topics": [
+        "dileepadev",
+        "flutter-app",
+        "gamers-app",
+        "gamers-club",
+        "gaming-network",
+        "ggez",
+        "ggez-network"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2025-12-28T17:39:26Z",
+      "pushedAt": "2025-12-31T04:58:03Z",
+      "updatedAt": "2026-01-04T04:49:28Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "trashpick",
+      "description": "TrashPick Mobile App",
+      "url": "https://github.com/dileepadev/trashpick",
+      "homepage": "https://youtu.be/lwqs8Z3Aw50",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 837,
+      "primaryLanguage": "Dart",
+      "languages": [
+        {
+          "name": "Dart",
+          "bytes": 267337
+        },
+        {
+          "name": "HTML",
+          "bytes": 1543
+        },
+        {
+          "name": "Swift",
+          "bytes": 404
+        },
+        {
+          "name": "Kotlin",
+          "bytes": 133
+        },
+        {
+          "name": "Objective-C",
+          "bytes": 38
+        }
+      ],
+      "topics": [
+        "dileepadev",
+        "flutter-app",
+        "flutter-firebase",
+        "trash-collection-app",
+        "trash-mobile-app",
+        "trash-picking-app",
+        "trashpick"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2025-12-31T04:23:35Z",
+      "pushedAt": "2025-12-31T04:32:25Z",
+      "updatedAt": "2026-01-04T04:49:06Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "flutter-firebase-phone-auth",
+      "description": "Flutter Firebase Phone Auth",
+      "url": "https://github.com/dileepadev/flutter-firebase-phone-auth",
+      "homepage": "https://youtu.be/205O8dKtwOA",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 506,
+      "primaryLanguage": "Dart",
+      "languages": [
+        {
+          "name": "Dart",
+          "bytes": 10653
+        },
+        {
+          "name": "HTML",
+          "bytes": 3982
+        },
+        {
+          "name": "Swift",
+          "bytes": 404
+        },
+        {
+          "name": "Kotlin",
+          "bytes": 148
+        },
+        {
+          "name": "Objective-C",
+          "bytes": 38
+        }
+      ],
+      "topics": [
+        "dileepadev",
+        "flutter-app",
+        "flutter-firebase",
+        "flutter-firebase-auth",
+        "flutter-firebase-phone-auth"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2025-12-27T18:27:16Z",
+      "pushedAt": "2025-12-31T04:14:01Z",
+      "updatedAt": "2026-01-04T04:49:15Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "edoc-demo",
+      "description": "eDoc Mobile App (Demo Version)",
+      "url": "https://github.com/dileepadev/edoc-demo",
+      "homepage": "https://youtu.be/lYhdtlcxQLA",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 371,
+      "primaryLanguage": "Dart",
+      "languages": [
+        {
+          "name": "Dart",
+          "bytes": 66363
+        },
+        {
+          "name": "Swift",
+          "bytes": 404
+        },
+        {
+          "name": "Kotlin",
+          "bytes": 128
+        },
+        {
+          "name": "Objective-C",
+          "bytes": 38
+        }
+      ],
+      "topics": [
+        "dart",
+        "dileepadev",
+        "edoc",
+        "flutter",
+        "flutter-app",
+        "flutter-ui"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2025-12-27T18:26:48Z",
+      "pushedAt": "2025-12-31T04:11:59Z",
+      "updatedAt": "2026-01-04T04:35:08Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "mashmart-demo",
+      "description": "Mashmart Mobile App (Demo Version)",
+      "url": "https://github.com/dileepadev/mashmart-demo",
+      "homepage": "https://youtu.be/GvNAG3htzDw",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 431,
+      "primaryLanguage": "Dart",
+      "languages": [
+        {
+          "name": "Dart",
+          "bytes": 24452
+        },
+        {
+          "name": "Swift",
+          "bytes": 404
+        },
+        {
+          "name": "Kotlin",
+          "bytes": 137
+        },
+        {
+          "name": "Objective-C",
+          "bytes": 38
+        }
+      ],
+      "topics": [
+        "dart",
+        "dileepadev",
+        "flutter",
+        "flutter-app",
+        "flutter-ui",
+        "mashmart"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2025-12-27T18:26:19Z",
+      "pushedAt": "2025-12-31T04:09:56Z",
+      "updatedAt": "2026-01-04T04:34:54Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "finedeliver",
+      "description": "FineDeliver Mobile App",
+      "url": "https://github.com/dileepadev/finedeliver",
+      "homepage": "https://youtu.be/7RVSHpwieSQ",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 1191,
+      "primaryLanguage": "Java",
+      "languages": [
+        {
+          "name": "Java",
+          "bytes": 119723
+        }
+      ],
+      "topics": [
+        "android-application",
+        "delivery-application",
+        "dileepadev",
+        "finedeliver",
+        "firebase",
+        "java-android"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2025-12-27T18:25:46Z",
+      "pushedAt": "2025-12-31T03:58:57Z",
+      "updatedAt": "2026-01-04T04:34:41Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "burgerplus-web",
+      "description": "BurgerPlus Website (Sample UI)",
+      "url": "https://github.com/dileepadev/burgerplus-web",
+      "homepage": "https://dileepadev.github.io/burgerplus-web/",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 1411,
+      "primaryLanguage": "HTML",
+      "languages": [
+        {
+          "name": "HTML",
+          "bytes": 9042
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 1593
+        },
+        {
+          "name": "CSS",
+          "bytes": 1535
+        }
+      ],
+      "topics": [
+        "burgerplus",
+        "dileepade",
+        "html-css-javascript",
+        "website",
+        "website-template"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2025-12-27T09:16:14Z",
+      "pushedAt": "2025-12-31T03:55:38Z",
+      "updatedAt": "2025-12-31T03:55:42Z",
+      "hasPages": true,
+      "pages": {
+        "status": "built",
+        "cname": null,
+        "htmlUrl": "https://dileepadev.github.io/burgerplus-web/",
+        "buildType": "legacy",
+        "httpsEnforced": true,
+        "sourceBranch": "main"
+      }
+    },
+    {
+      "name": "openjobs-desktop",
+      "description": "OpenJobs Desktop Application",
+      "url": "https://github.com/dileepadev/openjobs-desktop",
+      "homepage": "https://youtu.be/oRQKSB9skfA",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 882,
+      "primaryLanguage": "Java",
+      "languages": [
+        {
+          "name": "Java",
+          "bytes": 146614
+        }
+      ],
+      "topics": [
+        "dileepadev",
+        "java",
+        "java-desktop-application",
+        "javaswing",
+        "openjobs"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2025-12-27T18:23:21Z",
+      "pushedAt": "2025-12-31T03:53:24Z",
+      "updatedAt": "2026-01-04T04:34:19Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "railway-guider",
+      "description": "Railway Guider Passenger Mobile App",
+      "url": "https://github.com/dileepadev/railway-guider",
+      "homepage": "https://youtu.be/M0syZuBxhbY",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 9079,
+      "primaryLanguage": "Java",
+      "languages": [
+        {
+          "name": "Java",
+          "bytes": 234713
+        }
+      ],
+      "topics": [
+        "android",
+        "dileepadev",
+        "java-android",
+        "railway-app",
+        "railway-guider"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2025-12-27T09:15:32Z",
+      "pushedAt": "2025-12-31T03:52:09Z",
+      "updatedAt": "2026-01-04T04:15:16Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "railway-guider-web",
+      "description": "Railway Guider Website",
+      "url": "https://github.com/dileepadev/railway-guider-web",
+      "homepage": "https://dileepadev.github.io/railway-guider-web/",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 15085,
+      "primaryLanguage": "HTML",
+      "languages": [
+        {
+          "name": "HTML",
+          "bytes": 79822
+        },
+        {
+          "name": "CSS",
+          "bytes": 6121
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 1259
+        }
+      ],
+      "topics": [
+        "dileepadev",
+        "html-css-javascript",
+        "railway-app",
+        "railway-guider",
+        "website"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2025-12-27T09:15:05Z",
+      "pushedAt": "2025-12-31T03:48:44Z",
+      "updatedAt": "2025-12-31T03:48:48Z",
+      "hasPages": true,
+      "pages": {
+        "status": "built",
+        "cname": null,
+        "htmlUrl": "https://dileepadev.github.io/railway-guider-web/",
+        "buildType": "legacy",
+        "httpsEnforced": true,
+        "sourceBranch": "main"
+      }
+    },
+    {
+      "name": "railway-guider-ticket-scanner",
+      "description": "Railway Guider Ticket Scanner",
+      "url": "https://github.com/dileepadev/railway-guider-ticket-scanner",
+      "homepage": "https://youtu.be/cmi6hqZiB0E",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 121,
+      "primaryLanguage": "C#",
+      "languages": [
+        {
+          "name": "C#",
+          "bytes": 4949
+        }
+      ],
+      "topics": [
+        "desktop-app",
+        "dileepadev",
+        "dotnet",
+        "qrcode-scanner",
+        "railway-app",
+        "railway-guider"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2025-12-27T09:14:27Z",
+      "pushedAt": "2025-12-31T03:46:49Z",
+      "updatedAt": "2026-01-04T04:14:59Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "railway-guider-admin",
+      "description": "Railway Guider Admin Mobile App",
+      "url": "https://github.com/dileepadev/railway-guider-admin",
+      "homepage": "https://youtu.be/waE9ZqxgTUo",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 396,
+      "primaryLanguage": "Java",
+      "languages": [
+        {
+          "name": "Java",
+          "bytes": 25116
+        }
+      ],
+      "topics": [
+        "android",
+        "dileepadev",
+        "java-android",
+        "railway-app",
+        "railway-guider"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2025-12-27T09:13:56Z",
+      "pushedAt": "2025-12-31T03:44:10Z",
+      "updatedAt": "2026-01-04T04:13:32Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "class-manager-desktop",
+      "description": "Class Manager Desktop Application",
+      "url": "https://github.com/dileepadev/class-manager-desktop",
+      "homepage": "https://youtu.be/tOEZ8ckuucI",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 1101,
+      "primaryLanguage": "Java",
+      "languages": [
+        {
+          "name": "Java",
+          "bytes": 379040
+        }
+      ],
+      "topics": [
+        "class-management",
+        "desktop-app",
+        "dileepadev",
+        "java",
+        "java-swing"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2025-12-26T17:55:29Z",
+      "pushedAt": "2025-12-31T03:41:26Z",
+      "updatedAt": "2026-01-04T04:11:28Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "hungryme-web",
+      "description": "HungryMe Website",
+      "url": "https://github.com/dileepadev/hungryme-web",
+      "homepage": "https://dileepadev.github.io/hungryme-web/",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 17729,
+      "primaryLanguage": "HTML",
+      "languages": [
+        {
+          "name": "HTML",
+          "bytes": 88824
+        },
+        {
+          "name": "CSS",
+          "bytes": 19666
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 728
+        }
+      ],
+      "topics": [
+        "dileepadev",
+        "food-ordering",
+        "html-css-javascript",
+        "hungryme",
+        "website"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2025-12-25T18:01:58Z",
+      "pushedAt": "2025-12-31T03:37:36Z",
+      "updatedAt": "2025-12-31T03:37:39Z",
+      "hasPages": true,
+      "pages": {
+        "status": "built",
+        "cname": null,
+        "htmlUrl": "https://dileepadev.github.io/hungryme-web/",
+        "buildType": "legacy",
+        "httpsEnforced": true,
+        "sourceBranch": "main"
+      }
+    },
+    {
+      "name": "hungryme-desktop",
+      "description": "HungryMe Desktop Application",
+      "url": "https://github.com/dileepadev/hungryme-desktop",
+      "homepage": "https://youtu.be/YPMFw7W680o",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 34099,
+      "primaryLanguage": "C#",
+      "languages": [
+        {
+          "name": "C#",
+          "bytes": 189460
+        }
+      ],
+      "topics": [
+        "csharp",
+        "dileepadev",
+        "dotnet",
+        "food-ordering",
+        "hungryme",
+        "windowsapp"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2025-12-23T18:06:01Z",
+      "pushedAt": "2025-12-31T03:33:57Z",
+      "updatedAt": "2025-12-31T03:34:01Z",
+      "hasPages": false,
+      "pages": null
+    }
+  ],
+  "ci": [
+    {
+      "repo": "links-dileepa-dev",
+      "url": "https://github.com/dileepadev/links-dileepa-dev",
+      "runs": 15,
+      "successRate": 93,
+      "medianDurationMs": 34000,
+      "lastRun": {
+        "repo": "links-dileepa-dev",
+        "id": 33641864737,
+        "name": "Deploy Astro site to Pages",
+        "workflow": "astro.yml",
+        "runNumber": 15,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "main",
+        "sha": "462f488",
+        "createdAt": "2026-09-02T14:24:40Z",
+        "startedAt": "2026-09-02T14:24:40Z",
+        "updatedAt": "2026-09-02T14:25:13Z",
+        "durationMs": 33000,
+        "url": "https://github.com/dileepadev/links-dileepa-dev/actions/runs/33641864737"
+      },
+      "workflows": [
+        "astro.yml"
+      ]
+    },
+    {
+      "repo": "api-dileepa-dev",
+      "url": "https://github.com/dileepadev/api-dileepa-dev",
+      "runs": 20,
+      "successRate": 100,
+      "medianDurationMs": 61000,
+      "lastRun": {
+        "repo": "api-dileepa-dev",
+        "id": 33436524212,
+        "name": "Deploy",
+        "workflow": "deploy.yml",
+        "runNumber": 7,
+        "event": "workflow_dispatch",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "main",
+        "sha": "02f42ea",
+        "createdAt": "2026-08-31T20:31:50Z",
+        "startedAt": "2026-08-31T20:31:50Z",
+        "updatedAt": "2026-08-31T20:32:58Z",
+        "durationMs": 68000,
+        "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33436524212"
+      },
+      "workflows": [
+        "deploy.yml",
+        "ci.yml"
+      ]
+    },
+    {
+      "repo": "blog-dileepa-dev",
+      "url": "https://github.com/dileepadev/blog-dileepa-dev",
+      "runs": 20,
+      "successRate": 80,
+      "medianDurationMs": 16000,
+      "lastRun": {
+        "repo": "blog-dileepa-dev",
+        "id": 33427823590,
+        "name": "Sync blog posts to API",
+        "workflow": "sync.yml",
+        "runNumber": 6,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "main",
+        "sha": "05e0fad",
+        "createdAt": "2026-08-31T18:56:50Z",
+        "startedAt": "2026-08-31T18:56:50Z",
+        "updatedAt": "2026-08-31T18:57:04Z",
+        "durationMs": 14000,
+        "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/33427823590"
+      },
+      "workflows": [
+        "sync.yml",
+        "validate.yml",
+        "astro.yml",
+        "dynamic/copilot-swe-agent/copilot"
+      ]
+    },
+    {
+      "repo": "gauntlet",
+      "url": "https://github.com/dileepadev/gauntlet",
+      "runs": 2,
+      "successRate": 100,
+      "medianDurationMs": 34500,
+      "lastRun": {
+        "repo": "gauntlet",
+        "id": 32640257706,
+        "name": "CI",
+        "workflow": "ci.yml",
+        "runNumber": 2,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "main",
+        "sha": "ef652d5",
+        "createdAt": "2026-08-23T12:44:28Z",
+        "startedAt": "2026-08-23T12:44:28Z",
+        "updatedAt": "2026-08-23T12:45:22Z",
+        "durationMs": 54000,
+        "url": "https://github.com/dileepadev/gauntlet/actions/runs/32640257706"
+      },
+      "workflows": [
+        "ci.yml"
+      ]
+    },
+    {
+      "repo": "learn-ai",
+      "url": "https://github.com/dileepadev/learn-ai",
+      "runs": 20,
+      "successRate": 80,
+      "medianDurationMs": 67000,
+      "lastRun": {
+        "repo": "learn-ai",
+        "id": 32518532879,
+        "name": "Deploy to GitHub Pages",
+        "workflow": "deploy.yml",
+        "runNumber": 19,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "main",
+        "sha": "cd34f81",
+        "createdAt": "2026-08-21T19:27:08Z",
+        "startedAt": "2026-08-21T19:27:08Z",
+        "updatedAt": "2026-08-21T19:28:31Z",
+        "durationMs": 83000,
+        "url": "https://github.com/dileepadev/learn-ai/actions/runs/32518532879"
+      },
+      "workflows": [
+        "deploy.yml",
+        "dynamic/copilot-swe-agent/copilot"
+      ]
+    },
+    {
+      "repo": "microsoft-agent-framework-workshop",
+      "url": "https://github.com/dileepadev/microsoft-agent-framework-workshop",
+      "runs": 8,
+      "successRate": 75,
+      "medianDurationMs": 41000,
+      "lastRun": {
+        "repo": "microsoft-agent-framework-workshop",
+        "id": 31955150480,
+        "name": "Deploy Docs to GitHub Pages",
+        "workflow": "docs.yml",
+        "runNumber": 7,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "main",
+        "sha": "5d45228",
+        "createdAt": "2026-08-16T15:16:19Z",
+        "startedAt": "2026-08-16T15:16:19Z",
+        "updatedAt": "2026-08-16T15:17:18Z",
+        "durationMs": 59000,
+        "url": "https://github.com/dileepadev/microsoft-agent-framework-workshop/actions/runs/31955150480"
+      },
+      "workflows": [
+        "docs.yml",
+        "dynamic/pages/pages-build-deployment"
+      ]
+    },
+    {
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop",
+      "runs": 20,
+      "successRate": 85,
+      "medianDurationMs": 42500,
+      "lastRun": {
+        "repo": "deploying-agentic-ai-apps-workshop",
+        "id": 31831362225,
+        "name": "Deploy workshop site to GitHub Pages",
+        "workflow": "deploy-pages.yml",
+        "runNumber": 15,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "main",
+        "sha": "a5b643a",
+        "createdAt": "2026-08-14T19:01:11Z",
+        "startedAt": "2026-08-14T19:01:11Z",
+        "updatedAt": "2026-08-14T19:02:27Z",
+        "durationMs": 76000,
+        "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31831362225"
+      },
+      "workflows": [
+        "deploy-pages.yml",
+        "deploy-fastapi-cloud.yml",
+        "deploy-vercel.yml",
+        "dynamic/copilot-swe-agent/copilot"
+      ]
+    },
+    {
+      "repo": "learn-ai-engineering",
+      "url": "https://github.com/dileepadev/learn-ai-engineering",
+      "runs": 14,
+      "successRate": 79,
+      "medianDurationMs": 80500,
+      "lastRun": {
+        "repo": "learn-ai-engineering",
+        "id": 31501554720,
+        "name": "Deploy site",
+        "workflow": "deploy-site.yml",
+        "runNumber": 8,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "main",
+        "sha": "2985af6",
+        "createdAt": "2026-08-11T14:26:38Z",
+        "startedAt": "2026-08-11T14:26:38Z",
+        "updatedAt": "2026-08-11T14:27:32Z",
+        "durationMs": 54000,
+        "url": "https://github.com/dileepadev/learn-ai-engineering/actions/runs/31501554720"
+      },
+      "workflows": [
+        "deploy-site.yml",
+        "dynamic/copilot-swe-agent/copilot"
+      ]
+    },
+    {
+      "repo": "learn-az900",
+      "url": "https://github.com/dileepadev/learn-az900",
+      "runs": 13,
+      "successRate": 100,
+      "medianDurationMs": 26000,
+      "lastRun": {
+        "repo": "learn-az900",
+        "id": 25070728633,
+        "name": "pages build and deployment",
+        "workflow": "dynamic/pages/pages-build-deployment",
+        "runNumber": 13,
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "main",
+        "sha": "a2a30fe",
+        "createdAt": "2026-04-28T18:31:20Z",
+        "startedAt": "2026-04-28T18:31:20Z",
+        "updatedAt": "2026-04-28T18:31:47Z",
+        "durationMs": 27000,
+        "url": "https://github.com/dileepadev/learn-az900/actions/runs/25070728633"
+      },
+      "workflows": [
+        "dynamic/pages/pages-build-deployment"
+      ]
+    },
+    {
+      "repo": "learn-github-copilot",
+      "url": "https://github.com/dileepadev/learn-github-copilot",
+      "runs": 3,
+      "successRate": 100,
+      "medianDurationMs": 314000,
+      "lastRun": {
+        "repo": "learn-github-copilot",
+        "id": 23504452156,
+        "name": "Addressing comment on PR #1",
+        "workflow": "dynamic/copilot-swe-agent/copilot",
+        "runNumber": 2,
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "copilot/explore-github-copilot-capabilities",
+        "sha": "e11be45",
+        "createdAt": "2026-03-24T17:55:01Z",
+        "startedAt": "2026-03-24T17:55:01Z",
+        "updatedAt": "2026-03-24T18:00:36Z",
+        "durationMs": 335000,
+        "url": "https://github.com/dileepadev/learn-github-copilot/actions/runs/23504452156"
+      },
+      "workflows": [
+        "dynamic/copilot-swe-agent/copilot",
+        "dynamic/copilot-pull-request-reviewer/copilot-pull-request-reviewer"
+      ]
+    },
+    {
+      "repo": "dileepadev.github.io",
+      "url": "https://github.com/dileepadev/dileepadev.github.io",
+      "runs": 20,
+      "successRate": 100,
+      "medianDurationMs": 42500,
+      "lastRun": {
+        "repo": "dileepadev.github.io",
+        "id": 22549888960,
+        "name": "pages build and deployment",
+        "workflow": "dynamic/pages/pages-build-deployment",
+        "runNumber": 30,
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "main",
+        "sha": "87c15b7",
+        "createdAt": "2026-03-01T18:37:15Z",
+        "startedAt": "2026-03-01T18:37:15Z",
+        "updatedAt": "2026-03-01T18:37:59Z",
+        "durationMs": 44000,
+        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/22549888960"
+      },
+      "workflows": [
+        "dynamic/pages/pages-build-deployment"
+      ]
+    },
+    {
+      "repo": "fetch-gitignore",
+      "url": "https://github.com/dileepadev/fetch-gitignore",
+      "runs": 7,
+      "successRate": 71,
+      "medianDurationMs": 32000,
+      "lastRun": {
+        "repo": "fetch-gitignore",
+        "id": 22259898704,
+        "name": "Publish Package",
+        "workflow": "publish.yml",
+        "runNumber": 4,
+        "event": "release",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "v1.0.2",
+        "sha": "10ac69a",
+        "createdAt": "2026-02-21T16:06:37Z",
+        "startedAt": "2026-02-21T16:06:37Z",
+        "updatedAt": "2026-02-21T16:07:09Z",
+        "durationMs": 32000,
+        "url": "https://github.com/dileepadev/fetch-gitignore/actions/runs/22259898704"
+      },
+      "workflows": [
+        "publish.yml",
+        "dynamic/copilot-swe-agent/copilot"
+      ]
+    },
+    {
+      "repo": "dileepadev-npm",
+      "url": "https://github.com/dileepadev/dileepadev-npm",
+      "runs": 6,
+      "successRate": 17,
+      "medianDurationMs": 15500,
+      "lastRun": {
+        "repo": "dileepadev-npm",
+        "id": 22237043239,
+        "name": "Publish Package",
+        "workflow": "publish.yml",
+        "runNumber": 6,
+        "event": "release",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "v0.1.0",
+        "sha": "6402420",
+        "createdAt": "2026-02-20T18:55:48Z",
+        "startedAt": "2026-02-20T18:55:48Z",
+        "updatedAt": "2026-02-20T18:56:17Z",
+        "durationMs": 29000,
+        "url": "https://github.com/dileepadev/dileepadev-npm/actions/runs/22237043239"
+      },
+      "workflows": [
+        "publish.yml"
+      ]
+    },
+    {
+      "repo": "realtime-car-tracking-web-app",
+      "url": "https://github.com/dileepadev/realtime-car-tracking-web-app",
+      "runs": 3,
+      "successRate": 100,
+      "medianDurationMs": 45000,
+      "lastRun": {
+        "repo": "realtime-car-tracking-web-app",
+        "id": 20644552152,
+        "name": "pages build and deployment",
+        "workflow": "dynamic/pages/pages-build-deployment",
+        "runNumber": 3,
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "1.1.0-demo-web-build",
+        "sha": "2e76a5e",
+        "createdAt": "2026-01-01T19:47:50Z",
+        "startedAt": "2026-01-01T19:47:50Z",
+        "updatedAt": "2026-01-01T19:48:28Z",
+        "durationMs": 38000,
+        "url": "https://github.com/dileepadev/realtime-car-tracking-web-app/actions/runs/20644552152"
+      },
+      "workflows": [
+        "dynamic/pages/pages-build-deployment"
+      ]
+    },
+    {
+      "repo": "flutter-portfolio-site",
+      "url": "https://github.com/dileepadev/flutter-portfolio-site",
+      "runs": 1,
+      "successRate": 100,
+      "medianDurationMs": 42000,
+      "lastRun": {
+        "repo": "flutter-portfolio-site",
+        "id": 20642505739,
+        "name": "pages build and deployment",
+        "workflow": "dynamic/pages/pages-build-deployment",
+        "runNumber": 1,
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "web-build",
+        "sha": "9b32da9",
+        "createdAt": "2026-01-01T17:18:16Z",
+        "startedAt": "2026-01-01T17:18:16Z",
+        "updatedAt": "2026-01-01T17:18:58Z",
+        "durationMs": 42000,
+        "url": "https://github.com/dileepadev/flutter-portfolio-site/actions/runs/20642505739"
+      },
+      "workflows": [
+        "dynamic/pages/pages-build-deployment"
+      ]
+    },
+    {
+      "repo": "flutter-links-site",
+      "url": "https://github.com/dileepadev/flutter-links-site",
+      "runs": 1,
+      "successRate": 100,
+      "medianDurationMs": 46000,
+      "lastRun": {
+        "repo": "flutter-links-site",
+        "id": 20641392659,
+        "name": "pages build and deployment",
+        "workflow": "dynamic/pages/pages-build-deployment",
+        "runNumber": 1,
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "web-build",
+        "sha": "9202b71",
+        "createdAt": "2026-01-01T15:54:48Z",
+        "startedAt": "2026-01-01T15:54:48Z",
+        "updatedAt": "2026-01-01T15:55:34Z",
+        "durationMs": 46000,
+        "url": "https://github.com/dileepadev/flutter-links-site/actions/runs/20641392659"
+      },
+      "workflows": [
+        "dynamic/pages/pages-build-deployment"
+      ]
+    },
+    {
+      "repo": "flutter-toolkit-site",
+      "url": "https://github.com/dileepadev/flutter-toolkit-site",
+      "runs": 2,
+      "successRate": 100,
+      "medianDurationMs": 44500,
+      "lastRun": {
+        "repo": "flutter-toolkit-site",
+        "id": 20640647143,
+        "name": "pages build and deployment",
+        "workflow": "dynamic/pages/pages-build-deployment",
+        "runNumber": 2,
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "web-build",
+        "sha": "c2b7177",
+        "createdAt": "2026-01-01T14:59:02Z",
+        "startedAt": "2026-01-01T14:59:02Z",
+        "updatedAt": "2026-01-01T14:59:42Z",
+        "durationMs": 40000,
+        "url": "https://github.com/dileepadev/flutter-toolkit-site/actions/runs/20640647143"
+      },
+      "workflows": [
+        "dynamic/pages/pages-build-deployment"
+      ]
+    },
+    {
+      "repo": "burgerplus-web",
+      "url": "https://github.com/dileepadev/burgerplus-web",
+      "runs": 3,
+      "successRate": 100,
+      "medianDurationMs": 41000,
+      "lastRun": {
+        "repo": "burgerplus-web",
+        "id": 20611626453,
+        "name": "pages build and deployment",
+        "workflow": "dynamic/pages/pages-build-deployment",
+        "runNumber": 3,
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "main",
+        "sha": "3f729f5",
+        "createdAt": "2025-12-31T03:55:40Z",
+        "startedAt": "2025-12-31T03:55:40Z",
+        "updatedAt": "2025-12-31T03:56:21Z",
+        "durationMs": 41000,
+        "url": "https://github.com/dileepadev/burgerplus-web/actions/runs/20611626453"
+      },
+      "workflows": [
+        "dynamic/pages/pages-build-deployment"
+      ]
+    },
+    {
+      "repo": "railway-guider-web",
+      "url": "https://github.com/dileepadev/railway-guider-web",
+      "runs": 2,
+      "successRate": 100,
+      "medianDurationMs": 40500,
+      "lastRun": {
+        "repo": "railway-guider-web",
+        "id": 20611539799,
+        "name": "pages build and deployment",
+        "workflow": "dynamic/pages/pages-build-deployment",
+        "runNumber": 2,
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "main",
+        "sha": "6f5d47c",
+        "createdAt": "2025-12-31T03:48:45Z",
+        "startedAt": "2025-12-31T03:48:45Z",
+        "updatedAt": "2025-12-31T03:49:23Z",
+        "durationMs": 38000,
+        "url": "https://github.com/dileepadev/railway-guider-web/actions/runs/20611539799"
+      },
+      "workflows": [
+        "dynamic/pages/pages-build-deployment"
+      ]
+    },
+    {
+      "repo": "hungryme-web",
+      "url": "https://github.com/dileepadev/hungryme-web",
+      "runs": 3,
+      "successRate": 100,
+      "medianDurationMs": 44000,
+      "lastRun": {
+        "repo": "hungryme-web",
+        "id": 20611406990,
+        "name": "pages build and deployment",
+        "workflow": "dynamic/pages/pages-build-deployment",
+        "runNumber": 3,
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "main",
+        "sha": "d3540c3",
+        "createdAt": "2025-12-31T03:37:37Z",
+        "startedAt": "2025-12-31T03:37:37Z",
+        "updatedAt": "2025-12-31T03:38:23Z",
+        "durationMs": 46000,
+        "url": "https://github.com/dileepadev/hungryme-web/actions/runs/20611406990"
+      },
+      "workflows": [
+        "dynamic/pages/pages-build-deployment"
+      ]
+    },
+    {
+      "repo": "admin-dileepa-dev",
+      "url": "https://github.com/dileepadev/admin-dileepa-dev",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "cinewave-demo-agent-api",
+      "url": "https://github.com/dileepadev/cinewave-demo-agent-api",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "cinewave-demo-agent-cli",
+      "url": "https://github.com/dileepadev/cinewave-demo-agent-cli",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "cinewave-demo-core-api",
+      "url": "https://github.com/dileepadev/cinewave-demo-core-api",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "cinewave-demo-portal",
+      "url": "https://github.com/dileepadev/cinewave-demo-portal",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "class-manager-desktop",
+      "url": "https://github.com/dileepadev/class-manager-desktop",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "community-standards",
+      "url": "https://github.com/dileepadev/community-standards",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "context-reader",
+      "url": "https://github.com/dileepadev/context-reader",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "dileepa-dev",
+      "url": "https://github.com/dileepadev/dileepa-dev",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "dileepadev",
+      "url": "https://github.com/dileepadev/dileepadev",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "edoc-demo",
+      "url": "https://github.com/dileepadev/edoc-demo",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "finedeliver",
+      "url": "https://github.com/dileepadev/finedeliver",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "flutter-firebase-phone-auth",
+      "url": "https://github.com/dileepadev/flutter-firebase-phone-auth",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "ggez",
+      "url": "https://github.com/dileepadev/ggez",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "gnome-bluetooth-headset-monitor",
+      "url": "https://github.com/dileepadev/gnome-bluetooth-headset-monitor",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "gnome-resource-monitor",
+      "url": "https://github.com/dileepadev/gnome-resource-monitor",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "hungryme-desktop",
+      "url": "https://github.com/dileepadev/hungryme-desktop",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "learn-ai900",
+      "url": "https://github.com/dileepadev/learn-ai900",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "learn-microsoft-foundry",
+      "url": "https://github.com/dileepadev/learn-microsoft-foundry",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "learn-python",
+      "url": "https://github.com/dileepadev/learn-python",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "learn-typescript",
+      "url": "https://github.com/dileepadev/learn-typescript",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "mashmart-demo",
+      "url": "https://github.com/dileepadev/mashmart-demo",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "mender",
+      "url": "https://github.com/dileepadev/mender",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "microsoft-agent-framework-chat-app",
+      "url": "https://github.com/dileepadev/microsoft-agent-framework-chat-app",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "ml-dataset-health-api",
+      "url": "https://github.com/dileepadev/ml-dataset-health-api",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "openjobs-desktop",
+      "url": "https://github.com/dileepadev/openjobs-desktop",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "python-certificate-generator",
+      "url": "https://github.com/dileepadev/python-certificate-generator",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "python-markdown-to-pdf",
+      "url": "https://github.com/dileepadev/python-markdown-to-pdf",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "qa-test-pilot",
+      "url": "https://github.com/dileepadev/qa-test-pilot",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "railway-guider",
+      "url": "https://github.com/dileepadev/railway-guider",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "railway-guider-admin",
+      "url": "https://github.com/dileepadev/railway-guider-admin",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "railway-guider-ticket-scanner",
+      "url": "https://github.com/dileepadev/railway-guider-ticket-scanner",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "studentprofiler-demo",
+      "url": "https://github.com/dileepadev/studentprofiler-demo",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "terminal-configs",
+      "url": "https://github.com/dileepadev/terminal-configs",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "trashpick",
+      "url": "https://github.com/dileepadev/trashpick",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "youtube",
+      "url": "https://github.com/dileepadev/youtube",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    }
+  ],
+  "live": [
+    {
+      "repo": "dileepadev.github.io",
+      "url": "https://dileepadev.github.io/",
+      "homepage": "https://dileepadev.github.io/",
+      "hasPages": true,
+      "cname": null,
+      "status": "built",
+      "buildType": "legacy",
+      "lastDeployedAt": "2026-03-01T18:37:46Z",
+      "pushedAt": "2026-09-02T14:50:35Z"
+    },
+    {
+      "repo": "links-dileepa-dev",
+      "url": "https://links.dileepa.dev/",
+      "homepage": "http://links.dileepa.dev/",
+      "hasPages": true,
+      "cname": "links.dileepa.dev",
+      "status": null,
+      "buildType": "workflow",
+      "lastDeployedAt": "2026-09-02T14:24:58Z",
+      "pushedAt": "2026-09-02T14:25:24Z"
+    },
+    {
+      "repo": "dileepa-dev",
+      "url": "https://dileepa.dev",
+      "homepage": "https://dileepa.dev",
+      "hasPages": false,
+      "cname": null,
+      "status": null,
+      "buildType": null,
+      "lastDeployedAt": "2026-09-01T18:27:22Z",
+      "pushedAt": "2026-09-01T18:26:48Z"
+    },
+    {
+      "repo": "api-dileepa-dev",
+      "url": "https://api.dileepa.dev",
+      "homepage": "https://api.dileepa.dev",
+      "hasPages": false,
+      "cname": null,
+      "status": null,
+      "buildType": null,
+      "lastDeployedAt": "2026-08-31T20:31:52Z",
+      "pushedAt": "2026-08-31T20:05:37Z"
+    },
+    {
+      "repo": "blog-dileepa-dev",
+      "url": "https://dileepa.dev/blog",
+      "homepage": "https://dileepa.dev/blog",
+      "hasPages": false,
+      "cname": null,
+      "status": null,
+      "buildType": null,
+      "lastDeployedAt": "2026-08-21T17:17:32Z",
+      "pushedAt": "2026-08-31T19:20:05Z"
+    },
+    {
+      "repo": "dileepadev",
+      "url": "https://dileepa.dev",
+      "homepage": "https://dileepa.dev",
+      "hasPages": false,
+      "cname": null,
+      "status": null,
+      "buildType": null,
+      "lastDeployedAt": null,
+      "pushedAt": "2026-08-26T13:46:30Z"
+    },
+    {
+      "repo": "learn-ai",
+      "url": "https://dileepadev.github.io/learn-ai/",
+      "homepage": "https://dileepadev.github.io/learn-ai/",
+      "hasPages": true,
+      "cname": null,
+      "status": "built",
+      "buildType": "workflow",
+      "lastDeployedAt": "2026-08-21T19:28:15Z",
+      "pushedAt": "2026-08-21T19:27:06Z"
+    },
+    {
+      "repo": "microsoft-agent-framework-workshop",
+      "url": "https://dileepadev.github.io/microsoft-agent-framework-workshop/",
+      "homepage": "https://dileepadev.github.io/microsoft-agent-framework-workshop/",
+      "hasPages": true,
+      "cname": null,
+      "status": "built",
+      "buildType": "workflow",
+      "lastDeployedAt": null,
+      "pushedAt": "2026-08-17T18:10:08Z"
+    },
+    {
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "url": "https://dileepadev.github.io/deploying-agentic-ai-apps-workshop/",
+      "homepage": "https://dileepadev.github.io/deploying-agentic-ai-apps-workshop/",
+      "hasPages": true,
+      "cname": null,
+      "status": null,
+      "buildType": "workflow",
+      "lastDeployedAt": "2026-08-14T18:20:41Z",
+      "pushedAt": "2026-08-14T19:03:13Z"
+    },
+    {
+      "repo": "learn-ai-engineering",
+      "url": "https://dileepadev.github.io/learn-ai-engineering/",
+      "homepage": "https://dileepadev.github.io/learn-ai-engineering/",
+      "hasPages": true,
+      "cname": null,
+      "status": null,
+      "buildType": "workflow",
+      "lastDeployedAt": "2026-08-11T14:27:17Z",
+      "pushedAt": "2026-08-11T14:26:36Z"
+    },
+    {
+      "repo": "learn-az900",
+      "url": "https://dileepadev.github.io/learn-az900/",
+      "homepage": "https://dileepadev.github.io/learn-az900/",
+      "hasPages": true,
+      "cname": null,
+      "status": "built",
+      "buildType": "legacy",
+      "lastDeployedAt": "2026-04-28T18:31:33Z",
+      "pushedAt": "2026-04-28T18:31:18Z"
+    },
+    {
+      "repo": "fetch-gitignore",
+      "url": "https://npmjs.com/package/@dileepadev/fetch-gitignore",
+      "homepage": "https://npmjs.com/package/@dileepadev/fetch-gitignore",
+      "hasPages": false,
+      "cname": null,
+      "status": null,
+      "buildType": null,
+      "lastDeployedAt": null,
+      "pushedAt": "2026-02-21T16:06:35Z"
+    },
+    {
+      "repo": "dileepadev-npm",
+      "url": "https://npmjs.com/package/@dileepadev/dileepadev-npm",
+      "homepage": "https://npmjs.com/package/@dileepadev/dileepadev-npm",
+      "hasPages": false,
+      "cname": null,
+      "status": null,
+      "buildType": null,
+      "lastDeployedAt": null,
+      "pushedAt": "2026-02-20T18:55:21Z"
+    },
+    {
+      "repo": "realtime-car-tracking-web-app",
+      "url": "https://dileepadev.github.io/realtime-car-tracking-web-app/",
+      "homepage": "https://dileepadev.github.io/realtime-car-tracking-web-app/",
+      "hasPages": true,
+      "cname": null,
+      "status": "built",
+      "buildType": "legacy",
+      "lastDeployedAt": "2026-01-01T19:48:16Z",
+      "pushedAt": "2026-01-06T15:09:15Z"
+    },
+    {
+      "repo": "flutter-portfolio-site",
+      "url": "https://dileepadev.github.io/flutter-portfolio-site/",
+      "homepage": "https://dileepadev.github.io/flutter-portfolio-site/",
+      "hasPages": true,
+      "cname": null,
+      "status": "built",
+      "buildType": "legacy",
+      "lastDeployedAt": "2026-01-01T17:18:42Z",
+      "pushedAt": "2026-01-06T15:08:46Z"
+    },
+    {
+      "repo": "flutter-links-site",
+      "url": "https://dileepadev.github.io/flutter-links-site/",
+      "homepage": "https://dileepadev.github.io/flutter-links-site/",
+      "hasPages": true,
+      "cname": null,
+      "status": "built",
+      "buildType": "legacy",
+      "lastDeployedAt": "2026-01-01T15:55:18Z",
+      "pushedAt": "2026-01-06T15:08:18Z"
+    },
+    {
+      "repo": "flutter-toolkit-site",
+      "url": "https://dileepadev.github.io/flutter-toolkit-site/",
+      "homepage": "https://dileepadev.github.io/flutter-toolkit-site/",
+      "hasPages": true,
+      "cname": null,
+      "status": "built",
+      "buildType": "legacy",
+      "lastDeployedAt": "2026-01-01T14:59:27Z",
+      "pushedAt": "2026-01-06T15:07:46Z"
+    },
+    {
+      "repo": "ggez",
+      "url": "https://youtu.be/fXXrps7qlHM",
+      "homepage": "https://youtu.be/fXXrps7qlHM",
+      "hasPages": false,
+      "cname": null,
+      "status": null,
+      "buildType": null,
+      "lastDeployedAt": null,
+      "pushedAt": "2025-12-31T04:58:03Z"
+    },
+    {
+      "repo": "trashpick",
+      "url": "https://youtu.be/lwqs8Z3Aw50",
+      "homepage": "https://youtu.be/lwqs8Z3Aw50",
+      "hasPages": false,
+      "cname": null,
+      "status": null,
+      "buildType": null,
+      "lastDeployedAt": null,
+      "pushedAt": "2025-12-31T04:32:25Z"
+    },
+    {
+      "repo": "flutter-firebase-phone-auth",
+      "url": "https://youtu.be/205O8dKtwOA",
+      "homepage": "https://youtu.be/205O8dKtwOA",
+      "hasPages": false,
+      "cname": null,
+      "status": null,
+      "buildType": null,
+      "lastDeployedAt": null,
+      "pushedAt": "2025-12-31T04:14:01Z"
+    },
+    {
+      "repo": "edoc-demo",
+      "url": "https://youtu.be/lYhdtlcxQLA",
+      "homepage": "https://youtu.be/lYhdtlcxQLA",
+      "hasPages": false,
+      "cname": null,
+      "status": null,
+      "buildType": null,
+      "lastDeployedAt": null,
+      "pushedAt": "2025-12-31T04:11:59Z"
+    },
+    {
+      "repo": "mashmart-demo",
+      "url": "https://youtu.be/GvNAG3htzDw",
+      "homepage": "https://youtu.be/GvNAG3htzDw",
+      "hasPages": false,
+      "cname": null,
+      "status": null,
+      "buildType": null,
+      "lastDeployedAt": null,
+      "pushedAt": "2025-12-31T04:09:56Z"
+    },
+    {
+      "repo": "finedeliver",
+      "url": "https://youtu.be/7RVSHpwieSQ",
+      "homepage": "https://youtu.be/7RVSHpwieSQ",
+      "hasPages": false,
+      "cname": null,
+      "status": null,
+      "buildType": null,
+      "lastDeployedAt": null,
+      "pushedAt": "2025-12-31T03:58:57Z"
+    },
+    {
+      "repo": "burgerplus-web",
+      "url": "https://dileepadev.github.io/burgerplus-web/",
+      "homepage": "https://dileepadev.github.io/burgerplus-web/",
+      "hasPages": true,
+      "cname": null,
+      "status": "built",
+      "buildType": "legacy",
+      "lastDeployedAt": "2025-12-31T03:56:06Z",
+      "pushedAt": "2025-12-31T03:55:38Z"
+    },
+    {
+      "repo": "openjobs-desktop",
+      "url": "https://youtu.be/oRQKSB9skfA",
+      "homepage": "https://youtu.be/oRQKSB9skfA",
+      "hasPages": false,
+      "cname": null,
+      "status": null,
+      "buildType": null,
+      "lastDeployedAt": null,
+      "pushedAt": "2025-12-31T03:53:24Z"
+    },
+    {
+      "repo": "railway-guider",
+      "url": "https://youtu.be/M0syZuBxhbY",
+      "homepage": "https://youtu.be/M0syZuBxhbY",
+      "hasPages": false,
+      "cname": null,
+      "status": null,
+      "buildType": null,
+      "lastDeployedAt": null,
+      "pushedAt": "2025-12-31T03:52:09Z"
+    },
+    {
+      "repo": "railway-guider-web",
+      "url": "https://dileepadev.github.io/railway-guider-web/",
+      "homepage": "https://dileepadev.github.io/railway-guider-web/",
+      "hasPages": true,
+      "cname": null,
+      "status": "built",
+      "buildType": "legacy",
+      "lastDeployedAt": "2025-12-31T03:49:12Z",
+      "pushedAt": "2025-12-31T03:48:44Z"
+    },
+    {
+      "repo": "railway-guider-ticket-scanner",
+      "url": "https://youtu.be/cmi6hqZiB0E",
+      "homepage": "https://youtu.be/cmi6hqZiB0E",
+      "hasPages": false,
+      "cname": null,
+      "status": null,
+      "buildType": null,
+      "lastDeployedAt": null,
+      "pushedAt": "2025-12-31T03:46:49Z"
+    },
+    {
+      "repo": "railway-guider-admin",
+      "url": "https://youtu.be/waE9ZqxgTUo",
+      "homepage": "https://youtu.be/waE9ZqxgTUo",
+      "hasPages": false,
+      "cname": null,
+      "status": null,
+      "buildType": null,
+      "lastDeployedAt": null,
+      "pushedAt": "2025-12-31T03:44:10Z"
+    },
+    {
+      "repo": "class-manager-desktop",
+      "url": "https://youtu.be/tOEZ8ckuucI",
+      "homepage": "https://youtu.be/tOEZ8ckuucI",
+      "hasPages": false,
+      "cname": null,
+      "status": null,
+      "buildType": null,
+      "lastDeployedAt": null,
+      "pushedAt": "2025-12-31T03:41:26Z"
+    },
+    {
+      "repo": "hungryme-web",
+      "url": "https://dileepadev.github.io/hungryme-web/",
+      "homepage": "https://dileepadev.github.io/hungryme-web/",
+      "hasPages": true,
+      "cname": null,
+      "status": "built",
+      "buildType": "legacy",
+      "lastDeployedAt": "2025-12-31T03:38:09Z",
+      "pushedAt": "2025-12-31T03:37:36Z"
+    },
+    {
+      "repo": "hungryme-desktop",
+      "url": "https://youtu.be/YPMFw7W680o",
+      "homepage": "https://youtu.be/YPMFw7W680o",
+      "hasPages": false,
+      "cname": null,
+      "status": null,
+      "buildType": null,
+      "lastDeployedAt": null,
+      "pushedAt": "2025-12-31T03:33:57Z"
+    }
+  ],
+  "releases": [
+    {
+      "repo": "links-dileepa-dev",
+      "tag": "v2.0.0",
+      "name": "v2.0.0",
+      "publishedAt": "2026-09-02T14:25:42Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/links-dileepa-dev/releases/tag/v2.0.0"
+    },
+    {
+      "repo": "admin-dileepa-dev",
+      "tag": "v2.0.0",
+      "name": "v2.0.0",
+      "publishedAt": "2026-09-01T19:16:52Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/admin-dileepa-dev/releases/tag/v2.0.0"
+    },
+    {
+      "repo": "dileepa-dev",
+      "tag": "v2.0.0",
+      "name": "v2.0.0",
+      "publishedAt": "2026-09-01T18:27:08Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/dileepa-dev/releases/tag/v2.0.0"
+    },
+    {
+      "repo": "api-dileepa-dev",
+      "tag": "v2.0.0",
+      "name": "v2.0.0",
+      "publishedAt": "2026-08-31T20:05:38Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/api-dileepa-dev/releases/tag/v2.0.0"
+    },
+    {
+      "repo": "blog-dileepa-dev",
+      "tag": "v2.0.0",
+      "name": "v2.0.0: Transition to Dedicated Content Source",
+      "publishedAt": "2026-08-31T18:59:43Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/blog-dileepa-dev/releases/tag/v2.0.0"
+    },
+    {
+      "repo": "dileepadev",
+      "tag": "v1.0",
+      "name": "v1.0",
+      "publishedAt": "2026-08-23T15:07:23Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/dileepadev/releases/tag/v1.0"
+    },
+    {
+      "repo": "dileepadev.github.io",
+      "tag": "v1.0.0",
+      "name": "v1.0.0",
+      "publishedAt": "2026-08-22T15:08:43Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/dileepadev.github.io/releases/tag/v1.0.0"
+    },
+    {
+      "repo": "microsoft-agent-framework-workshop",
+      "tag": "v1.0",
+      "name": "v1.0",
+      "publishedAt": "2026-08-15T17:37:00Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/microsoft-agent-framework-workshop/releases/tag/v1.0"
+    },
+    {
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "tag": "v1.0.0",
+      "name": "v1.0.0",
+      "publishedAt": "2026-08-14T19:01:36Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/releases/tag/v1.0.0"
+    },
+    {
+      "repo": "dileepadev",
+      "tag": "v0.2",
+      "name": "v0.2",
+      "publishedAt": "2026-08-06T17:15:57Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/dileepadev/releases/tag/v0.2"
+    },
+    {
+      "repo": "gnome-bluetooth-headset-monitor",
+      "tag": "v1.0.1",
+      "name": "v1.0.1",
+      "publishedAt": "2026-08-04T14:04:26Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/gnome-bluetooth-headset-monitor/releases/tag/v1.0.1"
+    },
+    {
+      "repo": "gnome-resource-monitor",
+      "tag": "v1.0.1",
+      "name": "v1.0.1",
+      "publishedAt": "2026-07-30T18:22:51Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/gnome-resource-monitor/releases/tag/v1.0.1"
+    },
+    {
+      "repo": "gnome-bluetooth-headset-monitor",
+      "tag": "v1.0.0",
+      "name": "v1.0.0",
+      "publishedAt": "2026-06-03T14:55:06Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/gnome-bluetooth-headset-monitor/releases/tag/v1.0.0"
+    },
+    {
+      "repo": "community-standards",
+      "tag": "v1.1.0",
+      "name": "v1.1.0",
+      "publishedAt": "2026-03-26T16:47:19Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/community-standards/releases/tag/v1.1.0"
+    },
+    {
+      "repo": "links-dileepa-dev",
+      "tag": "v1.0.0",
+      "name": "v1.0.0",
+      "publishedAt": "2026-03-07T19:33:07Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/links-dileepa-dev/releases/tag/v1.0.0"
+    },
+    {
+      "repo": "blog-dileepa-dev",
+      "tag": "v1.1.0",
+      "name": "v1.1.0",
+      "publishedAt": "2026-03-06T16:48:07Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/blog-dileepa-dev/releases/tag/v1.1.0"
+    },
+    {
+      "repo": "dileepa-dev",
+      "tag": "v1.3.0",
+      "name": "v1.3.0",
+      "publishedAt": "2026-03-03T14:55:31Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/dileepa-dev/releases/tag/v1.3.0"
+    },
+    {
+      "repo": "api-dileepa-dev",
+      "tag": "v1.2.1",
+      "name": "v1.2.1",
+      "publishedAt": "2026-03-02T16:39:57Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/api-dileepa-dev/releases/tag/v1.2.1"
+    },
+    {
+      "repo": "admin-dileepa-dev",
+      "tag": "v1.0.0",
+      "name": "v1.0.0",
+      "publishedAt": "2026-03-02T14:56:12Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/admin-dileepa-dev/releases/tag/v1.0.0"
+    },
+    {
+      "repo": "api-dileepa-dev",
+      "tag": "v1.2.0",
+      "name": "v1.2.0",
+      "publishedAt": "2026-03-02T12:03:36Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/api-dileepa-dev/releases/tag/v1.2.0"
+    },
+    {
+      "repo": "dileepadev",
+      "tag": "v0.1",
+      "name": "v0.1",
+      "publishedAt": "2026-02-28T16:13:24Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/dileepadev/releases/tag/v0.1"
+    },
+    {
+      "repo": "fetch-gitignore",
+      "tag": "v1.0.2",
+      "name": "v1.0.2",
+      "publishedAt": "2026-02-21T16:06:36Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/fetch-gitignore/releases/tag/v1.0.2"
+    },
+    {
+      "repo": "fetch-gitignore",
+      "tag": "v1.0.1",
+      "name": "v1.0.1",
+      "publishedAt": "2026-02-21T15:40:09Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/fetch-gitignore/releases/tag/v1.0.1"
+    },
+    {
+      "repo": "fetch-gitignore",
+      "tag": "v1.0.0",
+      "name": "v1.0.0",
+      "publishedAt": "2026-02-21T15:23:37Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/fetch-gitignore/releases/tag/v1.0.0"
+    },
+    {
+      "repo": "dileepadev-npm",
+      "tag": "v0.1.0",
+      "name": "v0.1.0",
+      "publishedAt": "2026-02-20T18:55:46Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/dileepadev-npm/releases/tag/v0.1.0"
+    },
+    {
+      "repo": "blog-dileepa-dev",
+      "tag": "v1.0.0",
+      "name": "v1.0.0",
+      "publishedAt": "2026-02-04T05:42:12Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/blog-dileepa-dev/releases/tag/v1.0.0"
+    },
+    {
+      "repo": "terminal-configs",
+      "tag": "v1.1.0",
+      "name": "v1.1.0",
+      "publishedAt": "2026-01-20T16:23:20Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/terminal-configs/releases/tag/v1.1.0"
+    },
+    {
+      "repo": "gnome-resource-monitor",
+      "tag": "v1.0.0",
+      "name": "v1.0.0",
+      "publishedAt": "2026-01-20T14:33:47Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/gnome-resource-monitor/releases/tag/v1.0.0"
+    },
+    {
+      "repo": "terminal-configs",
+      "tag": "v1.0.0",
+      "name": "v1.0.0",
+      "publishedAt": "2026-01-16T16:20:20Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/terminal-configs/releases/tag/v1.0.0"
+    },
+    {
+      "repo": "dileepa-dev",
+      "tag": "v1.2.0",
+      "name": "v1.2.0",
+      "publishedAt": "2026-01-15T18:26:57Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/dileepa-dev/releases/tag/v1.2.0"
+    },
+    {
+      "repo": "dileepa-dev",
+      "tag": "v1.1.0",
+      "name": "v1.1.0",
+      "publishedAt": "2026-01-15T12:58:47Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/dileepa-dev/releases/tag/v1.1.0"
+    },
+    {
+      "repo": "api-dileepa-dev",
+      "tag": "v1.1.0",
+      "name": "v1.1.0",
+      "publishedAt": "2026-01-14T18:27:11Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/api-dileepa-dev/releases/tag/v1.1.0"
+    },
+    {
+      "repo": "dileepa-dev",
+      "tag": "v1.0.0",
+      "name": "v1.0.0",
+      "publishedAt": "2026-01-14T17:35:28Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/dileepa-dev/releases/tag/v1.0.0"
+    },
+    {
+      "repo": "api-dileepa-dev",
+      "tag": "v1.0.0",
+      "name": "v1.0.0",
+      "publishedAt": "2026-01-13T15:32:31Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/api-dileepa-dev/releases/tag/v1.0.0"
+    },
+    {
+      "repo": "community-standards",
+      "tag": "v1.0.0",
+      "name": "v1.0.0",
+      "publishedAt": "2026-01-12T14:31:09Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/community-standards/releases/tag/v1.0.0"
+    },
+    {
+      "repo": "realtime-car-tracking-web-app",
+      "tag": "v1.1.0",
+      "name": "v1.1.0",
+      "publishedAt": "2026-01-06T15:23:02Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/realtime-car-tracking-web-app/releases/tag/v1.1.0"
+    },
+    {
+      "repo": "flutter-portfolio-site",
+      "tag": "v1.2.0",
+      "name": "v1.2.0",
+      "publishedAt": "2026-01-06T15:21:52Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/flutter-portfolio-site/releases/tag/v1.2.0"
+    },
+    {
+      "repo": "flutter-links-site",
+      "tag": "v.1.2.0",
+      "name": "v1.2.0",
+      "publishedAt": "2026-01-06T15:20:38Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/flutter-links-site/releases/tag/v.1.2.0"
+    },
+    {
+      "repo": "flutter-toolkit-site",
+      "tag": "1.2.0",
+      "name": "v1.2.0",
+      "publishedAt": "2026-01-06T15:19:09Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/flutter-toolkit-site/releases/tag/1.2.0"
+    }
+  ],
+  "activity": [
+    {
+      "kind": "release",
+      "repo": "links-dileepa-dev",
+      "at": "2026-09-02T14:25:42Z",
+      "title": "v2.0.0",
+      "detail": "v2.0.0",
+      "state": "released",
+      "url": "https://github.com/dileepadev/links-dileepa-dev/releases/tag/v2.0.0"
+    },
+    {
+      "kind": "run",
+      "repo": "links-dileepa-dev",
+      "at": "2026-09-02T14:25:13Z",
+      "title": "Deploy Astro site to Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/links-dileepa-dev/actions/runs/33641864737"
+    },
+    {
+      "kind": "deployment",
+      "repo": "links-dileepa-dev",
+      "at": "2026-09-02T14:24:58Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "release",
+      "repo": "admin-dileepa-dev",
+      "at": "2026-09-01T19:16:52Z",
+      "title": "v2.0.0",
+      "detail": "v2.0.0",
+      "state": "released",
+      "url": "https://github.com/dileepadev/admin-dileepa-dev/releases/tag/v2.0.0"
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-09-01T18:27:22Z",
+      "title": "Production",
+      "detail": "9dada10921d46dbf8514998f782352acbf30b8a9",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "release",
+      "repo": "dileepa-dev",
+      "at": "2026-09-01T18:27:08Z",
+      "title": "v2.0.0",
+      "detail": "v2.0.0",
+      "state": "released",
+      "url": "https://github.com/dileepadev/dileepa-dev/releases/tag/v2.0.0"
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-09-01T18:18:06Z",
+      "title": "Preview",
+      "detail": "924c2bd48601ad88470d315baf51a6151035d5cb",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-09-01T18:11:26Z",
+      "title": "Preview",
+      "detail": "34f26e9ece091c2e7668a5f82951dc6fb6ff57e3",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-09-01T17:51:06Z",
+      "title": "Preview",
+      "detail": "db54d884ce51ab5534efa57f50ffffa6a058c1c0",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-09-01T17:32:40Z",
+      "title": "Preview",
+      "detail": "262710331b7f01e034c2a61a13680dfc4fcbb2ab",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-09-01T15:11:54Z",
+      "title": "Preview",
+      "detail": "3c368664de93d143eca6842817ef68a0e06cd7b1",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-09-01T11:44:25Z",
+      "title": "Preview",
+      "detail": "426e343a0fd131a72da234558f8b122042765b9c",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-09-01T10:53:11Z",
+      "title": "Preview",
+      "detail": "2ec91811db2e085cd5e7f9a903a1674d4c195a36",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T20:32:58Z",
+      "title": "Deploy",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33436524212"
+    },
+    {
+      "kind": "deployment",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T20:31:52Z",
+      "title": "production",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "release",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T20:05:38Z",
+      "title": "v2.0.0",
+      "detail": "v2.0.0",
+      "state": "released",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/releases/tag/v2.0.0"
+    },
+    {
+      "kind": "run",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T20:05:15Z",
+      "title": "CI",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33433999971"
+    },
+    {
+      "kind": "run",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T20:05:05Z",
+      "title": "Deploy",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33433999994"
+    },
+    {
+      "kind": "deployment",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T20:04:17Z",
+      "title": "production",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T20:04:03Z",
+      "title": "CI",
+      "detail": "dev",
+      "state": "success",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33433877533"
+    },
+    {
+      "kind": "run",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T20:03:25Z",
+      "title": "CI",
+      "detail": "dev",
+      "state": "success",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33433823434"
+    },
+    {
+      "kind": "run",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T20:02:04Z",
+      "title": "CI",
+      "detail": "feat/v2.0.0",
+      "state": "success",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33433705730"
+    },
+    {
+      "kind": "run",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T20:01:49Z",
+      "title": "CI",
+      "detail": "feat/v2.0.0",
+      "state": "success",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33433678883"
+    },
+    {
+      "kind": "run",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T19:46:14Z",
+      "title": "Deploy",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33432292561"
+    },
+    {
+      "kind": "run",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T19:46:11Z",
+      "title": "CI",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33432292314"
+    },
+    {
+      "kind": "deployment",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T19:45:23Z",
+      "title": "production",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T19:45:07Z",
+      "title": "CI",
+      "detail": "dev",
+      "state": "success",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33432173884"
+    },
+    {
+      "kind": "run",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T19:45:00Z",
+      "title": "CI",
+      "detail": "dev",
+      "state": "success",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33432169572"
+    },
+    {
+      "kind": "run",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T19:42:48Z",
+      "title": "CI",
+      "detail": "dev",
+      "state": "success",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33431965590"
+    },
+    {
+      "kind": "run",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T19:40:44Z",
+      "title": "CI",
+      "detail": "feat/v2.0.0",
+      "state": "success",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33431785290"
+    },
+    {
+      "kind": "run",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T19:40:34Z",
+      "title": "CI",
+      "detail": "feat/v2.0.0",
+      "state": "success",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33431782404"
+    },
+    {
+      "kind": "run",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T19:35:52Z",
+      "title": "CI",
+      "detail": "feat/v2.0.0",
+      "state": "success",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33431350321"
+    },
+    {
+      "kind": "release",
+      "repo": "blog-dileepa-dev",
+      "at": "2026-08-31T18:59:43Z",
+      "title": "v2.0.0: Transition to Dedicated Content Source",
+      "detail": "v2.0.0",
+      "state": "released",
+      "url": "https://github.com/dileepadev/blog-dileepa-dev/releases/tag/v2.0.0"
+    },
+    {
+      "kind": "run",
+      "repo": "blog-dileepa-dev",
+      "at": "2026-08-31T18:57:04Z",
+      "title": "Sync blog posts to API",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/33427823590"
+    },
+    {
+      "kind": "run",
+      "repo": "blog-dileepa-dev",
+      "at": "2026-08-31T18:56:59Z",
+      "title": "Validate posts",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/33427823563"
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-08-31T18:53:00Z",
+      "title": "Preview",
+      "detail": "33da0e20c35b38c6adf01ce421994c1f0e70f50b",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-08-31T18:49:29Z",
+      "title": "Preview",
+      "detail": "d0d35f59e033fec32cd5fc877a261bd8394f85b1",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "blog-dileepa-dev",
+      "at": "2026-08-31T18:46:49Z",
+      "title": "Sync blog posts to API",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/33426884125"
+    },
+    {
+      "kind": "run",
+      "repo": "blog-dileepa-dev",
+      "at": "2026-08-31T18:46:43Z",
+      "title": "Validate posts",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/33426884041"
+    },
+    {
+      "kind": "run",
+      "repo": "blog-dileepa-dev",
+      "at": "2026-08-31T18:35:27Z",
+      "title": "Sync blog posts to API",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/33425829003"
+    },
+    {
+      "kind": "run",
+      "repo": "blog-dileepa-dev",
+      "at": "2026-08-31T18:35:20Z",
+      "title": "Validate posts",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/33425828984"
+    },
+    {
+      "kind": "run",
+      "repo": "blog-dileepa-dev",
+      "at": "2026-08-31T18:12:18Z",
+      "title": "Sync blog posts to API",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/33423686965"
+    },
+    {
+      "kind": "run",
+      "repo": "blog-dileepa-dev",
+      "at": "2026-08-31T18:12:14Z",
+      "title": "Validate posts",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/33423686919"
+    },
+    {
+      "kind": "run",
+      "repo": "blog-dileepa-dev",
+      "at": "2026-08-31T18:11:02Z",
+      "title": "Validate posts",
+      "detail": "feat/v2.0.0",
+      "state": "success",
+      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/33423582261"
+    },
+    {
+      "kind": "run",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T16:54:20Z",
+      "title": "Deploy",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33416563793"
+    },
+    {
+      "kind": "deployment",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T16:53:22Z",
+      "title": "production",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T16:51:49Z",
+      "title": "CI",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33416357348"
+    },
+    {
+      "kind": "run",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T16:50:48Z",
+      "title": "CI",
+      "detail": "dev",
+      "state": "success",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33416249540"
+    },
+    {
+      "kind": "run",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T16:50:44Z",
+      "title": "CI",
+      "detail": "dev",
+      "state": "success",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33416244257"
+    },
+    {
+      "kind": "run",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-31T16:49:19Z",
+      "title": "CI",
+      "detail": "dev",
+      "state": "success",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33416118682"
+    },
+    {
+      "kind": "deployment",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-27T12:34:22Z",
+      "title": "production",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "blog-dileepa-dev",
+      "at": "2026-08-26T17:38:08Z",
+      "title": "Sync blog posts to API",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/32995303722"
+    },
+    {
+      "kind": "run",
+      "repo": "blog-dileepa-dev",
+      "at": "2026-08-26T17:36:08Z",
+      "title": "Sync blog posts to API",
+      "detail": "main",
+      "state": "failure",
+      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/32995100160"
+    },
+    {
+      "kind": "run",
+      "repo": "blog-dileepa-dev",
+      "at": "2026-08-26T17:36:05Z",
+      "title": "Validate posts",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/32995100176"
+    },
+    {
+      "kind": "run",
+      "repo": "blog-dileepa-dev",
+      "at": "2026-08-26T17:34:51Z",
+      "title": "Validate posts",
+      "detail": "feat/v2.0.0",
+      "state": "success",
+      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/32994968733"
+    },
+    {
+      "kind": "deployment",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-26T17:06:27Z",
+      "title": "production",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "deployment",
+      "repo": "api-dileepa-dev",
+      "at": "2026-08-26T16:55:09Z",
+      "title": "production",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "release",
+      "repo": "dileepadev",
+      "at": "2026-08-23T15:07:23Z",
+      "title": "v1.0",
+      "detail": "v1.0",
+      "state": "released",
+      "url": "https://github.com/dileepadev/dileepadev/releases/tag/v1.0"
+    },
+    {
+      "kind": "run",
+      "repo": "gauntlet",
+      "at": "2026-08-23T12:45:22Z",
+      "title": "CI",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/gauntlet/actions/runs/32640257706"
+    },
+    {
+      "kind": "release",
+      "repo": "dileepadev.github.io",
+      "at": "2026-08-22T15:08:43Z",
+      "title": "v1.0.0",
+      "detail": "v1.0.0",
+      "state": "released",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/releases/tag/v1.0.0"
+    },
+    {
+      "kind": "run",
+      "repo": "learn-ai",
+      "at": "2026-08-21T19:28:31Z",
+      "title": "Deploy to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-ai/actions/runs/32518532879"
+    },
+    {
+      "kind": "deployment",
+      "repo": "learn-ai",
+      "at": "2026-08-21T19:28:15Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "blog-dileepa-dev",
+      "at": "2026-08-21T17:18:07Z",
+      "title": "Deploy Astro site to Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/32507347859"
+    },
+    {
+      "kind": "deployment",
+      "repo": "blog-dileepa-dev",
+      "at": "2026-08-21T17:17:32Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "blog-dileepa-dev",
+      "at": "2026-08-21T16:27:31Z",
+      "title": "Deploy Astro site to Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/32502942761"
+    },
+    {
+      "kind": "deployment",
+      "repo": "blog-dileepa-dev",
+      "at": "2026-08-21T16:27:04Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "blog-dileepa-dev",
+      "at": "2026-08-20T17:36:18Z",
+      "title": "Deploy Astro site to Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/32398399557"
+    },
+    {
+      "kind": "deployment",
+      "repo": "blog-dileepa-dev",
+      "at": "2026-08-20T17:35:30Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "gauntlet",
+      "at": "2026-08-20T17:00:52Z",
+      "title": "CI",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/gauntlet/actions/runs/32395202985"
+    },
+    {
+      "kind": "run",
+      "repo": "microsoft-agent-framework-workshop",
+      "at": "2026-08-16T15:17:18Z",
+      "title": "Deploy Docs to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/microsoft-agent-framework-workshop/actions/runs/31955150480"
+    },
+    {
+      "kind": "run",
+      "repo": "learn-ai",
+      "at": "2026-08-15T18:22:54Z",
+      "title": "Deploy to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-ai/actions/runs/31900898392"
+    },
+    {
+      "kind": "deployment",
+      "repo": "learn-ai",
+      "at": "2026-08-15T18:22:30Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "learn-ai",
+      "at": "2026-08-15T18:04:08Z",
+      "title": "Deploy to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-ai/actions/runs/31900043088"
+    },
+    {
+      "kind": "deployment",
+      "repo": "learn-ai",
+      "at": "2026-08-15T18:03:51Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "release",
+      "repo": "microsoft-agent-framework-workshop",
+      "at": "2026-08-15T17:37:00Z",
+      "title": "v1.0",
+      "detail": "v1.0",
+      "state": "released",
+      "url": "https://github.com/dileepadev/microsoft-agent-framework-workshop/releases/tag/v1.0"
+    },
+    {
+      "kind": "run",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T19:02:27Z",
+      "title": "Deploy workshop site to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31831362225"
+    },
+    {
+      "kind": "release",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T19:01:36Z",
+      "title": "v1.0.0",
+      "detail": "v1.0.0",
+      "state": "released",
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/releases/tag/v1.0.0"
+    },
+    {
+      "kind": "run",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T18:21:30Z",
+      "title": "Deploy agent to FastAPI Cloud",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31828188353"
+    },
+    {
+      "kind": "deployment",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T18:20:41Z",
+      "title": "Production – FastAPI",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T18:13:33Z",
+      "title": "Deploy client to Vercel",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31827597605"
+    },
+    {
+      "kind": "run",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T18:13:31Z",
+      "title": "Deploy workshop site to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31827597594"
+    },
+    {
+      "kind": "run",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T18:13:11Z",
+      "title": "Deploy agent to FastAPI Cloud",
+      "detail": "main",
+      "state": "failure",
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31827597580"
+    },
+    {
+      "kind": "deployment",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T18:12:55Z",
+      "title": "Production – Vercel",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "deployment",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T18:12:55Z",
+      "title": "Production – FastAPI",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T18:10:17Z",
+      "title": "Running Copilot cloud agent",
+      "detail": "copilot/rename-production-deployment-titles",
+      "state": "success",
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31827211690"
+    },
+    {
+      "kind": "run",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T13:16:56Z",
+      "title": "Deploy workshop site to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31803958600"
+    },
+    {
+      "kind": "deployment",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T13:16:26Z",
+      "title": "Production",
+      "detail": "82a8ab8640c157c6bd54cfd911d7270fa605786d",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "deployment",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T13:16:18Z",
+      "title": "Production – deploying-agentic-ai-apps-workshop",
+      "detail": "82a8ab8640c157c6bd54cfd911d7270fa605786d",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T12:22:08Z",
+      "title": "Deploy workshop site to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31799969410"
+    },
+    {
+      "kind": "deployment",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T12:21:33Z",
+      "title": "Production",
+      "detail": "5dc97181e900e78918b796a3ff9adc91adf901a9",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "deployment",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T12:21:26Z",
+      "title": "Production – deploying-agentic-ai-apps-workshop",
+      "detail": "5dc97181e900e78918b796a3ff9adc91adf901a9",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T11:52:24Z",
+      "title": "Deploy workshop site to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31797919344"
+    },
+    {
+      "kind": "deployment",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T11:51:53Z",
+      "title": "Production",
+      "detail": "e3e25aba33f6437f5036b20c517b47d18622b00a",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "deployment",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T11:51:45Z",
+      "title": "Production – deploying-agentic-ai-apps-workshop",
+      "detail": "e3e25aba33f6437f5036b20c517b47d18622b00a",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T10:33:42Z",
+      "title": "Running Copilot cloud agent",
+      "detail": "copilot/rename-production-deployment-titles",
+      "state": "success",
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31792654908"
+    },
+    {
+      "kind": "run",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T10:31:00Z",
+      "title": "Running Copilot cloud agent",
+      "detail": "copilot/rename-production-deployment-titles",
+      "state": "success",
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31792448533"
+    },
+    {
+      "kind": "deployment",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T09:37:42Z",
+      "title": "Production",
+      "detail": "ab1bb50e96bed96e48226c94e23f14b4a96cb300",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T08:56:03Z",
+      "title": "Deploy workshop site to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31785903106"
+    },
+    {
+      "kind": "run",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-14T06:43:19Z",
+      "title": "Deploy workshop site to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31777233955"
+    },
+    {
+      "kind": "run",
+      "repo": "learn-ai",
+      "at": "2026-08-14T06:19:12Z",
+      "title": "Deploy to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-ai/actions/runs/31775825278"
+    },
+    {
+      "kind": "deployment",
+      "repo": "learn-ai",
+      "at": "2026-08-14T06:19:00Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-13T19:56:06Z",
+      "title": "Deploy workshop site to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31738270775"
+    },
+    {
+      "kind": "run",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-13T18:44:54Z",
+      "title": "Deploy workshop site to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31732272299"
+    },
+    {
+      "kind": "run",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-13T17:48:19Z",
+      "title": ".github/workflows/deploy-pages.yml",
+      "detail": "fix-pages-workflow-message",
+      "state": "failure",
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31727538776"
+    },
+    {
+      "kind": "run",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-13T17:27:34Z",
+      "title": "Running Copilot cloud agent",
+      "detail": "copilot/refs-1-update-commit-message",
+      "state": "success",
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31725669950"
+    },
+    {
+      "kind": "run",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-13T16:57:36Z",
+      "title": "Deploy workshop site to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31723239171"
+    },
+    {
+      "kind": "run",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-13T16:06:01Z",
+      "title": "Deploy workshop site to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31718788244"
+    },
+    {
+      "kind": "run",
+      "repo": "deploying-agentic-ai-apps-workshop",
+      "at": "2026-08-13T16:01:06Z",
+      "title": "Deploy workshop site to GitHub Pages",
+      "detail": "main",
+      "state": "failure",
+      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31718493240"
+    },
+    {
+      "kind": "run",
+      "repo": "learn-ai-engineering",
+      "at": "2026-08-11T14:27:32Z",
+      "title": "Deploy site",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-ai-engineering/actions/runs/31501554720"
+    },
+    {
+      "kind": "deployment",
+      "repo": "learn-ai-engineering",
+      "at": "2026-08-11T14:27:17Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "learn-ai-engineering",
+      "at": "2026-08-11T14:18:34Z",
+      "title": "Deploy site",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-ai-engineering/actions/runs/31500732128"
+    },
+    {
+      "kind": "deployment",
+      "repo": "learn-ai-engineering",
+      "at": "2026-08-11T14:18:20Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "learn-ai-engineering",
+      "at": "2026-08-11T14:05:44Z",
+      "title": "Deploy site",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-ai-engineering/actions/runs/31499449648"
+    },
+    {
+      "kind": "deployment",
+      "repo": "learn-ai-engineering",
+      "at": "2026-08-11T14:04:14Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "learn-ai-engineering",
+      "at": "2026-08-11T13:29:03Z",
+      "title": "Deploy site",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-ai-engineering/actions/runs/31496307344"
+    },
+    {
+      "kind": "deployment",
+      "repo": "learn-ai-engineering",
+      "at": "2026-08-11T13:28:49Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "learn-ai-engineering",
+      "at": "2026-08-11T13:25:06Z",
+      "title": "Deploy site",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-ai-engineering/actions/runs/31495860096"
+    },
+    {
+      "kind": "deployment",
+      "repo": "learn-ai-engineering",
+      "at": "2026-08-11T13:23:32Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "learn-ai-engineering",
+      "at": "2026-08-11T13:14:11Z",
+      "title": "Deploy site",
+      "detail": "main",
+      "state": "failure",
+      "url": "https://github.com/dileepadev/learn-ai-engineering/actions/runs/31495103301"
+    },
+    {
+      "kind": "run",
+      "repo": "learn-ai-engineering",
+      "at": "2026-08-11T13:11:33Z",
+      "title": "Running Copilot cloud agent",
+      "detail": "copilot/fix-setup-uv-version-error",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-ai-engineering/actions/runs/31494777088"
+    }
+  ]
+}

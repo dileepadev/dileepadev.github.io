@@ -1,0 +1,299 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHead from "../components/PageHead.astro";
+import EmptyState from "../components/EmptyState.astro";
+import ColumnChart from "../components/ColumnChart.astro";
+import { repos, totals } from "../lib/snapshot";
+import { num, since } from "../lib/format";
+
+// Most recently pushed first: the question this page answers is "what is
+// being worked on", and that is what recency means here.
+const rows = [...repos].sort(
+  (a, b) => Date.parse(b.pushedAt) - Date.parse(a.pushedAt),
+);
+
+// Repositories by the month they were created. Every repo carries `createdAt`,
+// so unlike the workflow-run series this one is complete and safe to plot.
+const createdByMonth = new Map<string, number>();
+for (const repo of rows) {
+  const key = repo.createdAt.slice(0, 7);
+  createdByMonth.set(key, (createdByMonth.get(key) ?? 0) + 1);
+}
+
+// Months with no repositories still get a column, otherwise a six-month gap
+// renders as two adjacent bars and the time axis lies about the spacing.
+const createdKeys = [...createdByMonth.keys()].sort();
+const created: { label: string; value: number; key: string }[] = [];
+if (createdKeys.length > 0) {
+  const cursor = new Date(`${createdKeys[0]}-01T00:00:00Z`);
+  const last = new Date(`${createdKeys[createdKeys.length - 1]}-01T00:00:00Z`);
+  while (cursor <= last) {
+    const key = cursor.toISOString().slice(0, 7);
+    created.push({
+      label: cursor.toLocaleDateString("en-GB", {
+        month: "short",
+        timeZone: "UTC",
+      }),
+      value: createdByMonth.get(key) ?? 0,
+      key,
+    });
+    cursor.setUTCMonth(cursor.getUTCMonth() + 1);
+  }
+}
+
+const languageOptions = [
+  ...new Set(
+    rows.map((r) => r.primaryLanguage).filter((l): l is string => Boolean(l)),
+  ),
+].sort((a, b) => a.localeCompare(b));
+---
+
+<Layout
+  title="Repositories | Build log"
+  description="Every public repository on the dileepadev account, sortable by activity, stars and name."
+>
+  <PageHead
+    title="Repositories"
+    lead={`${num(totals.repos)} public repositories. ${num(totals.liveSites)} have a live site, ${num(totals.reposWithCi)} run CI.`}
+    path={[{ label: "repos", href: "/repos/" }]}
+  />
+
+  {
+    created.length > 1 && (
+      <section class="section repos-chart" aria-labelledby="repos-created">
+        <div class="section-head">
+          <div>
+            <h2 id="repos-created" class="section-label">
+              Created per month
+            </h2>
+            <p>When the {num(rows.length)} public repositories were opened.</p>
+          </div>
+        </div>
+        <ColumnChart
+          data={created}
+          ariaLabel={`Public repositories created per month: ${created
+            .map((m) => `${m.label} ${m.value}`)
+            .join(", ")}.`}
+          unit="repositories"
+        />
+      </section>
+    )
+  }
+
+  <div class="controls">
+    <label class="sr-only" for="repo-search">Search repositories</label>
+    <input
+      id="repo-search"
+      class="control-select"
+      type="search"
+      placeholder="Search name or description"
+      autocomplete="off"
+    />
+
+    <label class="sr-only" for="repo-language">Filter by language</label>
+    <select id="repo-language" class="control-select">
+      <option value="">All languages</option>
+      {languageOptions.map((l) => <option value={l}>{l}</option>)}
+    </select>
+
+    <label class="sr-only" for="repo-pages">Filter by site</label>
+    <select id="repo-pages" class="control-select">
+      <option value="">All repositories</option>
+      <option value="pages">With a live site</option>
+      <option value="nopages">Without a site</option>
+    </select>
+
+    <label class="sr-only" for="repo-sort">Sort</label>
+    <select id="repo-sort" class="control-select">
+      <option value="pushed">Recently pushed</option>
+      <option value="created">Newest</option>
+      <option value="name">Name</option>
+      <option value="stars">Stars</option>
+    </select>
+
+    <span class="control-count" id="repo-count"></span>
+  </div>
+
+  <div class="table-wrap">
+    <table class="data" id="repo-table">
+      <thead>
+        <tr>
+          <th scope="col">Repository</th>
+          <th scope="col">Language</th>
+          <th scope="col">Topics</th>
+          <th scope="col" class="num">Stars</th>
+          <th scope="col" class="num">Pushed</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          rows.map((repo) => (
+            <tr
+              data-name={repo.name.toLowerCase()}
+              data-desc={(repo.description ?? "").toLowerCase()}
+              data-language={repo.primaryLanguage ?? ""}
+              data-pages={repo.hasPages || repo.homepage ? "pages" : "nopages"}
+              data-stars={repo.stars}
+              data-pushed={Date.parse(repo.pushedAt)}
+              data-created={Date.parse(repo.createdAt)}
+            >
+              <td>
+                <a
+                  class="repo-name"
+                  href={repo.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {repo.name}
+                </a>
+                {repo.isArchived && <span class="tag-archived">archived</span>}
+                {repo.description && (
+                  <div class="repo-desc">{repo.description}</div>
+                )}
+              </td>
+              <td>
+                {repo.primaryLanguage ? (
+                  <span class="mono">{repo.primaryLanguage}</span>
+                ) : (
+                  <span class="muted mono">—</span>
+                )}
+              </td>
+              <td>
+                {repo.topics.length > 0 ? (
+                  <span class="mono muted topics">
+                    {repo.topics.slice(0, 3).join(" · ")}
+                  </span>
+                ) : (
+                  <span class="muted mono">—</span>
+                )}
+              </td>
+              <td class="num">{repo.stars}</td>
+              <td class="num muted">{since(repo.pushedAt)}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+
+    <div id="repo-empty" hidden>
+      <EmptyState
+        title="No repositories match those filters"
+        hint="Try clearing the search box or choosing a different language."
+      />
+    </div>
+  </div>
+</Layout>
+
+<script>
+  // Filtering and sorting happen in the browser over rows already rendered at
+  // build time. There is no data here the page did not ship with — the
+  // controls only decide what of it is visible.
+  const table = document.getElementById(
+    "repo-table",
+  ) as HTMLTableElement | null;
+  const body = table?.querySelector("tbody");
+  const empty = document.getElementById("repo-empty");
+  const count = document.getElementById("repo-count");
+
+  const search = document.getElementById(
+    "repo-search",
+  ) as HTMLInputElement | null;
+  const language = document.getElementById(
+    "repo-language",
+  ) as HTMLSelectElement | null;
+  const pages = document.getElementById(
+    "repo-pages",
+  ) as HTMLSelectElement | null;
+  const sort = document.getElementById("repo-sort") as HTMLSelectElement | null;
+
+  if (body) {
+    const rows = Array.from(body.querySelectorAll("tr"));
+    const total = rows.length;
+
+    const numberOf = (row: HTMLElement, key: string) =>
+      Number(row.dataset[key] ?? 0);
+
+    function apply() {
+      const term = (search?.value ?? "").trim().toLowerCase();
+      const lang = language?.value ?? "";
+      const site = pages?.value ?? "";
+
+      let visible = 0;
+      for (const row of rows) {
+        const matchesTerm =
+          !term ||
+          (row.dataset.name ?? "").includes(term) ||
+          (row.dataset.desc ?? "").includes(term);
+        const matchesLang = !lang || row.dataset.language === lang;
+        const matchesSite = !site || row.dataset.pages === site;
+        const show = matchesTerm && matchesLang && matchesSite;
+        row.hidden = !show;
+        if (show) visible += 1;
+      }
+
+      const order = sort?.value ?? "pushed";
+      const sorted = [...rows].sort((a, b) => {
+        switch (order) {
+          case "name":
+            return (a.dataset.name ?? "").localeCompare(b.dataset.name ?? "");
+          case "stars":
+            return numberOf(b, "stars") - numberOf(a, "stars");
+          case "created":
+            return numberOf(b, "created") - numberOf(a, "created");
+          default:
+            return numberOf(b, "pushed") - numberOf(a, "pushed");
+        }
+      });
+      for (const row of sorted) body!.appendChild(row);
+
+      if (empty) empty.hidden = visible > 0;
+      if (table) table.hidden = visible === 0;
+      if (count) {
+        count.textContent =
+          visible === total
+            ? `${total} repositories`
+            : `${visible} of ${total} repositories`;
+      }
+    }
+
+    search?.addEventListener("input", apply);
+    language?.addEventListener("change", apply);
+    pages?.addEventListener("change", apply);
+    sort?.addEventListener("change", apply);
+    apply();
+  }
+</script>
+
+<style>
+  .repos-chart {
+    padding-top: 0;
+    margin-bottom: var(--space-12);
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .topics {
+    font-size: var(--text-label);
+  }
+
+  .tag-archived {
+    margin-left: var(--space-2);
+    font-family: var(--font-mono);
+    font-size: var(--text-label);
+    letter-spacing: var(--track-label);
+    color: var(--fg-muted);
+    border: var(--hairline) solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    padding: 1px var(--space-2);
+  }
+</style>

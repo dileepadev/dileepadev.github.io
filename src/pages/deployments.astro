@@ -1,0 +1,152 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHead from "../components/PageHead.astro";
+import Stat from "../components/Stat.astro";
+import EmptyState from "../components/EmptyState.astro";
+import { live, meta, repos, totals } from "../lib/snapshot";
+import { host, num, since, siteLabel } from "../lib/format";
+
+// A site on its own domain and a site on github.io are both live; the
+// distinction worth drawing is who serves it, not who owns the name.
+const onPages = live.filter((site) => site.hasPages);
+const elsewhere = live.filter((site) => !site.hasPages);
+const customDomains = live.filter((site) => site.cname).length;
+
+// Repositories that report a Pages site but for which the /pages endpoint
+// returned nothing. That is a permission answer, not a missing site — and it
+// is the only honest trigger for the notice below. An individual site can
+// report a null `status` while its detail was fetched perfectly well, so
+// keying the notice on `status` cried wolf.
+const missingPagesDetail = repos.filter((r) => r.hasPages && !r.pages).length;
+---
+
+<Layout
+  title="Deployments | Build log"
+  description="Live sites across the dileepadev account — GitHub Pages and elsewhere."
+>
+  <PageHead
+    title="Deployments"
+    lead={`${num(live.length)} repositories publish something people can open. ${num(onPages.length)} are served by GitHub Pages; the rest are hosted elsewhere and recorded from the repository's homepage field.`}
+    path={[{ label: "deployments", href: "/deployments/" }]}
+  />
+
+  <section class="section" aria-labelledby="dep-headline">
+    <h2 id="dep-headline" class="section-label">Live</h2>
+    <div class="stat-grid">
+      <Stat headline value={num(live.length)} label="Live sites" />
+      <Stat value={num(onPages.length)} label="On GitHub Pages" />
+      <Stat
+        value={num(customDomains)}
+        label="Custom domains"
+        note={meta.authenticated ? undefined : "Needs a token to detect"}
+      />
+      <Stat
+        value={num(totals.deployments)}
+        label="Deployment events"
+        note="Held in the snapshot"
+      />
+    </div>
+
+    {
+      missingPagesDetail > 0 && (
+        <p class="notice">
+          <strong>Pages detail is partial.</strong> The
+          <code>/repos/&#123;owner&#125;/&#123;repo&#125;/pages</code> endpoint
+          needs admin on each repository, which the Actions token does not have.
+          Sites below still resolve from <code>has_pages</code> and{" "}
+          <code>homepage</code>; only the build status and CNAME are missing.
+        </p>
+      )
+    }
+  </section>
+
+  <section class="section" aria-labelledby="dep-pages">
+    <div class="section-head">
+      <div>
+        <h2 id="dep-pages" class="section-label">GitHub Pages</h2>
+        <p>Served from this account's repositories.</p>
+      </div>
+    </div>
+
+    {
+      onPages.length === 0 ? (
+        <EmptyState title="No Pages sites" />
+      ) : (
+        <div class="card-grid">
+          {onPages.map((site) => (
+            <a
+              class="site-card"
+              href={site.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="site-card-host">{siteLabel(site.url)}</span>
+              <span class="site-card-repo">{site.repo}</span>
+              <span class="site-card-foot">
+                <span class="status">{site.status ?? "live"}</span>
+                <span>{since(site.lastDeployedAt ?? site.pushedAt)}</span>
+              </span>
+            </a>
+          ))}
+        </div>
+      )
+    }
+  </section>
+
+  {
+    elsewhere.length > 0 && (
+      <section class="section" aria-labelledby="dep-elsewhere">
+        <div class="section-head">
+          <div>
+            <h2 id="dep-elsewhere" class="section-label">
+              Hosted elsewhere
+            </h2>
+            <p>
+              Recorded from the repository's homepage field — Vercel, FastAPI
+              Cloud and anything else outside GitHub.
+            </p>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data">
+            <thead>
+              <tr>
+                <th scope="col">Site</th>
+                <th scope="col">Repository</th>
+                <th scope="col" class="num">
+                  Last push
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {elsewhere.map((site) => (
+                <tr>
+                  <td>
+                    <a
+                      class="repo-name mono"
+                      href={site.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {host(site.url)}
+                    </a>
+                  </td>
+                  <td class="muted">{site.repo}</td>
+                  <td class="num muted">{since(site.pushedAt)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    )
+  }
+</Layout>
+
+<style>
+  code {
+    font-family: var(--font-mono);
+    font-size: var(--text-label);
+  }
+</style>

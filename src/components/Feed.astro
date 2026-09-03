@@ -1,0 +1,76 @@
+---
+import type { ActivityEvent } from "../lib/snapshot";
+import { since, stateClass, stateLabel } from "../lib/format";
+import EmptyState from "./EmptyState.astro";
+
+interface Props {
+  events: ActivityEvent[];
+  emptyTitle?: string;
+  emptyHint?: string;
+}
+
+const {
+  events,
+  emptyTitle = "No activity recorded",
+  emptyHint = "The next refresh will pick up releases, workflow runs and deployments as they happen.",
+} = Astro.props;
+---
+
+{
+  events.length === 0 ? (
+    <div class="feed">
+      <EmptyState title={emptyTitle} hint={emptyHint} />
+    </div>
+  ) : (
+    <div class="feed">
+      {events.map((event) => (
+        <div class="feed-row">
+          <span class="feed-kind">{event.kind}</span>
+
+          <div class="feed-main">
+            {event.url ? (
+              <a
+                class="feed-title"
+                href={event.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {event.title ?? event.repo}
+              </a>
+            ) : (
+              <div class="feed-title">{event.title ?? event.repo}</div>
+            )}
+            <div class="feed-meta">
+              {event.repo}
+              {event.detail && ` · ${event.detail}`}
+            </div>
+          </div>
+
+          <div class="feed-side">
+            <span class={stateClass(event.state)}>
+              {stateLabel(event.state)}
+            </span>
+            <span class="feed-when">{since(event.at)}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+<style>
+  .feed-side {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    justify-content: flex-end;
+  }
+
+  @media (max-width: 640px) {
+    .feed-side {
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+    }
+  }
+</style>

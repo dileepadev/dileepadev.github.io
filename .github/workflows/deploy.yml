@@ -1,0 +1,82 @@
+name: Deploy to Pages
+
+# Pushing to `main` publishes immediately - there is no preview environment.
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time, and never cancel one in flight: a half-published
+# site is worse than a slightly stale one.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Install dependencies
+        run: npm ci
+
+      # The build reads the committed snapshot and never calls the API. The
+      # refresh workflow is what updates the data; keeping them separate means
+      # a GitHub outage cannot fail a deploy.
+      - name: Build with Astro
+        run: |
+          npx --no-install astro build \
+            --site "${{ steps.pages.outputs.origin }}" \
+            --base "${{ steps.pages.outputs.base_path }}"
+
+      # `_astro/` starts with an underscore, which Jekyll would strip. Nothing
+      # here runs Jekyll, but the marker costs nothing and removes the doubt.
+      - name: Disable Jekyll
+        run: touch dist/.nojekyll
+
+      # Every project preview still hot-linked from another repository's README
+      # lives under dist/images/. If this count is ever zero the deploy would
+      # silently 404 images across the account - fail here instead.
+      - name: Verify migrated assets are present
+        run: |
+          count=$(find dist/images -type f | wc -l)
+          echo "dist/images holds $count file(s)"
+          if [ "$count" -eq 0 ]; then
+            echo "::error::dist/images is empty - hot-linked project previews would 404"
+            exit 1
+          fi
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    name: Deploy
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

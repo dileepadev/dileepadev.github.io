@@ -1,0 +1,114 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHead from "../components/PageHead.astro";
+import Feed from "../components/Feed.astro";
+import Stat from "../components/Stat.astro";
+import { activity, totals } from "../lib/snapshot";
+import { num } from "../lib/format";
+
+// Grouped by day so a run of commits on one afternoon reads as one afternoon
+// rather than as twenty separate lines with no shape.
+const byDay = new Map<string, typeof activity>();
+for (const event of activity) {
+  const day = event.at.slice(0, 10);
+  const bucket = byDay.get(day) ?? [];
+  bucket.push(event);
+  byDay.set(day, bucket);
+}
+
+const days = [...byDay.entries()].sort((a, b) => b[0].localeCompare(a[0]));
+
+const kinds = {
+  release: activity.filter((e) => e.kind === "release").length,
+  run: activity.filter((e) => e.kind === "run").length,
+  deployment: activity.filter((e) => e.kind === "deployment").length,
+};
+
+const dayLabel = (iso: string) =>
+  new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-GB", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+---
+
+<Layout
+  title="Activity | Build log"
+  description="A chronological build log: releases, workflow runs and deployments across the dileepadev account."
+>
+  <PageHead
+    title="Activity"
+    lead={`The ${num(activity.length)} most recent events across every repository — ${num(kinds.release)} releases, ${num(kinds.run)} workflow runs, ${num(kinds.deployment)} deployments.`}
+    path={[{ label: "activity", href: "/activity/" }]}
+  />
+
+  <!-- Counts, not a chart. An events-per-week column chart is the obvious
+       thing to put here and it would lie: the snapshot keeps only the 20 most
+       recent runs per repository, so older weeks are truncated and would
+       render as a decline that never happened. Four numbers are four numbers. -->
+  <section class="section" aria-labelledby="activity-totals">
+    <h2 id="activity-totals" class="section-label">In this window</h2>
+    <div class="stat-grid">
+      <Stat headline value={num(activity.length)} label="Events shown" />
+      <Stat value={num(kinds.release)} label="Releases" />
+      <Stat value={num(kinds.run)} label="Workflow runs" />
+      <Stat value={num(kinds.deployment)} label="Deployments" />
+    </div>
+  </section>
+
+  <!-- This site's own refresh runs appear below. That is deliberate: it is
+       the most honest entry in the log. -->
+  {
+    days.map(([day, events]) => (
+      <section class="section day">
+        <h2 class="section-label">
+          {dayLabel(day)}
+          <span class="day-count">{events.length}</span>
+        </h2>
+        <Feed events={events} />
+      </section>
+    ))
+  }
+
+  {
+    days.length === 0 && (
+      <Feed
+        events={[]}
+        emptyTitle="Nothing recorded yet"
+        emptyHint="Releases, workflow runs and deployments appear here as the next refresh picks them up."
+      />
+    )
+  }
+
+  <p class="footnote">
+    Showing {num(totals.workflowRuns)} runs, {num(totals.releases)} releases and{
+      " "
+    }
+    {num(totals.deployments)} deployments held in the snapshot, trimmed to the most
+    recent {num(activity.length)} events.
+  </p>
+</Layout>
+
+<style>
+  .day .section-label {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-3);
+  }
+
+  .day-count {
+    color: var(--fg-muted);
+    text-transform: none;
+  }
+
+  .footnote {
+    margin-top: var(--space-8);
+    font-family: var(--font-mono);
+    font-size: var(--text-label);
+    line-height: var(--lh-label);
+    letter-spacing: var(--track-label);
+    color: var(--fg-muted);
+  }
+</style>
