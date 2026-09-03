@@ -96,16 +96,16 @@ GitHub data. Architecture and rules are in [AGENTS.md](AGENTS.md).
 
 Per project:
 
-- [ ] Copy the asset into the repository it documents
-- [ ] Update that repo's README to the new path
-- [ ] Grep every repository for the old `dileepadev.github.io/images/...` URL and update each hit
-- [ ] Only once no reference remains, remove the file here
+- [x] Copy the asset into the repository it documents
+- [x] Update that repo's README to the new path
+- [x] Grep every repository for the old `dileepadev.github.io/images/...` URL and update each hit
+- [x] Only once no reference remains, remove the file here
 
 Known consumers to start from:
 
-- [ ] `dileepa-dev` → `images/dileepa-dev/preview-1.3.0.png`
-- [ ] `blog-dileepa-dev` → `images/blog-dileepa-dev/preview.png`
-- [ ] Audit the remaining 24 project folders for external references
+- [x] `dileepa-dev` → `images/dileepa-dev/preview-1.3.0.png`
+- [x] `blog-dileepa-dev` → `images/blog-dileepa-dev/preview.png`
+- [x] Audit the remaining 24 project folders for external references
 
 **Do not batch the removal step.** Nothing here is exempt — once the previews are gone, this repo
 keeps no assets on behalf of another repository.
