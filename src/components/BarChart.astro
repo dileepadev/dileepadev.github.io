@@ -35,7 +35,15 @@ const { data, ariaLabel, max } = Astro.props;
 const top = max ?? data.reduce((acc, d) => Math.max(acc, d.value), 0) ?? 1;
 ---
 
-<ol class="bars" role="img" aria-label={ariaLabel}>
+{
+  /* role="list" restores what list-style: none strips from the implicit role in
+    Chromium. It replaces role="img": some rows carry a real `href` (the /ci
+    view links each repo), and role="img" would have made that link
+    unreachable to a screen reader — the aria-label still gives the whole
+    reading as this list's accessible description, ahead of each row's own
+    content. */
+}
+<ol class="bars" role="list" aria-label={ariaLabel}>
   {
     data.map((row) => (
       <li class="bar-row">

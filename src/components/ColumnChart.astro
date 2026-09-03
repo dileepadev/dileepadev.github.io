@@ -71,7 +71,13 @@ const ticks = [top, step, 0];
         <span></span><span></span><span></span>
       </div>
 
-      <ol class="chart-cols">
+      {
+        /* role="list" restores what list-style: none strips from the implicit
+          role in Chromium. Unlike BarChart's rows, these columns stay
+          individually focusable (tabindex + hover/focus readout), so they
+          can't be hidden the way BarChart's decorative rows are. */
+      }
+      <ol class="chart-cols" role="list">
         {
           data.map((d, i) => (
             <li class="chart-col">

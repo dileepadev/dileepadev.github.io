@@ -59,6 +59,15 @@ over the account's public GitHub data.
 - `README.md` rewritten — what the dashboard shows, where the data comes from, how it refreshes,
   and the image migration status.
 
+### Fixed
+
+- **`role="list"` on `BarChart` and `ColumnChart`'s column list.** `list-style: none` strips the
+  implicit list role in Chromium, orphaning every `<li>` — caught by a Lighthouse accessibility
+  run against the deployed site (96, not the 100 measured locally pre-deploy). `BarChart` had
+  briefly gone through `aria-hidden` on each row instead; that was reverted before it shipped,
+  since `/ci`'s rows carry a real `href` per repository and hiding the row would have hidden that
+  link from a screen reader too.
+
 ### Removed
 
 - The v1 landing page: `index.html`, `styles.css`, `script.js`.
@@ -66,8 +75,12 @@ over the account's public GitHub data.
 
 ### Notes
 
-- **GitHub Pages must be set to build from GitHub Actions.** The repository was on the legacy
-  branch-root source, which serves the repository tree rather than the Astro build.
+- **GitHub Pages is now built from GitHub Actions.** Switched from the legacy branch-root source,
+  which served the repository tree rather than the Astro build, ahead of merging `feat/v2.0.0` —
+  see [#2](https://github.com/dileepadev/dileepadev.github.io/pull/2). No custom domain; the site
+  stays on `dileepadev.github.io`.
+- Lighthouse against the deployed site: performance 97, accessibility 100 (after the fix above),
+  best practices 100, SEO 100.
 - Project preview images are still hosted here. They move out one repository at a time — see the
   image migration section in [README.md](README.md).
 
