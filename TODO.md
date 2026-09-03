@@ -172,9 +172,30 @@ keeps no assets on behalf of another repository.
       confirmed populated in the committed snapshot
 - [x] **Tag `v2.0.0`** — released as
       [v2.0.0](https://github.com/dileepadev/dileepadev.github.io/releases/tag/v2.0.0)
+- [x] **`v2.0.0` re-cut.** The corrections below landed hours after the first tag, and both belong
+      to the release rather than to a patch on top of it — the dropdowns were never meant to be
+      native selects, and the deprecated actions were shipped that way. The tag and release were
+      deleted and re-created from the new `main`. Nothing consumes this tag: it is a website, not
+      a library, and the re-cut is a same-day correction rather than a rewrite of anything anyone
+      has depended on
 - [x] **Close [issue #1](https://github.com/dileepadev/dileepadev.github.io/issues/1)** —
       referencing #2, #3, and the release; the performance re-check above is carried forward
       here, not left dangling on the closed issue
+
+### Corrections folded into v2.0.0 ✅
+
+- [x] **The repos filters and sort were native `<select>`s and looked nothing like `dileepa-dev`.**
+      A native select's menu is drawn by the OS, so no token reaches it — on Carbon it opened as a
+      white OS list against a dark page. Ported `FilterSelect` and `SortSelect` into a single
+      `Dropdown.astro` (button + listbox, filter and sort variants), with the styles in
+      `global.css` beside the navbar block the same way. Keyboard, Escape and outside-press
+      behaviour match the navbar dropdowns; both variants sit at `--control-h` so the row still
+      lines up. Checked in a real browser, both themes and 375px, and the filtering and sorting
+      still work by mouse and keyboard
+- [x] **Node 20 deprecation on the runners.** Every action in both workflows moved to its Node 24
+      major — checkout and setup-node v4 → v7, configure-pages v5 → v6, upload-pages-artifact
+      v3 → v5, deploy-pages v4 → v5. `upload-pages-artifact` v4 stopped bundling dotfiles, which
+      would have dropped `.nojekyll` silently, so `include-hidden-files: true` is now set
 
 ## Later
 

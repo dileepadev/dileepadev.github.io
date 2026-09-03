@@ -1,16 +1,34 @@
 # Changelog
 
-All notable changes to this repository are documented here.
+All notable changes to this project are documented in this file.
 
-The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project
-adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+Changes are organized into the following categories:
 
-## [2.0.0] — 2026-09-03
+- **Added:** New features or functionality introduced to the project.
+- **Changed:** Modifications to existing functionality that do not add new features.
+- **Fixed:** Bug fixes that resolve issues or correct unintended behavior.
+- **Removed:** Features or components that have been removed from the project.
 
-The repository stops being an image host and becomes the public build log: a static dashboard
-over the account's public GitHub data.
+## [Unreleased]
 
-### Added
+Unreleased changes go here.
+
+## [v2.0.0] - 2026-09-03
+
+> [!NOTE]
+> The repository stops being an image host and becomes the public build log: a static dashboard over the account's public GitHub data.
+>
+> - **GitHub Pages is now built from GitHub Actions.** Switched from the legacy branch-root source, which served the repository tree rather than the Astro build, ahead of merging `feat/v2.0.0` — see [#2](https://github.com/dileepadev/dileepadev.github.io/pull/2). No custom domain; the site stays on `dileepadev.github.io`.
+>
+> - Lighthouse against the deployed site: accessibility 100 (after the fixes above), best
+>   practices 100, SEO 100, every run. Performance, from PageSpeed Insights (Google's own network,
+>   authoritative over this environment's earlier, noisier local readings): desktop 99, mobile 91 —
+>   both "good," mobile short of the ≥ 95 target, tracking the same render-blocking Google Fonts
+>   and layout-CSS requests. See `TODO.md` for why that's not being chased further right now.
+> - Project preview images are still hosted here. They move out one repository at a time — see the
+>   image migration section in [README.md](README.md).
+
+### Added - v2.0.0
 
 - **Astro 7 + Tailwind CSS 4.3** build, matching `links-dileepa-dev`. Node 22+, npm.
 - **`scripts/fetch-github.mjs`** — build-time fetch writing `src/data/snapshot.json`. GraphQL for
@@ -41,7 +59,7 @@ over the account's public GitHub data.
 - Theme toggle with the platform storage key `dileepa-theme`, applied before first paint.
 - Prettier, `astro check`, and a `check` script.
 
-### Changed
+### Changed - v2.0.0
 
 - **`images/` → `public/images/` and `assets/` → `public/assets/`.** Astro publishes only what is
   under `public/`, so this move is what keeps every hot-linked
@@ -58,8 +76,27 @@ over the account's public GitHub data.
   use `--error`, in-progress uses `--warning`, and emerald marks **one** figure per page.
 - `README.md` rewritten — what the dashboard shows, where the data comes from, how it refreshes,
   and the image migration status.
+- **The repos view's filter and sort controls are the dropdowns from `dileepa-dev`**, not native
+  `<select>` elements. A native select draws its menu with the operating system's own chrome,
+  which no brand token can reach — on Carbon it opened as a white OS list beside a dark page, and
+  it looked nothing like the same control on `dileepa.dev`. Replaced with a button and listbox
+  built from the same tokens as the rest of the page (`src/components/Dropdown.astro`), ported
+  from `FilterSelect` and `SortSelect`: filter iconography and an active dot for the two filters,
+  sort iconography for sort, a rotating chevron, a check on the selected row, and per-option
+  counts. Keyboard and dismissal behaviour match the navbar's dropdowns — arrows with wraparound,
+  Enter or Space to choose, Escape and outside press to close, focus returned to the trigger.
+  Both variants sit at `--control-h`, so they line up with the search input beside them.
+- **Every workflow action moved to a Node 24 major.** GitHub is forcing Node 20 actions onto the
+  Node 24 runtime and warning on each run. `actions/checkout` and `actions/setup-node` v4 → v7 in
+  both workflows; `actions/configure-pages` v5 → v6, `actions/upload-pages-artifact` v3 → v5 and
+  `actions/deploy-pages` v4 → v5 in the deploy. The one behaviour change that mattered:
+  `upload-pages-artifact` stopped bundling dotfiles at v4, which would have dropped `.nojekyll`
+  from the tarball with no error — `include-hidden-files: true` restores it. `setup-node`'s v6
+  automatic npm caching does not engage here, since `package.json` declares no `packageManager`
+  field, and the pinned `node-version` is unaffected: the deprecation is about the runtime the
+  action itself runs on, not the Node the build uses.
 
-### Fixed
+### Fixed - v2.0.0
 
 - **`role="list"` on `BarChart` and `ColumnChart`'s column list.** `list-style: none` strips the
   implicit list role in Chromium, orphaning every `<li>` — caught by a Lighthouse accessibility
@@ -77,23 +114,17 @@ over the account's public GitHub data.
   never part of that spec. The identical rule exists verbatim in `dileepa-dev`, this navbar's
   origin; out of scope for this repository, not touched here.
 
-### Removed
+### Removed - v2.0.0
 
 - The v1 landing page: `index.html`, `styles.css`, `script.js`.
 - The Jekyll-oriented `.gitignore`, replaced with the Astro one.
 
-### Notes
+<!-- e.g., -->
+<!-- Unreleased -->
+<!-- v2.0.0 -->
+<!-- v1.1.0 -->
+<!-- v1.0.0 -->
+<!-- v0.0.1 -->
 
-- **GitHub Pages is now built from GitHub Actions.** Switched from the legacy branch-root source,
-  which served the repository tree rather than the Astro build, ahead of merging `feat/v2.0.0` —
-  see [#2](https://github.com/dileepadev/dileepadev.github.io/pull/2). No custom domain; the site
-  stays on `dileepadev.github.io`.
-- Lighthouse against the deployed site: accessibility 100 (after the fixes above), best
-  practices 100, SEO 100, every run. Performance, from PageSpeed Insights (Google's own network,
-  authoritative over this environment's earlier, noisier local readings): desktop 99, mobile 91 —
-  both "good," mobile short of the ≥ 95 target, tracking the same render-blocking Google Fonts
-  and layout-CSS requests. See `TODO.md` for why that's not being chased further right now.
-- Project preview images are still hosted here. They move out one repository at a time — see the
-  image migration section in [README.md](README.md).
-
-[2.0.0]: https://github.com/dileepadev/dileepadev.github.io/releases/tag/v2.0.0
+[Unreleased]: https://github.com/dileepadev/dileepadev.github.io/branches
+[v2.0.0]: https://github.com/dileepadev/dileepadev.github.io/releases/tag/v2.0.0
