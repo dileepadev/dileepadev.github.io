@@ -1,16 +1,16 @@
 {
   "meta": {
-    "fetchedAt": "2026-09-05T12:21:16.189Z",
+    "fetchedAt": "2026-09-05T18:17:14.238Z",
     "login": "dileepadev",
     "source": "GitHub REST + GraphQL, public data only",
-    "durationMs": 5724,
+    "durationMs": 5927,
     "authenticated": true,
     "partial": false,
     "warnings": [],
     "rateLimit": {
       "limit": 5000,
       "remaining": 5000,
-      "resetAt": "2026-09-05T13:21:16.000Z"
+      "resetAt": "2026-09-05T19:17:14.000Z"
     }
   },
   "profile": {
@@ -30,12 +30,12 @@
   "contributions": {
     "from": "2025-08-30T18:30:00Z",
     "to": "2026-09-05T18:29:59Z",
-    "totalCommits": 1902,
+    "totalCommits": 1962,
     "totalPullRequests": 73,
     "totalIssues": 39,
     "totalRepositories": 56,
     "privateContributions": 26,
-    "calendarTotal": 2108,
+    "calendarTotal": 2168,
     "weeks": [
       [
         {
@@ -1947,24 +1947,24 @@
         },
         {
           "date": "2026-08-27",
-          "count": 5,
+          "count": 10,
           "weekday": 4
         },
         {
           "date": "2026-08-28",
-          "count": 0,
+          "count": 10,
           "weekday": 5
         },
         {
           "date": "2026-08-29",
-          "count": 0,
+          "count": 10,
           "weekday": 6
         }
       ],
       [
         {
           "date": "2026-08-30",
-          "count": 0,
+          "count": 10,
           "weekday": 0
         },
         {
@@ -1989,12 +1989,12 @@
         },
         {
           "date": "2026-09-04",
-          "count": 1,
+          "count": 12,
           "weekday": 5
         },
         {
           "date": "2026-09-05",
-          "count": 0,
+          "count": 14,
           "weekday": 6
         }
       ]
@@ -2006,85 +2006,91 @@
     "forks": 0,
     "archived": 0,
     "stars": 3,
-    "languages": 19,
+    "languages": 20,
     "releases": 41,
-    "workflowRuns": 183,
-    "deployments": 97,
-    "liveSites": 32,
-    "reposWithCi": 20
+    "workflowRuns": 188,
+    "deployments": 102,
+    "liveSites": 33,
+    "reposWithCi": 21
   },
   "languages": [
     {
       "name": "TypeScript",
-      "bytes": 1588242,
-      "repos": 12,
-      "share": 22.8
+      "bytes": 2081753,
+      "repos": 13,
+      "share": 26.9
     },
     {
       "name": "Python",
       "bytes": 1580109,
       "repos": 13,
-      "share": 22.6
+      "share": 20.4
     },
     {
       "name": "Dart",
       "bytes": 1032446,
       "repos": 10,
-      "share": 14.8
+      "share": 13.3
     },
     {
       "name": "Java",
       "bytes": 905206,
       "repos": 5,
-      "share": 13
+      "share": 11.7
     },
     {
       "name": "CSS",
-      "bytes": 352234,
-      "repos": 18,
-      "share": 5
+      "bytes": 366060,
+      "repos": 19,
+      "share": 4.7
+    },
+    {
+      "name": "Astro",
+      "bytes": 353931,
+      "repos": 7,
+      "share": 4.6
     },
     {
       "name": "HTML",
       "bytes": 340436,
       "repos": 13,
-      "share": 4.9
-    },
-    {
-      "name": "Astro",
-      "bytes": 340001,
-      "repos": 6,
-      "share": 4.9
+      "share": 4.4
     },
     {
       "name": "JavaScript",
-      "bytes": 225027,
-      "repos": 20,
-      "share": 3.2
+      "bytes": 241446,
+      "repos": 21,
+      "share": 3.1
+    },
+    {
+      "name": "Svelte",
+      "bytes": 228370,
+      "repos": 1,
+      "share": 2.9
     },
     {
       "name": "C#",
       "bytes": 194409,
       "repos": 2,
-      "share": 2.8
+      "share": 2.5
     },
     {
       "name": "MDX",
       "bytes": 142258,
       "repos": 1,
-      "share": 2
+      "share": 1.8
     },
     {
       "name": "C++",
       "bytes": 141904,
       "repos": 6,
-      "share": 2
+      "share": 1.8
     },
     {
       "name": "CMake",
       "bytes": 106100,
       "repos": 6,
-      "share": 1.5
+      "share": 1.4
     },
     {
       "name": "Swift",
@@ -2131,6 +2137,114 @@
   ],
   "repos": [
     {
+      "name": "learn-ai-901",
+      "description": "Exam Preparation: Microsoft Certified: Azure AI Fundamentals (AI-901)",
+      "url": "https://github.com/dileepadev/learn-ai-901",
+      "homepage": "https://dileepadev.github.io/learn-ai-901/",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 1,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 36,
+      "primaryLanguage": "TypeScript",
+      "languages": [
+        {
+          "name": "TypeScript",
+          "bytes": 493511
+        },
+        {
+          "name": "Svelte",
+          "bytes": 228370
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 16419
+        },
+        {
+          "name": "Astro",
+          "bytes": 13930
+        },
+        {
+          "name": "CSS",
+          "bytes": 13826
+        }
+      ],
+      "topics": [
+        "ai-901",
+        "ai-901-study-material",
+        "ai-901-test-questions",
+        "azure-901",
+        "azure-exams",
+        "microsoft-certification",
+        "microsoft-certification-ai-901"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-05-01T13:43:22Z",
+      "pushedAt": "2026-09-05T17:55:45Z",
+      "updatedAt": "2026-09-05T17:55:49Z",
+      "hasPages": true,
+      "pages": {
+        "status": null,
+        "cname": null,
+        "htmlUrl": "https://dileepadev.github.io/learn-ai-901/",
+        "buildType": "workflow",
+        "httpsEnforced": true,
+        "sourceBranch": "main"
+      }
+    },
+    {
+      "name": "learn-ai",
+      "description": "This repository contains a collection of concepts and resources related to Artificial Intelligence (AI).",
+      "url": "https://github.com/dileepadev/learn-ai",
+      "homepage": "https://dileepadev.github.io/learn-ai/",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 3910,
+      "primaryLanguage": "Astro",
+      "languages": [
+        {
+          "name": "Astro",
+          "bytes": 37008
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 3743
+        },
+        {
+          "name": "TypeScript",
+          "bytes": 2371
+        },
+        {
+          "name": "CSS",
+          "bytes": 346
+        }
+      ],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-01-21T17:49:01Z",
+      "pushedAt": "2026-09-05T17:01:16Z",
+      "updatedAt": "2026-09-05T17:01:23Z",
+      "hasPages": true,
+      "pages": {
+        "status": "built",
+        "cname": null,
+        "htmlUrl": "https://dileepadev.github.io/learn-ai/",
+        "buildType": "workflow",
+        "httpsEnforced": true,
+        "sourceBranch": "copilot/prepare-astro-project-for-deployment"
+      }
+    },
+    {
       "name": "dileepadev.github.io",
       "description": "GitHub Pages site for updates.",
       "url": "https://github.com/dileepadev/dileepadev.github.io",
@@ -2142,7 +2256,7 @@
       "forks": 0,
       "watchers": null,
       "openIssues": 0,
-      "size": 30933,
+      "size": 30935,
       "primaryLanguage": "Astro",
       "languages": [
         {
@@ -2168,8 +2282,8 @@
       "license": "MIT",
       "defaultBranch": "main",
       "createdAt": "2025-12-24T15:24:10Z",
-      "pushedAt": "2026-09-05T06:24:47Z",
-      "updatedAt": "2026-09-05T06:24:50Z",
+      "pushedAt": "2026-09-05T12:21:17Z",
+      "updatedAt": "2026-09-05T12:21:20Z",
       "hasPages": true,
       "pages": {
         "status": "built",
@@ -2478,54 +2592,6 @@
       "pages": null
     },
     {
-      "name": "learn-ai",
-      "description": "This repository contains a collection of concepts and resources related to Artificial Intelligence (AI).",
-      "url": "https://github.com/dileepadev/learn-ai",
-      "homepage": "https://dileepadev.github.io/learn-ai/",
-      "isFork": false,
-      "isArchived": false,
-      "isTemplate": false,
-      "stars": 0,
-      "forks": 0,
-      "watchers": null,
-      "openIssues": 0,
-      "size": 3739,
-      "primaryLanguage": "Astro",
-      "languages": [
-        {
-          "name": "Astro",
-          "bytes": 37008
-        },
-        {
-          "name": "JavaScript",
-          "bytes": 3743
-        },
-        {
-          "name": "TypeScript",
-          "bytes": 2371
-        },
-        {
-          "name": "CSS",
-          "bytes": 346
-        }
-      ],
-      "topics": [],
-      "license": "MIT",
-      "defaultBranch": "main",
-      "createdAt": "2026-01-21T17:49:01Z",
-      "pushedAt": "2026-08-21T19:27:06Z",
-      "updatedAt": "2026-08-21T19:27:14Z",
-      "hasPages": true,
-      "pages": {
-        "status": "built",
-        "cname": null,
-        "htmlUrl": "https://dileepadev.github.io/learn-ai/",
-        "buildType": "workflow",
-        "httpsEnforced": true,
-        "sourceBranch": "copilot/prepare-astro-project-for-deployment"
-      }
-    },
-    {
       "name": "qa-test-pilot",
       "description": "An autonomous AI agent for API testing, failure analysis, and QA automation.",
       "url": "https://github.com/dileepadev/qa-test-pilot",
@@ -2826,30 +2892,6 @@
       "createdAt": "2026-01-17T16:53:01Z",
       "pushedAt": "2026-07-30T18:18:06Z",
       "updatedAt": "2026-07-30T18:20:15Z",
-      "hasPages": false,
-      "pages": null
-    },
-    {
-      "name": "learn-ai901",
-      "description": "Notes & practice tests related to Microsoft Certified: Azure AI Fundamentals ",
-      "url": "https://github.com/dileepadev/learn-ai901",
-      "homepage": null,
-      "isFork": false,
-      "isArchived": false,
-      "isTemplate": false,
-      "stars": 1,
-      "forks": 0,
-      "watchers": null,
-      "openIssues": 0,
-      "size": 36,
-      "primaryLanguage": null,
-      "languages": [],
-      "topics": [],
-      "license": null,
-      "defaultBranch": "main",
-      "createdAt": "2026-05-01T13:43:22Z",
-      "pushedAt": "2026-06-02T15:39:58Z",
-      "updatedAt": "2026-09-04T17:28:48Z",
       "hasPages": false,
       "pages": null
     },
@@ -4450,23 +4492,77 @@
       "medianDurationMs": 21500,
       "lastRun": {
         "repo": "dileepadev.github.io",
-        "id": 33965788424,
+        "id": 33983573073,
         "name": "Refresh snapshot",
         "workflow": "refresh-data.yml",
-        "runNumber": 12,
+        "runNumber": 13,
         "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
         "branch": "main",
-        "sha": "274b5d2",
-        "createdAt": "2026-09-05T12:21:05Z",
-        "startedAt": "2026-09-05T12:21:05Z",
-        "updatedAt": "2026-09-05T12:21:08Z",
+        "sha": "261603d",
+        "createdAt": "2026-09-05T18:17:03Z",
+        "startedAt": "2026-09-05T18:17:03Z",
+        "updatedAt": "2026-09-05T18:17:06Z",
         "durationMs": 3000,
-        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/33965788424"
+        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/33983573073"
       },
       "workflows": [
         "refresh-data.yml",
+        "deploy.yml"
+      ]
+    },
+    {
+      "repo": "learn-ai-901",
+      "url": "https://github.com/dileepadev/learn-ai-901",
+      "runs": 5,
+      "successRate": 80,
+      "medianDurationMs": 42000,
+      "lastRun": {
+        "repo": "learn-ai-901",
+        "id": 33982469124,
+        "name": "Deploy to GitHub Pages",
+        "workflow": "deploy.yml",
+        "runNumber": 5,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "main",
+        "sha": "d85dca2",
+        "createdAt": "2026-09-05T17:55:47Z",
+        "startedAt": "2026-09-05T17:55:47Z",
+        "updatedAt": "2026-09-05T17:56:34Z",
+        "durationMs": 47000,
+        "url": "https://github.com/dileepadev/learn-ai-901/actions/runs/33982469124"
+      },
+      "workflows": [
+        "deploy.yml"
+      ]
+    },
+    {
+      "repo": "learn-ai",
+      "url": "https://github.com/dileepadev/learn-ai",
+      "runs": 20,
+      "successRate": 80,
+      "medianDurationMs": 67000,
+      "lastRun": {
+        "repo": "learn-ai",
+        "id": 33979644423,
+        "name": "Deploy to GitHub Pages",
+        "workflow": "deploy.yml",
+        "runNumber": 21,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "main",
+        "sha": "885861c",
+        "createdAt": "2026-09-05T17:01:18Z",
+        "startedAt": "2026-09-05T17:01:18Z",
+        "updatedAt": "2026-09-05T17:02:40Z",
+        "durationMs": 82000,
+        "url": "https://github.com/dileepadev/learn-ai/actions/runs/33979644423"
+      },
+      "workflows": [
         "deploy.yml"
       ]
     },
@@ -4580,34 +4676,6 @@
       },
       "workflows": [
         "ci.yml"
-      ]
-    },
-    {
-      "repo": "learn-ai",
-      "url": "https://github.com/dileepadev/learn-ai",
-      "runs": 20,
-      "successRate": 80,
-      "medianDurationMs": 67000,
-      "lastRun": {
-        "repo": "learn-ai",
-        "id": 32518532879,
-        "name": "Deploy to GitHub Pages",
-        "workflow": "deploy.yml",
-        "runNumber": 19,
-        "event": "push",
-        "status": "completed",
-        "conclusion": "success",
-        "branch": "main",
-        "sha": "cd34f81",
-        "createdAt": "2026-08-21T19:27:08Z",
-        "startedAt": "2026-08-21T19:27:08Z",
-        "updatedAt": "2026-08-21T19:28:31Z",
-        "durationMs": 83000,
-        "url": "https://github.com/dileepadev/learn-ai/actions/runs/32518532879"
-      },
-      "workflows": [
-        "deploy.yml",
-        "dynamic/copilot-swe-agent/copilot"
       ]
     },
     {
@@ -5149,15 +5217,6 @@
       "workflows": []
     },
     {
-      "repo": "learn-ai901",
-      "url": "https://github.com/dileepadev/learn-ai901",
-      "runs": 0,
-      "successRate": null,
-      "medianDurationMs": null,
-      "lastRun": null,
-      "workflows": []
-    },
-    {
       "repo": "learn-microsoft-foundry",
       "url": "https://github.com/dileepadev/learn-microsoft-foundry",
       "runs": 0,
@@ -5322,6 +5381,28 @@
   ],
   "live": [
     {
+      "repo": "learn-ai-901",
+      "url": "https://dileepadev.github.io/learn-ai-901/",
+      "homepage": "https://dileepadev.github.io/learn-ai-901/",
+      "hasPages": true,
+      "cname": null,
+      "status": null,
+      "buildType": "workflow",
+      "lastDeployedAt": "2026-09-05T17:56:19Z",
+      "pushedAt": "2026-09-05T17:55:45Z"
+    },
+    {
+      "repo": "learn-ai",
+      "url": "https://dileepadev.github.io/learn-ai/",
+      "homepage": "https://dileepadev.github.io/learn-ai/",
+      "hasPages": true,
+      "cname": null,
+      "status": "built",
+      "buildType": "workflow",
+      "lastDeployedAt": "2026-09-05T17:02:23Z",
+      "pushedAt": "2026-09-05T17:01:16Z"
+    },
+    {
       "repo": "dileepadev.github.io",
       "url": "https://dileepadev.github.io/",
       "homepage": "https://dileepadev.github.io/",
@@ -5330,7 +5411,7 @@
       "status": "built",
       "buildType": "workflow",
       "lastDeployedAt": "2026-09-03T15:36:03Z",
-      "pushedAt": "2026-09-05T06:24:47Z"
+      "pushedAt": "2026-09-05T12:21:17Z"
     },
     {
       "repo": "dileepadev",
@@ -5386,17 +5467,6 @@
       "buildType": null,
       "lastDeployedAt": "2026-08-21T17:17:32Z",
       "pushedAt": "2026-08-31T19:20:05Z"
-    },
-    {
-      "repo": "learn-ai",
-      "url": "https://dileepadev.github.io/learn-ai/",
-      "homepage": "https://dileepadev.github.io/learn-ai/",
-      "hasPages": true,
-      "cname": null,
-      "status": "built",
-      "buildType": "workflow",
-      "lastDeployedAt": "2026-08-21T19:28:15Z",
-      "pushedAt": "2026-08-21T19:27:06Z"
     },
     {
       "repo": "microsoft-agent-framework-workshop",
@@ -6008,10 +6078,145 @@
     {
       "kind": "run",
       "repo": "dileepadev.github.io",
-      "at": "2026-09-05T12:21:08Z",
+      "at": "2026-09-05T18:17:06Z",
       "title": "Refresh snapshot",
       "detail": "main",
       "state": "in_progress",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/33983573073"
+    },
+    {
+      "kind": "run",
+      "repo": "learn-ai-901",
+      "at": "2026-09-05T17:56:34Z",
+      "title": "Deploy to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-ai-901/actions/runs/33982469124"
+    },
+    {
+      "kind": "deployment",
+      "repo": "learn-ai-901",
+      "at": "2026-09-05T17:56:19Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "learn-ai-901",
+      "at": "2026-09-05T17:48:15Z",
+      "title": "Deploy to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-ai-901/actions/runs/33982019803"
+    },
+    {
+      "kind": "deployment",
+      "repo": "learn-ai-901",
+      "at": "2026-09-05T17:47:27Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "learn-ai-901",
+      "at": "2026-09-05T17:33:00Z",
+      "title": "Deploy to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-ai-901/actions/runs/33981268862"
+    },
+    {
+      "kind": "deployment",
+      "repo": "learn-ai-901",
+      "at": "2026-09-05T17:32:46Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "learn-ai-901",
+      "at": "2026-09-05T17:26:21Z",
+      "title": "Deploy to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-ai-901/actions/runs/33980926619"
+    },
+    {
+      "kind": "deployment",
+      "repo": "learn-ai-901",
+      "at": "2026-09-05T17:26:08Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "learn-ai-901",
+      "at": "2026-09-05T17:22:54Z",
+      "title": "Deploy to GitHub Pages",
+      "detail": "main",
+      "state": "failure",
+      "url": "https://github.com/dileepadev/learn-ai-901/actions/runs/33980755441"
+    },
+    {
+      "kind": "deployment",
+      "repo": "learn-ai-901",
+      "at": "2026-09-05T17:22:47Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "learn-ai",
+      "at": "2026-09-05T17:02:40Z",
+      "title": "Deploy to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-ai/actions/runs/33979644423"
+    },
+    {
+      "kind": "deployment",
+      "repo": "learn-ai",
+      "at": "2026-09-05T17:02:23Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "learn-ai",
+      "at": "2026-09-05T16:28:23Z",
+      "title": "Deploy to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-ai/actions/runs/33977899148"
+    },
+    {
+      "kind": "deployment",
+      "repo": "learn-ai",
+      "at": "2026-09-05T16:28:07Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-09-05T12:21:19Z",
+      "title": "Refresh snapshot",
+      "detail": "main",
+      "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/33965788424"
     },
     {
@@ -6292,15 +6497,6 @@
       "detail": "main",
       "state": "deployed",
       "url": null
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-09-03T09:45:46Z",
-      "title": "Refresh snapshot",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/33740606711"
     },
     {
       "kind": "release",
@@ -6958,132 +7154,6 @@
       "detail": "main",
       "state": "success",
       "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31831362225"
-    },
-    {
-      "kind": "release",
-      "repo": "deploying-agentic-ai-apps-workshop",
-      "at": "2026-08-14T19:01:36Z",
-      "title": "v1.0.0",
-      "detail": "v1.0.0",
-      "state": "released",
-      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/releases/tag/v1.0.0"
-    },
-    {
-      "kind": "run",
-      "repo": "deploying-agentic-ai-apps-workshop",
-      "at": "2026-08-14T18:21:30Z",
-      "title": "Deploy agent to FastAPI Cloud",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31828188353"
-    },
-    {
-      "kind": "deployment",
-      "repo": "deploying-agentic-ai-apps-workshop",
-      "at": "2026-08-14T18:20:41Z",
-      "title": "Production – FastAPI",
-      "detail": "main",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "run",
-      "repo": "deploying-agentic-ai-apps-workshop",
-      "at": "2026-08-14T18:13:33Z",
-      "title": "Deploy client to Vercel",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31827597605"
-    },
-    {
-      "kind": "run",
-      "repo": "deploying-agentic-ai-apps-workshop",
-      "at": "2026-08-14T18:13:31Z",
-      "title": "Deploy workshop site to GitHub Pages",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31827597594"
-    },
-    {
-      "kind": "run",
-      "repo": "deploying-agentic-ai-apps-workshop",
-      "at": "2026-08-14T18:13:11Z",
-      "title": "Deploy agent to FastAPI Cloud",
-      "detail": "main",
-      "state": "failure",
-      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31827597580"
-    },
-    {
-      "kind": "deployment",
-      "repo": "deploying-agentic-ai-apps-workshop",
-      "at": "2026-08-14T18:12:55Z",
-      "title": "Production – Vercel",
-      "detail": "main",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "deployment",
-      "repo": "deploying-agentic-ai-apps-workshop",
-      "at": "2026-08-14T18:12:55Z",
-      "title": "Production – FastAPI",
-      "detail": "main",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "run",
-      "repo": "deploying-agentic-ai-apps-workshop",
-      "at": "2026-08-14T18:10:17Z",
-      "title": "Running Copilot cloud agent",
-      "detail": "copilot/rename-production-deployment-titles",
-      "state": "success",
-      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31827211690"
-    },
-    {
-      "kind": "run",
-      "repo": "deploying-agentic-ai-apps-workshop",
-      "at": "2026-08-14T13:16:56Z",
-      "title": "Deploy workshop site to GitHub Pages",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31803958600"
-    },
-    {
-      "kind": "deployment",
-      "repo": "deploying-agentic-ai-apps-workshop",
-      "at": "2026-08-14T13:16:26Z",
-      "title": "Production",
-      "detail": "82a8ab8640c157c6bd54cfd911d7270fa605786d",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "deployment",
-      "repo": "deploying-agentic-ai-apps-workshop",
-      "at": "2026-08-14T13:16:18Z",
-      "title": "Production – deploying-agentic-ai-apps-workshop",
-      "detail": "82a8ab8640c157c6bd54cfd911d7270fa605786d",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "run",
-      "repo": "deploying-agentic-ai-apps-workshop",
-      "at": "2026-08-14T12:22:08Z",
-      "title": "Deploy workshop site to GitHub Pages",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/deploying-agentic-ai-apps-workshop/actions/runs/31799969410"
-    },
-    {
-      "kind": "deployment",
-      "repo": "deploying-agentic-ai-apps-workshop",
-      "at": "2026-08-14T12:21:33Z",
-      "title": "Production",
-      "detail": "5dc97181e900e78918b796a3ff9adc91adf901a9",
-      "state": "deployed",
-      "url": null
     }
   ]
 }
