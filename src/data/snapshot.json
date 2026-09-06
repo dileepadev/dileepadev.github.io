@@ -1,16 +1,16 @@
 {
   "meta": {
-    "fetchedAt": "2026-09-06T12:21:17.950Z",
+    "fetchedAt": "2026-09-06T18:17:24.034Z",
     "login": "dileepadev",
     "source": "GitHub REST + GraphQL, public data only",
-    "durationMs": 6097,
+    "durationMs": 6521,
     "authenticated": true,
     "partial": false,
     "warnings": [],
     "rateLimit": {
       "limit": 5000,
       "remaining": 5000,
-      "resetAt": "2026-09-06T13:21:17.000Z"
+      "resetAt": "2026-09-06T19:17:23.000Z"
     }
   },
   "profile": {
@@ -30,12 +30,12 @@
   "contributions": {
     "from": "2025-08-30T18:30:00Z",
     "to": "2026-09-06T18:29:59Z",
-    "totalCommits": 1968,
+    "totalCommits": 1988,
     "totalPullRequests": 73,
     "totalIssues": 39,
     "totalRepositories": 56,
     "privateContributions": 28,
-    "calendarTotal": 2176,
+    "calendarTotal": 2196,
     "weeks": [
       [
         {
@@ -1964,7 +1964,7 @@
       [
         {
           "date": "2026-09-06",
-          "count": 8,
+          "count": 28,
           "weekday": 0
         }
       ]
@@ -1978,71 +1978,71 @@
     "stars": 3,
     "languages": 20,
     "releases": 41,
-    "workflowRuns": 189,
+    "workflowRuns": 190,
     "deployments": 103,
     "liveSites": 33,
-    "reposWithCi": 21
+    "reposWithCi": 22
   },
   "languages": [
     {
       "name": "TypeScript",
       "bytes": 2083525,
       "repos": 13,
-      "share": 26.9
+      "share": 25.9
     },
     {
       "name": "Python",
-      "bytes": 1580109,
-      "repos": 13,
-      "share": 20.4
+      "bytes": 1883546,
+      "repos": 14,
+      "share": 23.4
     },
     {
       "name": "Dart",
       "bytes": 1032446,
       "repos": 10,
-      "share": 13.3
+      "share": 12.8
     },
     {
       "name": "Java",
       "bytes": 905206,
       "repos": 5,
-      "share": 11.7
+      "share": 11.2
     },
     {
       "name": "CSS",
       "bytes": 366060,
       "repos": 19,
-      "share": 4.7
+      "share": 4.5
     },
     {
       "name": "Astro",
       "bytes": 353932,
       "repos": 7,
-      "share": 4.6
+      "share": 4.4
     },
     {
       "name": "HTML",
       "bytes": 340436,
       "repos": 13,
-      "share": 4.4
+      "share": 4.2
     },
     {
       "name": "JavaScript",
       "bytes": 241446,
       "repos": 21,
-      "share": 3.1
+      "share": 3
     },
     {
       "name": "Svelte",
       "bytes": 228372,
       "repos": 1,
-      "share": 2.9
+      "share": 2.8
     },
     {
       "name": "C#",
       "bytes": 194409,
       "repos": 2,
-      "share": 2.5
+      "share": 2.4
     },
     {
       "name": "MDX",
@@ -2060,7 +2060,7 @@
       "name": "CMake",
       "bytes": 106100,
       "repos": 6,
-      "share": 1.4
+      "share": 1.3
     },
     {
       "name": "Swift",
@@ -2106,6 +2106,85 @@
     }
   ],
   "repos": [
+    {
+      "name": "mender",
+      "description": "CI that fixes itself, and proves the fix",
+      "url": "https://github.com/dileepadev/mender",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 1,
+      "size": 19,
+      "primaryLanguage": "Python",
+      "languages": [
+        {
+          "name": "Python",
+          "bytes": 303437
+        }
+      ],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-08-18T16:48:43Z",
+      "pushedAt": "2026-09-06T17:37:39Z",
+      "updatedAt": "2026-09-06T17:37:45Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "dileepadev.github.io",
+      "description": "GitHub Pages site for updates.",
+      "url": "https://github.com/dileepadev/dileepadev.github.io",
+      "homepage": "https://dileepadev.github.io/",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 30942,
+      "primaryLanguage": "Astro",
+      "languages": [
+        {
+          "name": "Astro",
+          "bytes": 86727
+        },
+        {
+          "name": "CSS",
+          "bytes": 57090
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 24708
+        },
+        {
+          "name": "TypeScript",
+          "bytes": 9521
+        }
+      ],
+      "topics": [
+        "dileepadev"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2025-12-24T15:24:10Z",
+      "pushedAt": "2026-09-06T12:21:18Z",
+      "updatedAt": "2026-09-06T12:21:22Z",
+      "hasPages": true,
+      "pages": {
+        "status": "built",
+        "cname": null,
+        "htmlUrl": "https://dileepadev.github.io/",
+        "buildType": "workflow",
+        "httpsEnforced": true,
+        "sourceBranch": "main"
+      }
+    },
     {
       "name": "learn-ai-901",
       "description": "Exam Preparation: Microsoft Certified: Azure AI Fundamentals (AI-901)",
@@ -2161,56 +2240,6 @@
         "status": null,
         "cname": null,
         "htmlUrl": "https://dileepadev.github.io/learn-ai-901/",
-        "buildType": "workflow",
-        "httpsEnforced": true,
-        "sourceBranch": "main"
-      }
-    },
-    {
-      "name": "dileepadev.github.io",
-      "description": "GitHub Pages site for updates.",
-      "url": "https://github.com/dileepadev/dileepadev.github.io",
-      "homepage": "https://dileepadev.github.io/",
-      "isFork": false,
-      "isArchived": false,
-      "isTemplate": false,
-      "stars": 0,
-      "forks": 0,
-      "watchers": null,
-      "openIssues": 0,
-      "size": 30940,
-      "primaryLanguage": "Astro",
-      "languages": [
-        {
-          "name": "Astro",
-          "bytes": 86727
-        },
-        {
-          "name": "CSS",
-          "bytes": 57090
-        },
-        {
-          "name": "JavaScript",
-          "bytes": 24708
-        },
-        {
-          "name": "TypeScript",
-          "bytes": 9521
-        }
-      ],
-      "topics": [
-        "dileepadev"
-      ],
-      "license": "MIT",
-      "defaultBranch": "main",
-      "createdAt": "2025-12-24T15:24:10Z",
-      "pushedAt": "2026-09-06T06:25:06Z",
-      "updatedAt": "2026-09-06T06:25:09Z",
-      "hasPages": true,
-      "pages": {
-        "status": "built",
-        "cname": null,
-        "htmlUrl": "https://dileepadev.github.io/",
         "buildType": "workflow",
         "httpsEnforced": true,
         "sourceBranch": "main"
@@ -2582,30 +2611,6 @@
       "createdAt": "2026-08-21T16:45:36Z",
       "pushedAt": "2026-08-21T17:07:18Z",
       "updatedAt": "2026-08-21T17:16:47Z",
-      "hasPages": false,
-      "pages": null
-    },
-    {
-      "name": "mender",
-      "description": "CI that fixes itself, and proves the fix",
-      "url": "https://github.com/dileepadev/mender",
-      "homepage": null,
-      "isFork": false,
-      "isArchived": false,
-      "isTemplate": false,
-      "stars": 0,
-      "forks": 0,
-      "watchers": null,
-      "openIssues": 1,
-      "size": 19,
-      "primaryLanguage": null,
-      "languages": [],
-      "topics": [],
-      "license": "MIT",
-      "defaultBranch": "main",
-      "createdAt": "2026-08-18T16:48:43Z",
-      "pushedAt": "2026-08-19T15:01:04Z",
-      "updatedAt": "2026-08-19T15:03:47Z",
       "hasPages": false,
       "pages": null
     },
@@ -4462,24 +4467,51 @@
       "medianDurationMs": 17000,
       "lastRun": {
         "repo": "dileepadev.github.io",
-        "id": 34032839278,
+        "id": 34051225086,
         "name": "Refresh snapshot",
         "workflow": "refresh-data.yml",
-        "runNumber": 16,
+        "runNumber": 17,
         "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
         "branch": "main",
-        "sha": "ab8fea0",
-        "createdAt": "2026-09-06T12:21:05Z",
-        "startedAt": "2026-09-06T12:21:05Z",
-        "updatedAt": "2026-09-06T12:21:08Z",
+        "sha": "6c4411e",
+        "createdAt": "2026-09-06T18:17:11Z",
+        "startedAt": "2026-09-06T18:17:11Z",
+        "updatedAt": "2026-09-06T18:17:14Z",
         "durationMs": 3000,
-        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/34032839278"
+        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/34051225086"
       },
       "workflows": [
         "refresh-data.yml",
         "deploy.yml"
+      ]
+    },
+    {
+      "repo": "mender",
+      "url": "https://github.com/dileepadev/mender",
+      "runs": 1,
+      "successRate": 100,
+      "medianDurationMs": 49000,
+      "lastRun": {
+        "repo": "mender",
+        "id": 34049196238,
+        "name": "CI",
+        "workflow": "ci.yml",
+        "runNumber": 1,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "main",
+        "sha": "bda055e",
+        "createdAt": "2026-09-06T17:37:44Z",
+        "startedAt": "2026-09-06T17:37:44Z",
+        "updatedAt": "2026-09-06T17:38:33Z",
+        "durationMs": 49000,
+        "url": "https://github.com/dileepadev/mender/actions/runs/34049196238"
+      },
+      "workflows": [
+        "ci.yml"
       ]
     },
     {
@@ -5223,15 +5255,6 @@
       "workflows": []
     },
     {
-      "repo": "mender",
-      "url": "https://github.com/dileepadev/mender",
-      "runs": 0,
-      "successRate": null,
-      "medianDurationMs": null,
-      "lastRun": null,
-      "workflows": []
-    },
-    {
       "repo": "microsoft-agent-framework-chat-app",
       "url": "https://github.com/dileepadev/microsoft-agent-framework-chat-app",
       "runs": 0,
@@ -5351,6 +5374,17 @@
   ],
   "live": [
     {
+      "repo": "dileepadev.github.io",
+      "url": "https://dileepadev.github.io/",
+      "homepage": "https://dileepadev.github.io/",
+      "hasPages": true,
+      "cname": null,
+      "status": "built",
+      "buildType": "workflow",
+      "lastDeployedAt": "2026-09-03T15:36:03Z",
+      "pushedAt": "2026-09-06T12:21:18Z"
+    },
+    {
       "repo": "learn-ai-901",
       "url": "https://dileepadev.github.io/learn-ai-901/",
       "homepage": "https://dileepadev.github.io/learn-ai-901/",
@@ -5360,17 +5394,6 @@
       "buildType": "workflow",
       "lastDeployedAt": "2026-09-06T06:56:15Z",
       "pushedAt": "2026-09-06T06:55:34Z"
-    },
-    {
-      "repo": "dileepadev.github.io",
-      "url": "https://dileepadev.github.io/",
-      "homepage": "https://dileepadev.github.io/",
-      "hasPages": true,
-      "cname": null,
-      "status": "built",
-      "buildType": "workflow",
-      "lastDeployedAt": "2026-09-03T15:36:03Z",
-      "pushedAt": "2026-09-06T06:25:06Z"
     },
     {
       "repo": "learn-ai",
@@ -6048,10 +6071,28 @@
     {
       "kind": "run",
       "repo": "dileepadev.github.io",
-      "at": "2026-09-06T12:21:08Z",
+      "at": "2026-09-06T18:17:14Z",
       "title": "Refresh snapshot",
       "detail": "main",
       "state": "in_progress",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/34051225086"
+    },
+    {
+      "kind": "run",
+      "repo": "mender",
+      "at": "2026-09-06T17:38:33Z",
+      "title": "CI",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/mender/actions/runs/34049196238"
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-09-06T12:21:22Z",
+      "title": "Refresh snapshot",
+      "detail": "main",
+      "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/34032839278"
     },
     {
@@ -6440,15 +6481,6 @@
       "detail": "main",
       "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/33746973215"
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-09-03T10:27:26Z",
-      "title": "Deploy to Pages",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/33744332162"
     },
     {
       "kind": "deployment",
@@ -7115,15 +7147,6 @@
       "detail": "main",
       "state": "success",
       "url": "https://github.com/dileepadev/learn-ai/actions/runs/31900043088"
-    },
-    {
-      "kind": "deployment",
-      "repo": "learn-ai",
-      "at": "2026-08-15T18:03:51Z",
-      "title": "github-pages",
-      "detail": "main",
-      "state": "deployed",
-      "url": null
     }
   ]
 }
