@@ -1,16 +1,16 @@
 {
   "meta": {
-    "fetchedAt": "2026-09-09T12:24:37.117Z",
+    "fetchedAt": "2026-09-09T18:20:48.437Z",
     "login": "dileepadev",
     "source": "GitHub REST + GraphQL, public data only",
-    "durationMs": 7370,
+    "durationMs": 7354,
     "authenticated": true,
     "partial": false,
     "warnings": [],
     "rateLimit": {
       "limit": 5000,
       "remaining": 5000,
-      "resetAt": "2026-09-09T13:24:37.000Z"
+      "resetAt": "2026-09-09T19:20:48.000Z"
     }
   },
   "profile": {
@@ -30,12 +30,12 @@
   "contributions": {
     "from": "2025-09-06T18:30:00Z",
     "to": "2026-09-09T18:29:59Z",
-    "totalCommits": 2068,
-    "totalPullRequests": 76,
-    "totalIssues": 40,
+    "totalCommits": 2082,
+    "totalPullRequests": 77,
+    "totalIssues": 41,
     "totalRepositories": 56,
     "privateContributions": 34,
-    "calendarTotal": 2286,
+    "calendarTotal": 2302,
     "weeks": [
       [
         {
@@ -1979,7 +1979,7 @@
         },
         {
           "date": "2026-09-09",
-          "count": 0,
+          "count": 16,
           "weekday": 3
         }
       ]
@@ -1992,59 +1992,59 @@
     "archived": 0,
     "stars": 3,
     "languages": 20,
-    "releases": 42,
-    "workflowRuns": 190,
-    "deployments": 103,
-    "liveSites": 33,
-    "reposWithCi": 22
+    "releases": 43,
+    "workflowRuns": 199,
+    "deployments": 104,
+    "liveSites": 34,
+    "reposWithCi": 23
   },
   "languages": [
     {
       "name": "TypeScript",
-      "bytes": 2089573,
-      "repos": 13,
-      "share": 25.9
+      "bytes": 2140623,
+      "repos": 14,
+      "share": 26.1
     },
     {
       "name": "Python",
-      "bytes": 1883546,
-      "repos": 14,
-      "share": 23.4
+      "bytes": 1870600,
+      "repos": 13,
+      "share": 22.8
     },
     {
       "name": "Dart",
       "bytes": 1032446,
       "repos": 10,
-      "share": 12.8
+      "share": 12.6
     },
     {
       "name": "Java",
       "bytes": 905206,
       "repos": 5,
-      "share": 11.2
-    },
-    {
-      "name": "CSS",
-      "bytes": 366060,
-      "repos": 19,
-      "share": 4.5
+      "share": 11
     },
     {
       "name": "Astro",
-      "bytes": 353932,
-      "repos": 7,
-      "share": 4.4
+      "bytes": 388918,
+      "repos": 8,
+      "share": 4.7
+    },
+    {
+      "name": "CSS",
+      "bytes": 374131,
+      "repos": 20,
+      "share": 4.6
     },
     {
       "name": "HTML",
       "bytes": 340436,
       "repos": 13,
-      "share": 4.2
+      "share": 4.1
     },
     {
       "name": "JavaScript",
-      "bytes": 241446,
-      "repos": 21,
+      "bytes": 247003,
+      "repos": 22,
       "share": 3
     },
     {
@@ -2054,22 +2054,22 @@
       "share": 2.8
     },
     {
+      "name": "MDX",
+      "bytes": 205749,
+      "repos": 2,
+      "share": 2.5
+    },
+    {
       "name": "C#",
       "bytes": 194409,
       "repos": 2,
       "share": 2.4
     },
     {
-      "name": "MDX",
-      "bytes": 142258,
-      "repos": 1,
-      "share": 1.8
-    },
-    {
       "name": "C++",
       "bytes": 141904,
       "repos": 6,
-      "share": 1.8
+      "share": 1.7
     },
     {
       "name": "CMake",
@@ -2122,6 +2122,58 @@
   ],
   "repos": [
     {
+      "name": "learn-python-ai",
+      "description": "This repository contains code examples and exercises for learning Python.",
+      "url": "https://github.com/dileepadev/learn-python-ai",
+      "homepage": "https://dileepadev.github.io/learn-python-ai/",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 1,
+      "size": 198,
+      "primaryLanguage": "MDX",
+      "languages": [
+        {
+          "name": "MDX",
+          "bytes": 63491
+        },
+        {
+          "name": "TypeScript",
+          "bytes": 51050
+        },
+        {
+          "name": "Astro",
+          "bytes": 34986
+        },
+        {
+          "name": "CSS",
+          "bytes": 8071
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 5557
+        }
+      ],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-01-21T17:49:40Z",
+      "pushedAt": "2026-09-09T15:43:40Z",
+      "updatedAt": "2026-09-09T15:44:52Z",
+      "hasPages": true,
+      "pages": {
+        "status": null,
+        "cname": null,
+        "htmlUrl": "https://dileepadev.github.io/learn-python-ai/",
+        "buildType": "workflow",
+        "httpsEnforced": true,
+        "sourceBranch": "main"
+      }
+    },
+    {
       "name": "dileepadev.github.io",
       "description": "GitHub Pages site for updates.",
       "url": "https://github.com/dileepadev/dileepadev.github.io",
@@ -2133,7 +2185,7 @@
       "forks": 0,
       "watchers": null,
       "openIssues": 0,
-      "size": 30960,
+      "size": 30961,
       "primaryLanguage": "Astro",
       "languages": [
         {
@@ -2159,8 +2211,8 @@
       "license": "MIT",
       "defaultBranch": "main",
       "createdAt": "2025-12-24T15:24:10Z",
-      "pushedAt": "2026-09-09T06:28:49Z",
-      "updatedAt": "2026-09-09T06:29:25Z",
+      "pushedAt": "2026-09-09T12:24:38Z",
+      "updatedAt": "2026-09-09T12:27:08Z",
       "hasPages": true,
       "pages": {
         "status": "built",
@@ -3030,35 +3082,6 @@
       "createdAt": "2026-03-24T17:47:01Z",
       "pushedAt": "2026-03-26T16:34:02Z",
       "updatedAt": "2026-03-26T16:34:15Z",
-      "hasPages": false,
-      "pages": null
-    },
-    {
-      "name": "learn-python",
-      "description": "This repository contains code examples and exercises for learning Python.",
-      "url": "https://github.com/dileepadev/learn-python",
-      "homepage": null,
-      "isFork": false,
-      "isArchived": false,
-      "isTemplate": false,
-      "stars": 0,
-      "forks": 0,
-      "watchers": null,
-      "openIssues": 0,
-      "size": 47,
-      "primaryLanguage": "Python",
-      "languages": [
-        {
-          "name": "Python",
-          "bytes": 12946
-        }
-      ],
-      "topics": [],
-      "license": "MIT",
-      "defaultBranch": "main",
-      "createdAt": "2026-01-21T17:49:40Z",
-      "pushedAt": "2026-03-18T17:32:54Z",
-      "updatedAt": "2026-03-18T17:36:17Z",
       "hasPages": false,
       "pages": null
     },
@@ -4479,26 +4502,54 @@
       "url": "https://github.com/dileepadev/dileepadev.github.io",
       "runs": 20,
       "successRate": 100,
-      "medianDurationMs": 17000,
+      "medianDurationMs": 16500,
       "lastRun": {
         "repo": "dileepadev.github.io",
-        "id": 34350823814,
+        "id": 34388401168,
         "name": "Refresh snapshot",
         "workflow": "refresh-data.yml",
-        "runNumber": 28,
+        "runNumber": 29,
         "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
         "branch": "main",
-        "sha": "954ff9e",
-        "createdAt": "2026-09-09T12:24:24Z",
-        "startedAt": "2026-09-09T12:24:24Z",
-        "updatedAt": "2026-09-09T12:24:27Z",
-        "durationMs": 3000,
-        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/34350823814"
+        "sha": "e59a69a",
+        "createdAt": "2026-09-09T18:20:32Z",
+        "startedAt": "2026-09-09T18:20:32Z",
+        "updatedAt": "2026-09-09T18:20:37Z",
+        "durationMs": 5000,
+        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/34388401168"
       },
       "workflows": [
         "refresh-data.yml"
+      ]
+    },
+    {
+      "repo": "learn-python-ai",
+      "url": "https://github.com/dileepadev/learn-python-ai",
+      "runs": 9,
+      "successRate": 100,
+      "medianDurationMs": 29000,
+      "lastRun": {
+        "repo": "learn-python-ai",
+        "id": 34371913173,
+        "name": "Deploy to GitHub Pages",
+        "workflow": "deploy.yml",
+        "runNumber": 1,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "main",
+        "sha": "3417018",
+        "createdAt": "2026-09-09T15:41:42Z",
+        "startedAt": "2026-09-09T15:41:42Z",
+        "updatedAt": "2026-09-09T15:42:27Z",
+        "durationMs": 45000,
+        "url": "https://github.com/dileepadev/learn-python-ai/actions/runs/34371913173"
+      },
+      "workflows": [
+        "deploy.yml",
+        "ci.yml"
       ]
     },
     {
@@ -5242,15 +5293,6 @@
       "workflows": []
     },
     {
-      "repo": "learn-python",
-      "url": "https://github.com/dileepadev/learn-python",
-      "runs": 0,
-      "successRate": null,
-      "medianDurationMs": null,
-      "lastRun": null,
-      "workflows": []
-    },
-    {
       "repo": "learn-typescript",
       "url": "https://github.com/dileepadev/learn-typescript",
       "runs": 0,
@@ -5388,6 +5430,17 @@
   ],
   "live": [
     {
+      "repo": "learn-python-ai",
+      "url": "https://dileepadev.github.io/learn-python-ai/",
+      "homepage": "https://dileepadev.github.io/learn-python-ai/",
+      "hasPages": true,
+      "cname": null,
+      "status": null,
+      "buildType": "workflow",
+      "lastDeployedAt": "2026-09-09T15:42:10Z",
+      "pushedAt": "2026-09-09T15:43:40Z"
+    },
+    {
       "repo": "dileepadev.github.io",
       "url": "https://dileepadev.github.io/",
       "homepage": "https://dileepadev.github.io/",
@@ -5396,7 +5449,7 @@
       "status": "built",
       "buildType": "workflow",
       "lastDeployedAt": "2026-09-03T15:36:03Z",
-      "pushedAt": "2026-09-09T06:28:49Z"
+      "pushedAt": "2026-09-09T12:24:38Z"
     },
     {
       "repo": "dileepa-dev",
@@ -5753,6 +5806,14 @@
   ],
   "releases": [
     {
+      "repo": "learn-python-ai",
+      "tag": "v0.1.0",
+      "name": "v0.1.0 — Interactive learning platform and Python Foundations",
+      "publishedAt": "2026-09-09T15:43:55Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/learn-python-ai/releases/tag/v0.1.0"
+    },
+    {
       "repo": "dileepa-dev",
       "tag": "v2.0.1",
       "name": "v2.0.1",
@@ -6093,10 +6154,118 @@
     {
       "kind": "run",
       "repo": "dileepadev.github.io",
-      "at": "2026-09-09T12:24:27Z",
+      "at": "2026-09-09T18:20:37Z",
       "title": "Refresh snapshot",
       "detail": "main",
       "state": "in_progress",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/34388401168"
+    },
+    {
+      "kind": "release",
+      "repo": "learn-python-ai",
+      "at": "2026-09-09T15:43:55Z",
+      "title": "v0.1.0 — Interactive learning platform and Python Foundations",
+      "detail": "v0.1.0",
+      "state": "released",
+      "url": "https://github.com/dileepadev/learn-python-ai/releases/tag/v0.1.0"
+    },
+    {
+      "kind": "run",
+      "repo": "learn-python-ai",
+      "at": "2026-09-09T15:42:27Z",
+      "title": "Deploy to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-python-ai/actions/runs/34371913173"
+    },
+    {
+      "kind": "deployment",
+      "repo": "learn-python-ai",
+      "at": "2026-09-09T15:42:10Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "learn-python-ai",
+      "at": "2026-09-09T15:38:36Z",
+      "title": "CI",
+      "detail": "feat/interactive-learning-platform",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-python-ai/actions/runs/34371529979"
+    },
+    {
+      "kind": "run",
+      "repo": "learn-python-ai",
+      "at": "2026-09-09T15:38:33Z",
+      "title": "CI",
+      "detail": "feat/interactive-learning-platform",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-python-ai/actions/runs/34371535857"
+    },
+    {
+      "kind": "run",
+      "repo": "learn-python-ai",
+      "at": "2026-09-09T15:32:21Z",
+      "title": "CI",
+      "detail": "feat/interactive-learning-platform",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-python-ai/actions/runs/34370781559"
+    },
+    {
+      "kind": "run",
+      "repo": "learn-python-ai",
+      "at": "2026-09-09T15:31:46Z",
+      "title": "CI",
+      "detail": "feat/interactive-learning-platform",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-python-ai/actions/runs/34370775823"
+    },
+    {
+      "kind": "run",
+      "repo": "learn-python-ai",
+      "at": "2026-09-09T15:25:45Z",
+      "title": "CI",
+      "detail": "feat/interactive-learning-platform",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-python-ai/actions/runs/34370136442"
+    },
+    {
+      "kind": "run",
+      "repo": "learn-python-ai",
+      "at": "2026-09-09T15:25:43Z",
+      "title": "CI",
+      "detail": "feat/interactive-learning-platform",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-python-ai/actions/runs/34370130504"
+    },
+    {
+      "kind": "run",
+      "repo": "learn-python-ai",
+      "at": "2026-09-09T14:54:22Z",
+      "title": "CI",
+      "detail": "feat/interactive-learning-platform",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-python-ai/actions/runs/34366648256"
+    },
+    {
+      "kind": "run",
+      "repo": "learn-python-ai",
+      "at": "2026-09-09T14:42:04Z",
+      "title": "CI",
+      "detail": "feat/interactive-learning-platform",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-python-ai/actions/runs/34365278212"
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-09-09T12:24:40Z",
+      "title": "Refresh snapshot",
+      "detail": "main",
+      "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/34350823814"
     },
     {
@@ -6494,15 +6663,6 @@
       "detail": "main",
       "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/33933876939"
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-09-04T18:18:56Z",
-      "title": "Refresh snapshot",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/33905194141"
     },
     {
       "kind": "release",
@@ -7070,105 +7230,6 @@
       "detail": "main",
       "state": "success",
       "url": "https://github.com/dileepadev/learn-ai/actions/runs/32518532879"
-    },
-    {
-      "kind": "deployment",
-      "repo": "learn-ai",
-      "at": "2026-08-21T19:28:15Z",
-      "title": "github-pages",
-      "detail": "main",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "run",
-      "repo": "blog-dileepa-dev",
-      "at": "2026-08-21T17:18:07Z",
-      "title": "Deploy Astro site to Pages",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/32507347859"
-    },
-    {
-      "kind": "deployment",
-      "repo": "blog-dileepa-dev",
-      "at": "2026-08-21T17:17:32Z",
-      "title": "github-pages",
-      "detail": "main",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "run",
-      "repo": "blog-dileepa-dev",
-      "at": "2026-08-21T16:27:31Z",
-      "title": "Deploy Astro site to Pages",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/32502942761"
-    },
-    {
-      "kind": "deployment",
-      "repo": "blog-dileepa-dev",
-      "at": "2026-08-21T16:27:04Z",
-      "title": "github-pages",
-      "detail": "main",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "run",
-      "repo": "blog-dileepa-dev",
-      "at": "2026-08-20T17:36:18Z",
-      "title": "Deploy Astro site to Pages",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/32398399557"
-    },
-    {
-      "kind": "deployment",
-      "repo": "blog-dileepa-dev",
-      "at": "2026-08-20T17:35:30Z",
-      "title": "github-pages",
-      "detail": "main",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "run",
-      "repo": "gauntlet",
-      "at": "2026-08-20T17:00:52Z",
-      "title": "CI",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/gauntlet/actions/runs/32395202985"
-    },
-    {
-      "kind": "run",
-      "repo": "microsoft-agent-framework-workshop",
-      "at": "2026-08-16T15:17:18Z",
-      "title": "Deploy Docs to GitHub Pages",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/microsoft-agent-framework-workshop/actions/runs/31955150480"
-    },
-    {
-      "kind": "run",
-      "repo": "learn-ai",
-      "at": "2026-08-15T18:22:54Z",
-      "title": "Deploy to GitHub Pages",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/learn-ai/actions/runs/31900898392"
-    },
-    {
-      "kind": "deployment",
-      "repo": "learn-ai",
-      "at": "2026-08-15T18:22:30Z",
-      "title": "github-pages",
-      "detail": "main",
-      "state": "deployed",
-      "url": null
     }
   ]
 }
