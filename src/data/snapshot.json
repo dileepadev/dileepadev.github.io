@@ -1,16 +1,16 @@
 {
   "meta": {
-    "fetchedAt": "2026-09-14T12:25:42.759Z",
+    "fetchedAt": "2026-09-14T18:18:59.103Z",
     "login": "dileepadev",
     "source": "GitHub REST + GraphQL, public data only",
-    "durationMs": 6408,
+    "durationMs": 6808,
     "authenticated": true,
     "partial": false,
     "warnings": [],
     "rateLimit": {
       "limit": 5000,
       "remaining": 5000,
-      "resetAt": "2026-09-14T13:25:42.000Z"
+      "resetAt": "2026-09-14T19:18:59.000Z"
     }
   },
   "profile": {
@@ -30,12 +30,12 @@
   "contributions": {
     "from": "2025-09-13T18:30:00Z",
     "to": "2026-09-14T18:29:59Z",
-    "totalCommits": 2181,
-    "totalPullRequests": 81,
+    "totalCommits": 2186,
+    "totalPullRequests": 83,
     "totalIssues": 50,
     "totalRepositories": 57,
-    "privateContributions": 34,
-    "calendarTotal": 2415,
+    "privateContributions": 41,
+    "calendarTotal": 2429,
     "weeks": [
       [
         {
@@ -1937,7 +1937,7 @@
         },
         {
           "date": "2026-09-08",
-          "count": 6,
+          "count": 7,
           "weekday": 2
         },
         {
@@ -1969,7 +1969,7 @@
         },
         {
           "date": "2026-09-14",
-          "count": 0,
+          "count": 13,
           "weekday": 1
         }
       ]
@@ -1982,7 +1982,7 @@
     "archived": 0,
     "stars": 3,
     "languages": 20,
-    "releases": 44,
+    "releases": 45,
     "workflowRuns": 206,
     "deployments": 107,
     "liveSites": 34,
@@ -1991,7 +1991,7 @@
   "languages": [
     {
       "name": "TypeScript",
-      "bytes": 2151489,
+      "bytes": 2159452,
       "repos": 14,
       "share": 23.2
     },
@@ -2112,6 +2112,50 @@
   ],
   "repos": [
     {
+      "name": "dileepa-dev",
+      "description": "This is my personal website.",
+      "url": "https://github.com/dileepadev/dileepa-dev",
+      "homepage": "https://dileepa.dev",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 15595,
+      "primaryLanguage": "TypeScript",
+      "languages": [
+        {
+          "name": "TypeScript",
+          "bytes": 877483
+        },
+        {
+          "name": "CSS",
+          "bytes": 82002
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 559
+        }
+      ],
+      "topics": [
+        "dileepadev",
+        "nextjs",
+        "nextjs-portfolio",
+        "personal-website",
+        "portfolio",
+        "portfolio-website"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-01-02T17:24:46Z",
+      "pushedAt": "2026-09-14T14:13:12Z",
+      "updatedAt": "2026-09-14T14:13:06Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
       "name": "dileepadev.github.io",
       "description": "GitHub Pages site for updates.",
       "url": "https://github.com/dileepadev/dileepadev.github.io",
@@ -2123,7 +2167,7 @@
       "forks": 0,
       "watchers": null,
       "openIssues": 0,
-      "size": 30993,
+      "size": 30994,
       "primaryLanguage": "Astro",
       "languages": [
         {
@@ -2149,8 +2193,8 @@
       "license": "MIT",
       "defaultBranch": "main",
       "createdAt": "2025-12-24T15:24:10Z",
-      "pushedAt": "2026-09-14T06:37:08Z",
-      "updatedAt": "2026-09-14T06:37:12Z",
+      "pushedAt": "2026-09-14T12:25:43Z",
+      "updatedAt": "2026-09-14T12:25:47Z",
       "hasPages": true,
       "pages": {
         "status": "built",
@@ -2241,50 +2285,6 @@
         "httpsEnforced": true,
         "sourceBranch": "main"
       }
-    },
-    {
-      "name": "dileepa-dev",
-      "description": "This is my personal website.",
-      "url": "https://github.com/dileepadev/dileepa-dev",
-      "homepage": "https://dileepa.dev",
-      "isFork": false,
-      "isArchived": false,
-      "isTemplate": false,
-      "stars": 0,
-      "forks": 0,
-      "watchers": null,
-      "openIssues": 0,
-      "size": 16508,
-      "primaryLanguage": "TypeScript",
-      "languages": [
-        {
-          "name": "TypeScript",
-          "bytes": 869520
-        },
-        {
-          "name": "CSS",
-          "bytes": 82002
-        },
-        {
-          "name": "JavaScript",
-          "bytes": 559
-        }
-      ],
-      "topics": [
-        "dileepadev",
-        "nextjs",
-        "nextjs-portfolio",
-        "personal-website",
-        "portfolio",
-        "portfolio-website"
-      ],
-      "license": "MIT",
-      "defaultBranch": "main",
-      "createdAt": "2026-01-02T17:24:46Z",
-      "pushedAt": "2026-09-08T13:42:19Z",
-      "updatedAt": "2026-09-08T13:44:17Z",
-      "hasPages": false,
-      "pages": null
     },
     {
       "name": "mender",
@@ -4524,20 +4524,20 @@
       "medianDurationMs": 19000,
       "lastRun": {
         "repo": "dileepadev.github.io",
-        "id": 34843347412,
+        "id": 34880026984,
         "name": "Refresh snapshot",
         "workflow": "refresh-data.yml",
-        "runNumber": 48,
+        "runNumber": 49,
         "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
         "branch": "main",
-        "sha": "f92c7f0",
-        "createdAt": "2026-09-14T12:25:30Z",
-        "startedAt": "2026-09-14T12:25:30Z",
-        "updatedAt": "2026-09-14T12:25:34Z",
-        "durationMs": 4000,
-        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/34843347412"
+        "sha": "d44d422",
+        "createdAt": "2026-09-14T18:18:46Z",
+        "startedAt": "2026-09-14T18:18:46Z",
+        "updatedAt": "2026-09-14T18:18:49Z",
+        "durationMs": 3000,
+        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/34880026984"
       },
       "workflows": [
         "refresh-data.yml"
@@ -5458,6 +5458,17 @@
   ],
   "live": [
     {
+      "repo": "dileepa-dev",
+      "url": "https://dileepa.dev",
+      "homepage": "https://dileepa.dev",
+      "hasPages": false,
+      "cname": null,
+      "status": null,
+      "buildType": null,
+      "lastDeployedAt": "2026-09-14T14:13:54Z",
+      "pushedAt": "2026-09-14T14:13:12Z"
+    },
+    {
       "repo": "dileepadev.github.io",
       "url": "https://dileepadev.github.io/",
       "homepage": "https://dileepadev.github.io/",
@@ -5466,7 +5477,7 @@
       "status": "built",
       "buildType": "workflow",
       "lastDeployedAt": "2026-09-03T15:36:03Z",
-      "pushedAt": "2026-09-14T06:37:08Z"
+      "pushedAt": "2026-09-14T12:25:43Z"
     },
     {
       "repo": "learn-python-ai",
@@ -5478,17 +5489,6 @@
       "buildType": "workflow",
       "lastDeployedAt": "2026-09-12T06:05:47Z",
       "pushedAt": "2026-09-12T06:05:21Z"
-    },
-    {
-      "repo": "dileepa-dev",
-      "url": "https://dileepa.dev",
-      "homepage": "https://dileepa.dev",
-      "hasPages": false,
-      "cname": null,
-      "status": null,
-      "buildType": null,
-      "lastDeployedAt": "2026-09-08T13:42:56Z",
-      "pushedAt": "2026-09-08T13:42:19Z"
     },
     {
       "repo": "learn-ai-901",
@@ -5833,6 +5833,14 @@
     }
   ],
   "releases": [
+    {
+      "repo": "dileepa-dev",
+      "tag": "v2.0.2",
+      "name": "v2.0.2",
+      "publishedAt": "2026-09-14T14:13:21Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/dileepa-dev/releases/tag/v2.0.2"
+    },
     {
       "repo": "learn-python-ai",
       "tag": "v0.2.0",
@@ -6190,10 +6198,73 @@
     {
       "kind": "run",
       "repo": "dileepadev.github.io",
-      "at": "2026-09-14T12:25:34Z",
+      "at": "2026-09-14T18:18:49Z",
       "title": "Refresh snapshot",
       "detail": "main",
       "state": "in_progress",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/34880026984"
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-09-14T14:13:54Z",
+      "title": "Production",
+      "detail": "baf76d60cbaf54ae042706562fae73a2787c05c4",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "release",
+      "repo": "dileepa-dev",
+      "at": "2026-09-14T14:13:21Z",
+      "title": "v2.0.2",
+      "detail": "v2.0.2",
+      "state": "released",
+      "url": "https://github.com/dileepadev/dileepa-dev/releases/tag/v2.0.2"
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-09-14T14:13:09Z",
+      "title": "Preview",
+      "detail": "d2e244641a5cdd312184d236a795843e86a63096",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-09-14T14:12:19Z",
+      "title": "Preview",
+      "detail": "baad22ccc117e81d7808bfde6e0214368ae73b67",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-09-14T13:50:43Z",
+      "title": "Preview",
+      "detail": "02817e9b22939edf5954c02601bd5cf44e89d2f3",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-09-14T13:35:44Z",
+      "title": "Preview",
+      "detail": "283aab0ff81a6f908dba0188b0effa2d0cc2d36b",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-09-14T12:25:46Z",
+      "title": "Refresh snapshot",
+      "detail": "main",
+      "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/34843347412"
     },
     {
@@ -6458,15 +6529,6 @@
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/34422455446"
     },
     {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-09-09T18:20:53Z",
-      "title": "Refresh snapshot",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/34388401168"
-    },
-    {
       "kind": "release",
       "repo": "learn-python-ai",
       "at": "2026-09-09T15:43:55Z",
@@ -6616,33 +6678,6 @@
       "at": "2026-09-08T13:33:08Z",
       "title": "Preview",
       "detail": "d0d447da4eb556fa3703aa037bf814855f159148",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepa-dev",
-      "at": "2026-09-07T18:22:38Z",
-      "title": "Preview",
-      "detail": "883aab98537ce9309245ed6ba0bd08b4b5cf82f6",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepa-dev",
-      "at": "2026-09-07T18:14:12Z",
-      "title": "Preview",
-      "detail": "d611ec1ad41af239bad344d238b3dc10b0482939",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepa-dev",
-      "at": "2026-09-07T18:11:52Z",
-      "title": "Preview",
-      "detail": "889b84544ad2d7a0db07ca559f05673115d08be6",
       "state": "deployed",
       "url": null
     },
@@ -6832,24 +6867,6 @@
       "at": "2026-09-03T11:50:38Z",
       "title": "github-pages",
       "detail": "main",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepa-dev",
-      "at": "2026-09-03T11:43:51Z",
-      "title": "Preview",
-      "detail": "6c3bd327048c6eefa3977716288664fc3c32e964",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepa-dev",
-      "at": "2026-09-03T11:40:16Z",
-      "title": "Preview",
-      "detail": "8da750da1b5b5631476c288938161815c17a4b88",
       "state": "deployed",
       "url": null
     },
@@ -7257,15 +7274,6 @@
       "detail": "dev",
       "state": "success",
       "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33416244257"
-    },
-    {
-      "kind": "run",
-      "repo": "api-dileepa-dev",
-      "at": "2026-08-31T16:49:19Z",
-      "title": "CI",
-      "detail": "dev",
-      "state": "success",
-      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33416118682"
     }
   ]
 }
