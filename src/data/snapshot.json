@@ -1,16 +1,16 @@
 {
   "meta": {
-    "fetchedAt": "2026-09-25T12:25:29.370Z",
+    "fetchedAt": "2026-09-25T18:19:47.848Z",
     "login": "dileepadev",
     "source": "GitHub REST + GraphQL, public data only",
-    "durationMs": 8361,
+    "durationMs": 6894,
     "authenticated": true,
     "partial": false,
     "warnings": [],
     "rateLimit": {
       "limit": 5000,
       "remaining": 5000,
-      "resetAt": "2026-09-25T13:25:29.000Z"
+      "resetAt": "2026-09-25T19:19:47.000Z"
     }
   },
   "profile": {
@@ -30,12 +30,12 @@
   "contributions": {
     "from": "2025-09-20T18:30:00Z",
     "to": "2026-09-25T18:29:59Z",
-    "totalCommits": 2186,
+    "totalCommits": 2276,
     "totalPullRequests": 83,
     "totalIssues": 50,
     "totalRepositories": 58,
     "privateContributions": 51,
-    "calendarTotal": 2440,
+    "calendarTotal": 2530,
     "weeks": [
       [
         {
@@ -1942,29 +1942,29 @@
         },
         {
           "date": "2026-09-16",
-          "count": 0,
+          "count": 10,
           "weekday": 3
         },
         {
           "date": "2026-09-17",
-          "count": 0,
+          "count": 10,
           "weekday": 4
         },
         {
           "date": "2026-09-18",
-          "count": 0,
+          "count": 10,
           "weekday": 5
         },
         {
           "date": "2026-09-19",
-          "count": 0,
+          "count": 10,
           "weekday": 6
         }
       ],
       [
         {
           "date": "2026-09-20",
-          "count": 0,
+          "count": 10,
           "weekday": 0
         },
         {
@@ -1974,22 +1974,22 @@
         },
         {
           "date": "2026-09-22",
-          "count": 0,
+          "count": 10,
           "weekday": 2
         },
         {
           "date": "2026-09-23",
-          "count": 0,
+          "count": 10,
           "weekday": 3
         },
         {
           "date": "2026-09-24",
-          "count": 0,
+          "count": 10,
           "weekday": 4
         },
         {
           "date": "2026-09-25",
-          "count": 0,
+          "count": 10,
           "weekday": 5
         }
       ]
@@ -2132,6 +2132,54 @@
   ],
   "repos": [
     {
+      "name": "learn-ai",
+      "description": "This repository contains a collection of concepts and resources related to Artificial Intelligence (AI).",
+      "url": "https://github.com/dileepadev/learn-ai",
+      "homepage": "https://dileepadev.github.io/learn-ai/",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 4111,
+      "primaryLanguage": "Astro",
+      "languages": [
+        {
+          "name": "Astro",
+          "bytes": 37008
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 3743
+        },
+        {
+          "name": "TypeScript",
+          "bytes": 2371
+        },
+        {
+          "name": "CSS",
+          "bytes": 346
+        }
+      ],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-01-21T17:49:01Z",
+      "pushedAt": "2026-09-25T17:14:08Z",
+      "updatedAt": "2026-09-25T17:14:21Z",
+      "hasPages": true,
+      "pages": {
+        "status": "built",
+        "cname": null,
+        "htmlUrl": "https://dileepadev.github.io/learn-ai/",
+        "buildType": "workflow",
+        "httpsEnforced": true,
+        "sourceBranch": "copilot/prepare-astro-project-for-deployment"
+      }
+    },
+    {
       "name": "dileepadev.github.io",
       "description": "GitHub Pages site for updates.",
       "url": "https://github.com/dileepadev/dileepadev.github.io",
@@ -2143,7 +2191,7 @@
       "forks": 0,
       "watchers": null,
       "openIssues": 0,
-      "size": 31015,
+      "size": 31016,
       "primaryLanguage": "Astro",
       "languages": [
         {
@@ -2169,8 +2217,8 @@
       "license": "MIT",
       "defaultBranch": "main",
       "createdAt": "2025-12-24T15:24:10Z",
-      "pushedAt": "2026-09-25T06:29:18Z",
-      "updatedAt": "2026-09-25T06:29:22Z",
+      "pushedAt": "2026-09-25T12:25:30Z",
+      "updatedAt": "2026-09-25T12:25:34Z",
       "hasPages": true,
       "pages": {
         "status": "built",
@@ -2417,54 +2465,6 @@
         "buildType": "workflow",
         "httpsEnforced": true,
         "sourceBranch": "main"
-      }
-    },
-    {
-      "name": "learn-ai",
-      "description": "This repository contains a collection of concepts and resources related to Artificial Intelligence (AI).",
-      "url": "https://github.com/dileepadev/learn-ai",
-      "homepage": "https://dileepadev.github.io/learn-ai/",
-      "isFork": false,
-      "isArchived": false,
-      "isTemplate": false,
-      "stars": 0,
-      "forks": 0,
-      "watchers": null,
-      "openIssues": 0,
-      "size": 3910,
-      "primaryLanguage": "Astro",
-      "languages": [
-        {
-          "name": "Astro",
-          "bytes": 37008
-        },
-        {
-          "name": "JavaScript",
-          "bytes": 3743
-        },
-        {
-          "name": "TypeScript",
-          "bytes": 2371
-        },
-        {
-          "name": "CSS",
-          "bytes": 346
-        }
-      ],
-      "topics": [],
-      "license": "MIT",
-      "defaultBranch": "main",
-      "createdAt": "2026-01-21T17:49:01Z",
-      "pushedAt": "2026-09-05T17:01:16Z",
-      "updatedAt": "2026-09-05T17:01:23Z",
-      "hasPages": true,
-      "pages": {
-        "status": "built",
-        "cname": null,
-        "htmlUrl": "https://dileepadev.github.io/learn-ai/",
-        "buildType": "workflow",
-        "httpsEnforced": true,
-        "sourceBranch": "copilot/prepare-astro-project-for-deployment"
       }
     },
     {
@@ -4565,26 +4565,53 @@
       "url": "https://github.com/dileepadev/dileepadev.github.io",
       "runs": 20,
       "successRate": 100,
-      "medianDurationMs": 19000,
+      "medianDurationMs": 19500,
       "lastRun": {
         "repo": "dileepadev.github.io",
-        "id": 36134808153,
+        "id": 36172692873,
         "name": "Refresh snapshot",
         "workflow": "refresh-data.yml",
-        "runNumber": 92,
+        "runNumber": 93,
         "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
         "branch": "main",
-        "sha": "cd1793d",
-        "createdAt": "2026-09-25T12:25:10Z",
-        "startedAt": "2026-09-25T12:25:10Z",
-        "updatedAt": "2026-09-25T12:25:14Z",
+        "sha": "10ea269",
+        "createdAt": "2026-09-25T18:19:33Z",
+        "startedAt": "2026-09-25T18:19:33Z",
+        "updatedAt": "2026-09-25T18:19:37Z",
         "durationMs": 4000,
-        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/36134808153"
+        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/36172692873"
       },
       "workflows": [
         "refresh-data.yml"
+      ]
+    },
+    {
+      "repo": "learn-ai",
+      "url": "https://github.com/dileepadev/learn-ai",
+      "runs": 20,
+      "successRate": 80,
+      "medianDurationMs": 67500,
+      "lastRun": {
+        "repo": "learn-ai",
+        "id": 36165835704,
+        "name": "Deploy to GitHub Pages",
+        "workflow": "deploy.yml",
+        "runNumber": 22,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "main",
+        "sha": "9e13914",
+        "createdAt": "2026-09-25T17:14:11Z",
+        "startedAt": "2026-09-25T17:14:11Z",
+        "updatedAt": "2026-09-25T17:15:37Z",
+        "durationMs": 86000,
+        "url": "https://github.com/dileepadev/learn-ai/actions/runs/36165835704"
+      },
+      "workflows": [
+        "deploy.yml"
       ]
     },
     {
@@ -4664,33 +4691,6 @@
         "updatedAt": "2026-09-06T06:56:26Z",
         "durationMs": 50000,
         "url": "https://github.com/dileepadev/learn-ai-901/actions/runs/34017777723"
-      },
-      "workflows": [
-        "deploy.yml"
-      ]
-    },
-    {
-      "repo": "learn-ai",
-      "url": "https://github.com/dileepadev/learn-ai",
-      "runs": 20,
-      "successRate": 80,
-      "medianDurationMs": 67000,
-      "lastRun": {
-        "repo": "learn-ai",
-        "id": 33979644423,
-        "name": "Deploy to GitHub Pages",
-        "workflow": "deploy.yml",
-        "runNumber": 21,
-        "event": "push",
-        "status": "completed",
-        "conclusion": "success",
-        "branch": "main",
-        "sha": "885861c",
-        "createdAt": "2026-09-05T17:01:18Z",
-        "startedAt": "2026-09-05T17:01:18Z",
-        "updatedAt": "2026-09-05T17:02:40Z",
-        "durationMs": 82000,
-        "url": "https://github.com/dileepadev/learn-ai/actions/runs/33979644423"
       },
       "workflows": [
         "deploy.yml"
@@ -5511,6 +5511,17 @@
   ],
   "live": [
     {
+      "repo": "learn-ai",
+      "url": "https://dileepadev.github.io/learn-ai/",
+      "homepage": "https://dileepadev.github.io/learn-ai/",
+      "hasPages": true,
+      "cname": null,
+      "status": "built",
+      "buildType": "workflow",
+      "lastDeployedAt": "2026-09-25T17:15:17Z",
+      "pushedAt": "2026-09-25T17:14:08Z"
+    },
+    {
       "repo": "dileepadev.github.io",
       "url": "https://dileepadev.github.io/",
       "homepage": "https://dileepadev.github.io/",
@@ -5519,7 +5530,7 @@
       "status": "built",
       "buildType": "workflow",
       "lastDeployedAt": "2026-09-03T15:36:03Z",
-      "pushedAt": "2026-09-25T06:29:18Z"
+      "pushedAt": "2026-09-25T12:25:30Z"
     },
     {
       "repo": "dileepa-dev",
@@ -5553,17 +5564,6 @@
       "buildType": "workflow",
       "lastDeployedAt": "2026-09-06T06:56:15Z",
       "pushedAt": "2026-09-06T06:55:34Z"
-    },
-    {
-      "repo": "learn-ai",
-      "url": "https://dileepadev.github.io/learn-ai/",
-      "homepage": "https://dileepadev.github.io/learn-ai/",
-      "hasPages": true,
-      "cname": null,
-      "status": "built",
-      "buildType": "workflow",
-      "lastDeployedAt": "2026-09-05T17:02:23Z",
-      "pushedAt": "2026-09-05T17:01:16Z"
     },
     {
       "repo": "dileepadev",
@@ -6251,10 +6251,37 @@
     {
       "kind": "run",
       "repo": "dileepadev.github.io",
-      "at": "2026-09-25T12:25:14Z",
+      "at": "2026-09-25T18:19:37Z",
       "title": "Refresh snapshot",
       "detail": "main",
       "state": "in_progress",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/36172692873"
+    },
+    {
+      "kind": "run",
+      "repo": "learn-ai",
+      "at": "2026-09-25T17:15:37Z",
+      "title": "Deploy to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-ai/actions/runs/36165835704"
+    },
+    {
+      "kind": "deployment",
+      "repo": "learn-ai",
+      "at": "2026-09-25T17:15:17Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-09-25T12:25:33Z",
+      "title": "Refresh snapshot",
+      "detail": "main",
+      "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/36134808153"
     },
     {
@@ -6418,15 +6445,6 @@
       "detail": "main",
       "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/35548852970"
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-09-20T18:18:09Z",
-      "title": "Refresh snapshot",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/35528602076"
     },
     {
       "kind": "deployment",
@@ -7309,24 +7327,6 @@
       "detail": "main",
       "state": "success",
       "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33416357348"
-    },
-    {
-      "kind": "run",
-      "repo": "api-dileepa-dev",
-      "at": "2026-08-31T16:50:48Z",
-      "title": "CI",
-      "detail": "dev",
-      "state": "success",
-      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33416249540"
-    },
-    {
-      "kind": "run",
-      "repo": "api-dileepa-dev",
-      "at": "2026-08-31T16:50:44Z",
-      "title": "CI",
-      "detail": "dev",
-      "state": "success",
-      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33416244257"
     }
   ]
 }
