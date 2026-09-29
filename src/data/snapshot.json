@@ -1,16 +1,16 @@
 {
   "meta": {
-    "fetchedAt": "2026-09-29T12:27:41.038Z",
+    "fetchedAt": "2026-09-29T18:22:13.011Z",
     "login": "dileepadev",
     "source": "GitHub REST + GraphQL, public data only",
-    "durationMs": 7688,
+    "durationMs": 6900,
     "authenticated": true,
     "partial": false,
     "warnings": [],
     "rateLimit": {
       "limit": 5000,
       "remaining": 5000,
-      "resetAt": "2026-09-29T13:27:40.000Z"
+      "resetAt": "2026-09-29T19:22:12.000Z"
     }
   },
   "profile": {
@@ -30,12 +30,12 @@
   "contributions": {
     "from": "2025-09-27T18:30:00Z",
     "to": "2026-09-29T18:29:59Z",
-    "totalCommits": 2285,
-    "totalPullRequests": 83,
-    "totalIssues": 50,
+    "totalCommits": 2287,
+    "totalPullRequests": 85,
+    "totalIssues": 56,
     "totalRepositories": 58,
     "privateContributions": 51,
-    "calendarTotal": 2539,
+    "calendarTotal": 2549,
     "weeks": [
       [
         {
@@ -1974,7 +1974,7 @@
         },
         {
           "date": "2026-09-29",
-          "count": 0,
+          "count": 10,
           "weekday": 2
         }
       ]
@@ -1988,10 +1988,10 @@
     "stars": 3,
     "languages": 20,
     "releases": 45,
-    "workflowRuns": 206,
+    "workflowRuns": 211,
     "deployments": 107,
     "liveSites": 34,
-    "reposWithCi": 23
+    "reposWithCi": 24
   },
   "languages": [
     {
@@ -2117,6 +2117,30 @@
   ],
   "repos": [
     {
+      "name": "ai-snippets",
+      "description": "Official code snippets for AI model APIs, agent SDKs, and frameworks, covering LLMs, SLMs, vision, speech, embeddings, image generation, and more.",
+      "url": "https://github.com/dileepadev/ai-snippets",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 8,
+      "size": 171,
+      "primaryLanguage": null,
+      "languages": [],
+      "topics": [],
+      "license": "NOASSERTION",
+      "defaultBranch": "main",
+      "createdAt": "2026-09-21T05:55:19Z",
+      "pushedAt": "2026-09-29T15:51:34Z",
+      "updatedAt": "2026-09-29T16:06:46Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
       "name": "dileepadev.github.io",
       "description": "GitHub Pages site for updates.",
       "url": "https://github.com/dileepadev/dileepadev.github.io",
@@ -2128,7 +2152,7 @@
       "forks": 0,
       "watchers": null,
       "openIssues": 0,
-      "size": 31039,
+      "size": 31001,
       "primaryLanguage": "Astro",
       "languages": [
         {
@@ -2154,8 +2178,8 @@
       "license": "MIT",
       "defaultBranch": "main",
       "createdAt": "2025-12-24T15:24:10Z",
-      "pushedAt": "2026-09-29T06:30:13Z",
-      "updatedAt": "2026-09-29T06:30:17Z",
+      "pushedAt": "2026-09-29T12:27:42Z",
+      "updatedAt": "2026-09-29T12:27:46Z",
       "hasPages": true,
       "pages": {
         "status": "built",
@@ -2213,30 +2237,6 @@
         "httpsEnforced": true,
         "sourceBranch": "copilot/prepare-astro-project-for-deployment"
       }
-    },
-    {
-      "name": "ai-snippets",
-      "description": "Official code snippets for AI model APIs, agent SDKs, and frameworks, covering LLMs, SLMs, vision, speech, embeddings, image generation, and more. Every example comes from its official docs, with a source link.",
-      "url": "https://github.com/dileepadev/ai-snippets",
-      "homepage": null,
-      "isFork": false,
-      "isArchived": false,
-      "isTemplate": false,
-      "stars": 0,
-      "forks": 0,
-      "watchers": null,
-      "openIssues": 0,
-      "size": 0,
-      "primaryLanguage": null,
-      "languages": [],
-      "topics": [],
-      "license": null,
-      "defaultBranch": "main",
-      "createdAt": "2026-09-21T05:55:19Z",
-      "pushedAt": "2026-09-21T05:55:20Z",
-      "updatedAt": "2026-09-21T05:55:20Z",
-      "hasPages": false,
-      "pages": null
     },
     {
       "name": "dileepa-dev",
@@ -4553,23 +4553,51 @@
       "medianDurationMs": 17500,
       "lastRun": {
         "repo": "dileepadev.github.io",
-        "id": 36568218752,
+        "id": 36611529114,
         "name": "Refresh snapshot",
         "workflow": "refresh-data.yml",
-        "runNumber": 108,
+        "runNumber": 109,
         "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
         "branch": "main",
-        "sha": "b407023",
-        "createdAt": "2026-09-29T12:27:23Z",
-        "startedAt": "2026-09-29T12:27:23Z",
-        "updatedAt": "2026-09-29T12:27:27Z",
+        "sha": "eb0defd",
+        "createdAt": "2026-09-29T18:21:59Z",
+        "startedAt": "2026-09-29T18:21:59Z",
+        "updatedAt": "2026-09-29T18:22:03Z",
         "durationMs": 4000,
-        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/36568218752"
+        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/36611529114"
       },
       "workflows": [
         "refresh-data.yml"
+      ]
+    },
+    {
+      "repo": "ai-snippets",
+      "url": "https://github.com/dileepadev/ai-snippets",
+      "runs": 5,
+      "successRate": 100,
+      "medianDurationMs": 32000,
+      "lastRun": {
+        "repo": "ai-snippets",
+        "id": 36594451307,
+        "name": "Running Copilot Code Review",
+        "workflow": "dynamic/agents/copilot-pull-request-reviewer",
+        "runNumber": 2,
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "feat/snippet-library",
+        "sha": "ba20694",
+        "createdAt": "2026-09-29T15:59:59Z",
+        "startedAt": "2026-09-29T15:59:59Z",
+        "updatedAt": "2026-09-29T16:08:36Z",
+        "durationMs": 517000,
+        "url": "https://github.com/dileepadev/ai-snippets/actions/runs/36594451307"
+      },
+      "workflows": [
+        "dynamic/agents/copilot-pull-request-reviewer",
+        "ci.yml"
       ]
     },
     {
@@ -5188,15 +5216,6 @@
       "workflows": []
     },
     {
-      "repo": "ai-snippets",
-      "url": "https://github.com/dileepadev/ai-snippets",
-      "runs": 0,
-      "successRate": null,
-      "medianDurationMs": null,
-      "lastRun": null,
-      "workflows": []
-    },
-    {
       "repo": "cinewave-demo-agent-api",
       "url": "https://github.com/dileepadev/cinewave-demo-agent-api",
       "runs": 0,
@@ -5504,7 +5523,7 @@
       "status": "built",
       "buildType": "workflow",
       "lastDeployedAt": "2026-09-03T15:36:03Z",
-      "pushedAt": "2026-09-29T06:30:13Z"
+      "pushedAt": "2026-09-29T12:27:42Z"
     },
     {
       "repo": "learn-ai",
@@ -6236,10 +6255,64 @@
     {
       "kind": "run",
       "repo": "dileepadev.github.io",
-      "at": "2026-09-29T12:27:27Z",
+      "at": "2026-09-29T18:22:03Z",
       "title": "Refresh snapshot",
       "detail": "main",
       "state": "in_progress",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/36611529114"
+    },
+    {
+      "kind": "run",
+      "repo": "ai-snippets",
+      "at": "2026-09-29T16:08:36Z",
+      "title": "Running Copilot Code Review",
+      "detail": "feat/snippet-library",
+      "state": "success",
+      "url": "https://github.com/dileepadev/ai-snippets/actions/runs/36594451307"
+    },
+    {
+      "kind": "run",
+      "repo": "ai-snippets",
+      "at": "2026-09-29T16:02:09Z",
+      "title": "Running Copilot Code Review",
+      "detail": "docs/community-files",
+      "state": "success",
+      "url": "https://github.com/dileepadev/ai-snippets/actions/runs/36594447962"
+    },
+    {
+      "kind": "run",
+      "repo": "ai-snippets",
+      "at": "2026-09-29T16:00:12Z",
+      "title": "Checks",
+      "detail": "feat/snippet-library",
+      "state": "success",
+      "url": "https://github.com/dileepadev/ai-snippets/actions/runs/36594412531"
+    },
+    {
+      "kind": "run",
+      "repo": "ai-snippets",
+      "at": "2026-09-29T15:52:06Z",
+      "title": "Checks",
+      "detail": "feat/snippet-library",
+      "state": "success",
+      "url": "https://github.com/dileepadev/ai-snippets/actions/runs/36593405400"
+    },
+    {
+      "kind": "run",
+      "repo": "ai-snippets",
+      "at": "2026-09-29T15:48:44Z",
+      "title": "Checks",
+      "detail": "feat/snippet-library",
+      "state": "success",
+      "url": "https://github.com/dileepadev/ai-snippets/actions/runs/36592972287"
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-09-29T12:27:44Z",
+      "title": "Refresh snapshot",
+      "detail": "main",
+      "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/36568218752"
     },
     {
@@ -6421,15 +6494,6 @@
       "detail": "main",
       "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/36078900464"
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-09-24T18:21:20Z",
-      "title": "Refresh snapshot",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/36040583325"
     },
     {
       "kind": "deployment",
@@ -7267,51 +7331,6 @@
       "detail": "main",
       "state": "success",
       "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/33423686965"
-    },
-    {
-      "kind": "run",
-      "repo": "blog-dileepa-dev",
-      "at": "2026-08-31T18:12:14Z",
-      "title": "Validate posts",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/33423686919"
-    },
-    {
-      "kind": "run",
-      "repo": "blog-dileepa-dev",
-      "at": "2026-08-31T18:11:02Z",
-      "title": "Validate posts",
-      "detail": "feat/v2.0.0",
-      "state": "success",
-      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/33423582261"
-    },
-    {
-      "kind": "run",
-      "repo": "api-dileepa-dev",
-      "at": "2026-08-31T16:54:20Z",
-      "title": "Deploy",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33416563793"
-    },
-    {
-      "kind": "deployment",
-      "repo": "api-dileepa-dev",
-      "at": "2026-08-31T16:53:22Z",
-      "title": "production",
-      "detail": "main",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "run",
-      "repo": "api-dileepa-dev",
-      "at": "2026-08-31T16:51:49Z",
-      "title": "CI",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33416357348"
     }
   ]
 }
