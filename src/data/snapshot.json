@@ -1,16 +1,16 @@
 {
   "meta": {
-    "fetchedAt": "2026-10-25T18:17:41.285Z",
+    "fetchedAt": "2026-10-26T00:44:04.058Z",
     "login": "dileepadev",
     "source": "GitHub REST + GraphQL, public data only",
-    "durationMs": 6789,
+    "durationMs": 7096,
     "authenticated": true,
     "partial": false,
     "warnings": [],
     "rateLimit": {
       "limit": 5000,
-      "remaining": 4806,
-      "resetAt": "2026-10-25T18:34:44.000Z"
+      "remaining": 4808,
+      "resetAt": "2026-10-26T01:43:57.000Z"
     }
   },
   "profile": {
@@ -28,14 +28,14 @@
     "createdAt": "2025-12-22T17:19:29Z"
   },
   "contributions": {
-    "from": "2025-10-18T18:30:00Z",
-    "to": "2026-10-25T18:29:59Z",
-    "totalCommits": 2287,
+    "from": "2025-10-25T18:30:00Z",
+    "to": "2026-10-26T18:29:59Z",
+    "totalCommits": 2300,
     "totalPullRequests": 86,
     "totalIssues": 56,
     "totalRepositories": 58,
     "privateContributions": 216,
-    "calendarTotal": 2715,
+    "calendarTotal": 2728,
     "weeks": [
       [
         {
@@ -1932,12 +1932,12 @@
         },
         {
           "date": "2026-10-19",
-          "count": 1,
+          "count": 7,
           "weekday": 1
         },
         {
           "date": "2026-10-20",
-          "count": 0,
+          "count": 2,
           "weekday": 2
         },
         {
@@ -1964,8 +1964,13 @@
       [
         {
           "date": "2026-10-25",
-          "count": 0,
+          "count": 3,
           "weekday": 0
+        },
+        {
+          "date": "2026-10-26",
+          "count": 2,
+          "weekday": 1
         }
       ]
     ]
@@ -1978,51 +1983,51 @@
     "stars": 1,
     "languages": 20,
     "releases": 45,
-    "workflowRuns": 211,
-    "deployments": 107,
+    "workflowRuns": 212,
+    "deployments": 108,
     "liveSites": 34,
     "reposWithCi": 24
   },
   "languages": [
     {
       "name": "TypeScript",
-      "bytes": 2159452,
+      "bytes": 2395485,
       "repos": 14,
-      "share": 23.2
+      "share": 24.9
     },
     {
       "name": "Python",
       "bytes": 1891053,
       "repos": 14,
-      "share": 20.3
+      "share": 19.6
     },
     {
       "name": "MDX",
       "bytes": 1214484,
       "repos": 2,
-      "share": 13.1
+      "share": 12.6
     },
     {
       "name": "Dart",
       "bytes": 1032446,
       "repos": 10,
-      "share": 11.1
+      "share": 10.7
     },
     {
       "name": "Java",
       "bytes": 905206,
       "repos": 5,
-      "share": 9.7
+      "share": 9.4
     },
     {
       "name": "Astro",
-      "bytes": 396034,
+      "bytes": 455237,
       "repos": 8,
-      "share": 4.3
+      "share": 4.7
     },
     {
       "name": "CSS",
-      "bytes": 374131,
+      "bytes": 383605,
       "repos": 20,
       "share": 4
     },
@@ -2030,25 +2035,25 @@
       "name": "HTML",
       "bytes": 340436,
       "repos": 13,
-      "share": 3.7
+      "share": 3.5
     },
     {
       "name": "JavaScript",
-      "bytes": 288291,
+      "bytes": 295654,
       "repos": 22,
       "share": 3.1
     },
     {
       "name": "Svelte",
-      "bytes": 228372,
+      "bytes": 251065,
       "repos": 1,
-      "share": 2.5
+      "share": 2.6
     },
     {
       "name": "C#",
       "bytes": 194409,
       "repos": 2,
-      "share": 2.1
+      "share": 2
     },
     {
       "name": "C++",
@@ -2107,6 +2112,66 @@
   ],
   "repos": [
     {
+      "name": "learn-ai-901",
+      "description": "Exam Preparation: Microsoft Certified: Azure AI Fundamentals (AI-901)",
+      "url": "https://github.com/dileepadev/learn-ai-901",
+      "homepage": "https://dileepadev.github.io/learn-ai-901/",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 786,
+      "primaryLanguage": "TypeScript",
+      "languages": [
+        {
+          "name": "TypeScript",
+          "bytes": 731316
+        },
+        {
+          "name": "Svelte",
+          "bytes": 251065
+        },
+        {
+          "name": "Astro",
+          "bytes": 73134
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 23782
+        },
+        {
+          "name": "CSS",
+          "bytes": 23300
+        }
+      ],
+      "topics": [
+        "ai-901",
+        "ai-901-study-material",
+        "ai-901-test-questions",
+        "azure-901",
+        "azure-exams",
+        "microsoft-certification",
+        "microsoft-certification-ai-901"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-05-01T13:43:22Z",
+      "pushedAt": "2026-10-25T18:48:17Z",
+      "updatedAt": "2026-10-25T18:48:24Z",
+      "hasPages": true,
+      "pages": {
+        "status": null,
+        "cname": null,
+        "htmlUrl": "https://dileepadev.github.io/learn-ai-901/",
+        "buildType": "workflow",
+        "httpsEnforced": true,
+        "sourceBranch": "main"
+      }
+    },
+    {
       "name": "dileepadev.github.io",
       "description": "GitHub Pages site for updates.",
       "url": "https://github.com/dileepadev/dileepadev.github.io",
@@ -2118,7 +2183,7 @@
       "forks": 0,
       "watchers": null,
       "openIssues": 0,
-      "size": 31110,
+      "size": 31112,
       "primaryLanguage": "Astro",
       "languages": [
         {
@@ -2144,73 +2209,13 @@
       "license": "MIT",
       "defaultBranch": "main",
       "createdAt": "2025-12-24T15:24:10Z",
-      "pushedAt": "2026-10-25T12:21:11Z",
-      "updatedAt": "2026-10-25T12:21:14Z",
+      "pushedAt": "2026-10-25T18:17:42Z",
+      "updatedAt": "2026-10-25T18:17:46Z",
       "hasPages": true,
       "pages": {
         "status": "built",
         "cname": null,
         "htmlUrl": "https://dileepadev.github.io/",
-        "buildType": "workflow",
-        "httpsEnforced": true,
-        "sourceBranch": "main"
-      }
-    },
-    {
-      "name": "learn-ai-901",
-      "description": "Exam Preparation: Microsoft Certified: Azure AI Fundamentals (AI-901)",
-      "url": "https://github.com/dileepadev/learn-ai-901",
-      "homepage": "https://dileepadev.github.io/learn-ai-901/",
-      "isFork": false,
-      "isArchived": false,
-      "isTemplate": false,
-      "stars": 0,
-      "forks": 0,
-      "watchers": null,
-      "openIssues": 1,
-      "size": 675,
-      "primaryLanguage": "TypeScript",
-      "languages": [
-        {
-          "name": "TypeScript",
-          "bytes": 495283
-        },
-        {
-          "name": "Svelte",
-          "bytes": 228372
-        },
-        {
-          "name": "JavaScript",
-          "bytes": 16419
-        },
-        {
-          "name": "Astro",
-          "bytes": 13931
-        },
-        {
-          "name": "CSS",
-          "bytes": 13826
-        }
-      ],
-      "topics": [
-        "ai-901",
-        "ai-901-study-material",
-        "ai-901-test-questions",
-        "azure-901",
-        "azure-exams",
-        "microsoft-certification",
-        "microsoft-certification-ai-901"
-      ],
-      "license": "MIT",
-      "defaultBranch": "main",
-      "createdAt": "2026-05-01T13:43:22Z",
-      "pushedAt": "2026-10-20T18:16:21Z",
-      "updatedAt": "2026-10-01T19:27:07Z",
-      "hasPages": true,
-      "pages": {
-        "status": null,
-        "cname": null,
-        "htmlUrl": "https://dileepadev.github.io/learn-ai-901/",
         "buildType": "workflow",
         "httpsEnforced": true,
         "sourceBranch": "main"
@@ -4543,23 +4548,50 @@
       "medianDurationMs": 19000,
       "lastRun": {
         "repo": "dileepadev.github.io",
-        "id": 40220531450,
+        "id": 40250752932,
         "name": "Refresh snapshot",
         "workflow": "refresh-data.yml",
-        "runNumber": 202,
+        "runNumber": 203,
         "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
         "branch": "main",
-        "sha": "9cd70eb",
-        "createdAt": "2026-10-25T18:17:24Z",
-        "startedAt": "2026-10-25T18:17:24Z",
-        "updatedAt": "2026-10-25T18:17:27Z",
+        "sha": "348f120",
+        "createdAt": "2026-10-26T00:43:49Z",
+        "startedAt": "2026-10-26T00:43:49Z",
+        "updatedAt": "2026-10-26T00:43:52Z",
         "durationMs": 3000,
-        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/40220531450"
+        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/40250752932"
       },
       "workflows": [
         "refresh-data.yml"
+      ]
+    },
+    {
+      "repo": "learn-ai-901",
+      "url": "https://github.com/dileepadev/learn-ai-901",
+      "runs": 7,
+      "successRate": 86,
+      "medianDurationMs": 46000,
+      "lastRun": {
+        "repo": "learn-ai-901",
+        "id": 40222983796,
+        "name": "Deploy to GitHub Pages",
+        "workflow": "deploy.yml",
+        "runNumber": 7,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "main",
+        "sha": "0a26bb2",
+        "createdAt": "2026-10-25T18:48:19Z",
+        "startedAt": "2026-10-25T18:48:19Z",
+        "updatedAt": "2026-10-25T18:49:05Z",
+        "durationMs": 46000,
+        "url": "https://github.com/dileepadev/learn-ai-901/actions/runs/40222983796"
+      },
+      "workflows": [
+        "deploy.yml"
       ]
     },
     {
@@ -4670,33 +4702,6 @@
       },
       "workflows": [
         "ci.yml"
-      ]
-    },
-    {
-      "repo": "learn-ai-901",
-      "url": "https://github.com/dileepadev/learn-ai-901",
-      "runs": 6,
-      "successRate": 83,
-      "medianDurationMs": 44500,
-      "lastRun": {
-        "repo": "learn-ai-901",
-        "id": 34017777723,
-        "name": "Deploy to GitHub Pages",
-        "workflow": "deploy.yml",
-        "runNumber": 6,
-        "event": "push",
-        "status": "completed",
-        "conclusion": "success",
-        "branch": "main",
-        "sha": "744ec3d",
-        "createdAt": "2026-09-06T06:55:36Z",
-        "startedAt": "2026-09-06T06:55:36Z",
-        "updatedAt": "2026-09-06T06:56:26Z",
-        "durationMs": 50000,
-        "url": "https://github.com/dileepadev/learn-ai-901/actions/runs/34017777723"
-      },
-      "workflows": [
-        "deploy.yml"
       ]
     },
     {
@@ -5505,6 +5510,17 @@
   ],
   "live": [
     {
+      "repo": "learn-ai-901",
+      "url": "https://dileepadev.github.io/learn-ai-901/",
+      "homepage": "https://dileepadev.github.io/learn-ai-901/",
+      "hasPages": true,
+      "cname": null,
+      "status": null,
+      "buildType": "workflow",
+      "lastDeployedAt": "2026-10-25T18:48:51Z",
+      "pushedAt": "2026-10-25T18:48:17Z"
+    },
+    {
       "repo": "dileepadev.github.io",
       "url": "https://dileepadev.github.io/",
       "homepage": "https://dileepadev.github.io/",
@@ -5513,18 +5529,7 @@
       "status": "built",
       "buildType": "workflow",
       "lastDeployedAt": "2026-09-03T15:36:03Z",
-      "pushedAt": "2026-10-25T12:21:11Z"
-    },
-    {
-      "repo": "learn-ai-901",
-      "url": "https://dileepadev.github.io/learn-ai-901/",
-      "homepage": "https://dileepadev.github.io/learn-ai-901/",
-      "hasPages": true,
-      "cname": null,
-      "status": null,
-      "buildType": "workflow",
-      "lastDeployedAt": "2026-09-06T06:56:15Z",
-      "pushedAt": "2026-10-20T18:16:21Z"
+      "pushedAt": "2026-10-25T18:17:42Z"
     },
     {
       "repo": "learn-ai",
@@ -6245,10 +6250,37 @@
     {
       "kind": "run",
       "repo": "dileepadev.github.io",
-      "at": "2026-10-25T18:17:27Z",
+      "at": "2026-10-26T00:43:52Z",
       "title": "Refresh snapshot",
       "detail": "main",
       "state": "in_progress",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/40250752932"
+    },
+    {
+      "kind": "run",
+      "repo": "learn-ai-901",
+      "at": "2026-10-25T18:49:05Z",
+      "title": "Deploy to GitHub Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/learn-ai-901/actions/runs/40222983796"
+    },
+    {
+      "kind": "deployment",
+      "repo": "learn-ai-901",
+      "at": "2026-10-25T18:48:51Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-10-25T18:17:45Z",
+      "title": "Refresh snapshot",
+      "detail": "main",
+      "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/40220531450"
     },
     {
@@ -6412,15 +6444,6 @@
       "detail": "main",
       "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/39555508058"
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-10-21T00:41:25Z",
-      "title": "Refresh snapshot",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/39522794551"
     },
     {
       "kind": "run",
@@ -7303,24 +7326,6 @@
       "detail": "main",
       "state": "success",
       "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/33425829003"
-    },
-    {
-      "kind": "run",
-      "repo": "blog-dileepa-dev",
-      "at": "2026-08-31T18:35:20Z",
-      "title": "Validate posts",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/33425828984"
-    },
-    {
-      "kind": "run",
-      "repo": "blog-dileepa-dev",
-      "at": "2026-08-31T18:12:18Z",
-      "title": "Sync blog posts to API",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/33423686965"
     }
   ]
 }
