@@ -1,16 +1,16 @@
 {
   "meta": {
-    "fetchedAt": "2026-10-27T17:02:52.993Z",
+    "fetchedAt": "2026-10-27T18:14:31.550Z",
     "login": "dileepadev",
     "source": "GitHub REST + GraphQL, public data only",
-    "durationMs": 6962,
+    "durationMs": 8103,
     "authenticated": true,
     "partial": false,
     "warnings": [],
     "rateLimit": {
       "limit": 5000,
-      "remaining": 4793,
-      "resetAt": "2026-10-27T17:44:43.000Z"
+      "remaining": 4799,
+      "resetAt": "2026-10-27T18:45:25.000Z"
     }
   },
   "profile": {
@@ -30,12 +30,12 @@
   "contributions": {
     "from": "2025-10-25T18:30:00Z",
     "to": "2026-10-27T18:29:59Z",
-    "totalCommits": 2300,
-    "totalPullRequests": 87,
+    "totalCommits": 2304,
+    "totalPullRequests": 88,
     "totalIssues": 63,
     "totalRepositories": 58,
     "privateContributions": 216,
-    "calendarTotal": 2736,
+    "calendarTotal": 2741,
     "weeks": [
       [
         {
@@ -1974,7 +1974,7 @@
         },
         {
           "date": "2026-10-27",
-          "count": 8,
+          "count": 13,
           "weekday": 2
         }
       ]
@@ -1987,7 +1987,7 @@
     "archived": 0,
     "stars": 1,
     "languages": 20,
-    "releases": 45,
+    "releases": 46,
     "workflowRuns": 212,
     "deployments": 108,
     "liveSites": 34,
@@ -2117,6 +2117,43 @@
   ],
   "repos": [
     {
+      "name": "blog-dileepa-dev",
+      "description": "This is my blog.",
+      "url": "https://github.com/dileepadev/blog-dileepa-dev",
+      "homepage": "https://dileepa.dev/blog",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 2,
+      "size": 19060,
+      "primaryLanguage": "JavaScript",
+      "languages": [
+        {
+          "name": "JavaScript",
+          "bytes": 17138
+        }
+      ],
+      "topics": [
+        "astro",
+        "astro-blog",
+        "astro-template",
+        "astro-theme",
+        "blog",
+        "blog-theme",
+        "dileepadev"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-01-29T14:40:07Z",
+      "pushedAt": "2026-10-27T18:09:08Z",
+      "updatedAt": "2026-08-31T19:20:53Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
       "name": "dileepadev.github.io",
       "description": "GitHub Pages site for updates.",
       "url": "https://github.com/dileepadev/dileepadev.github.io",
@@ -2128,7 +2165,7 @@
       "forks": 0,
       "watchers": null,
       "openIssues": 1,
-      "size": 31123,
+      "size": 31129,
       "primaryLanguage": "Astro",
       "languages": [
         {
@@ -2154,8 +2191,8 @@
       "license": "MIT",
       "defaultBranch": "main",
       "createdAt": "2025-12-24T15:24:10Z",
-      "pushedAt": "2026-10-27T17:02:32Z",
-      "updatedAt": "2026-10-27T17:02:41Z",
+      "pushedAt": "2026-10-27T17:13:05Z",
+      "updatedAt": "2026-10-27T17:03:00Z",
       "hasPages": true,
       "pages": {
         "status": "built",
@@ -2607,43 +2644,6 @@
       "createdAt": "2026-01-02T17:22:16Z",
       "pushedAt": "2026-08-31T20:05:37Z",
       "updatedAt": "2026-08-31T20:04:25Z",
-      "hasPages": false,
-      "pages": null
-    },
-    {
-      "name": "blog-dileepa-dev",
-      "description": "This is my blog.",
-      "url": "https://github.com/dileepadev/blog-dileepa-dev",
-      "homepage": "https://dileepa.dev/blog",
-      "isFork": false,
-      "isArchived": false,
-      "isTemplate": false,
-      "stars": 0,
-      "forks": 0,
-      "watchers": null,
-      "openIssues": 1,
-      "size": 19060,
-      "primaryLanguage": "JavaScript",
-      "languages": [
-        {
-          "name": "JavaScript",
-          "bytes": 17138
-        }
-      ],
-      "topics": [
-        "astro",
-        "astro-blog",
-        "astro-template",
-        "astro-theme",
-        "blog",
-        "blog-theme",
-        "dileepadev"
-      ],
-      "license": "MIT",
-      "defaultBranch": "main",
-      "createdAt": "2026-01-29T14:40:07Z",
-      "pushedAt": "2026-08-31T19:20:05Z",
-      "updatedAt": "2026-08-31T19:20:53Z",
       "hasPages": false,
       "pages": null
     },
@@ -4553,24 +4553,54 @@
       "medianDurationMs": 19000,
       "lastRun": {
         "repo": "dileepadev.github.io",
-        "id": 40546794611,
+        "id": 40558069069,
         "name": "Refresh snapshot",
         "workflow": "refresh-data.yml",
-        "runNumber": 210,
-        "event": "push",
+        "runNumber": 211,
+        "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
         "branch": "main",
-        "sha": "e83ead4",
-        "createdAt": "2026-10-27T17:02:36Z",
-        "startedAt": "2026-10-27T17:02:36Z",
-        "updatedAt": "2026-10-27T17:02:40Z",
+        "sha": "2a02caf",
+        "createdAt": "2026-10-27T18:14:16Z",
+        "startedAt": "2026-10-27T18:14:16Z",
+        "updatedAt": "2026-10-27T18:14:20Z",
         "durationMs": 4000,
-        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/40546794611"
+        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/40558069069"
       },
       "workflows": [
         "refresh-data.yml",
         "deploy.yml"
+      ]
+    },
+    {
+      "repo": "blog-dileepa-dev",
+      "url": "https://github.com/dileepadev/blog-dileepa-dev",
+      "runs": 20,
+      "successRate": 85,
+      "medianDurationMs": 14500,
+      "lastRun": {
+        "repo": "blog-dileepa-dev",
+        "id": 40557488317,
+        "name": "Validate posts",
+        "workflow": "validate.yml",
+        "runNumber": 8,
+        "event": "pull_request",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "content/diagram-images",
+        "sha": "cc16df2",
+        "createdAt": "2026-10-27T18:10:35Z",
+        "startedAt": "2026-10-27T18:10:35Z",
+        "updatedAt": "2026-10-27T18:10:43Z",
+        "durationMs": 8000,
+        "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/40557488317"
+      },
+      "workflows": [
+        "validate.yml",
+        "sync.yml",
+        "astro.yml",
+        "dynamic/copilot-swe-agent/copilot"
       ]
     },
     {
@@ -4763,36 +4793,6 @@
       "workflows": [
         "deploy.yml",
         "ci.yml"
-      ]
-    },
-    {
-      "repo": "blog-dileepa-dev",
-      "url": "https://github.com/dileepadev/blog-dileepa-dev",
-      "runs": 20,
-      "successRate": 80,
-      "medianDurationMs": 16000,
-      "lastRun": {
-        "repo": "blog-dileepa-dev",
-        "id": 33427823590,
-        "name": "Sync blog posts to API",
-        "workflow": "sync.yml",
-        "runNumber": 6,
-        "event": "push",
-        "status": "completed",
-        "conclusion": "success",
-        "branch": "main",
-        "sha": "05e0fad",
-        "createdAt": "2026-08-31T18:56:50Z",
-        "startedAt": "2026-08-31T18:56:50Z",
-        "updatedAt": "2026-08-31T18:57:04Z",
-        "durationMs": 14000,
-        "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/33427823590"
-      },
-      "workflows": [
-        "sync.yml",
-        "validate.yml",
-        "astro.yml",
-        "dynamic/copilot-swe-agent/copilot"
       ]
     },
     {
@@ -5516,6 +5516,17 @@
   ],
   "live": [
     {
+      "repo": "blog-dileepa-dev",
+      "url": "https://dileepa.dev/blog",
+      "homepage": "https://dileepa.dev/blog",
+      "hasPages": false,
+      "cname": null,
+      "status": null,
+      "buildType": null,
+      "lastDeployedAt": "2026-08-21T17:17:32Z",
+      "pushedAt": "2026-10-27T18:09:08Z"
+    },
+    {
       "repo": "dileepadev.github.io",
       "url": "https://dileepadev.github.io/",
       "homepage": "https://dileepadev.github.io/",
@@ -5523,8 +5534,8 @@
       "cname": null,
       "status": "built",
       "buildType": "workflow",
-      "lastDeployedAt": "2026-09-03T15:36:03Z",
-      "pushedAt": "2026-10-27T17:02:32Z"
+      "lastDeployedAt": "2026-10-27T17:04:42Z",
+      "pushedAt": "2026-10-27T17:13:05Z"
     },
     {
       "repo": "learn-ai-901",
@@ -5602,17 +5613,6 @@
       "buildType": null,
       "lastDeployedAt": "2026-08-31T20:31:52Z",
       "pushedAt": "2026-08-31T20:05:37Z"
-    },
-    {
-      "repo": "blog-dileepa-dev",
-      "url": "https://dileepa.dev/blog",
-      "homepage": "https://dileepa.dev/blog",
-      "hasPages": false,
-      "cname": null,
-      "status": null,
-      "buildType": null,
-      "lastDeployedAt": "2026-08-21T17:17:32Z",
-      "pushedAt": "2026-08-31T19:20:05Z"
     },
     {
       "repo": "microsoft-agent-framework-workshop",
@@ -5891,6 +5891,14 @@
     }
   ],
   "releases": [
+    {
+      "repo": "dileepadev.github.io",
+      "tag": "v2.0.1",
+      "name": "v2.0.1",
+      "publishedAt": "2026-10-27T17:13:06Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/dileepadev.github.io/releases/tag/v2.0.1"
+    },
     {
       "repo": "dileepa-dev",
       "tag": "v2.0.2",
@@ -6256,20 +6264,74 @@
     {
       "kind": "run",
       "repo": "dileepadev.github.io",
-      "at": "2026-10-27T17:02:40Z",
+      "at": "2026-10-27T18:14:20Z",
       "title": "Refresh snapshot",
       "detail": "main",
       "state": "in_progress",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/40546794611"
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/40558069069"
+    },
+    {
+      "kind": "run",
+      "repo": "blog-dileepa-dev",
+      "at": "2026-10-27T18:10:43Z",
+      "title": "Validate posts",
+      "detail": "content/diagram-images",
+      "state": "success",
+      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/40557488317"
+    },
+    {
+      "kind": "release",
+      "repo": "dileepadev.github.io",
+      "at": "2026-10-27T17:13:06Z",
+      "title": "v2.0.1",
+      "detail": "v2.0.1",
+      "state": "released",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/releases/tag/v2.0.1"
     },
     {
       "kind": "run",
       "repo": "dileepadev.github.io",
-      "at": "2026-10-27T17:02:40Z",
+      "at": "2026-10-27T17:05:39Z",
       "title": "Deploy to Pages",
       "detail": "main",
-      "state": "in_progress",
+      "state": "success",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/40546846796"
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepadev.github.io",
+      "at": "2026-10-27T17:04:42Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-10-27T17:04:23Z",
+      "title": "Deploy to Pages",
+      "detail": "main",
+      "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/40546794586"
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepadev.github.io",
+      "at": "2026-10-27T17:03:08Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-10-27T17:02:59Z",
+      "title": "Refresh snapshot",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/40546794611"
     },
     {
       "kind": "run",
@@ -6432,24 +6494,6 @@
       "detail": "main",
       "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/40002334292"
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-10-23T12:23:13Z",
-      "title": "Refresh snapshot",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/39952869747"
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-10-23T06:27:53Z",
-      "title": "Refresh snapshot",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/39911603758"
     },
     {
       "kind": "run",
@@ -7296,42 +7340,6 @@
       "detail": "main",
       "state": "success",
       "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/33427823590"
-    },
-    {
-      "kind": "run",
-      "repo": "blog-dileepa-dev",
-      "at": "2026-08-31T18:56:59Z",
-      "title": "Validate posts",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/33427823563"
-    },
-    {
-      "kind": "run",
-      "repo": "blog-dileepa-dev",
-      "at": "2026-08-31T18:46:49Z",
-      "title": "Sync blog posts to API",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/33426884125"
-    },
-    {
-      "kind": "run",
-      "repo": "blog-dileepa-dev",
-      "at": "2026-08-31T18:46:43Z",
-      "title": "Validate posts",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/33426884041"
-    },
-    {
-      "kind": "run",
-      "repo": "blog-dileepa-dev",
-      "at": "2026-08-31T18:35:27Z",
-      "title": "Sync blog posts to API",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/blog-dileepa-dev/actions/runs/33425829003"
     }
   ]
 }
