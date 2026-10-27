@@ -13,6 +13,18 @@ Changes are organized into the following categories:
 
 Unreleased changes go here.
 
+## [v2.0.1] - 2026-10-27
+
+### Fixed - v2.0.1
+
+- **The site redeploys after a data refresh again** ([#6](https://github.com/dileepadev/dileepadev.github.io/issues/6)).
+  The refresh pushed its snapshot commit with `GITHUB_TOKEN`, and GitHub never triggers a workflow
+  from such a push, so `deploy.yml` had not run since the last human push on 2026-09-03. The
+  refresh now dispatches `deploy.yml` itself, only when the snapshot changed, and holds
+  `actions: write` to do it.
+- Corrected the comment in `refresh-data.yml` and the README's _Refresh_ section, which both
+  claimed the snapshot commit triggered the deploy.
+
 ## [v2.0.0] - 2026-09-03
 
 > [!NOTE]
