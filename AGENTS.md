@@ -293,6 +293,10 @@ conventions still apply:
   for it retroactively.
 - **The dashboard reports on itself.** Its own workflow runs and deployments appear in its own
   activity feed. Expect that, and do not filter it out — it is the most honest entry in the log.
+- **A bot push does not deploy.** GitHub never triggers a workflow from a push made with
+  `GITHUB_TOKEN`, so the refresh commit cannot start `deploy.yml` through `on: push`. The refresh
+  dispatches the deploy explicitly instead. Remove that step and the site silently stops updating
+  — that is exactly what happened from 2026-09-03 until #6.
 - **A scheduled commit is still a commit.** The refresh will dominate this repo's history and
   will show up in the contribution calendar it renders. Use a consistent commit prefix so it can
   be filtered in the activity view.

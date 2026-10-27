@@ -1,7 +1,7 @@
 {
   "name": "dileepadev-github-io",
   "type": "module",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Public build log - a static dashboard over the dileepadev account's public GitHub data.",
   "author": {
     "name": "Dileepa Bandara",
