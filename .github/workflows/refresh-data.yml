@@ -1,9 +1,10 @@
 name: Refresh snapshot
 
 # Every 6 hours, on demand, and on a push that changes the fetch script itself.
-# The commit this produces lands on `main`, which triggers the deploy workflow -
-# so the data refresh and the publish stay two separate, individually
-# debuggable steps.
+# A push made with GITHUB_TOKEN never triggers another workflow, so the commit
+# this produces cannot start the deploy through `on: push` - the last step
+# dispatches it instead. The data refresh and the publish stay two separate,
+# individually debuggable workflows.
 on:
   schedule:
     - cron: "0 */6 * * *"
@@ -16,6 +17,9 @@ on:
 
 permissions:
   contents: write
+  # Needed to dispatch deploy.yml - a dispatch is one of the two events
+  # GITHUB_TOKEN is allowed to start another workflow with.
+  actions: write
 
 concurrency:
   group: "refresh"
@@ -58,6 +62,7 @@ jobs:
       # runs four times a day and would otherwise bury the human history under
       # empty ones.
       - name: Commit the snapshot
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -68,3 +73,12 @@ jobs:
           fi
           git commit -m "chore(data): refresh snapshot (refs #1)"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      # Only a refresh that committed something publishes. The early `exit 0`
+      # above ends that step alone, so the output is what gates this one.
+      - name: Deploy the new snapshot
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main
