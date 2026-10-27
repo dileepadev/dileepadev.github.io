@@ -84,7 +84,9 @@ ones leave it alone.
 
 `.github/workflows/refresh-data.yml` runs every 6 hours, on `workflow_dispatch`, and when the
 fetch script itself changes. It commits as `chore(data): refresh snapshot` so the scheduled
-commits stay filterable from human ones. That commit lands on `main`, which triggers the deploy.
+commits stay filterable from human ones. When the snapshot changed, it then dispatches
+`deploy.yml` — the commit alone cannot, because GitHub never triggers a workflow from a push made
+with `GITHUB_TOKEN`. A refresh that changed nothing commits nothing and deploys nothing.
 
 The refresh and the publish are deliberately two workflows: a GitHub outage can then fail a data
 refresh without touching a deploy.
