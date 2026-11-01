@@ -1,16 +1,16 @@
 {
   "meta": {
-    "fetchedAt": "2026-11-01T06:16:54.191Z",
+    "fetchedAt": "2026-11-01T12:14:30.468Z",
     "login": "dileepadev",
     "source": "GitHub REST + GraphQL, public data only",
-    "durationMs": 6397,
+    "durationMs": 6112,
     "authenticated": true,
     "partial": false,
     "warnings": [],
     "rateLimit": {
       "limit": 5000,
-      "remaining": 4808,
-      "resetAt": "2026-11-01T07:16:48.000Z"
+      "remaining": 4805,
+      "resetAt": "2026-11-01T13:10:40.000Z"
     }
   },
   "profile": {
@@ -30,12 +30,12 @@
   "contributions": {
     "from": "2025-10-25T18:30:00Z",
     "to": "2026-11-01T18:29:59Z",
-    "totalCommits": 2310,
-    "totalPullRequests": 89,
-    "totalIssues": 63,
+    "totalCommits": 2386,
+    "totalPullRequests": 91,
+    "totalIssues": 66,
     "totalRepositories": 58,
     "privateContributions": 216,
-    "calendarTotal": 2748,
+    "calendarTotal": 2829,
     "weeks": [
       [
         {
@@ -1942,17 +1942,17 @@
         },
         {
           "date": "2026-10-28",
-          "count": 1,
+          "count": 4,
           "weekday": 3
         },
         {
           "date": "2026-10-29",
-          "count": 0,
+          "count": 25,
           "weekday": 4
         },
         {
           "date": "2026-10-30",
-          "count": 0,
+          "count": 28,
           "weekday": 5
         },
         {
@@ -1964,7 +1964,7 @@
       [
         {
           "date": "2026-11-01",
-          "count": 0,
+          "count": 25,
           "weekday": 0
         }
       ]
@@ -1977,7 +1977,7 @@
     "archived": 0,
     "stars": 1,
     "languages": 20,
-    "releases": 46,
+    "releases": 47,
     "workflowRuns": 212,
     "deployments": 108,
     "liveSites": 34,
@@ -1986,33 +1986,33 @@
   "languages": [
     {
       "name": "TypeScript",
-      "bytes": 2395485,
+      "bytes": 2465318,
       "repos": 14,
-      "share": 24.9
+      "share": 25.2
     },
     {
       "name": "Python",
       "bytes": 1891053,
       "repos": 14,
-      "share": 19.6
+      "share": 19.4
     },
     {
       "name": "MDX",
       "bytes": 1214484,
       "repos": 2,
-      "share": 12.6
+      "share": 12.4
     },
     {
       "name": "Dart",
       "bytes": 1032446,
       "repos": 10,
-      "share": 10.7
+      "share": 10.6
     },
     {
       "name": "Java",
       "bytes": 905206,
       "repos": 5,
-      "share": 9.4
+      "share": 9.3
     },
     {
       "name": "Astro",
@@ -2022,9 +2022,9 @@
     },
     {
       "name": "CSS",
-      "bytes": 383605,
+      "bytes": 437054,
       "repos": 20,
-      "share": 4
+      "share": 4.5
     },
     {
       "name": "HTML",
@@ -2034,7 +2034,7 @@
     },
     {
       "name": "JavaScript",
-      "bytes": 295654,
+      "bytes": 303897,
       "repos": 22,
       "share": 3.1
     },
@@ -2107,6 +2107,50 @@
   ],
   "repos": [
     {
+      "name": "dileepa-dev",
+      "description": "This is my personal website.",
+      "url": "https://github.com/dileepadev/dileepa-dev",
+      "homepage": "https://dileepa.dev",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 16881,
+      "primaryLanguage": "TypeScript",
+      "languages": [
+        {
+          "name": "TypeScript",
+          "bytes": 947316
+        },
+        {
+          "name": "CSS",
+          "bytes": 135451
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 8802
+        }
+      ],
+      "topics": [
+        "dileepadev",
+        "nextjs",
+        "nextjs-portfolio",
+        "personal-website",
+        "portfolio",
+        "portfolio-website"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-01-02T17:24:46Z",
+      "pushedAt": "2026-11-01T09:52:30Z",
+      "updatedAt": "2026-11-01T09:52:12Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
       "name": "dileepadev.github.io",
       "description": "GitHub Pages site for updates.",
       "url": "https://github.com/dileepadev/dileepadev.github.io",
@@ -2118,7 +2162,7 @@
       "forks": 0,
       "watchers": null,
       "openIssues": 1,
-      "size": 31115,
+      "size": 31116,
       "primaryLanguage": "Astro",
       "languages": [
         {
@@ -2144,8 +2188,8 @@
       "license": "MIT",
       "defaultBranch": "main",
       "createdAt": "2025-12-24T15:24:10Z",
-      "pushedAt": "2026-11-01T00:34:17Z",
-      "updatedAt": "2026-11-01T00:34:20Z",
+      "pushedAt": "2026-11-01T06:16:55Z",
+      "updatedAt": "2026-11-01T06:16:58Z",
       "hasPages": true,
       "pages": {
         "status": "built",
@@ -2155,50 +2199,6 @@
         "httpsEnforced": true,
         "sourceBranch": "main"
       }
-    },
-    {
-      "name": "dileepa-dev",
-      "description": "This is my personal website.",
-      "url": "https://github.com/dileepadev/dileepa-dev",
-      "homepage": "https://dileepa.dev",
-      "isFork": false,
-      "isArchived": false,
-      "isTemplate": false,
-      "stars": 0,
-      "forks": 0,
-      "watchers": null,
-      "openIssues": 1,
-      "size": 16131,
-      "primaryLanguage": "TypeScript",
-      "languages": [
-        {
-          "name": "TypeScript",
-          "bytes": 877483
-        },
-        {
-          "name": "CSS",
-          "bytes": 82002
-        },
-        {
-          "name": "JavaScript",
-          "bytes": 559
-        }
-      ],
-      "topics": [
-        "dileepadev",
-        "nextjs",
-        "nextjs-portfolio",
-        "personal-website",
-        "portfolio",
-        "portfolio-website"
-      ],
-      "license": "MIT",
-      "defaultBranch": "main",
-      "createdAt": "2026-01-02T17:24:46Z",
-      "pushedAt": "2026-10-30T18:19:32Z",
-      "updatedAt": "2026-09-14T14:13:06Z",
-      "hasPages": false,
-      "pages": null
     },
     {
       "name": "blog-dileepa-dev",
@@ -4543,20 +4543,20 @@
       "medianDurationMs": 33000,
       "lastRun": {
         "repo": "dileepadev.github.io",
-        "id": 41280173365,
+        "id": 41305512748,
         "name": "Refresh snapshot",
         "workflow": "refresh-data.yml",
-        "runNumber": 229,
+        "runNumber": 230,
         "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
         "branch": "main",
-        "sha": "d22377a",
-        "createdAt": "2026-11-01T06:16:41Z",
-        "startedAt": "2026-11-01T06:16:41Z",
-        "updatedAt": "2026-11-01T06:16:44Z",
+        "sha": "ba2a998",
+        "createdAt": "2026-11-01T12:14:18Z",
+        "startedAt": "2026-11-01T12:14:18Z",
+        "updatedAt": "2026-11-01T12:14:21Z",
         "durationMs": 3000,
-        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/41280173365"
+        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/41305512748"
       },
       "workflows": [
         "refresh-data.yml",
@@ -5505,17 +5505,6 @@
   ],
   "live": [
     {
-      "repo": "dileepadev.github.io",
-      "url": "https://dileepadev.github.io/",
-      "homepage": "https://dileepadev.github.io/",
-      "hasPages": true,
-      "cname": null,
-      "status": "built",
-      "buildType": "workflow",
-      "lastDeployedAt": "2026-11-01T00:34:44Z",
-      "pushedAt": "2026-11-01T00:34:17Z"
-    },
-    {
       "repo": "dileepa-dev",
       "url": "https://dileepa.dev",
       "homepage": "https://dileepa.dev",
@@ -5523,8 +5512,19 @@
       "cname": null,
       "status": null,
       "buildType": null,
-      "lastDeployedAt": "2026-10-30T18:20:29Z",
-      "pushedAt": "2026-10-30T18:19:32Z"
+      "lastDeployedAt": "2026-11-01T09:53:15Z",
+      "pushedAt": "2026-11-01T09:52:30Z"
+    },
+    {
+      "repo": "dileepadev.github.io",
+      "url": "https://dileepadev.github.io/",
+      "homepage": "https://dileepadev.github.io/",
+      "hasPages": true,
+      "cname": null,
+      "status": "built",
+      "buildType": "workflow",
+      "lastDeployedAt": "2026-11-01T06:17:18Z",
+      "pushedAt": "2026-11-01T06:16:55Z"
     },
     {
       "repo": "blog-dileepa-dev",
@@ -5880,6 +5880,14 @@
     }
   ],
   "releases": [
+    {
+      "repo": "dileepa-dev",
+      "tag": "v2.1.0",
+      "name": "v2.1.0",
+      "publishedAt": "2026-11-01T09:52:44Z",
+      "prerelease": false,
+      "url": "https://github.com/dileepadev/dileepa-dev/releases/tag/v2.1.0"
+    },
     {
       "repo": "dileepadev.github.io",
       "tag": "v2.0.1",
@@ -6253,10 +6261,136 @@
     {
       "kind": "run",
       "repo": "dileepadev.github.io",
-      "at": "2026-11-01T06:16:44Z",
+      "at": "2026-11-01T12:14:21Z",
       "title": "Refresh snapshot",
       "detail": "main",
       "state": "in_progress",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/41305512748"
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-11-01T09:53:15Z",
+      "title": "Production",
+      "detail": "038e31fea74fcbfff9e387f42bf5b85cb2e9fc43",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "release",
+      "repo": "dileepa-dev",
+      "at": "2026-11-01T09:52:44Z",
+      "title": "v2.1.0",
+      "detail": "v2.1.0",
+      "state": "released",
+      "url": "https://github.com/dileepadev/dileepa-dev/releases/tag/v2.1.0"
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-11-01T09:51:32Z",
+      "title": "Preview",
+      "detail": "0e740acc7617483a85937147fda66ad257251a4a",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-11-01T09:49:30Z",
+      "title": "Preview",
+      "detail": "d5fb116f5ff578fb09d64471cf4b6eb1a34b44ff",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-11-01T09:41:42Z",
+      "title": "Preview",
+      "detail": "e8e7a9de28effb191d7bd133dea4bd10cb8dd347",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-11-01T09:40:42Z",
+      "title": "Preview",
+      "detail": "d41bdd9d9df5607ecdde8a7974f8d83685ff8eff",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-11-01T07:20:36Z",
+      "title": "Preview",
+      "detail": "63717038be6aa8158521076786d07f201395b30d",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-11-01T07:18:54Z",
+      "title": "Preview",
+      "detail": "d3988b9684c9b8642658efa56a1b6555e284e0af",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-11-01T07:09:03Z",
+      "title": "Preview",
+      "detail": "bf6798ced8907eb52c7ed4551069ab348de1dfed",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-11-01T07:05:22Z",
+      "title": "Preview",
+      "detail": "3bef2c4d4b58ededdd520967c9f61957e1849a3b",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepa-dev",
+      "at": "2026-11-01T07:02:58Z",
+      "title": "Preview",
+      "detail": "9f85928e19840e33c00bfa6f29be72e6d52a3d2a",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-01T06:17:37Z",
+      "title": "Deploy to Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/41280189854"
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-01T06:17:18Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-01T06:17:07Z",
+      "title": "Refresh snapshot",
+      "detail": "main",
+      "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/41280173365"
     },
     {
@@ -6395,15 +6529,6 @@
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/41150264232"
     },
     {
-      "kind": "deployment",
-      "repo": "dileepa-dev",
-      "at": "2026-10-30T18:20:29Z",
-      "title": "Preview",
-      "detail": "df637bae2c63cff516e4143eefb1b50982143fed",
-      "state": "deployed",
-      "url": null
-    },
-    {
       "kind": "run",
       "repo": "dileepadev.github.io",
       "at": "2026-10-30T18:14:26Z",
@@ -6499,114 +6624,6 @@
       "at": "2026-10-30T00:33:36Z",
       "title": "github-pages",
       "detail": "main",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-10-30T00:33:16Z",
-      "title": "Refresh snapshot",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/40980376423"
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepa-dev",
-      "at": "2026-10-29T20:34:07Z",
-      "title": "Preview",
-      "detail": "9cbe0c8b0de076a6a7339c3bcf1d56ef9fcecb1a",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepa-dev",
-      "at": "2026-10-29T20:31:21Z",
-      "title": "Preview",
-      "detail": "c4dd01a9686a4db1000a7390a004f5a86ff1b7e8",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepa-dev",
-      "at": "2026-10-29T19:58:57Z",
-      "title": "Preview",
-      "detail": "efbba4e57178fee3e7c18812ac06ee8a48d4b985",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepa-dev",
-      "at": "2026-10-29T19:47:47Z",
-      "title": "Preview",
-      "detail": "715375da8aea2fbd08d9e2832735e02464fef632",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepa-dev",
-      "at": "2026-10-29T19:37:32Z",
-      "title": "Preview",
-      "detail": "30002e8b785b27fb93dbb610ba9957b4c66a6346",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepa-dev",
-      "at": "2026-10-29T19:29:44Z",
-      "title": "Preview",
-      "detail": "377bec9d2ce9ea34fe0d6f98c5cc27af814c0417",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepa-dev",
-      "at": "2026-10-29T19:19:03Z",
-      "title": "Preview",
-      "detail": "b9dcd7af8a5f028e218597810a4ed6f821d8ae04",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-10-29T18:16:04Z",
-      "title": "Deploy to Pages",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/40929088513"
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepadev.github.io",
-      "at": "2026-10-29T18:15:48Z",
-      "title": "github-pages",
-      "detail": "main",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepa-dev",
-      "at": "2026-10-27T18:44:52Z",
-      "title": "Preview",
-      "detail": "184e2373a11288cacb07e4887ae50cd8f40de30a",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepa-dev",
-      "at": "2026-10-27T18:36:29Z",
-      "title": "Preview",
-      "detail": "1c635a913b4db0e8cf5c7bff8e264845331e22d8",
       "state": "deployed",
       "url": null
     },
@@ -7320,15 +7337,6 @@
       "detail": "feat/v2.0.0",
       "state": "success",
       "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33431785290"
-    },
-    {
-      "kind": "run",
-      "repo": "api-dileepa-dev",
-      "at": "2026-08-31T19:40:34Z",
-      "title": "CI",
-      "detail": "feat/v2.0.0",
-      "state": "success",
-      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/33431782404"
     }
   ]
 }
