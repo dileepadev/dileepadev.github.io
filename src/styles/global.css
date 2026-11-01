@@ -54,7 +54,6 @@
 
   --radius-sm: var(--radius-sm);
   --radius-lg: var(--radius-lg);
-  --radius-xl: var(--radius-xl);
 
   --ease-brand: var(--ease);
 }
@@ -63,7 +62,7 @@
    it from the theme, so every `rounded` would otherwise draw 4px against a
    token that says 8px. */
 @utility rounded {
-  border-radius: var(--radius);
+  border-radius: var(--radius-block);
 }
 
 /* ============================================================
@@ -211,7 +210,7 @@ main {
 .lockup {
   display: inline-flex;
   align-items: baseline;
-  gap: 0.34em;
+  gap: 0.02em;
   flex: 0 0 auto;
   white-space: nowrap;
 }
@@ -225,25 +224,15 @@ main {
   letter-spacing: var(--track-tight);
 }
 
+/* The "@" is the muted step of the wordmark's ink, at the same weight. */
 .lockup .mark {
   font-family: var(--font-sans);
   font-size: var(--text-h3);
-  font-weight: 700;
+  font-weight: 500;
   font-style: normal;
   line-height: 1;
-  color: var(--brand);
+  color: var(--fg-muted);
   letter-spacing: var(--track-tight);
-}
-
-.lockup .mark::after {
-  content: "";
-  display: inline-block;
-  width: 0.22em;
-  height: 0.22em;
-  margin-right: 0.1em;
-  border-radius: 50%;
-  background: var(--brand);
-  vertical-align: baseline;
 }
 
 /* --- Header & navigation ------------------------------------------------
@@ -274,7 +263,7 @@ main {
   padding: 0 var(--space-4);
   background: var(--bg-surface);
   border: var(--hairline) solid var(--border-strong);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-tile);
   box-shadow: var(--shadow-nav);
   transition:
     background-color var(--dur) var(--ease),
@@ -313,7 +302,7 @@ main {
   justify-content: center;
   padding: 0 var(--space-3);
   height: 36px;
-  border-radius: var(--radius);
+  border-radius: var(--radius-block);
   border: var(--hairline) solid transparent;
   background: transparent;
   font-family: var(--font-sans);
@@ -428,7 +417,7 @@ main {
   height: 36px;
   padding: 0;
   border: var(--hairline) solid transparent;
-  border-radius: var(--radius);
+  border-radius: var(--radius-block);
   background: transparent;
   color: var(--fg-muted);
   cursor: pointer;
@@ -519,7 +508,7 @@ main {
   align-items: center;
   justify-content: space-between;
   padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius);
+  border-radius: var(--radius-block);
   font-size: var(--text-body);
   font-weight: 500;
   color: var(--fg-muted);
@@ -562,7 +551,7 @@ main {
   justify-content: space-between;
   gap: var(--space-2);
   padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius);
+  border-radius: var(--radius-block);
   font-size: var(--text-small);
   font-weight: 500;
   color: var(--fg-muted);
@@ -731,7 +720,7 @@ main {
   padding: var(--space-3) var(--space-4);
   border: var(--hairline) solid var(--border-strong);
   border-left: 2px solid var(--warning);
-  border-radius: var(--radius);
+  border-radius: var(--radius-block);
   background: var(--bg-surface);
   font-size: var(--text-small);
   line-height: var(--lh-small);
@@ -770,9 +759,8 @@ main {
   font-variant-numeric: tabular-nums;
 }
 
-/* One emerald figure per page - design-system.md §2.6, and the rule this
-   surface most needs. Fifty green numbers is the accent diluted until it
-   signals nothing. */
+/* One headline figure per page at full accent; every other figure stays a
+   step down, so the one that matters stands out. */
 .stat--headline .stat-value {
   color: var(--brand);
 }
@@ -1166,7 +1154,7 @@ a.feed-title:hover {
   padding: 0 var(--space-3);
   background: var(--bg-surface);
   border: var(--hairline) solid var(--border-input);
-  border-radius: var(--radius);
+  border-radius: var(--radius-block);
   color: var(--fg);
   font-family: var(--font-sans);
   font-size: var(--text-small);
@@ -1205,7 +1193,7 @@ a.feed-title:hover {
   padding: 0 var(--space-3);
   background: var(--bg-surface);
   border: var(--hairline) solid var(--border-strong);
-  border-radius: var(--radius);
+  border-radius: var(--radius-block);
   color: var(--fg-muted);
   font-family: var(--font-sans);
   font-size: var(--text-small);
@@ -1303,7 +1291,7 @@ a.feed-title:hover {
   list-style: none;
   background: var(--bg-surface);
   border: var(--hairline) solid var(--border-strong);
-  border-radius: var(--radius);
+  border-radius: var(--radius-block);
   box-shadow: var(--shadow-nav);
   animation: dropdown-in var(--dur) var(--ease);
 }

@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   border: var(--hairline) solid transparent;
-  border-radius: var(--radius);
+  border-radius: var(--radius-pill);
   background: transparent;
   color: var(--fg-muted);
   cursor: pointer;
