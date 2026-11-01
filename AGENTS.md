@@ -137,67 +137,29 @@ edit the past.
   that cannot be checked against the source.
 - Comments explain _why_, not _what_.
 
-## Brand rules — v2.0.0
+## Brand rules — v2.1.0
 
-Tokens come from `dileepadev/docs/brand/brand-tokens.css`.
+These are the **v2.1.0** rules (dileepadev#4).
 
-- Emerald is the only accent. No second hue.
-- Never Emerald Deep on Carbon. Never Emerald Bright on Paper.
-- Manrope (UI) and JetBrains Mono. Weights **400, 500, 700 only**.
-- Sentence case throughout.
-- The `dileepadev /.` lockup in the header; the reduced `/.` mark as the favicon.
-
-The **navbar is ported from `dileepa-dev`** — the pill, the link styling, the Explore dropdown
-and the mobile menu are the same CSS, so a change to one should be considered for the other.
-What differs is content: this site navigates pages, not homepage sections, so there is no
-scroll-spy, and Explore carries the other platform surfaces rather than more of this one.
-
-Vendor the token sheet from `dileepadev/docs/brand/brand-tokens.css` into `src/styles/`. Do not
-hot-link it — `raw.githubusercontent.com` serves CSS as `text/plain` and browsers refuse to apply
-it. Copy the _file_; never copy values out of it into components.
-
-### Two rules this site will test
-
-**Mono is the workhorse here.** Counts, dates, durations, SHAs, run numbers, repo names — all of
-it is data, which is exactly what guide §2.3 reserves mono for. Prose and headings stay Manrope.
-This is the one surface in the platform where mono is the majority face, and that is correct.
-
-**Status colour is the trap.** A dashboard invites a traffic-light palette, and the brand permits
-exactly one accent. The resolution:
-
-- Passing, completed, and idle states are **neutral** — `--fg-muted`. The common case needs no
-  colour.
-- Failure uses `--error`. In-progress may use `--warning`. Both are _functional_ states under
-  guide §1.3, permitted precisely because they are not brand.
-- **Emerald marks one thing per page** — the single headline number, or the current live state.
-  Not every green check.
-
-Fifty green ticks in emerald is not brand compliance; it is the accent diluted until it signals
-nothing. Colour the exceptions, not the norm.
-
-### Charts
-
-Charts are built from three values and nothing else: `--chart-mark` (a neutral, the default fill
-for **every** mark in a chart), `--brand` for the single mark that is the point, and `--error`
-where a state is genuinely bad. Both mixes resolve against the current `--fg` and `--bg`, so one
-declaration is correct in both themes. Measured against the page surface, the neutral is 5.7:1 on
-Carbon and 4.0:1 on Paper — clear of the 3:1 floor for a meaningful graphic.
-
-Three rules that are easy to break here:
-
-- **One colour per chart.** Shading bars darker-where-bigger double-encodes length as tone and
-  spends the only free channel on information the bar already carries. The accent marks meaning,
-  never rank. GitHub's per-language colours are the obvious trap: a dozen languages is a dozen
-  second hues, and the guide permits one.
-- **Only plot a series the snapshot holds completely.** The contribution calendar and repository
-  creation dates are complete. Workflow runs are **not** — the fetch keeps 20 per repository, so
-  a runs-per-week chart would render truncation as a decline that never happened. `/activity`
-  carries stat tiles for that reason, not a time series.
-- **A period still in progress is drawn as unfinished** (hatched), never as a fall.
-
-Charts are HTML and CSS, not SVG and not a charting library: labels stay real text at every
-viewport instead of scaling with a viewBox, and every chart sits on a page that already shows the
-same data as a table or list, so no value is reachable only by hovering.
+- **No brand hue.** The accent is the text colour — `--brand` is Ink 100 `#F1F1F1` on Carbon and
+  Paper 900 `#131313` on Paper. Colour appears only as a state: `--success`, `--error`,
+  `--warning`. Never add a hue as an accent.
+- Components use semantic tokens only — never a hex, never a raw ramp token.
+- Three text steps: `--fg` for titles, `--fg-body` for running text, `--fg-muted` for metadata.
+- Manrope for display and UI, JetBrains Mono for code and data. No third family.
+- Weights 400, 500, 700 only. No 600. Every heading is 500; 700 is the display line and
+  `<strong>` only. Nothing smaller than 13px (`--text-label`).
+- Corners are fixed (panel, tile, block, inline), capsule (every control and field), or
+  concentric (a row inside a tile). Never invent a radius.
+- An edge means it acts: buttons, selects and interactive chips take `--border-strong`, fields
+  take `--border-input`, labels take none.
+- Every text link carries an arrow — `→` on the site, `↗` off it.
+- The logo is the handle, `@dileepadev`: the `@` in `--fg-muted`, the wordmark in `--fg`, both
+  Manrope 500, no gap. Black and white only.
+- Sentence case everywhere — headings, buttons, nav, labels.
+- Banned words, without exception: *passionate about, leveraging, cutting-edge, revolutionize,
+  game-changing, unlock, seamless, AI enthusiast, thought leader, journey, humbled to announce,
+  10x.*
 
 ## Content and voice
 
