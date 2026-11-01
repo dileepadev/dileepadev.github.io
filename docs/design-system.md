@@ -438,10 +438,14 @@ command), and the meta links - Profile, Brand, Privacy, Terms, Sitemap, Source, 
 
 ## 6.1 Photographs
 
-Photographs appear in two places on `dileepa.dev`: **the portrait** (the rail, the phone hero, the
-profile) and **event photographs** (the gallery and each event). That is the whole budget.
+Photographs appear in three places on `dileepa.dev`: **the portrait** (the rail, the phone hero,
+the profile), **event photographs** (the gallery and each event) and **video thumbnails** on
+`/videos`. That is the whole budget.
 
-- Blog posts carry no banner; videos are a list, not a grid of thumbnails.
+- A video thumbnail is 16:9 at `--radius-block`, beside the video's title in a list row - never a
+  grid of thumbnails, so the title and date still lead. Its length sits on the picture on a fixed
+  dark scrim, and the thumbnail link stays out of the tab order: the title is the one link.
+- Blog posts carry no banner.
 - Logos, tool marks and project covers are not photographs and aren't counted.
 - A portrait sits on its field (`#D2D2D2`) or on `--bg-surface`; never a cut-out on the page.
 

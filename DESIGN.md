@@ -615,9 +615,10 @@ More than three columns scroll inside their own box (`overflow-x: auto`, `--bord
 
 ### 13.2 Photography Budget
 
-Two places only: **the portrait** (rail, phone hero, profile) and **event photographs** (gallery,
-event pages). Blog posts carry no banner; videos are a list, not thumbnails. Photos sit at
-`--radius-block`; captions over a fixed dark scrim.
+Three places only: **the portrait** (rail, phone hero, profile), **event photographs** (gallery,
+event pages) and **video thumbnails** on `/videos`: 16:9, beside each video's title in a list, never
+a wall of thumbnails, with the length on a fixed dark scrim. Blog posts carry no banner. Photos sit
+at `--radius-block`; captions over a fixed dark scrim.
 
 ---
 
