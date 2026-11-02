@@ -56,6 +56,8 @@
   --radius-lg: var(--radius-lg);
 
   --ease-brand: var(--ease);
+  --color-fg-body: var(--fg-body);
+  --color-border-input: var(--border-input);
 }
 
 /* Tailwind 4 keeps bare `rounded` as a 0.25rem legacy alias and does not read
@@ -77,6 +79,27 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) var(--bg);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--fg-muted);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -161,30 +184,62 @@ summary {
   margin-inline: auto;
 }
 
+:root,
+[data-theme="dark"] {
+  --panel-pad: clamp(var(--space-6), 0.5rem + 3vw, var(--space-12));
+  --panel-shadow: none;
+}
+
+[data-theme="light"] {
+  --panel-shadow:
+    0 1px 2px color-mix(in srgb, var(--fg) 4%, transparent),
+    0 12px 40px color-mix(in srgb, var(--fg) 6%, transparent);
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    --panel-shadow:
+      0 1px 2px color-mix(in srgb, var(--fg) 4%, transparent),
+      0 12px 40px color-mix(in srgb, var(--fg) 6%, transparent);
+  }
+}
+
+/* Follow the website's final soft panels; strong edges belong to controls. */
+.section,
+.page-head,
+.footer-inner,
+.error-page {
+  box-shadow: var(--panel-shadow);
+}
+
 main {
   flex: 1 0 auto;
-  padding-bottom: var(--space-16);
+  padding-bottom: var(--space-6);
 }
 
 .section {
-  padding-top: var(--space-12);
   scroll-margin-top: 80px;
+  padding: var(--panel-pad);
+  background: var(--bg-surface);
+  border: 0;
+  border-radius: var(--radius-panel);
+  margin-top: var(--space-6);
+  min-width: 0;
 }
 
 .section + .section {
-  border-top: var(--hairline) solid var(--border);
-  margin-top: var(--space-12);
+  margin-top: var(--space-6);
 }
 
 /* A section label is a word, not a number. Numbering claims an order the
    page does not have and breaks when a section is added in the middle. */
 .section-label {
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   font-size: var(--text-label);
   line-height: var(--lh-label);
   font-weight: 500;
   letter-spacing: var(--track-label);
-  text-transform: uppercase;
+  text-transform: none;
   color: var(--fg-muted);
   margin-bottom: var(--space-3);
 }
@@ -210,7 +265,7 @@ main {
 .lockup {
   display: inline-flex;
   align-items: baseline;
-  gap: 0.02em;
+  gap: 0;
   flex: 0 0 auto;
   white-space: nowrap;
 }
@@ -244,10 +299,10 @@ main {
 
 .site-header {
   position: sticky;
-  top: 1rem;
+  top: 0;
   z-index: 40;
-  padding-top: 0.75rem;
-  margin-bottom: var(--space-8);
+  padding-top: var(--space-5);
+  margin-bottom: var(--space-6);
 }
 
 .nav-wrapper {
@@ -260,10 +315,10 @@ main {
   align-items: center;
   justify-content: space-between;
   gap: var(--space-4);
-  padding: 0 var(--space-4);
+  padding: 0 var(--space-3) 0 var(--panel-pad);
   background: var(--bg-surface);
   border: var(--hairline) solid var(--border-strong);
-  border-radius: var(--radius-tile);
+  border-radius: var(--radius-pill);
   box-shadow: var(--shadow-nav);
   transition:
     background-color var(--dur) var(--ease),
@@ -302,7 +357,7 @@ main {
   justify-content: center;
   padding: 0 var(--space-3);
   height: 36px;
-  border-radius: var(--radius-block);
+  border-radius: var(--radius-pill);
   border: var(--hairline) solid transparent;
   background: transparent;
   font-family: var(--font-sans);
@@ -325,19 +380,15 @@ main {
 
 .nav-link:active {
   background: var(--raised-hover);
-  transform: scale(0.96);
 }
 
-/* Colour only, never a weight or background change - design-system.md
-   §Navigation. The background was extra scope beyond that spec, and it also
-   broke contrast: --brand on --surface-hover measures 4.31:1 in light theme,
-   under the 4.5:1 AA floor for this text size (--brand alone on the plain
-   surface is 5.0:1). */
+/* Current page: full-contrast text on the hover fill, never a weight change. */
 .nav-link.is-active,
 .nav-link[aria-current="true"],
 .nav-link[aria-current="page"] {
-  color: var(--brand);
+  color: var(--fg);
   font-weight: 500;
+  background: var(--surface-hover);
 }
 
 .nav-link:focus-visible {
@@ -372,10 +423,10 @@ main {
   top: calc(100% + var(--space-2));
   z-index: 50;
   width: 12rem;
-  padding: var(--space-2);
+  padding: 6px;
   background: var(--bg-surface);
   border: var(--hairline) solid var(--border-strong);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-tile);
   box-shadow: var(--shadow-nav);
   animation: dropdown-in var(--dur) var(--ease);
 }
@@ -386,7 +437,7 @@ main {
   justify-content: space-between;
   gap: var(--space-3);
   padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-row);
   font-size: var(--text-small);
   font-weight: 500;
   color: var(--fg-muted);
@@ -417,7 +468,7 @@ main {
   height: 36px;
   padding: 0;
   border: var(--hairline) solid transparent;
-  border-radius: var(--radius-block);
+  border-radius: var(--radius-pill);
   background: transparent;
   color: var(--fg-muted);
   cursor: pointer;
@@ -441,7 +492,6 @@ main {
 
 .nav-mobile-toggle:active {
   background: var(--raised-hover);
-  transform: scale(0.96);
 }
 
 .nav-mobile-toggle:focus-visible {
@@ -472,12 +522,18 @@ main {
   left: 0;
   right: 0;
   z-index: 50;
-  padding: var(--space-3);
+  padding: 10px;
   background: var(--bg-surface);
   border: var(--hairline) solid var(--border-strong);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-panel);
   box-shadow: var(--shadow-nav);
   animation: dropdown-in var(--dur) var(--ease);
+  /* Keep every link reachable below the 60px nav on short phone screens. */
+  max-height: calc(
+    100dvh - 60px - var(--space-6) - var(--space-3) - var(--space-4)
+  );
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 @media (min-width: 768px) {
@@ -487,11 +543,12 @@ main {
 }
 
 .nav-mobile-section-label {
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   font-size: var(--text-label);
   line-height: var(--lh-label);
+  font-weight: 500;
   letter-spacing: var(--track-label);
-  text-transform: uppercase;
+  text-transform: none;
   color: var(--fg-muted);
   padding: var(--space-1) var(--space-2);
   margin-bottom: var(--space-1);
@@ -508,7 +565,7 @@ main {
   align-items: center;
   justify-content: space-between;
   padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius-block);
+  border-radius: calc(var(--radius-panel) - 10px);
   font-size: var(--text-body);
   font-weight: 500;
   color: var(--fg-muted);
@@ -523,14 +580,12 @@ main {
   color: var(--fg);
 }
 
-/* Same fix as .nav-link.is-active above: the background was undocumented
-   scope beyond design-system.md's "colour only" rule, and it broke contrast.
-   The mobile menu's own documented indicator is .nav-active-dot, not this
-   background. */
+/* The mobile menu also marks its active page with .nav-active-dot. */
 .nav-mobile-link.is-active,
 .nav-mobile-link[aria-current="page"] {
   color: var(--brand);
   font-weight: 500;
+  background: var(--surface-hover);
 }
 
 .nav-mobile-divider {
@@ -551,7 +606,7 @@ main {
   justify-content: space-between;
   gap: var(--space-2);
   padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius-block);
+  border-radius: calc(var(--radius-panel) - 10px);
   font-size: var(--text-small);
   font-weight: 500;
   color: var(--fg-muted);
@@ -596,12 +651,14 @@ main {
 /* --- Page heading & breadcrumb ------------------------------------------ */
 
 .page-head {
-  padding-top: var(--space-4);
-  padding-bottom: var(--space-8);
+  padding: var(--panel-pad);
+  background: var(--bg-surface);
+  border: 0;
+  border-radius: var(--radius-panel);
 }
 
 .page-path {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.375rem;
   flex-wrap: wrap;
@@ -611,6 +668,9 @@ main {
   letter-spacing: var(--track-label);
   color: var(--fg-muted);
   margin-bottom: var(--space-4);
+  padding: var(--space-2) var(--space-3);
+  background: var(--bg);
+  border-radius: var(--radius-pill);
 }
 
 .page-path a:hover {
@@ -624,13 +684,14 @@ main {
 .page-title {
   font-size: var(--text-h1);
   line-height: var(--lh-h1);
-  font-weight: 700;
-  letter-spacing: var(--track-tight);
+  font-weight: 500;
+  letter-spacing: var(--track-display);
+  overflow-wrap: anywhere;
 }
 
 .page-lead {
   margin-top: var(--space-3);
-  color: var(--fg-muted);
+  color: var(--fg-body);
 }
 
 /* An inline mention in running prose — one of the few places the guide lets a
@@ -650,6 +711,7 @@ main {
 }
 
 .link-inline:hover {
+  color: var(--fg-muted);
   text-decoration-thickness: 2px;
 }
 
@@ -718,13 +780,14 @@ main {
 .notice {
   margin-top: var(--space-4);
   padding: var(--space-3) var(--space-4);
-  border: var(--hairline) solid var(--border-strong);
+  border: 0;
   border-left: 2px solid var(--warning);
   border-radius: var(--radius-block);
-  background: var(--bg-surface);
+  background: var(--bg);
   font-size: var(--text-small);
   line-height: var(--lh-small);
-  color: var(--fg-muted);
+  color: var(--fg-body);
+  overflow-wrap: anywhere;
 }
 
 .notice strong {
@@ -738,25 +801,27 @@ main {
 
 .stat-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr));
   gap: var(--space-3);
 }
 
 .stat {
   padding: var(--space-5);
-  background: var(--bg-surface);
-  border: var(--hairline) solid var(--border-strong);
-  border-radius: var(--radius-lg);
+  background: var(--bg);
+  border: 0;
+  border-radius: var(--radius-tile);
+  min-width: 0;
 }
 
 .stat-value {
   font-family: var(--font-mono);
-  font-size: 1.75rem;
+  font-size: var(--text-h2);
   line-height: 1.1;
   font-weight: 500;
-  letter-spacing: var(--track-tight);
+  letter-spacing: normal;
   color: var(--fg);
   font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
 }
 
 /* One headline figure per page at full accent; every other figure stays a
@@ -771,7 +836,7 @@ main {
   font-size: var(--text-label);
   line-height: var(--lh-label);
   letter-spacing: var(--track-label);
-  text-transform: uppercase;
+  text-transform: none;
   color: var(--fg-muted);
 }
 
@@ -789,9 +854,10 @@ main {
 
 .table-wrap {
   overflow-x: auto;
-  border: var(--hairline) solid var(--border);
-  border-radius: var(--radius-lg);
-  background: var(--bg-surface);
+  border: 0;
+  border-radius: var(--radius-tile);
+  background: var(--bg);
+  min-width: 0;
 }
 
 table.data {
@@ -806,7 +872,7 @@ table.data th {
   line-height: var(--lh-label);
   font-weight: 500;
   letter-spacing: var(--track-label);
-  text-transform: uppercase;
+  text-transform: none;
   color: var(--fg-muted);
   text-align: left;
   padding: var(--space-3) var(--space-4);
@@ -818,7 +884,7 @@ table.data td {
   padding: var(--space-3) var(--space-4);
   border-bottom: var(--hairline) solid var(--border);
   vertical-align: middle;
-  color: var(--fg);
+  color: var(--fg-body);
 }
 
 table.data tbody tr:last-child td {
@@ -856,15 +922,16 @@ th.num {
 }
 
 a.repo-name:hover {
-  color: var(--brand);
+  color: var(--fg-muted);
 }
 
 .repo-desc {
   margin-top: var(--space-1);
   font-size: var(--text-label);
   line-height: var(--lh-label);
-  color: var(--fg-muted);
+  color: var(--fg-body);
   max-width: 46ch;
+  overflow-wrap: anywhere;
 }
 
 .muted {
@@ -938,13 +1005,12 @@ a.repo-name:hover {
 .heatmap-day {
   width: 11px;
   height: 11px;
-  border-radius: 2px;
+  border-radius: var(--radius-inline);
   background: var(--bg-surface);
   border: var(--hairline) solid var(--border);
 }
 
-/* Four steps of the one accent, not four hues. Opacity rather than four
-   hand-picked greens keeps it correct in both themes from one declaration. */
+/* Four neutral steps resolve from the semantic accent in either theme. */
 .heatmap-day[data-level="1"] {
   background: color-mix(in srgb, var(--brand) 28%, var(--bg-surface));
   border-color: transparent;
@@ -974,6 +1040,7 @@ a.repo-name:hover {
   font-size: var(--text-label);
   letter-spacing: var(--track-label);
   color: var(--fg-muted);
+  flex-wrap: wrap;
 }
 
 .heatmap-legend .heatmap-day {
@@ -1057,10 +1124,11 @@ a.repo-name:hover {
    ============================================================ */
 
 .feed {
-  border: var(--hairline) solid var(--border);
-  border-radius: var(--radius-lg);
-  background: var(--bg-surface);
+  border: 0;
+  border-radius: var(--radius-tile);
+  background: var(--bg);
   overflow: hidden;
+  min-width: 0;
 }
 
 .feed-row {
@@ -1085,7 +1153,7 @@ a.repo-name:hover {
   font-family: var(--font-mono);
   font-size: var(--text-label);
   letter-spacing: var(--track-label);
-  text-transform: uppercase;
+  text-transform: none;
   color: var(--fg-muted);
 }
 
@@ -1099,11 +1167,13 @@ a.repo-name:hover {
   color: var(--fg);
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: normal;
+  display: block;
+  overflow-wrap: anywhere;
 }
 
 a.feed-title:hover {
-  color: var(--brand);
+  color: var(--fg-muted);
 }
 
 .feed-meta {
@@ -1114,7 +1184,8 @@ a.feed-title:hover {
   color: var(--fg-muted);
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .feed-when {
@@ -1151,22 +1222,38 @@ a.feed-title:hover {
 
 .control-select {
   height: var(--control-h);
-  padding: 0 var(--space-3);
+  padding: 0 var(--space-4);
   background: var(--bg-surface);
   border: var(--hairline) solid var(--border-input);
-  border-radius: var(--radius-block);
+  border-radius: var(--radius-field);
   color: var(--fg);
+  -webkit-text-fill-color: var(--fg);
   font-family: var(--font-sans);
   font-size: var(--text-small);
+  line-height: normal;
   outline: none;
   transition:
+    background-color var(--dur) var(--ease),
     border-color var(--dur) var(--ease),
     box-shadow var(--dur) var(--ease);
+  flex: 1 1 16rem;
+  min-width: 0;
+}
+
+.control-select:hover:not(:focus) {
+  background: var(--surface-hover);
+  border-color: color-mix(in srgb, var(--fg) 25%, var(--border-input));
 }
 
 .control-select:focus {
   border-color: var(--brand);
-  box-shadow: 0 0 0 var(--ring-width) var(--ring);
+  box-shadow: inset 0 0 0 var(--hairline) var(--brand);
+}
+
+.control-select::placeholder {
+  color: var(--fg-muted);
+  -webkit-text-fill-color: var(--fg-muted);
+  opacity: 0.6;
 }
 
 /* --- Custom dropdowns ----------------------------------------------------
@@ -1183,6 +1270,8 @@ a.feed-title:hover {
   position: relative;
   display: inline-flex;
   flex-shrink: 0;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .dropdown-trigger {
@@ -1191,9 +1280,9 @@ a.feed-title:hover {
   gap: var(--space-2);
   height: var(--control-h);
   padding: 0 var(--space-3);
-  background: var(--bg-surface);
+  background: transparent;
   border: var(--hairline) solid var(--border-strong);
-  border-radius: var(--radius-block);
+  border-radius: var(--radius-pill);
   color: var(--fg-muted);
   font-family: var(--font-sans);
   font-size: var(--text-small);
@@ -1207,23 +1296,24 @@ a.feed-title:hover {
     border-color var(--dur) var(--ease),
     color var(--dur) var(--ease),
     box-shadow var(--dur) var(--ease);
+  max-width: 100%;
 }
 
 .dropdown-trigger:hover {
   background: var(--surface-hover);
   color: var(--fg);
-  border-color: var(--brand);
+  border-color: var(--border-strong);
 }
 
 .dropdown-trigger:focus-visible,
 .dropdown-trigger[aria-expanded="true"] {
   border-color: var(--brand);
-  box-shadow: 0 0 0 var(--ring-width) var(--ring);
+  box-shadow: inset 0 0 0 var(--hairline) var(--brand);
 }
 
 /* A filter that is narrowing the table says so before it is opened. */
 .dropdown-filter[data-value=""] .dropdown-trigger {
-  background: var(--bg-surface);
+  background: transparent;
 }
 
 .dropdown-filter:not([data-value=""]) .dropdown-trigger {
@@ -1286,14 +1376,15 @@ a.feed-title:hover {
   min-width: 190px;
   max-height: 260px;
   overflow-y: auto;
-  padding: var(--space-1);
+  padding: 6px;
   margin: 0;
   list-style: none;
   background: var(--bg-surface);
   border: var(--hairline) solid var(--border-strong);
-  border-radius: var(--radius-block);
+  border-radius: var(--radius-tile);
   box-shadow: var(--shadow-nav);
   animation: dropdown-in var(--dur) var(--ease);
+  max-width: min(22rem, calc(100vw - var(--space-8)));
 }
 
 /* The sort menu hangs from the trigger's right edge, as it does on
@@ -1313,7 +1404,7 @@ a.feed-title:hover {
   justify-content: space-between;
   gap: var(--space-3);
   padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-row);
   font-family: var(--font-sans);
   font-size: var(--text-small);
   font-weight: 500;
@@ -1411,7 +1502,7 @@ a.feed-title:hover {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
   gap: var(--space-3);
 }
 
@@ -1420,17 +1511,13 @@ a.feed-title:hover {
   flex-direction: column;
   gap: var(--space-2);
   padding: var(--space-5);
-  background: var(--bg-surface);
-  border: var(--hairline) solid var(--border-strong);
-  border-radius: var(--radius-lg);
+  background: var(--bg);
+  border: 0;
+  border-radius: var(--radius-tile);
   transition:
     background var(--dur) var(--ease),
     border-color var(--dur) var(--ease);
-}
-
-a.site-card:hover {
-  background: var(--surface-hover);
-  border-color: var(--brand);
+  min-width: 0;
 }
 
 .site-card-host {
@@ -1439,10 +1526,6 @@ a.site-card:hover {
   font-weight: 500;
   color: var(--fg);
   overflow-wrap: anywhere;
-}
-
-a.site-card:hover .site-card-host {
-  color: var(--brand);
 }
 
 .site-card-repo {
@@ -1466,36 +1549,51 @@ a.site-card:hover .site-card-host {
 /* --- Footer ------------------------------------------------------------- */
 
 .site-footer {
-  border-top: var(--hairline) solid var(--border);
-  padding: var(--space-8) 0;
+  border-top: 0;
+  padding: 0 0 var(--space-6);
   margin-top: auto;
 }
 
 .footer-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-3);
-  text-align: center;
   color: var(--fg-muted);
+  background: var(--bg-surface);
+  border: 0;
+  border-radius: var(--radius-panel);
+  padding: var(--space-8) var(--panel-pad);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  padding-block: var(--space-6);
+  font-family: var(--font-sans);
   font-size: var(--text-small);
+  line-height: 1.55;
+  letter-spacing: var(--track-label);
+}
+
+.footer-legal {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
 }
 
 .footer-meta {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
+  gap: var(--space-6);
   flex-wrap: wrap;
-  justify-content: center;
-  font-family: var(--font-mono);
-  font-size: var(--text-label);
-  letter-spacing: var(--track-label);
 }
 
 .footer-meta a {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
+  font-family: var(--font-sans);
 }
 
 .footer-meta a:hover {
@@ -1512,6 +1610,23 @@ a.site-card:hover .site-card-host {
   color: var(--border-strong);
 }
 
+.footer-data {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  line-height: var(--lh-label);
+  margin: 0;
+  max-width: none;
+}
+
+@media (min-width: 1024px) {
+  .footer-inner {
+    padding-block: var(--space-2);
+  }
+  .footer-data {
+    padding-bottom: var(--space-6);
+  }
+}
+
 /* --- 404 ---------------------------------------------------------------- */
 
 .error-page {
@@ -1522,7 +1637,10 @@ a.site-card:hover .site-card-host {
   justify-content: center;
   text-align: center;
   gap: var(--space-4);
-  padding: var(--space-16) 0;
+  padding: var(--space-12) var(--space-6);
+  background: var(--bg-surface);
+  border: 0;
+  border-radius: var(--radius-panel);
 }
 
 .error-code {
@@ -1532,17 +1650,49 @@ a.site-card:hover .site-card-host {
   color: var(--brand);
 }
 
-@media (max-width: 720px) {
-  .page-title {
-    font-size: 2.125rem;
-  }
+:root :is(.section, .page-head, .footer-inner, .error-page),
+[data-theme="dark"] :is(.section, .page-head, .footer-inner, .error-page) {
+  border: var(--hairline) solid var(--border);
+}
 
+[data-theme="light"] :is(.section, .page-head, .footer-inner, .error-page) {
+  border: 0;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme])
+    :is(.section, .page-head, .footer-inner, .error-page) {
+    border: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  /* The first column names the row. Capped, it leaves the next column in view,
+     so a reader can see the table scrolls instead of finding a single column. */
+  table.data th:first-child,
+  table.data td:first-child {
+    min-width: 10rem;
+    max-width: 11rem;
+  }
+  table.data .repo-name {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  /* The other columns stay on one line and the table scrolls sideways, rather
+     than every cell wrapping into a tall row. */
+  table.data--scroll td:not(:first-child) {
+    white-space: nowrap;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .section {
-    padding-top: var(--space-10);
+    padding-top: var(--space-6);
   }
 
   .section + .section {
-    margin-top: var(--space-10);
+    margin-top: var(--space-6);
   }
 }
 
@@ -1552,5 +1702,79 @@ a.site-card:hover .site-card-host {
   *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* Text links carry direction, drawn the way the main site draws it: one mask
+   in the text colour, so the arrow follows the text on hover. External links
+   point up and right; links that stay on the site point right. */
+:root {
+  --icon-arrow-up-right: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 7h10v10'/%3E%3Cpath d='M7 17 17 7'/%3E%3C/svg%3E");
+  --icon-arrow-right: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14'/%3E%3Cpath d='m12 5 7 7-7 7'/%3E%3C/svg%3E");
+}
+:is(
+    .repo-name,
+    .run-name,
+    .feed-title,
+    .bar-label a,
+    .site-card-host
+  )[target="_blank"]::after,
+.footer-meta a::after,
+:is(.text-link, .section-more)::after {
+  content: "";
+  display: inline-block;
+  width: 0.85em;
+  height: 0.85em;
+  margin-left: 0.25em;
+  vertical-align: -0.05em;
+  background-color: currentColor;
+  -webkit-mask: var(--icon-arrow-up-right) no-repeat center / contain;
+  mask: var(--icon-arrow-up-right) no-repeat center / contain;
+  opacity: 0.65;
+  transition: opacity var(--dur) var(--ease);
+}
+:is(.text-link, .section-more)::after {
+  -webkit-mask-image: var(--icon-arrow-right);
+  mask-image: var(--icon-arrow-right);
+}
+:is(
+    .repo-name,
+    .run-name,
+    .feed-title,
+    .bar-label a,
+    .site-card-host,
+    .footer-meta a,
+    .text-link,
+    .section-more
+  ):is(:hover, :focus-visible)::after {
+  opacity: 1;
+}
+.text-link:hover,
+.site-card-host:hover {
+  color: var(--fg-muted);
+}
+table.data td.muted {
+  color: var(--fg-muted);
+}
+.site-card-host {
+  display: inline;
+}
+.error-page > p {
+  margin-inline: auto;
+  color: var(--fg-body);
+}
+@media (max-width: 560px) {
+  .controls > .control-select {
+    flex-basis: 100%;
+  }
+  .dropdown {
+    flex: 1 1 auto;
+  }
+  .dropdown-trigger {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .dropdown-menu {
+    max-width: calc(100vw - 5rem);
   }
 }

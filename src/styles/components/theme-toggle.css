@@ -27,7 +27,6 @@
 
 .theme-toggle:active {
   background: var(--raised-hover);
-  transform: scale(0.96);
 }
 
 .theme-toggle:focus-visible {

@@ -30,9 +30,10 @@ v2.0.0 repurposes it. Project preview images move out to the repositories they b
 sheet, logo lockups, favicons, banners — live in `dileepadev/docs/brand/` and only there. Like
 every other frontend, this one vendors the token sheet into its own styles.
 
-Issue **#1** holds the full scope. The cross-repository roadmap lives in `dileepadev/TODO.md`.
-
-Version: none today; the target is `2.0.0`.
+v2.1.0 is released: the monochrome brand and the dashboard polish on top of v2.0.1, which carried
+the data-refresh deploy fix (#6). [TODO.md](TODO.md) records scope; detailed tasks and
+verification are in [issue #7](https://github.com/dileepadev/dileepadev.github.io/issues/7).
+Brand provenance is in [docs/brand-source.md](docs/brand-source.md).
 
 ## Layout
 
@@ -157,9 +158,9 @@ These are the **v2.1.0** rules (dileepadev#4).
 - The logo is the handle, `@dileepadev`: the `@` in `--fg-muted`, the wordmark in `--fg`, both
   Manrope 500, no gap. Black and white only.
 - Sentence case everywhere — headings, buttons, nav, labels.
-- Banned words, without exception: *passionate about, leveraging, cutting-edge, revolutionize,
+- Banned words, without exception: _passionate about, leveraging, cutting-edge, revolutionize,
   game-changing, unlock, seamless, AI enthusiast, thought leader, journey, humbled to announce,
-  10x.*
+  10x._
 
 ## Content and voice
 
@@ -173,8 +174,21 @@ The numbers are the argument. Do not editorialise them.
 - No growth-hacking framing. No "🔥 streak", no trophies, no rank badges.
 - Empty and zero states say so plainly. A repo with no CI says "no workflows", not nothing.
 
-The voice rules in `dileepadev/docs/brand/voice.md` apply to every string, including column
-headers and tooltips.
+### Shared UI parity
+
+- Panels follow the main site's final soft treatment: shadow on Paper, a structural
+  `--border` hairline on Carbon. `--border-strong` belongs to controls and menus.
+- Section headings and footer copyright/navigation use Manrope. Data, including the
+  footer's provenance note, keeps JetBrains Mono. Footer links use the main site's SVG
+  arrow mask; the package version links to its own release, expected after publication.
+- The inline navigation fits from 768px. Escape and breakpoint changes must move focus
+  to a visible control; outside pointer presses and Tab must close menus without trapping focus.
+- A column chart is an accessible list of individually named values. Never wrap its
+  focusable marks in a single image role. Dropdown highlights use `aria-activedescendant`;
+  repository filter results use a polite live region.
+
+The voice rules in `DESIGN.md` §17 apply to every string, including column
+headers and tooltips. There is no separate `voice.md`.
 
 ## Image migration
 
@@ -209,6 +223,8 @@ No test suite. Before calling a change done:
 - Run the fetch script against the live API and check the snapshot has the fields the page reads.
 - **Test the degraded path** — run a build with a deliberately broken endpoint and confirm the
   site still builds and says what is missing.
+- Run live/degraded fetch checks in a temporary repository copy so verification never replaces
+  the working snapshot or rewrites history. The README records the local recipe.
 - Both themes, and 375px width. Data tables are where narrow layouts break first.
 - If any `images/` path was touched, verify every reference to it across the account.
 
@@ -216,7 +232,7 @@ No test suite. Before calling a change done:
 
 - `README.md` explains what the dashboard shows, where the data comes from, how to refresh it,
   and the image migration status.
-- [`TODO.md`](TODO.md) is this repo's slice of the v2.0.0 roadmap. Keep it current.
+- [`TODO.md`](TODO.md) records v2.1.0 scope; detailed progress stays in issue #7.
 - `CHANGELOG.md` is new in v2.0.0.
 - Document any new data source in the table above in the same commit that adds it.
 
@@ -227,7 +243,7 @@ conventions still apply:
 
 - Branches: `feat/x`, `fix/x`, `docs/x`, `chore/x`. `main` is protected and deploys to Pages.
 - Commits: `<type>(<scope>): <short message> (<issue refs>)` — types `feat`, `fix`, `docs`,
-  `style`, `refactor`, `perf`, `test`, `chore`. v2.0.0 work traces to `refs #1`.
+  `style`, `refactor`, `perf`, `test`, `chore`. v2.1.0 work traces to `refs #7`.
 - The scheduled data refresh commits as `chore(data): refresh snapshot`. Keep it distinguishable
   from human commits — it will be the majority of the log.
 
@@ -262,3 +278,20 @@ conventions still apply:
 - **A scheduled commit is still a commit.** The refresh will dominate this repo's history and
   will show up in the contribution calendar it renders. Use a consistent commit prefix so it can
   be filtered in the activity view.
+
+## Brand vendoring and release review
+
+- `docs/brand-tokens.css`, `docs/brand-guide.md`, `docs/design-system.md` and
+  `DESIGN.md` are exact canonical copies. Re-copy; never tune a copy in place.
+- The runtime token sheet removes only the Google Fonts import. Its header
+  records the source and how fonts load. Application-specific styles
+  use semantic tokens in global/component CSS.
+- [docs/brand-source.md](docs/brand-source.md) records the source and the
+  refresh procedure. There is no `docs/brand/` folder here: the logo, icons and
+  covers live in `dileepadev` only.
+- Detailed checklists belong in the GitHub issue, not in `TODO.md`.
+- Merge, tag and GitHub release each require owner approval.
+- **Tables scroll sideways on phones.** The first column is capped so the next
+  one shows at the edge; `table.data--scroll` keeps the other cells on one line.
+- **External arrows are one mask in the text colour**, as on `dileepa-dev`;
+  never type `↗` or `→` into link text.

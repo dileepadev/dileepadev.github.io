@@ -74,19 +74,21 @@ const missingPagesDetail = repos.filter((r) => r.hasPages && !r.pages).length;
       ) : (
         <div class="card-grid">
           {onPages.map((site) => (
-            <a
-              class="site-card"
-              href={site.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="site-card-host">{siteLabel(site.url)}</span>
+            <div class="site-card">
+              <a
+                class="site-card-host"
+                href={site.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {siteLabel(site.url)}
+              </a>
               <span class="site-card-repo">{site.repo}</span>
               <span class="site-card-foot">
                 <span class="status">{site.status ?? "live"}</span>
                 <span>{since(site.lastDeployedAt ?? site.pushedAt)}</span>
               </span>
-            </a>
+            </div>
           ))}
         </div>
       )

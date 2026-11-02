@@ -113,7 +113,7 @@ const top = max ?? data.reduce((acc, d) => Math.max(acc, d.value), 0) ?? 1;
     display: block;
     height: 10px;
     background: var(--chart-mark);
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 var(--radius-inline) var(--radius-inline) 0;
     transition: background-color var(--dur) var(--ease);
   }
 

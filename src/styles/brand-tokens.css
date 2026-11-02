@@ -1,21 +1,9 @@
-/* ============================================================
-   VENDORED COPY - do not edit here.
-
+/* VENDORED COPY — do not edit here.
    Source: dileepadev/docs/brand/brand-tokens.css
-   Vendored: brand tokens v2.1.0
-
-   This is a copy, and a copy can drift. When the canonical file
-   changes, re-copy it; never patch this one in place. The only
-   permitted local change is the one below.
-
-   CHANGED FROM SOURCE: the Google Fonts @import is removed. An
-   `@import` is invalid inside a CSS `@layer` block per spec - this
-   sheet is imported into the `brand` layer in global.css - so the
-   optimiser drops it with a warning at build time regardless.
-   Manrope and JetBrains Mono load through a <link> in
-   src/layouts/Layout.astro's head instead, same URL, same weights.
-   Everything else is identical.
-   ============================================================ */
+   Brand version: 2.1.0.
+   Adaptation: only the Google Fonts @import is removed; fonts load via
+   the font link in src/layouts/Layout.astro. All remaining source bytes are unchanged.
+   See docs/brand-source.md for provenance and the refresh procedure. */
 
 /* ============================================================
    CANONICAL TOKEN SHEET - do not fork, do not re-declare.
@@ -40,6 +28,7 @@
    muted.
    Every pairing below is verified against WCAG AA minimum.
    ============================================================ */
+
 
 :root {
   /* --- raw palette (never reference these directly in components) --- */

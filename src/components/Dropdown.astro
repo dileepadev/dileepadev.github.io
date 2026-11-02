@@ -50,7 +50,10 @@ const selected = items.find((o) => o.value === selectedValue) ?? items[0];
 
 // A value with no matching option still has to name itself, rather than
 // falling back to the "all" label beside a lit active dot.
-const displayLabel = selected?.label ?? selectedValue;
+const displayLabel =
+  variant === "filter" && selectedValue === ""
+    ? "All"
+    : (selected?.label ?? selectedValue);
 const isActive = variant === "filter" && selectedValue !== "";
 ---
 
@@ -140,8 +143,9 @@ const isActive = variant === "filter" && selectedValue !== "";
     hidden
   >
     {
-      items.map((item) => (
+      items.map((item, index) => (
         <li
+          id={`${id}-option-${index}`}
           class:list={[
             "dropdown-item",
             item.value === selectedValue && "is-selected",
@@ -204,6 +208,7 @@ const isActive = variant === "filter" && selectedValue !== "";
       items.forEach((item, i) => {
         item.classList.toggle("is-highlighted", i === highlighted);
       });
+      trigger!.setAttribute("aria-activedescendant", items[highlighted].id);
       items[highlighted]?.scrollIntoView({ block: "nearest" });
     }
 
@@ -218,6 +223,7 @@ const isActive = variant === "filter" && selectedValue !== "";
 
     function close(focusTrigger = true) {
       trigger!.setAttribute("aria-expanded", "false");
+      trigger!.removeAttribute("aria-activedescendant");
       menu!.hidden = true;
       if (focusTrigger) trigger!.focus();
     }
@@ -228,7 +234,9 @@ const isActive = variant === "filter" && selectedValue !== "";
 
       root.dataset.value = item.dataset.value ?? "";
       valueLabel!.textContent =
-        item.querySelector(".dropdown-item-text")?.textContent ?? "";
+        root.classList.contains("dropdown-filter") && !root.dataset.value
+          ? "All"
+          : (item.querySelector(".dropdown-item-text")?.textContent ?? "");
 
       items.forEach((other) => {
         const chosen = other === item;
@@ -278,6 +286,12 @@ const isActive = variant === "filter" && selectedValue !== "";
         case "ArrowUp":
           event.preventDefault();
           highlighted = (highlighted - 1 + items.length) % items.length;
+          paintHighlight();
+          break;
+        case "Home":
+        case "End":
+          event.preventDefault();
+          highlighted = event.key === "Home" ? 0 : items.length - 1;
           paintHighlight();
           break;
         case "Enter":

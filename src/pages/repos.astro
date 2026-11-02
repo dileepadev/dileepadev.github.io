@@ -84,7 +84,7 @@ const sortOptions = [
 
   {
     created.length > 1 && (
-      <section class="section repos-chart" aria-labelledby="repos-created">
+      <section class="section" aria-labelledby="repos-created">
         <div class="section-head">
           <div>
             <h2 id="repos-created" class="section-label">
@@ -104,111 +104,123 @@ const sortOptions = [
     )
   }
 
-  <div class="controls">
-    <label class="sr-only" for="repo-search">Search repositories</label>
-    <input
-      id="repo-search"
-      class="control-select"
-      type="search"
-      placeholder="Search name or description"
-      autocomplete="off"
-    />
-
-    <Dropdown
-      id="repo-language"
-      label="Language"
-      options={languageOptions}
-      allLabel="All languages"
-      value=""
-    />
-
-    <Dropdown
-      id="repo-pages"
-      label="Site"
-      options={siteOptions}
-      allLabel="All repositories"
-      value=""
-    />
-
-    <Dropdown
-      id="repo-sort"
-      variant="sort"
-      label="Sort repositories"
-      options={sortOptions}
-      value="pushed"
-    />
-
-    <span class="control-count" id="repo-count"></span>
-  </div>
-
-  <div class="table-wrap">
-    <table class="data" id="repo-table">
-      <thead>
-        <tr>
-          <th scope="col">Repository</th>
-          <th scope="col">Language</th>
-          <th scope="col">Topics</th>
-          <th scope="col" class="num">Stars</th>
-          <th scope="col" class="num">Pushed</th>
-        </tr>
-      </thead>
-      <tbody>
-        {
-          rows.map((repo) => (
-            <tr
-              data-name={repo.name.toLowerCase()}
-              data-desc={(repo.description ?? "").toLowerCase()}
-              data-language={repo.primaryLanguage ?? ""}
-              data-pages={repo.hasPages || repo.homepage ? "pages" : "nopages"}
-              data-stars={repo.stars}
-              data-pushed={Date.parse(repo.pushedAt)}
-              data-created={Date.parse(repo.createdAt)}
-            >
-              <td>
-                <a
-                  class="repo-name"
-                  href={repo.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {repo.name}
-                </a>
-                {repo.isArchived && <span class="tag-archived">archived</span>}
-                {repo.description && (
-                  <div class="repo-desc">{repo.description}</div>
-                )}
-              </td>
-              <td>
-                {repo.primaryLanguage ? (
-                  <span class="mono">{repo.primaryLanguage}</span>
-                ) : (
-                  <span class="muted mono">—</span>
-                )}
-              </td>
-              <td>
-                {repo.topics.length > 0 ? (
-                  <span class="mono muted topics">
-                    {repo.topics.slice(0, 3).join(" · ")}
-                  </span>
-                ) : (
-                  <span class="muted mono">—</span>
-                )}
-              </td>
-              <td class="num">{repo.stars}</td>
-              <td class="num muted">{since(repo.pushedAt)}</td>
-            </tr>
-          ))
-        }
-      </tbody>
-    </table>
-
-    <div id="repo-empty" hidden>
-      <EmptyState
-        title="No repositories match those filters"
-        hint="Try clearing the search box or choosing a different language."
+  <section class="section" aria-labelledby="repo-list">
+    <h2 id="repo-list" class="section-label">Repository list</h2>
+    <div class="controls">
+      <label class="sr-only" for="repo-search">Search repositories</label>
+      <input
+        id="repo-search"
+        class="control-select"
+        type="search"
+        placeholder="Search name or description"
+        autocomplete="off"
       />
+
+      <Dropdown
+        id="repo-language"
+        label="Language"
+        options={languageOptions}
+        allLabel="All languages"
+        value=""
+      />
+
+      <Dropdown
+        id="repo-pages"
+        label="Site"
+        options={siteOptions}
+        allLabel="All repositories"
+        value=""
+      />
+
+      <Dropdown
+        id="repo-sort"
+        variant="sort"
+        label="Sort repositories"
+        options={sortOptions}
+        value="pushed"
+      />
+
+      <span
+        class="control-count"
+        id="repo-count"
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"></span>
     </div>
-  </div>
+
+    <div class="table-wrap">
+      <table class="data" id="repo-table">
+        <thead>
+          <tr>
+            <th scope="col">Repository</th>
+            <th scope="col">Language</th>
+            <th scope="col">Topics</th>
+            <th scope="col" class="num">Stars</th>
+            <th scope="col" class="num">Pushed</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            rows.map((repo) => (
+              <tr
+                data-name={repo.name.toLowerCase()}
+                data-desc={(repo.description ?? "").toLowerCase()}
+                data-language={repo.primaryLanguage ?? ""}
+                data-pages={
+                  repo.hasPages || repo.homepage ? "pages" : "nopages"
+                }
+                data-stars={repo.stars}
+                data-pushed={Date.parse(repo.pushedAt)}
+                data-created={Date.parse(repo.createdAt)}
+              >
+                <td>
+                  <a
+                    class="repo-name"
+                    href={repo.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {repo.name}
+                  </a>
+                  {repo.isArchived && (
+                    <span class="tag-archived">archived</span>
+                  )}
+                  {repo.description && (
+                    <div class="repo-desc">{repo.description}</div>
+                  )}
+                </td>
+                <td>
+                  {repo.primaryLanguage ? (
+                    <span class="mono">{repo.primaryLanguage}</span>
+                  ) : (
+                    <span class="muted mono">—</span>
+                  )}
+                </td>
+                <td>
+                  {repo.topics.length > 0 ? (
+                    <span class="mono muted topics">
+                      {repo.topics.slice(0, 3).join(" · ")}
+                    </span>
+                  ) : (
+                    <span class="muted mono">—</span>
+                  )}
+                </td>
+                <td class="num">{repo.stars}</td>
+                <td class="num muted">{since(repo.pushedAt)}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+
+      <div id="repo-empty" hidden>
+        <EmptyState
+          title="No repositories match those filters"
+          hint="Try clearing the search box or choosing a different language."
+        />
+      </div>
+    </div>
+  </section>
 </Layout>
 
 <script>
@@ -291,11 +303,6 @@ const sortOptions = [
 </script>
 
 <style>
-  .repos-chart {
-    padding-top: 0;
-    margin-bottom: var(--space-12);
-  }
-
   .sr-only {
     position: absolute;
     width: 1px;
@@ -318,8 +325,9 @@ const sortOptions = [
     font-size: var(--text-label);
     letter-spacing: var(--track-label);
     color: var(--fg-muted);
-    border: var(--hairline) solid var(--border-strong);
-    border-radius: var(--radius-sm);
-    padding: 1px var(--space-2);
+    border: 0;
+    border-radius: var(--radius-pill);
+    padding: var(--space-1) var(--space-2);
+    background: var(--bg-surface);
   }
 </style>
