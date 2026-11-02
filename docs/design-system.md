@@ -453,8 +453,8 @@ the profile), **event photographs** (the gallery and each event) and **video thu
 
 **Interface icons (Lucide)**, `lucide-react`, across every control. 16px (`h-4 w-4`) in controls,
 14px inline with text; the section app-icon tiles draw them at 4rem with stroke 1.5. Section icons
-are literal: a person for About, a briefcase for Work, a graduation cap for Education, speech
-bubbles for Contact.
+are literal, and only the two homepage sections carry one: a person for About, speech bubbles for
+Contact.
 
 **Brand & social glyphs**: GitHub, LinkedIn, X, YouTube, Instagram, Facebook - hand-authored
 inline SVGs (24×24, `fill="currentColor"`), `--fg-muted` at rest, `--fg` on hover.

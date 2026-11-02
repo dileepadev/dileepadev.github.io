@@ -205,9 +205,10 @@ identity is a photograph, and a photograph has no vector form. A vector mark in 
 would put a second design there while every other surface - home screen, app icon, share sheet -
 shows the face. A PNG base64'd inside an SVG wrapper satisfies the checker and nothing else.
 
-> [!WARNING]
-> **The logo SVGs, covers and banners in this folder are out of date.** `logo/`, `covers/` and
-> `banners/` must be redrawn to this guide before they are used. `og.png` is current.
+> [!NOTE]
+> **Exported assets** live in `dileepadev`'s `docs/brand/`: `logo/` (the `@dileepadev` lockup and
+> the `@` mark, live-text and outlined, both themes), `covers/`, `banners/` and `og.png` all
+> follow this guide. See `logo/README.md` and `covers/README.md` there.
 
 ### 3.3 Custom mark, if commissioned later
 
