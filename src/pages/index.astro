@@ -213,7 +213,7 @@ const partialIndex = months.findIndex((m) => m.key === currentKey);
         <h2 id="recent" class="section-label">Recent activity</h2>
         <p>Releases, workflow runs and deployments, newest first.</p>
       </div>
-      <a class="section-more" href="/activity/">All activity →</a>
+      <a class="section-more" href="/activity/">All activity</a>
     </div>
 
     <Feed events={recent} />
@@ -227,12 +227,12 @@ const partialIndex = months.findIndex((m) => m.key === currentKey);
 
   .chart-title {
     margin-bottom: var(--space-4);
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: var(--text-label);
     line-height: var(--lh-label);
     font-weight: 500;
     letter-spacing: var(--track-label);
-    text-transform: uppercase;
+    text-transform: none;
     color: var(--fg-muted);
   }
 

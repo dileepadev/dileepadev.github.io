@@ -9,6 +9,13 @@ It answers a question a profile page cannot: _what is actually being built, and 
 
 **Live at [dileepadev.github.io](https://dileepadev.github.io).**
 
+## v2.1.0
+
+The monochrome brand and design system, released as
+[v2.1.0](https://github.com/dileepadev/dileepadev.github.io/releases/tag/v2.1.0). Work was tracked in
+[issue #7](https://github.com/dileepadev/dileepadev.github.io/issues/7);
+[brand provenance](docs/brand-source.md) records the canonical source.
+
 ## What it shows
 
 | View           | What it answers                                                            |
@@ -104,10 +111,13 @@ npm run format   # prettier
 
 The build reads the committed snapshot and never calls the API, so it works offline.
 
-To exercise the degraded path:
+To exercise the degraded path in a temporary copy, keeping the working snapshot and history:
 
 ```bash
-GITHUB_API_BASE=https://127.0.0.1:9 npm run fetch && npm run build
+review_dir="$(mktemp -d)"
+tar --exclude=.git --exclude=node_modules --exclude=dist --exclude=.astro -cf - . | tar -xf - -C "$review_dir"
+ln -s "$PWD/node_modules" "$review_dir/node_modules"
+(cd "$review_dir" && GITHUB_API_BASE=https://127.0.0.1:9 npm run fetch && npm run build)
 ```
 
 ## Stack
@@ -155,7 +165,7 @@ deleting `images/` wholesale is neither.
 ## Documentation
 
 - [AGENTS.md](AGENTS.md) — canonical rules for this repository
-- [TODO.md](TODO.md) — this repo's slice of the v2.0.0 roadmap
+- [TODO.md](TODO.md) — v2.1.0 scope and release tracking
 - [CHANGELOG.md](CHANGELOG.md)
 - Platform roadmap: [`dileepadev/TODO.md`](https://github.com/dileepadev/dileepadev/blob/main/TODO.md)
 

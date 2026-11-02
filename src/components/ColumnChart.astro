@@ -9,7 +9,7 @@
  * One series, so there is no legend — the section heading names what is
  * plotted. Marks are neutral by default; `emphasisIndex` spends the accent on
  * the single column that is the point, which is the one form the brand's
- * single-hue rule and the dataviz "emphasis" pattern agree on.
+ * contrast rule and the dataviz "emphasis" pattern agree on.
  */
 import { num } from "../lib/format";
 
@@ -66,7 +66,7 @@ const ticks = [top, step, 0];
       {ticks.map((t) => <span>{num(Math.round(t))}</span>)}
     </div>
 
-    <div class="chart-plot" role="img" aria-label={ariaLabel}>
+    <div class="chart-plot">
       <div class="chart-grid" aria-hidden="true">
         <span></span><span></span><span></span>
       </div>
@@ -75,9 +75,9 @@ const ticks = [top, step, 0];
         /* role="list" restores what list-style: none strips from the implicit
           role in Chromium. Unlike BarChart's rows, these columns stay
           individually focusable (tabindex + hover/focus readout), so they
-          can't be hidden the way BarChart's decorative rows are. */
+          can't sit under an image role that hides their accessible values. */
       }
-      <ol class="chart-cols" role="list">
+      <ol class="chart-cols" role="list" aria-label={ariaLabel}>
         {
           data.map((d, i) => (
             <li class="chart-col">
@@ -89,6 +89,8 @@ const ticks = [top, step, 0];
                 ]}
                 style={`height: ${top > 0 ? (d.value / top) * 100 : 0}%`}
                 tabindex="0"
+                role="img"
+                aria-label={`${d.label}: ${num(d.value)}${unit ? ` ${unit}` : ""}${d.note ? ` — ${d.note}` : ""}`}
                 title={`${d.label}: ${num(d.value)}${unit ? ` ${unit}` : ""}${d.note ? ` — ${d.note}` : ""}`}
               >
                 <span class="chart-readout">
@@ -197,7 +199,7 @@ const ticks = [top, step, 0];
     max-width: 24px;
     min-height: 2px;
     background: var(--chart-mark);
-    border-radius: 4px 4px 0 0;
+    border-radius: var(--radius-inline) var(--radius-inline) 0 0;
     transition:
       background-color var(--dur) var(--ease),
       opacity var(--dur) var(--ease);
@@ -237,8 +239,7 @@ const ticks = [top, step, 0];
     padding: var(--space-2) var(--space-3);
     background: var(--bg-raised);
     border: var(--hairline) solid var(--border-strong);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-nav);
+    border-radius: var(--radius-block);
     font-family: var(--font-mono);
     font-size: var(--text-label);
     line-height: 1.3;

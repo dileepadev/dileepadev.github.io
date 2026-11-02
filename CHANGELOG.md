@@ -13,6 +13,34 @@ Changes are organized into the following categories:
 
 Unreleased changes go here.
 
+## [v2.1.0] - 2026-11-03
+
+### Changed
+
+- Match the main site's soft Paper panels, Carbon hairlines and Manrope section
+  headings, while keeping data in JetBrains Mono.
+- Align footer typography, spacing and arrow masks with the main site; link the
+  displayed version to its matching release and retain the data-source note.
+- Adopt the monochrome design contract: medium-weight headings, three text
+  contrast levels, capsule controls and panel/card surfaces in Carbon and Paper.
+- Dashboard panels, typography, controls, charts, tables, activity and deployment tiles across all six pages.
+- Draw link arrows the way the main site does: one mask in the text colour (↗ off the
+  site, → on it) in place of typed glyphs, across repositories, runs, feed, charts, footer
+  and the 404 links.
+- Refresh the served OG card and portrait favicon set from the canonical root.
+- Record the vendored source and font-loading adaptation; update release scope,
+  package/lockfile version and repository instructions.
+
+### Fixed
+
+- Restore navigation focus after Escape and viewport changes; support arrow,
+  Home and End keys in Explore and close menus when focus leaves them.
+- The CI table no longer fills a phone with its first column: the repository column is capped
+  so the next one shows at the edge, and the other cells stay on one line instead of wrapping
+  into tall rows.
+- Expose individual chart values to screen readers, announce filter highlights
+  and repository result counts, and document isolated degraded-data checks.
+
 ## [v2.0.1] - 2026-10-27
 
 ### Fixed - v2.0.1
@@ -133,10 +161,13 @@ Unreleased changes go here.
 
 <!-- e.g., -->
 <!-- Unreleased -->
+<!-- v2.1.0 -->
 <!-- v2.0.0 -->
 <!-- v1.1.0 -->
 <!-- v1.0.0 -->
 <!-- v0.0.1 -->
 
 [Unreleased]: https://github.com/dileepadev/dileepadev.github.io/branches
+[v2.1.0]: https://github.com/dileepadev/dileepadev.github.io/releases/tag/v2.1.0
+[v2.0.1]: https://github.com/dileepadev/dileepadev.github.io/releases/tag/v2.0.1
 [v2.0.0]: https://github.com/dileepadev/dileepadev.github.io/releases/tag/v2.0.0

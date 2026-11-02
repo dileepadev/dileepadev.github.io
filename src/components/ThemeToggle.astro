@@ -54,6 +54,23 @@ import "../styles/components/theme-toggle.css";
   // API. Falls back to an instant swap with no delay when the browser
   // doesn't support it or the visitor prefers reduced motion - same as
   // the reference.
+  const REVEAL_MS = 2000;
+  const REVEAL_EASING = [0.16, 1, 0.3, 1] as const;
+
+  function timeAtProgress(progress: number): number {
+    const [x1, y1, x2, y2] = REVEAL_EASING;
+    const bezier = (s: number, a: number, b: number) =>
+      3 * (1 - s) ** 2 * s * a + 3 * (1 - s) * s ** 2 * b + s ** 3;
+    let low = 0;
+    let high = 1;
+    for (let i = 0; i < 20; i += 1) {
+      const mid = (low + high) / 2;
+      if (bezier(mid, y1, y2) < progress) low = mid;
+      else high = mid;
+    }
+    return bezier((low + high) / 2, x1, x2);
+  }
+
   function applyTheme(next: string) {
     document.documentElement.setAttribute("data-theme", next);
     localStorage.setItem(STORAGE_KEY, next);
@@ -83,10 +100,26 @@ import "../styles/components/theme-toggle.css";
       Math.max(y, window.innerHeight - y),
     );
 
+    // Hold the window scrollbar's current colours until the reveal circle
+    // reaches it, matching dileepa-dev's ThemeToggle.tsx.
+    const root = document.documentElement;
+    const before = getComputedStyle(root);
+    root.style.setProperty("scrollbar-color", before.scrollbarColor);
+    root.style.setProperty("color-scheme", before.colorScheme);
+    const releaseScrollbar = () => {
+      root.style.removeProperty("scrollbar-color");
+      root.style.removeProperty("color-scheme");
+    };
+    const scrollbarReach = Math.hypot(
+      window.innerWidth - x,
+      window.innerHeight / 2 - y,
+    );
+
     const transition = (
       document as unknown as {
         startViewTransition: (callback: () => void) => {
           ready: Promise<void>;
+          finished: Promise<void>;
         };
       }
     ).startViewTransition(() => applyTheme(next));
@@ -100,12 +133,17 @@ import "../styles/components/theme-toggle.css";
           ],
         },
         {
-          duration: 2000,
-          easing: "cubic-bezier(0.16, 1, 0.3, 1)",
+          duration: REVEAL_MS,
+          easing: `cubic-bezier(${REVEAL_EASING.join(", ")})`,
           pseudoElement: "::view-transition-new(root)",
         } as KeyframeAnimationOptions,
       );
+      window.setTimeout(
+        releaseScrollbar,
+        timeAtProgress(Math.min(1, scrollbarReach / endRadius)) * REVEAL_MS,
+      );
     });
+    transition.finished.finally(releaseScrollbar);
   }
 
   button?.addEventListener("click", toggleTheme);
