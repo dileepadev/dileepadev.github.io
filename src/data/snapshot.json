@@ -1,16 +1,16 @@
 {
   "meta": {
-    "fetchedAt": "2026-11-04T18:12:31.000Z",
+    "fetchedAt": "2026-11-05T00:28:48.624Z",
     "login": "dileepadev",
     "source": "GitHub REST + GraphQL, public data only",
-    "durationMs": 7591,
+    "durationMs": 6722,
     "authenticated": true,
     "partial": false,
     "warnings": [],
     "rateLimit": {
       "limit": 5000,
-      "remaining": 4807,
-      "resetAt": "2026-11-04T19:02:13.000Z"
+      "remaining": 4808,
+      "resetAt": "2026-11-05T01:28:42.000Z"
     }
   },
   "profile": {
@@ -29,13 +29,13 @@
   },
   "contributions": {
     "from": "2025-11-01T18:30:00Z",
-    "to": "2026-11-04T18:29:59Z",
+    "to": "2026-11-05T18:29:59Z",
     "totalCommits": 2443,
-    "totalPullRequests": 106,
-    "totalIssues": 67,
+    "totalPullRequests": 108,
+    "totalIssues": 69,
     "totalRepositories": 58,
     "privateContributions": 216,
-    "calendarTotal": 2902,
+    "calendarTotal": 2906,
     "weeks": [
       [
         {
@@ -1979,8 +1979,13 @@
         },
         {
           "date": "2026-11-04",
-          "count": 14,
+          "count": 18,
           "weekday": 3
+        },
+        {
+          "date": "2026-11-05",
+          "count": 0,
+          "weekday": 4
         }
       ]
     ]
@@ -2122,6 +2127,132 @@
   ],
   "repos": [
     {
+      "name": "community-standards",
+      "description": "This repository includes community standards that I personally use for my projects on GitHub.",
+      "url": "https://github.com/dileepadev/community-standards",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 2,
+      "size": 80,
+      "primaryLanguage": null,
+      "languages": [],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-01-10T15:50:29Z",
+      "pushedAt": "2026-11-04T19:36:42Z",
+      "updatedAt": "2026-03-26T16:45:20Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "learn-ai-engineering",
+      "description": "A self-paced, build-first roadmap for modern AI engineering.",
+      "url": "https://github.com/dileepadev/learn-ai-engineering",
+      "homepage": "https://dileepadev.github.io/learn-ai-engineering/",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 2,
+      "size": 410,
+      "primaryLanguage": "Python",
+      "languages": [
+        {
+          "name": "Python",
+          "bytes": 166258
+        },
+        {
+          "name": "TypeScript",
+          "bytes": 133340
+        },
+        {
+          "name": "Astro",
+          "bytes": 25485
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 18067
+        },
+        {
+          "name": "CSS",
+          "bytes": 8341
+        }
+      ],
+      "topics": [],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-08-06T18:25:08Z",
+      "pushedAt": "2026-11-04T19:03:15Z",
+      "updatedAt": "2026-08-11T14:30:30Z",
+      "hasPages": true,
+      "pages": {
+        "status": null,
+        "cname": null,
+        "htmlUrl": "https://dileepadev.github.io/learn-ai-engineering/",
+        "buildType": "workflow",
+        "httpsEnforced": true,
+        "sourceBranch": "main"
+      }
+    },
+    {
+      "name": "dileepadev.github.io",
+      "description": "GitHub Pages site for updates.",
+      "url": "https://github.com/dileepadev/dileepadev.github.io",
+      "homepage": "https://dileepadev.github.io/",
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 36234,
+      "primaryLanguage": "Astro",
+      "languages": [
+        {
+          "name": "Astro",
+          "bytes": 92852
+        },
+        {
+          "name": "CSS",
+          "bytes": 59088
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 24708
+        },
+        {
+          "name": "TypeScript",
+          "bytes": 9521
+        }
+      ],
+      "topics": [
+        "dileepadev"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2025-12-24T15:24:10Z",
+      "pushedAt": "2026-11-04T18:12:32Z",
+      "updatedAt": "2026-11-04T18:12:37Z",
+      "hasPages": true,
+      "pages": {
+        "status": "built",
+        "cname": null,
+        "htmlUrl": "https://dileepadev.github.io/",
+        "buildType": "workflow",
+        "httpsEnforced": true,
+        "sourceBranch": "main"
+      }
+    },
+    {
       "name": "blog-dileepa-dev",
       "description": "This is my blog.",
       "url": "https://github.com/dileepadev/blog-dileepa-dev",
@@ -2157,56 +2288,6 @@
       "updatedAt": "2026-11-04T13:12:33Z",
       "hasPages": false,
       "pages": null
-    },
-    {
-      "name": "dileepadev.github.io",
-      "description": "GitHub Pages site for updates.",
-      "url": "https://github.com/dileepadev/dileepadev.github.io",
-      "homepage": "https://dileepadev.github.io/",
-      "isFork": false,
-      "isArchived": false,
-      "isTemplate": false,
-      "stars": 0,
-      "forks": 0,
-      "watchers": null,
-      "openIssues": 0,
-      "size": 36232,
-      "primaryLanguage": "Astro",
-      "languages": [
-        {
-          "name": "Astro",
-          "bytes": 92852
-        },
-        {
-          "name": "CSS",
-          "bytes": 59088
-        },
-        {
-          "name": "JavaScript",
-          "bytes": 24708
-        },
-        {
-          "name": "TypeScript",
-          "bytes": 9521
-        }
-      ],
-      "topics": [
-        "dileepadev"
-      ],
-      "license": "MIT",
-      "defaultBranch": "main",
-      "createdAt": "2025-12-24T15:24:10Z",
-      "pushedAt": "2026-11-04T12:15:37Z",
-      "updatedAt": "2026-11-04T12:15:43Z",
-      "hasPages": true,
-      "pages": {
-        "status": "built",
-        "cname": null,
-        "htmlUrl": "https://dileepadev.github.io/",
-        "buildType": "workflow",
-        "httpsEnforced": true,
-        "sourceBranch": "main"
-      }
     },
     {
       "name": "dileepadev",
@@ -2857,58 +2938,6 @@
       }
     },
     {
-      "name": "learn-ai-engineering",
-      "description": "A self-paced, build-first roadmap for modern AI engineering.",
-      "url": "https://github.com/dileepadev/learn-ai-engineering",
-      "homepage": "https://dileepadev.github.io/learn-ai-engineering/",
-      "isFork": false,
-      "isArchived": false,
-      "isTemplate": false,
-      "stars": 0,
-      "forks": 0,
-      "watchers": null,
-      "openIssues": 0,
-      "size": 384,
-      "primaryLanguage": "Python",
-      "languages": [
-        {
-          "name": "Python",
-          "bytes": 166258
-        },
-        {
-          "name": "TypeScript",
-          "bytes": 133340
-        },
-        {
-          "name": "Astro",
-          "bytes": 25485
-        },
-        {
-          "name": "JavaScript",
-          "bytes": 18067
-        },
-        {
-          "name": "CSS",
-          "bytes": 8341
-        }
-      ],
-      "topics": [],
-      "license": "MIT",
-      "defaultBranch": "main",
-      "createdAt": "2026-08-06T18:25:08Z",
-      "pushedAt": "2026-08-11T14:26:36Z",
-      "updatedAt": "2026-08-11T14:30:30Z",
-      "hasPages": true,
-      "pages": {
-        "status": null,
-        "cname": null,
-        "htmlUrl": "https://dileepadev.github.io/learn-ai-engineering/",
-        "buildType": "workflow",
-        "httpsEnforced": true,
-        "sourceBranch": "main"
-      }
-    },
-    {
       "name": "gnome-bluetooth-headset-monitor",
       "description": "Bluetooth Headset Monitor is a GNOME Shell extension that adds a headset indicator to the top panel only when at least one compatible Bluetooth audio device is connected.",
       "url": "https://github.com/dileepadev/gnome-bluetooth-headset-monitor",
@@ -3087,30 +3116,6 @@
       "createdAt": "2026-03-24T17:44:33Z",
       "pushedAt": "2026-03-30T17:14:40Z",
       "updatedAt": "2026-03-30T17:14:44Z",
-      "hasPages": false,
-      "pages": null
-    },
-    {
-      "name": "community-standards",
-      "description": "This repository includes community standards that I personally use for my projects on GitHub.",
-      "url": "https://github.com/dileepadev/community-standards",
-      "homepage": null,
-      "isFork": false,
-      "isArchived": false,
-      "isTemplate": false,
-      "stars": 0,
-      "forks": 0,
-      "watchers": null,
-      "openIssues": 0,
-      "size": 33,
-      "primaryLanguage": null,
-      "languages": [],
-      "topics": [],
-      "license": "MIT",
-      "defaultBranch": "main",
-      "createdAt": "2026-01-10T15:50:29Z",
-      "pushedAt": "2026-03-26T16:47:19Z",
-      "updatedAt": "2026-03-26T16:45:20Z",
       "hasPages": false,
       "pages": null
     },
@@ -4558,20 +4563,20 @@
       "medianDurationMs": 34000,
       "lastRun": {
         "repo": "dileepadev.github.io",
-        "id": 41884762239,
+        "id": 41941592331,
         "name": "Refresh snapshot",
         "workflow": "refresh-data.yml",
-        "runNumber": 243,
+        "runNumber": 244,
         "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
         "branch": "main",
-        "sha": "fcb0c0e",
-        "createdAt": "2026-11-04T18:12:08Z",
-        "startedAt": "2026-11-04T18:12:08Z",
-        "updatedAt": "2026-11-04T18:12:21Z",
-        "durationMs": 13000,
-        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/41884762239"
+        "sha": "4bd5b5b",
+        "createdAt": "2026-11-05T00:28:35Z",
+        "startedAt": "2026-11-05T00:28:35Z",
+        "updatedAt": "2026-11-05T00:28:39Z",
+        "durationMs": 4000,
+        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/41941592331"
       },
       "workflows": [
         "refresh-data.yml",
@@ -5519,15 +5524,15 @@
   ],
   "live": [
     {
-      "repo": "blog-dileepa-dev",
-      "url": "https://dileepa.dev/blog",
-      "homepage": "https://dileepa.dev/blog",
-      "hasPages": false,
+      "repo": "learn-ai-engineering",
+      "url": "https://dileepadev.github.io/learn-ai-engineering/",
+      "homepage": "https://dileepadev.github.io/learn-ai-engineering/",
+      "hasPages": true,
       "cname": null,
       "status": null,
-      "buildType": null,
-      "lastDeployedAt": "2026-08-21T17:17:32Z",
-      "pushedAt": "2026-11-04T13:12:32Z"
+      "buildType": "workflow",
+      "lastDeployedAt": "2026-08-11T14:27:17Z",
+      "pushedAt": "2026-11-04T19:03:15Z"
     },
     {
       "repo": "dileepadev.github.io",
@@ -5537,8 +5542,19 @@
       "cname": null,
       "status": "built",
       "buildType": "workflow",
-      "lastDeployedAt": "2026-11-04T12:16:04Z",
-      "pushedAt": "2026-11-04T12:15:37Z"
+      "lastDeployedAt": "2026-11-04T18:13:08Z",
+      "pushedAt": "2026-11-04T18:12:32Z"
+    },
+    {
+      "repo": "blog-dileepa-dev",
+      "url": "https://dileepa.dev/blog",
+      "homepage": "https://dileepa.dev/blog",
+      "hasPages": false,
+      "cname": null,
+      "status": null,
+      "buildType": null,
+      "lastDeployedAt": "2026-08-21T17:17:32Z",
+      "pushedAt": "2026-11-04T13:12:32Z"
     },
     {
       "repo": "dileepadev",
@@ -5638,17 +5654,6 @@
       "buildType": "workflow",
       "lastDeployedAt": "2026-08-14T18:20:41Z",
       "pushedAt": "2026-08-14T19:03:13Z"
-    },
-    {
-      "repo": "learn-ai-engineering",
-      "url": "https://dileepadev.github.io/learn-ai-engineering/",
-      "homepage": "https://dileepadev.github.io/learn-ai-engineering/",
-      "hasPages": true,
-      "cname": null,
-      "status": null,
-      "buildType": "workflow",
-      "lastDeployedAt": "2026-08-11T14:27:17Z",
-      "pushedAt": "2026-08-11T14:26:36Z"
     },
     {
       "repo": "learn-az900",
@@ -6315,10 +6320,37 @@
     {
       "kind": "run",
       "repo": "dileepadev.github.io",
-      "at": "2026-11-04T18:12:21Z",
+      "at": "2026-11-05T00:28:39Z",
       "title": "Refresh snapshot",
       "detail": "main",
       "state": "in_progress",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/41941592331"
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-04T18:13:24Z",
+      "title": "Deploy to Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/41884838031"
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-04T18:13:08Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-04T18:12:39Z",
+      "title": "Refresh snapshot",
+      "detail": "main",
+      "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/41884762239"
     },
     {
@@ -6824,33 +6856,6 @@
       "detail": "main",
       "state": "deployed",
       "url": null
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-02T12:17:42Z",
-      "title": "Deploy to Pages",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/41443342138"
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-02T12:16:55Z",
-      "title": "github-pages",
-      "detail": "main",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-02T12:16:33Z",
-      "title": "Refresh snapshot",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/41443307246"
     },
     {
       "kind": "release",
