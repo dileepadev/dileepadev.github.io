@@ -1,16 +1,16 @@
 {
   "meta": {
-    "fetchedAt": "2026-11-07T06:15:59.397Z",
+    "fetchedAt": "2026-11-07T12:14:12.782Z",
     "login": "dileepadev",
     "source": "GitHub REST + GraphQL, public data only",
-    "durationMs": 6661,
+    "durationMs": 7180,
     "authenticated": true,
     "partial": false,
     "warnings": [],
     "rateLimit": {
       "limit": 5000,
-      "remaining": 4808,
-      "resetAt": "2026-11-07T07:15:52.000Z"
+      "remaining": 4799,
+      "resetAt": "2026-11-07T13:14:05.000Z"
     }
   },
   "profile": {
@@ -22,7 +22,7 @@
     "blog": "https://dileepa.dev",
     "avatarUrl": "https://avatars.githubusercontent.com/u/251038784?v=4",
     "htmlUrl": "https://github.com/dileepadev",
-    "publicRepos": 58,
+    "publicRepos": 61,
     "followers": 4,
     "following": 0,
     "createdAt": "2025-12-22T17:19:29Z"
@@ -32,10 +32,10 @@
     "to": "2026-11-07T18:29:59Z",
     "totalCommits": 2443,
     "totalPullRequests": 108,
-    "totalIssues": 69,
-    "totalRepositories": 58,
+    "totalIssues": 216,
+    "totalRepositories": 61,
     "privateContributions": 216,
-    "calendarTotal": 2906,
+    "calendarTotal": 3056,
     "weeks": [
       [
         {
@@ -1994,15 +1994,15 @@
         },
         {
           "date": "2026-11-07",
-          "count": 0,
+          "count": 150,
           "weekday": 6
         }
       ]
     ]
   },
   "totals": {
-    "repos": 58,
-    "ownedRepos": 58,
+    "repos": 61,
+    "ownedRepos": 61,
     "forks": 0,
     "archived": 0,
     "stars": 1,
@@ -2137,6 +2137,78 @@
   ],
   "repos": [
     {
+      "name": "docket",
+      "description": "Turns photos and PDFs of invoices and receipts into clean, validated spreadsheet rows. A person double-checks only the uncertain ones. Built for one real business, run as a live pilot, measured by the time it saves.",
+      "url": "https://github.com/dileepadev/docket",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 54,
+      "size": 0,
+      "primaryLanguage": null,
+      "languages": [],
+      "topics": [],
+      "license": null,
+      "defaultBranch": "main",
+      "createdAt": "2026-11-07T10:37:50Z",
+      "pushedAt": "2026-11-07T10:37:52Z",
+      "updatedAt": "2026-11-07T10:37:52Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "steward",
+      "description": "An AI support agent that can actually do things, like look up orders, issue refunds and cancel orders, without being tricked into doing the wrong things. Built on its own MCP tool server, with human approval for risky actions, rules enforced in code rather than in the prompt, and an evaluation suite that tests both reliability and attacks.",
+      "url": "https://github.com/dileepadev/steward",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 48,
+      "size": 0,
+      "primaryLanguage": null,
+      "languages": [],
+      "topics": [],
+      "license": null,
+      "defaultBranch": "main",
+      "createdAt": "2026-11-07T10:36:40Z",
+      "pushedAt": "2026-11-07T10:36:41Z",
+      "updatedAt": "2026-11-07T10:36:41Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "verity",
+      "description": "Ask questions about long, messy official documents and get answers you can check. Every claim cites a page. When the documents don't answer the question, Verity says \"I don't have that information.\"",
+      "url": "https://github.com/dileepadev/verity",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 45,
+      "size": 0,
+      "primaryLanguage": null,
+      "languages": [],
+      "topics": [],
+      "license": null,
+      "defaultBranch": "main",
+      "createdAt": "2026-11-07T10:36:19Z",
+      "pushedAt": "2026-11-07T10:36:21Z",
+      "updatedAt": "2026-11-07T10:36:21Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
       "name": "dileepadev.github.io",
       "description": "GitHub Pages site for updates.",
       "url": "https://github.com/dileepadev/dileepadev.github.io",
@@ -2148,7 +2220,7 @@
       "forks": 0,
       "watchers": null,
       "openIssues": 0,
-      "size": 36249,
+      "size": 36250,
       "primaryLanguage": "Astro",
       "languages": [
         {
@@ -2174,8 +2246,8 @@
       "license": "MIT",
       "defaultBranch": "main",
       "createdAt": "2025-12-24T15:24:10Z",
-      "pushedAt": "2026-11-07T00:25:50Z",
-      "updatedAt": "2026-11-07T00:25:54Z",
+      "pushedAt": "2026-11-07T06:16:00Z",
+      "updatedAt": "2026-11-07T06:16:03Z",
       "hasPages": true,
       "pages": {
         "status": "built",
@@ -4573,20 +4645,20 @@
       "medianDurationMs": 29500,
       "lastRun": {
         "repo": "dileepadev.github.io",
-        "id": 42346215216,
+        "id": 42371553009,
         "name": "Refresh snapshot",
         "workflow": "refresh-data.yml",
-        "runNumber": 253,
+        "runNumber": 254,
         "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
         "branch": "main",
-        "sha": "d9fe008",
-        "createdAt": "2026-11-07T06:15:46Z",
-        "startedAt": "2026-11-07T06:15:46Z",
-        "updatedAt": "2026-11-07T06:15:49Z",
+        "sha": "6cf4346",
+        "createdAt": "2026-11-07T12:13:59Z",
+        "startedAt": "2026-11-07T12:13:59Z",
+        "updatedAt": "2026-11-07T12:14:02Z",
         "durationMs": 3000,
-        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/42346215216"
+        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/42371553009"
       },
       "workflows": [
         "refresh-data.yml",
@@ -5316,6 +5388,15 @@
       "workflows": []
     },
     {
+      "repo": "docket",
+      "url": "https://github.com/dileepadev/docket",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
       "repo": "edoc-demo",
       "url": "https://github.com/dileepadev/edoc-demo",
       "runs": 0,
@@ -5496,6 +5577,15 @@
       "workflows": []
     },
     {
+      "repo": "steward",
+      "url": "https://github.com/dileepadev/steward",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
       "repo": "studentprofiler-demo",
       "url": "https://github.com/dileepadev/studentprofiler-demo",
       "runs": 0,
@@ -5523,6 +5613,15 @@
       "workflows": []
     },
     {
+      "repo": "verity",
+      "url": "https://github.com/dileepadev/verity",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
       "repo": "youtube",
       "url": "https://github.com/dileepadev/youtube",
       "runs": 0,
@@ -5541,8 +5640,8 @@
       "cname": null,
       "status": "built",
       "buildType": "workflow",
-      "lastDeployedAt": "2026-11-07T00:26:14Z",
-      "pushedAt": "2026-11-07T00:25:50Z"
+      "lastDeployedAt": "2026-11-07T06:16:27Z",
+      "pushedAt": "2026-11-07T06:16:00Z"
     },
     {
       "repo": "learn-ai-engineering",
@@ -6330,10 +6429,37 @@
     {
       "kind": "run",
       "repo": "dileepadev.github.io",
-      "at": "2026-11-07T06:15:49Z",
+      "at": "2026-11-07T12:14:02Z",
       "title": "Refresh snapshot",
       "detail": "main",
       "state": "in_progress",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/42371553009"
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-07T06:16:42Z",
+      "title": "Deploy to Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/42346235685"
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-07T06:16:27Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-07T06:16:05Z",
+      "title": "Refresh snapshot",
+      "detail": "main",
+      "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/42346215216"
     },
     {
@@ -6565,33 +6691,6 @@
       "kind": "deployment",
       "repo": "dileepadev.github.io",
       "at": "2026-11-05T00:29:10Z",
-      "title": "github-pages",
-      "detail": "main",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-05T00:28:55Z",
-      "title": "Refresh snapshot",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/41941592331"
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-04T18:13:24Z",
-      "title": "Deploy to Pages",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/41884838031"
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-04T18:13:08Z",
       "title": "github-pages",
       "detail": "main",
       "state": "deployed",
