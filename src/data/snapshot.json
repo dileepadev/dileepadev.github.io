@@ -1,16 +1,16 @@
 {
   "meta": {
-    "fetchedAt": "2026-11-08T12:13:57.110Z",
+    "fetchedAt": "2026-11-08T18:11:30.238Z",
     "login": "dileepadev",
     "source": "GitHub REST + GraphQL, public data only",
-    "durationMs": 5950,
+    "durationMs": 6285,
     "authenticated": true,
     "partial": false,
     "warnings": [],
     "rateLimit": {
       "limit": 5000,
-      "remaining": 4805,
-      "resetAt": "2026-11-08T13:13:51.000Z"
+      "remaining": 4802,
+      "resetAt": "2026-11-08T19:11:24.000Z"
     }
   },
   "profile": {
@@ -22,7 +22,7 @@
     "blog": "https://dileepa.dev",
     "avatarUrl": "https://avatars.githubusercontent.com/u/251038784?v=4",
     "htmlUrl": "https://github.com/dileepadev",
-    "publicRepos": 59,
+    "publicRepos": 60,
     "followers": 4,
     "following": 0,
     "createdAt": "2025-12-22T17:19:29Z"
@@ -30,12 +30,12 @@
   "contributions": {
     "from": "2025-11-01T18:30:00Z",
     "to": "2026-11-08T18:29:59Z",
-    "totalCommits": 2504,
-    "totalPullRequests": 108,
+    "totalCommits": 2507,
+    "totalPullRequests": 109,
     "totalIssues": 131,
-    "totalRepositories": 59,
+    "totalRepositories": 60,
     "privateContributions": 216,
-    "calendarTotal": 3030,
+    "calendarTotal": 3035,
     "weeks": [
       [
         {
@@ -1964,24 +1964,24 @@
       [
         {
           "date": "2026-11-08",
-          "count": 16,
+          "count": 21,
           "weekday": 0
         }
       ]
     ]
   },
   "totals": {
-    "repos": 59,
-    "ownedRepos": 59,
+    "repos": 60,
+    "ownedRepos": 60,
     "forks": 0,
     "archived": 0,
     "stars": 1,
     "languages": 20,
     "releases": 52,
-    "workflowRuns": 215,
+    "workflowRuns": 216,
     "deployments": 109,
     "liveSites": 34,
-    "reposWithCi": 24
+    "reposWithCi": 25
   },
   "languages": [
     {
@@ -2107,6 +2107,72 @@
   ],
   "repos": [
     {
+      "name": "verity-rag",
+      "description": "Evaluation-driven RAG over messy real-world PDFs: hybrid search (keyword + vectors), reranking, page-level citations, calibrated abstention, LLM-as-judge evals gated in CI, OpenTelemetry tracing. Python · FastAPI · PostgreSQL/pgvector · Next.js",
+      "url": "https://github.com/dileepadev/verity-rag",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 34,
+      "size": 121,
+      "primaryLanguage": null,
+      "languages": [],
+      "topics": [
+        "ai-engineering",
+        "docling",
+        "evals",
+        "fastapi",
+        "generative-ai",
+        "hybrid-search",
+        "langfuse",
+        "llm",
+        "llm-evaluation",
+        "nextjs",
+        "opentelemetry",
+        "pgvector",
+        "python",
+        "rag",
+        "reranking",
+        "retrieval-augmented-generation",
+        "typescript"
+      ],
+      "license": "MIT",
+      "defaultBranch": "main",
+      "createdAt": "2026-11-07T10:36:19Z",
+      "pushedAt": "2026-11-08T16:42:10Z",
+      "updatedAt": "2026-11-08T15:56:22Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
+      "name": "relay-support-agents",
+      "description": "A multi-agent support system that issues refunds and cancels orders safely: separated agent privileges, typed handoffs, human approval for risky actions.",
+      "url": "https://github.com/dileepadev/relay-support-agents",
+      "homepage": null,
+      "isFork": false,
+      "isArchived": false,
+      "isTemplate": false,
+      "stars": 0,
+      "forks": 0,
+      "watchers": null,
+      "openIssues": 0,
+      "size": 0,
+      "primaryLanguage": null,
+      "languages": [],
+      "topics": [],
+      "license": null,
+      "defaultBranch": "main",
+      "createdAt": "2026-11-08T16:05:05Z",
+      "pushedAt": "2026-11-08T16:05:06Z",
+      "updatedAt": "2026-11-08T16:05:06Z",
+      "hasPages": false,
+      "pages": null
+    },
+    {
       "name": "dileepadev.github.io",
       "description": "GitHub Pages site for updates.",
       "url": "https://github.com/dileepadev/dileepadev.github.io",
@@ -2118,7 +2184,7 @@
       "forks": 0,
       "watchers": null,
       "openIssues": 0,
-      "size": 36258,
+      "size": 36259,
       "primaryLanguage": "Astro",
       "languages": [
         {
@@ -2144,8 +2210,8 @@
       "license": "MIT",
       "defaultBranch": "main",
       "createdAt": "2025-12-24T15:24:10Z",
-      "pushedAt": "2026-11-08T06:16:25Z",
-      "updatedAt": "2026-11-08T06:16:29Z",
+      "pushedAt": "2026-11-08T12:13:58Z",
+      "updatedAt": "2026-11-08T12:14:01Z",
       "hasPages": true,
       "pages": {
         "status": "built",
@@ -2203,30 +2269,6 @@
         "httpsEnforced": true,
         "sourceBranch": "copilot/prepare-astro-project-for-deployment"
       }
-    },
-    {
-      "name": "verity",
-      "description": "Ask questions about long, messy official documents and get answers you can check. Every claim cites a page. When the documents don't answer the question, Verity says \"I don't have that information.\"",
-      "url": "https://github.com/dileepadev/verity",
-      "homepage": null,
-      "isFork": false,
-      "isArchived": false,
-      "isTemplate": false,
-      "stars": 0,
-      "forks": 0,
-      "watchers": null,
-      "openIssues": 35,
-      "size": 0,
-      "primaryLanguage": null,
-      "languages": [],
-      "topics": [],
-      "license": null,
-      "defaultBranch": "main",
-      "createdAt": "2026-11-07T10:36:19Z",
-      "pushedAt": "2026-11-07T10:36:21Z",
-      "updatedAt": "2026-11-07T10:36:21Z",
-      "hasPages": false,
-      "pages": null
     },
     {
       "name": "community-standards",
@@ -4564,27 +4606,54 @@
       "url": "https://github.com/dileepadev/dileepadev.github.io",
       "runs": 20,
       "successRate": 95,
-      "medianDurationMs": 28500,
+      "medianDurationMs": 28000,
       "lastRun": {
         "repo": "dileepadev.github.io",
-        "id": 42479243215,
+        "id": 42508710101,
         "name": "Refresh snapshot",
         "workflow": "refresh-data.yml",
-        "runNumber": 258,
+        "runNumber": 259,
         "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
         "branch": "main",
-        "sha": "c80ddbd",
-        "createdAt": "2026-11-08T12:13:44Z",
-        "startedAt": "2026-11-08T12:13:44Z",
-        "updatedAt": "2026-11-08T12:13:47Z",
+        "sha": "d7ee726",
+        "createdAt": "2026-11-08T18:11:18Z",
+        "startedAt": "2026-11-08T18:11:18Z",
+        "updatedAt": "2026-11-08T18:11:21Z",
         "durationMs": 3000,
-        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/42479243215"
+        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/42508710101"
       },
       "workflows": [
         "refresh-data.yml",
         "deploy.yml"
+      ]
+    },
+    {
+      "repo": "verity-rag",
+      "url": "https://github.com/dileepadev/verity-rag",
+      "runs": 1,
+      "successRate": 100,
+      "medianDurationMs": 53000,
+      "lastRun": {
+        "repo": "verity-rag",
+        "id": 42501238757,
+        "name": "ci",
+        "workflow": "ci.yml",
+        "runNumber": 1,
+        "event": "pull_request",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "chore/4-scaffold-repository",
+        "sha": "aa2782e",
+        "createdAt": "2026-11-08T16:42:16Z",
+        "startedAt": "2026-11-08T16:42:16Z",
+        "updatedAt": "2026-11-08T16:43:09Z",
+        "durationMs": 53000,
+        "url": "https://github.com/dileepadev/verity-rag/actions/runs/42501238757"
+      },
+      "workflows": [
+        "ci.yml"
       ]
     },
     {
@@ -5490,6 +5559,15 @@
       "workflows": []
     },
     {
+      "repo": "relay-support-agents",
+      "url": "https://github.com/dileepadev/relay-support-agents",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
       "repo": "studentprofiler-demo",
       "url": "https://github.com/dileepadev/studentprofiler-demo",
       "runs": 0,
@@ -5517,15 +5595,6 @@
       "workflows": []
     },
     {
-      "repo": "verity",
-      "url": "https://github.com/dileepadev/verity",
-      "runs": 0,
-      "successRate": null,
-      "medianDurationMs": null,
-      "lastRun": null,
-      "workflows": []
-    },
-    {
       "repo": "youtube",
       "url": "https://github.com/dileepadev/youtube",
       "runs": 0,
@@ -5544,8 +5613,8 @@
       "cname": null,
       "status": "built",
       "buildType": "workflow",
-      "lastDeployedAt": "2026-11-08T06:16:48Z",
-      "pushedAt": "2026-11-08T06:16:25Z"
+      "lastDeployedAt": "2026-11-08T12:14:18Z",
+      "pushedAt": "2026-11-08T12:13:58Z"
     },
     {
       "repo": "learn-ai",
@@ -6333,10 +6402,46 @@
     {
       "kind": "run",
       "repo": "dileepadev.github.io",
-      "at": "2026-11-08T12:13:47Z",
+      "at": "2026-11-08T18:11:21Z",
       "title": "Refresh snapshot",
       "detail": "main",
       "state": "in_progress",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/42508710101"
+    },
+    {
+      "kind": "run",
+      "repo": "verity-rag",
+      "at": "2026-11-08T16:43:09Z",
+      "title": "ci",
+      "detail": "chore/4-scaffold-repository",
+      "state": "success",
+      "url": "https://github.com/dileepadev/verity-rag/actions/runs/42501238757"
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-08T12:14:31Z",
+      "title": "Deploy to Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/42479262402"
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-08T12:14:18Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-08T12:14:02Z",
+      "title": "Refresh snapshot",
+      "detail": "main",
+      "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/42479243215"
     },
     {
@@ -6586,33 +6691,6 @@
       "kind": "deployment",
       "repo": "dileepadev.github.io",
       "at": "2026-11-06T06:19:34Z",
-      "title": "github-pages",
-      "detail": "main",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-06T06:19:19Z",
-      "title": "Refresh snapshot",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/42173645365"
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-06T00:29:35Z",
-      "title": "Deploy to Pages",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/42137129318"
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-06T00:29:21Z",
       "title": "github-pages",
       "detail": "main",
       "state": "deployed",
@@ -7400,15 +7478,6 @@
       "detail": "main",
       "state": "success",
       "url": "https://github.com/dileepadev/learn-ai-901/actions/runs/33981268862"
-    },
-    {
-      "kind": "deployment",
-      "repo": "learn-ai-901",
-      "at": "2026-09-05T17:32:46Z",
-      "title": "github-pages",
-      "detail": "main",
-      "state": "deployed",
-      "url": null
     }
   ]
 }
