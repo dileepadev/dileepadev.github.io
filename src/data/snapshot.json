@@ -1,16 +1,16 @@
 {
   "meta": {
-    "fetchedAt": "2026-11-15T06:16:18.921Z",
+    "fetchedAt": "2026-11-15T12:13:52.993Z",
     "login": "dileepadev",
     "source": "GitHub REST + GraphQL, public data only",
-    "durationMs": 6667,
+    "durationMs": 7572,
     "authenticated": true,
     "partial": false,
     "warnings": [],
     "rateLimit": {
       "limit": 5000,
-      "remaining": 4799,
-      "resetAt": "2026-11-15T07:16:13.000Z"
+      "remaining": 4769,
+      "resetAt": "2026-11-15T12:24:16.000Z"
     }
   },
   "profile": {
@@ -2118,7 +2118,7 @@
       "forks": 0,
       "watchers": null,
       "openIssues": 0,
-      "size": 36363,
+      "size": 36365,
       "primaryLanguage": "Astro",
       "languages": [
         {
@@ -2144,7 +2144,7 @@
       "license": "MIT",
       "defaultBranch": "main",
       "createdAt": "2025-12-24T15:24:10Z",
-      "pushedAt": "2026-11-15T00:30:08Z",
+      "pushedAt": "2026-11-15T06:16:19Z",
       "updatedAt": "2026-11-12T13:15:56Z",
       "hasPages": true,
       "pages": {
@@ -4650,27 +4650,216 @@
       "url": "https://github.com/dileepadev/dileepadev.github.io",
       "runs": 20,
       "successRate": 100,
-      "medianDurationMs": 38000,
+      "medianDurationMs": 36500,
       "lastRun": {
         "repo": "dileepadev.github.io",
-        "id": 43684658038,
+        "id": 43712751714,
         "name": "Refresh snapshot",
         "workflow": "refresh-data.yml",
-        "runNumber": 285,
+        "runNumber": 286,
         "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
         "branch": "main",
-        "sha": "766046d",
-        "createdAt": "2026-11-15T06:16:06Z",
-        "startedAt": "2026-11-15T06:16:06Z",
-        "updatedAt": "2026-11-15T06:16:09Z",
+        "sha": "c5bc316",
+        "createdAt": "2026-11-15T12:13:38Z",
+        "startedAt": "2026-11-15T12:13:38Z",
+        "updatedAt": "2026-11-15T12:13:41Z",
         "durationMs": 3000,
-        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/43684658038"
+        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/43712751714"
       },
       "workflows": [
         "refresh-data.yml",
         "deploy.yml"
+      ]
+    },
+    {
+      "repo": "realtime-car-tracking-web-app",
+      "url": "https://github.com/dileepadev/realtime-car-tracking-web-app",
+      "runs": 3,
+      "successRate": 100,
+      "medianDurationMs": 27432115000,
+      "lastRun": {
+        "repo": "realtime-car-tracking-web-app",
+        "id": 20644552152,
+        "name": "pages build and deployment",
+        "workflow": "dynamic/pages/pages-build-deployment",
+        "runNumber": 3,
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "1.1.0-demo-web-build",
+        "sha": "2e76a5e",
+        "createdAt": "2026-01-01T19:47:50Z",
+        "startedAt": "2026-01-01T19:47:50Z",
+        "updatedAt": "2026-11-15T07:43:19Z",
+        "durationMs": 27431729000,
+        "url": "https://github.com/dileepadev/realtime-car-tracking-web-app/actions/runs/20644552152"
+      },
+      "workflows": [
+        "dynamic/pages/pages-build-deployment"
+      ]
+    },
+    {
+      "repo": "flutter-portfolio-site",
+      "url": "https://github.com/dileepadev/flutter-portfolio-site",
+      "runs": 1,
+      "successRate": 100,
+      "medianDurationMs": 27440408000,
+      "lastRun": {
+        "repo": "flutter-portfolio-site",
+        "id": 20642505739,
+        "name": "pages build and deployment",
+        "workflow": "dynamic/pages/pages-build-deployment",
+        "runNumber": 1,
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "web-build",
+        "sha": "9b32da9",
+        "createdAt": "2026-01-01T17:18:16Z",
+        "startedAt": "2026-01-01T17:18:16Z",
+        "updatedAt": "2026-11-15T07:38:24Z",
+        "durationMs": 27440408000,
+        "url": "https://github.com/dileepadev/flutter-portfolio-site/actions/runs/20642505739"
+      },
+      "workflows": [
+        "dynamic/pages/pages-build-deployment"
+      ]
+    },
+    {
+      "repo": "flutter-toolkit-site",
+      "url": "https://github.com/dileepadev/flutter-toolkit-site",
+      "runs": 2,
+      "successRate": 100,
+      "medianDurationMs": 27449070000,
+      "lastRun": {
+        "repo": "flutter-toolkit-site",
+        "id": 20640647143,
+        "name": "pages build and deployment",
+        "workflow": "dynamic/pages/pages-build-deployment",
+        "runNumber": 2,
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "web-build",
+        "sha": "c2b7177",
+        "createdAt": "2026-01-01T14:59:02Z",
+        "startedAt": "2026-01-01T14:59:02Z",
+        "updatedAt": "2026-11-15T07:37:56Z",
+        "durationMs": 27448734000,
+        "url": "https://github.com/dileepadev/flutter-toolkit-site/actions/runs/20640647143"
+      },
+      "workflows": [
+        "dynamic/pages/pages-build-deployment"
+      ]
+    },
+    {
+      "repo": "flutter-links-site",
+      "url": "https://github.com/dileepadev/flutter-links-site",
+      "runs": 1,
+      "successRate": 100,
+      "medianDurationMs": 27445378000,
+      "lastRun": {
+        "repo": "flutter-links-site",
+        "id": 20641392659,
+        "name": "pages build and deployment",
+        "workflow": "dynamic/pages/pages-build-deployment",
+        "runNumber": 1,
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "web-build",
+        "sha": "9202b71",
+        "createdAt": "2026-01-01T15:54:48Z",
+        "startedAt": "2026-01-01T15:54:48Z",
+        "updatedAt": "2026-11-15T07:37:46Z",
+        "durationMs": 27445378000,
+        "url": "https://github.com/dileepadev/flutter-links-site/actions/runs/20641392659"
+      },
+      "workflows": [
+        "dynamic/pages/pages-build-deployment"
+      ]
+    },
+    {
+      "repo": "burgerplus-web",
+      "url": "https://github.com/dileepadev/burgerplus-web",
+      "runs": 3,
+      "successRate": 100,
+      "medianDurationMs": 27735250000,
+      "lastRun": {
+        "repo": "burgerplus-web",
+        "id": 20611626453,
+        "name": "pages build and deployment",
+        "workflow": "dynamic/pages/pages-build-deployment",
+        "runNumber": 3,
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "main",
+        "sha": "3f729f5",
+        "createdAt": "2025-12-31T03:55:40Z",
+        "startedAt": "2025-12-31T03:55:40Z",
+        "updatedAt": "2026-11-15T06:22:39Z",
+        "durationMs": 27570419000,
+        "url": "https://github.com/dileepadev/burgerplus-web/actions/runs/20611626453"
+      },
+      "workflows": [
+        "dynamic/pages/pages-build-deployment"
+      ]
+    },
+    {
+      "repo": "hungryme-web",
+      "url": "https://github.com/dileepadev/hungryme-web",
+      "runs": 3,
+      "successRate": 100,
+      "medianDurationMs": 27947599000,
+      "lastRun": {
+        "repo": "hungryme-web",
+        "id": 20611406990,
+        "name": "pages build and deployment",
+        "workflow": "dynamic/pages/pages-build-deployment",
+        "runNumber": 3,
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "main",
+        "sha": "d3540c3",
+        "createdAt": "2025-12-31T03:37:37Z",
+        "startedAt": "2025-12-31T03:37:37Z",
+        "updatedAt": "2026-11-15T06:21:37Z",
+        "durationMs": 27571440000,
+        "url": "https://github.com/dileepadev/hungryme-web/actions/runs/20611406990"
+      },
+      "workflows": [
+        "dynamic/pages/pages-build-deployment"
+      ]
+    },
+    {
+      "repo": "railway-guider-web",
+      "url": "https://github.com/dileepadev/railway-guider-web",
+      "runs": 2,
+      "successRate": 100,
+      "medianDurationMs": 27677218000,
+      "lastRun": {
+        "repo": "railway-guider-web",
+        "id": 20611539799,
+        "name": "pages build and deployment",
+        "workflow": "dynamic/pages/pages-build-deployment",
+        "runNumber": 2,
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "branch": "main",
+        "sha": "6f5d47c",
+        "createdAt": "2025-12-31T03:48:45Z",
+        "startedAt": "2025-12-31T03:48:45Z",
+        "updatedAt": "2026-11-15T06:21:25Z",
+        "durationMs": 27570760000,
+        "url": "https://github.com/dileepadev/railway-guider-web/actions/runs/20611539799"
+      },
+      "workflows": [
+        "dynamic/pages/pages-build-deployment"
       ]
     },
     {
@@ -5144,195 +5333,6 @@
       ]
     },
     {
-      "repo": "realtime-car-tracking-web-app",
-      "url": "https://github.com/dileepadev/realtime-car-tracking-web-app",
-      "runs": 3,
-      "successRate": 100,
-      "medianDurationMs": 45000,
-      "lastRun": {
-        "repo": "realtime-car-tracking-web-app",
-        "id": 20644552152,
-        "name": "pages build and deployment",
-        "workflow": "dynamic/pages/pages-build-deployment",
-        "runNumber": 3,
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "branch": "1.1.0-demo-web-build",
-        "sha": "2e76a5e",
-        "createdAt": "2026-01-01T19:47:50Z",
-        "startedAt": "2026-01-01T19:47:50Z",
-        "updatedAt": "2026-01-01T19:48:28Z",
-        "durationMs": 38000,
-        "url": "https://github.com/dileepadev/realtime-car-tracking-web-app/actions/runs/20644552152"
-      },
-      "workflows": [
-        "dynamic/pages/pages-build-deployment"
-      ]
-    },
-    {
-      "repo": "flutter-portfolio-site",
-      "url": "https://github.com/dileepadev/flutter-portfolio-site",
-      "runs": 1,
-      "successRate": 100,
-      "medianDurationMs": 42000,
-      "lastRun": {
-        "repo": "flutter-portfolio-site",
-        "id": 20642505739,
-        "name": "pages build and deployment",
-        "workflow": "dynamic/pages/pages-build-deployment",
-        "runNumber": 1,
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "branch": "web-build",
-        "sha": "9b32da9",
-        "createdAt": "2026-01-01T17:18:16Z",
-        "startedAt": "2026-01-01T17:18:16Z",
-        "updatedAt": "2026-01-01T17:18:58Z",
-        "durationMs": 42000,
-        "url": "https://github.com/dileepadev/flutter-portfolio-site/actions/runs/20642505739"
-      },
-      "workflows": [
-        "dynamic/pages/pages-build-deployment"
-      ]
-    },
-    {
-      "repo": "flutter-links-site",
-      "url": "https://github.com/dileepadev/flutter-links-site",
-      "runs": 1,
-      "successRate": 100,
-      "medianDurationMs": 46000,
-      "lastRun": {
-        "repo": "flutter-links-site",
-        "id": 20641392659,
-        "name": "pages build and deployment",
-        "workflow": "dynamic/pages/pages-build-deployment",
-        "runNumber": 1,
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "branch": "web-build",
-        "sha": "9202b71",
-        "createdAt": "2026-01-01T15:54:48Z",
-        "startedAt": "2026-01-01T15:54:48Z",
-        "updatedAt": "2026-01-01T15:55:34Z",
-        "durationMs": 46000,
-        "url": "https://github.com/dileepadev/flutter-links-site/actions/runs/20641392659"
-      },
-      "workflows": [
-        "dynamic/pages/pages-build-deployment"
-      ]
-    },
-    {
-      "repo": "flutter-toolkit-site",
-      "url": "https://github.com/dileepadev/flutter-toolkit-site",
-      "runs": 2,
-      "successRate": 100,
-      "medianDurationMs": 44500,
-      "lastRun": {
-        "repo": "flutter-toolkit-site",
-        "id": 20640647143,
-        "name": "pages build and deployment",
-        "workflow": "dynamic/pages/pages-build-deployment",
-        "runNumber": 2,
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "branch": "web-build",
-        "sha": "c2b7177",
-        "createdAt": "2026-01-01T14:59:02Z",
-        "startedAt": "2026-01-01T14:59:02Z",
-        "updatedAt": "2026-01-01T14:59:42Z",
-        "durationMs": 40000,
-        "url": "https://github.com/dileepadev/flutter-toolkit-site/actions/runs/20640647143"
-      },
-      "workflows": [
-        "dynamic/pages/pages-build-deployment"
-      ]
-    },
-    {
-      "repo": "burgerplus-web",
-      "url": "https://github.com/dileepadev/burgerplus-web",
-      "runs": 3,
-      "successRate": 100,
-      "medianDurationMs": 27735250000,
-      "lastRun": {
-        "repo": "burgerplus-web",
-        "id": 20611626453,
-        "name": "pages build and deployment",
-        "workflow": "dynamic/pages/pages-build-deployment",
-        "runNumber": 3,
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "branch": "main",
-        "sha": "3f729f5",
-        "createdAt": "2025-12-31T03:55:40Z",
-        "startedAt": "2025-12-31T03:55:40Z",
-        "updatedAt": "2025-12-31T03:56:21Z",
-        "durationMs": 41000,
-        "url": "https://github.com/dileepadev/burgerplus-web/actions/runs/20611626453"
-      },
-      "workflows": [
-        "dynamic/pages/pages-build-deployment"
-      ]
-    },
-    {
-      "repo": "railway-guider-web",
-      "url": "https://github.com/dileepadev/railway-guider-web",
-      "runs": 2,
-      "successRate": 100,
-      "medianDurationMs": 13891857000,
-      "lastRun": {
-        "repo": "railway-guider-web",
-        "id": 20611539799,
-        "name": "pages build and deployment",
-        "workflow": "dynamic/pages/pages-build-deployment",
-        "runNumber": 2,
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "branch": "main",
-        "sha": "6f5d47c",
-        "createdAt": "2025-12-31T03:48:45Z",
-        "startedAt": "2025-12-31T03:48:45Z",
-        "updatedAt": "2025-12-31T03:49:23Z",
-        "durationMs": 38000,
-        "url": "https://github.com/dileepadev/railway-guider-web/actions/runs/20611539799"
-      },
-      "workflows": [
-        "dynamic/pages/pages-build-deployment"
-      ]
-    },
-    {
-      "repo": "hungryme-web",
-      "url": "https://github.com/dileepadev/hungryme-web",
-      "runs": 3,
-      "successRate": 100,
-      "medianDurationMs": 27947599000,
-      "lastRun": {
-        "repo": "hungryme-web",
-        "id": 20611406990,
-        "name": "pages build and deployment",
-        "workflow": "dynamic/pages/pages-build-deployment",
-        "runNumber": 3,
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "branch": "main",
-        "sha": "d3540c3",
-        "createdAt": "2025-12-31T03:37:37Z",
-        "startedAt": "2025-12-31T03:37:37Z",
-        "updatedAt": "2025-12-31T03:38:23Z",
-        "durationMs": 46000,
-        "url": "https://github.com/dileepadev/hungryme-web/actions/runs/20611406990"
-      },
-      "workflows": [
-        "dynamic/pages/pages-build-deployment"
-      ]
-    },
-    {
       "repo": "admin-dileepa-dev",
       "url": "https://github.com/dileepadev/admin-dileepa-dev",
       "runs": 0,
@@ -5666,8 +5666,8 @@
       "cname": null,
       "status": "built",
       "buildType": "workflow",
-      "lastDeployedAt": "2026-11-15T00:30:34Z",
-      "pushedAt": "2026-11-15T00:30:08Z"
+      "lastDeployedAt": "2026-11-15T06:16:42Z",
+      "pushedAt": "2026-11-15T06:16:19Z"
     },
     {
       "repo": "learn-ai-engineering",
@@ -6463,10 +6463,127 @@
     {
       "kind": "run",
       "repo": "dileepadev.github.io",
-      "at": "2026-11-15T06:16:09Z",
+      "at": "2026-11-15T12:13:41Z",
       "title": "Refresh snapshot",
       "detail": "main",
       "state": "in_progress",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/43712751714"
+    },
+    {
+      "kind": "run",
+      "repo": "realtime-car-tracking-web-app",
+      "at": "2026-11-15T07:43:28Z",
+      "title": "pages build and deployment",
+      "detail": "1.1.0-demo-web-build",
+      "state": "success",
+      "url": "https://github.com/dileepadev/realtime-car-tracking-web-app/actions/runs/20644472431"
+    },
+    {
+      "kind": "run",
+      "repo": "realtime-car-tracking-web-app",
+      "at": "2026-11-15T07:43:19Z",
+      "title": "pages build and deployment",
+      "detail": "1.1.0-demo-web-build",
+      "state": "success",
+      "url": "https://github.com/dileepadev/realtime-car-tracking-web-app/actions/runs/20644552152"
+    },
+    {
+      "kind": "run",
+      "repo": "realtime-car-tracking-web-app",
+      "at": "2026-11-15T07:43:16Z",
+      "title": "pages build and deployment",
+      "detail": "1.1.0-demo-web-build",
+      "state": "success",
+      "url": "https://github.com/dileepadev/realtime-car-tracking-web-app/actions/runs/20644132187"
+    },
+    {
+      "kind": "run",
+      "repo": "flutter-portfolio-site",
+      "at": "2026-11-15T07:38:24Z",
+      "title": "pages build and deployment",
+      "detail": "web-build",
+      "state": "success",
+      "url": "https://github.com/dileepadev/flutter-portfolio-site/actions/runs/20642505739"
+    },
+    {
+      "kind": "run",
+      "repo": "flutter-toolkit-site",
+      "at": "2026-11-15T07:37:56Z",
+      "title": "pages build and deployment",
+      "detail": "web-build",
+      "state": "success",
+      "url": "https://github.com/dileepadev/flutter-toolkit-site/actions/runs/20640647143"
+    },
+    {
+      "kind": "run",
+      "repo": "flutter-links-site",
+      "at": "2026-11-15T07:37:46Z",
+      "title": "pages build and deployment",
+      "detail": "web-build",
+      "state": "success",
+      "url": "https://github.com/dileepadev/flutter-links-site/actions/runs/20641392659"
+    },
+    {
+      "kind": "run",
+      "repo": "flutter-toolkit-site",
+      "at": "2026-11-15T07:27:58Z",
+      "title": "pages build and deployment",
+      "detail": "web-build",
+      "state": "success",
+      "url": "https://github.com/dileepadev/flutter-toolkit-site/actions/runs/20640404924"
+    },
+    {
+      "kind": "run",
+      "repo": "burgerplus-web",
+      "at": "2026-11-15T06:22:39Z",
+      "title": "pages build and deployment",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/burgerplus-web/actions/runs/20611626453"
+    },
+    {
+      "kind": "run",
+      "repo": "hungryme-web",
+      "at": "2026-11-15T06:21:37Z",
+      "title": "pages build and deployment",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/hungryme-web/actions/runs/20611406990"
+    },
+    {
+      "kind": "run",
+      "repo": "railway-guider-web",
+      "at": "2026-11-15T06:21:25Z",
+      "title": "pages build and deployment",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/railway-guider-web/actions/runs/20611539799"
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-15T06:16:55Z",
+      "title": "Deploy to Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/43684679755"
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-15T06:16:42Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-15T06:16:26Z",
+      "title": "Refresh snapshot",
+      "detail": "main",
+      "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/43684658038"
     },
     {
@@ -6743,33 +6860,6 @@
       "kind": "deployment",
       "repo": "dileepadev.github.io",
       "at": "2026-11-13T00:28:25Z",
-      "title": "github-pages",
-      "detail": "main",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-13T00:27:59Z",
-      "title": "Refresh snapshot",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/43337236896"
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-12T18:13:46Z",
-      "title": "Deploy to Pages",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/43277462718"
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-12T18:13:13Z",
       "title": "github-pages",
       "detail": "main",
       "state": "deployed",
@@ -7449,96 +7539,6 @@
       "detail": "main",
       "state": "success",
       "url": "https://github.com/dileepadev/learn-python-ai/actions/runs/34371913173"
-    },
-    {
-      "kind": "deployment",
-      "repo": "learn-python-ai",
-      "at": "2026-09-09T15:42:10Z",
-      "title": "github-pages",
-      "detail": "main",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "run",
-      "repo": "learn-python-ai",
-      "at": "2026-09-09T15:38:36Z",
-      "title": "CI",
-      "detail": "feat/interactive-learning-platform",
-      "state": "success",
-      "url": "https://github.com/dileepadev/learn-python-ai/actions/runs/34371529979"
-    },
-    {
-      "kind": "run",
-      "repo": "learn-python-ai",
-      "at": "2026-09-09T15:38:33Z",
-      "title": "CI",
-      "detail": "feat/interactive-learning-platform",
-      "state": "success",
-      "url": "https://github.com/dileepadev/learn-python-ai/actions/runs/34371535857"
-    },
-    {
-      "kind": "run",
-      "repo": "learn-python-ai",
-      "at": "2026-09-09T15:32:21Z",
-      "title": "CI",
-      "detail": "feat/interactive-learning-platform",
-      "state": "success",
-      "url": "https://github.com/dileepadev/learn-python-ai/actions/runs/34370781559"
-    },
-    {
-      "kind": "run",
-      "repo": "learn-python-ai",
-      "at": "2026-09-09T15:31:46Z",
-      "title": "CI",
-      "detail": "feat/interactive-learning-platform",
-      "state": "success",
-      "url": "https://github.com/dileepadev/learn-python-ai/actions/runs/34370775823"
-    },
-    {
-      "kind": "run",
-      "repo": "learn-python-ai",
-      "at": "2026-09-09T15:25:45Z",
-      "title": "CI",
-      "detail": "feat/interactive-learning-platform",
-      "state": "success",
-      "url": "https://github.com/dileepadev/learn-python-ai/actions/runs/34370136442"
-    },
-    {
-      "kind": "run",
-      "repo": "learn-python-ai",
-      "at": "2026-09-09T15:25:43Z",
-      "title": "CI",
-      "detail": "feat/interactive-learning-platform",
-      "state": "success",
-      "url": "https://github.com/dileepadev/learn-python-ai/actions/runs/34370130504"
-    },
-    {
-      "kind": "run",
-      "repo": "learn-python-ai",
-      "at": "2026-09-09T14:54:22Z",
-      "title": "CI",
-      "detail": "feat/interactive-learning-platform",
-      "state": "success",
-      "url": "https://github.com/dileepadev/learn-python-ai/actions/runs/34366648256"
-    },
-    {
-      "kind": "run",
-      "repo": "learn-python-ai",
-      "at": "2026-09-09T14:42:04Z",
-      "title": "CI",
-      "detail": "feat/interactive-learning-platform",
-      "state": "success",
-      "url": "https://github.com/dileepadev/learn-python-ai/actions/runs/34365278212"
-    },
-    {
-      "kind": "release",
-      "repo": "dileepa-dev",
-      "at": "2026-09-08T13:42:29Z",
-      "title": "v2.0.1",
-      "detail": "v2.0.1",
-      "state": "released",
-      "url": "https://github.com/dileepadev/dileepa-dev/releases/tag/v2.0.1"
     }
   ]
 }
