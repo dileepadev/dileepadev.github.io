@@ -1,16 +1,16 @@
 {
   "meta": {
-    "fetchedAt": "2026-11-16T18:13:20.812Z",
+    "fetchedAt": "2026-11-17T00:28:12.126Z",
     "login": "dileepadev",
     "source": "GitHub REST + GraphQL, public data only",
-    "durationMs": 8317,
+    "durationMs": 6804,
     "authenticated": true,
     "partial": false,
     "warnings": [],
     "rateLimit": {
       "limit": 5000,
       "remaining": 4799,
-      "resetAt": "2026-11-16T19:13:13.000Z"
+      "resetAt": "2026-11-17T01:28:06.000Z"
     }
   },
   "profile": {
@@ -29,7 +29,7 @@
   },
   "contributions": {
     "from": "2025-11-15T18:30:00Z",
-    "to": "2026-11-16T18:29:59Z",
+    "to": "2026-11-17T18:29:59Z",
     "totalCommits": 2548,
     "totalPullRequests": 112,
     "totalIssues": 197,
@@ -1971,6 +1971,11 @@
           "date": "2026-11-16",
           "count": 0,
           "weekday": 1
+        },
+        {
+          "date": "2026-11-17",
+          "count": 0,
+          "weekday": 2
         }
       ]
     ]
@@ -2129,7 +2134,7 @@
       "forks": 0,
       "watchers": null,
       "openIssues": 0,
-      "size": 36375,
+      "size": 36376,
       "primaryLanguage": "Astro",
       "languages": [
         {
@@ -2155,7 +2160,7 @@
       "license": "MIT",
       "defaultBranch": "main",
       "createdAt": "2025-12-24T15:24:10Z",
-      "pushedAt": "2026-11-16T12:20:31Z",
+      "pushedAt": "2026-11-16T18:13:21Z",
       "updatedAt": "2026-11-12T13:15:56Z",
       "hasPages": true,
       "pages": {
@@ -4739,20 +4744,20 @@
       "medianDurationMs": 31000,
       "lastRun": {
         "repo": "dileepadev.github.io",
-        "id": 43926485996,
+        "id": 43987838761,
         "name": "Refresh snapshot",
         "workflow": "refresh-data.yml",
-        "runNumber": 291,
+        "runNumber": 292,
         "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
         "branch": "main",
-        "sha": "522d120",
-        "createdAt": "2026-11-16T18:13:06Z",
-        "startedAt": "2026-11-16T18:13:06Z",
-        "updatedAt": "2026-11-16T18:13:09Z",
+        "sha": "79286f2",
+        "createdAt": "2026-11-17T00:27:59Z",
+        "startedAt": "2026-11-17T00:27:59Z",
+        "updatedAt": "2026-11-17T00:28:02Z",
         "durationMs": 3000,
-        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/43926485996"
+        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/43987838761"
       },
       "workflows": [
         "refresh-data.yml",
@@ -5806,8 +5811,8 @@
       "cname": null,
       "status": "built",
       "buildType": "workflow",
-      "lastDeployedAt": "2026-11-16T12:21:12Z",
-      "pushedAt": "2026-11-16T12:20:31Z"
+      "lastDeployedAt": "2026-11-16T18:13:48Z",
+      "pushedAt": "2026-11-16T18:13:21Z"
     },
     {
       "repo": "learn-ai-engineering",
@@ -6627,10 +6632,37 @@
     {
       "kind": "run",
       "repo": "dileepadev.github.io",
-      "at": "2026-11-16T18:13:09Z",
+      "at": "2026-11-17T00:28:02Z",
       "title": "Refresh snapshot",
       "detail": "main",
       "state": "in_progress",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/43987838761"
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-16T18:14:01Z",
+      "title": "Deploy to Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/43926542762"
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-16T18:13:48Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-16T18:13:29Z",
+      "title": "Refresh snapshot",
+      "detail": "main",
+      "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/43926485996"
     },
     {
@@ -7186,33 +7218,6 @@
       "kind": "deployment",
       "repo": "dileepadev.github.io",
       "at": "2026-11-14T12:14:05Z",
-      "title": "github-pages",
-      "detail": "main",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-14T12:13:52Z",
-      "title": "Refresh snapshot",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/43593735354"
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-14T06:16:45Z",
-      "title": "Deploy to Pages",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/43565495052"
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-14T06:16:31Z",
       "title": "github-pages",
       "detail": "main",
       "state": "deployed",
