@@ -1,16 +1,16 @@
 {
   "meta": {
-    "fetchedAt": "2026-11-23T06:25:37.972Z",
+    "fetchedAt": "2026-11-23T12:16:31.986Z",
     "login": "dileepadev",
     "source": "GitHub REST + GraphQL, public data only",
-    "durationMs": 6598,
+    "durationMs": 7931,
     "authenticated": true,
     "partial": false,
     "warnings": [],
     "rateLimit": {
       "limit": 5000,
       "remaining": 4799,
-      "resetAt": "2026-11-23T07:25:32.000Z"
+      "resetAt": "2026-11-23T13:16:25.000Z"
     }
   },
   "profile": {
@@ -2129,7 +2129,7 @@
       "forks": 0,
       "watchers": null,
       "openIssues": 0,
-      "size": 36415,
+      "size": 36417,
       "primaryLanguage": "Astro",
       "languages": [
         {
@@ -2155,7 +2155,7 @@
       "license": "MIT",
       "defaultBranch": "main",
       "createdAt": "2025-12-24T15:24:10Z",
-      "pushedAt": "2026-11-23T00:30:15Z",
+      "pushedAt": "2026-11-23T06:25:39Z",
       "updatedAt": "2026-11-12T13:15:56Z",
       "hasPages": true,
       "pages": {
@@ -4739,20 +4739,20 @@
       "medianDurationMs": 25500,
       "lastRun": {
         "repo": "dileepadev.github.io",
-        "id": 45123994136,
+        "id": 45172703845,
         "name": "Refresh snapshot",
         "workflow": "refresh-data.yml",
-        "runNumber": 317,
+        "runNumber": 318,
         "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
         "branch": "main",
-        "sha": "4a923ac",
-        "createdAt": "2026-11-23T06:25:26Z",
-        "startedAt": "2026-11-23T06:25:26Z",
-        "updatedAt": "2026-11-23T06:25:28Z",
-        "durationMs": 2000,
-        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45123994136"
+        "sha": "f0bca38",
+        "createdAt": "2026-11-23T12:16:18Z",
+        "startedAt": "2026-11-23T12:16:18Z",
+        "updatedAt": "2026-11-23T12:16:21Z",
+        "durationMs": 3000,
+        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45172703845"
       },
       "workflows": [
         "refresh-data.yml",
@@ -5227,7 +5227,7 @@
       "url": "https://github.com/dileepadev/links-dileepa-dev",
       "runs": 18,
       "successRate": 94,
-      "medianDurationMs": 11298624500,
+      "medianDurationMs": 22557174000,
       "lastRun": {
         "repo": "links-dileepa-dev",
         "id": 41496156319,
@@ -5806,8 +5806,8 @@
       "cname": null,
       "status": "built",
       "buildType": "workflow",
-      "lastDeployedAt": "2026-11-23T00:30:35Z",
-      "pushedAt": "2026-11-23T00:30:15Z"
+      "lastDeployedAt": "2026-11-23T06:26:13Z",
+      "pushedAt": "2026-11-23T06:25:39Z"
     },
     {
       "repo": "learn-ai-engineering",
@@ -6627,10 +6627,82 @@
     {
       "kind": "run",
       "repo": "dileepadev.github.io",
-      "at": "2026-11-23T06:25:28Z",
+      "at": "2026-11-23T12:16:21Z",
       "title": "Refresh snapshot",
       "detail": "main",
       "state": "in_progress",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45172703845"
+    },
+    {
+      "kind": "run",
+      "repo": "links-dileepa-dev",
+      "at": "2026-11-23T09:01:48Z",
+      "title": "Deploy Astro site to Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/links-dileepa-dev/actions/runs/22805665832"
+    },
+    {
+      "kind": "run",
+      "repo": "links-dileepa-dev",
+      "at": "2026-11-23T08:58:00Z",
+      "title": "Deploy Astro site to Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/links-dileepa-dev/actions/runs/22804419369"
+    },
+    {
+      "kind": "run",
+      "repo": "links-dileepa-dev",
+      "at": "2026-11-23T08:57:40Z",
+      "title": "Deploy Astro site to Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/links-dileepa-dev/actions/runs/22804457450"
+    },
+    {
+      "kind": "run",
+      "repo": "links-dileepa-dev",
+      "at": "2026-11-23T08:57:36Z",
+      "title": "Deploy Astro site to Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/links-dileepa-dev/actions/runs/22804587291"
+    },
+    {
+      "kind": "run",
+      "repo": "links-dileepa-dev",
+      "at": "2026-11-23T08:47:08Z",
+      "title": "Deploy Astro site to Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/links-dileepa-dev/actions/runs/22804308384"
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-23T06:26:30Z",
+      "title": "Deploy to Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45124022204"
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-23T06:26:13Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-23T06:25:43Z",
+      "title": "Refresh snapshot",
+      "detail": "main",
+      "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45123994136"
     },
     {
@@ -7060,33 +7132,6 @@
       "kind": "deployment",
       "repo": "dileepadev.github.io",
       "at": "2026-11-21T00:28:21Z",
-      "title": "github-pages",
-      "detail": "main",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-21T00:27:58Z",
-      "title": "Refresh snapshot",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/44843963362"
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-20T18:13:22Z",
-      "title": "Deploy to Pages",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/44790586718"
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-20T18:13:10Z",
       "title": "github-pages",
       "detail": "main",
       "state": "deployed",
@@ -7658,51 +7703,6 @@
       "detail": "dev",
       "state": "success",
       "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/41506748338"
-    },
-    {
-      "kind": "run",
-      "repo": "api-dileepa-dev",
-      "at": "2026-11-02T19:03:04Z",
-      "title": "CI",
-      "detail": "feat/v2.1.0",
-      "state": "success",
-      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/41506115694"
-    },
-    {
-      "kind": "run",
-      "repo": "api-dileepa-dev",
-      "at": "2026-11-02T19:03:03Z",
-      "title": "CI",
-      "detail": "feat/v2.1.0",
-      "state": "success",
-      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/41506168360"
-    },
-    {
-      "kind": "run",
-      "repo": "links-dileepa-dev",
-      "at": "2026-11-02T17:59:30Z",
-      "title": "Deploy Astro site to Pages",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/links-dileepa-dev/actions/runs/41496156319"
-    },
-    {
-      "kind": "deployment",
-      "repo": "links-dileepa-dev",
-      "at": "2026-11-02T17:59:07Z",
-      "title": "github-pages",
-      "detail": "main",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "release",
-      "repo": "links-dileepa-dev",
-      "at": "2026-11-02T17:58:59Z",
-      "title": "v2.1.0",
-      "detail": "v2.1.0",
-      "state": "released",
-      "url": "https://github.com/dileepadev/links-dileepa-dev/releases/tag/v2.1.0"
     }
   ]
 }
