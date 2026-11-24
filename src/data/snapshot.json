@@ -1,16 +1,16 @@
 {
   "meta": {
-    "fetchedAt": "2026-11-24T06:18:36.544Z",
+    "fetchedAt": "2026-11-24T12:16:58.590Z",
     "login": "dileepadev",
     "source": "GitHub REST + GraphQL, public data only",
-    "durationMs": 7753,
+    "durationMs": 8001,
     "authenticated": true,
     "partial": false,
     "warnings": [],
     "rateLimit": {
       "limit": 5000,
       "remaining": 4799,
-      "resetAt": "2026-11-24T07:18:30.000Z"
+      "resetAt": "2026-11-24T13:16:51.000Z"
     }
   },
   "profile": {
@@ -1988,7 +1988,7 @@
     "stars": 1,
     "languages": 21,
     "releases": 56,
-    "workflowRuns": 231,
+    "workflowRuns": 230,
     "deployments": 110,
     "liveSites": 34,
     "reposWithCi": 28
@@ -2134,7 +2134,7 @@
       "forks": 0,
       "watchers": null,
       "openIssues": 0,
-      "size": 36422,
+      "size": 36423,
       "primaryLanguage": "Astro",
       "languages": [
         {
@@ -2160,7 +2160,7 @@
       "license": "MIT",
       "defaultBranch": "main",
       "createdAt": "2025-12-24T15:24:10Z",
-      "pushedAt": "2026-11-24T00:26:12Z",
+      "pushedAt": "2026-11-24T06:18:37Z",
       "updatedAt": "2026-11-12T13:15:56Z",
       "hasPages": true,
       "pages": {
@@ -4744,20 +4744,20 @@
       "medianDurationMs": 25500,
       "lastRun": {
         "repo": "dileepadev.github.io",
-        "id": 45339465765,
+        "id": 45391950254,
         "name": "Refresh snapshot",
         "workflow": "refresh-data.yml",
-        "runNumber": 321,
+        "runNumber": 322,
         "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
         "branch": "main",
-        "sha": "9c4fe04",
-        "createdAt": "2026-11-24T06:18:22Z",
-        "startedAt": "2026-11-24T06:18:22Z",
-        "updatedAt": "2026-11-24T06:18:25Z",
-        "durationMs": 3000,
-        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45339465765"
+        "sha": "7ab68bd",
+        "createdAt": "2026-11-24T12:16:43Z",
+        "startedAt": "2026-11-24T12:16:43Z",
+        "updatedAt": "2026-11-24T12:16:47Z",
+        "durationMs": 4000,
+        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45391950254"
       },
       "workflows": [
         "refresh-data.yml",
@@ -5065,9 +5065,9 @@
     {
       "repo": "railway-guider-web",
       "url": "https://github.com/dileepadev/railway-guider-web",
-      "runs": 2,
+      "runs": 1,
       "successRate": 100,
-      "medianDurationMs": 27677218000,
+      "medianDurationMs": 27570760000,
       "lastRun": {
         "repo": "railway-guider-web",
         "id": 20611539799,
@@ -5811,8 +5811,8 @@
       "cname": null,
       "status": "built",
       "buildType": "workflow",
-      "lastDeployedAt": "2026-11-24T00:26:34Z",
-      "pushedAt": "2026-11-24T00:26:12Z"
+      "lastDeployedAt": "2026-11-24T06:19:14Z",
+      "pushedAt": "2026-11-24T06:18:37Z"
     },
     {
       "repo": "learn-ai-engineering",
@@ -6632,10 +6632,37 @@
     {
       "kind": "run",
       "repo": "dileepadev.github.io",
-      "at": "2026-11-24T06:18:25Z",
+      "at": "2026-11-24T12:16:47Z",
       "title": "Refresh snapshot",
       "detail": "main",
       "state": "in_progress",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45391950254"
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-24T06:19:30Z",
+      "title": "Deploy to Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45339499874"
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-24T06:19:14Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-24T06:18:42Z",
+      "title": "Refresh snapshot",
+      "detail": "main",
+      "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45339465765"
     },
     {
@@ -7090,33 +7117,6 @@
     },
     {
       "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-22T00:29:45Z",
-      "title": "Refresh snapshot",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/44966859127"
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-21T18:11:56Z",
-      "title": "Deploy to Pages",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/44934137650"
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-21T18:11:41Z",
-      "title": "github-pages",
-      "detail": "main",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "run",
       "repo": "links-dileepa-dev",
       "at": "2026-11-21T09:33:28Z",
       "title": "Deploy Astro site to Pages",
@@ -7422,15 +7422,6 @@
       "url": "https://github.com/dileepadev/railway-guider-web/actions/runs/20611539799"
     },
     {
-      "kind": "run",
-      "repo": "railway-guider-web",
-      "at": "2026-11-15T04:16:52Z",
-      "title": "pages build and deployment",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/railway-guider-web/actions/runs/20555207473"
-    },
-    {
       "kind": "release",
       "repo": "learn-ai-engineering",
       "at": "2026-11-12T18:03:52Z",
@@ -7708,6 +7699,15 @@
       "detail": "main",
       "state": "deployed",
       "url": null
+    },
+    {
+      "kind": "release",
+      "repo": "links-dileepa-dev",
+      "at": "2026-11-02T17:58:59Z",
+      "title": "v2.1.0",
+      "detail": "v2.1.0",
+      "state": "released",
+      "url": "https://github.com/dileepadev/links-dileepa-dev/releases/tag/v2.1.0"
     }
   ]
 }
