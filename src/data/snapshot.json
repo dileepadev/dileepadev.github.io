@@ -1,16 +1,16 @@
 {
   "meta": {
-    "fetchedAt": "2026-11-25T00:27:54.078Z",
+    "fetchedAt": "2026-11-25T06:18:52.531Z",
     "login": "dileepadev",
     "source": "GitHub REST + GraphQL, public data only",
-    "durationMs": 7133,
+    "durationMs": 6674,
     "authenticated": true,
     "partial": false,
     "warnings": [],
     "rateLimit": {
       "limit": 5000,
       "remaining": 4799,
-      "resetAt": "2026-11-25T01:27:48.000Z"
+      "resetAt": "2026-11-25T07:18:47.000Z"
     }
   },
   "profile": {
@@ -1993,10 +1993,10 @@
     "stars": 1,
     "languages": 21,
     "releases": 56,
-    "workflowRuns": 230,
+    "workflowRuns": 227,
     "deployments": 110,
     "liveSites": 34,
-    "reposWithCi": 28
+    "reposWithCi": 25
   },
   "languages": [
     {
@@ -2139,7 +2139,7 @@
       "forks": 0,
       "watchers": null,
       "openIssues": 0,
-      "size": 36426,
+      "size": 36428,
       "primaryLanguage": "Astro",
       "languages": [
         {
@@ -2165,7 +2165,7 @@
       "license": "MIT",
       "defaultBranch": "main",
       "createdAt": "2025-12-24T15:24:10Z",
-      "pushedAt": "2026-11-24T18:12:34Z",
+      "pushedAt": "2026-11-25T00:27:55Z",
       "updatedAt": "2026-11-12T13:15:56Z",
       "hasPages": true,
       "pages": {
@@ -4746,23 +4746,23 @@
       "url": "https://github.com/dileepadev/dileepadev.github.io",
       "runs": 20,
       "successRate": 100,
-      "medianDurationMs": 27000,
+      "medianDurationMs": 27500,
       "lastRun": {
         "repo": "dileepadev.github.io",
-        "id": 45518253988,
+        "id": 45559640585,
         "name": "Refresh snapshot",
         "workflow": "refresh-data.yml",
-        "runNumber": 324,
+        "runNumber": 325,
         "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
         "branch": "main",
-        "sha": "dafc83f",
-        "createdAt": "2026-11-25T00:27:41Z",
-        "startedAt": "2026-11-25T00:27:41Z",
-        "updatedAt": "2026-11-25T00:27:44Z",
+        "sha": "425b126",
+        "createdAt": "2026-11-25T06:18:38Z",
+        "startedAt": "2026-11-25T06:18:38Z",
+        "updatedAt": "2026-11-25T06:18:41Z",
         "durationMs": 3000,
-        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45518253988"
+        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45559640585"
       },
       "workflows": [
         "refresh-data.yml",
@@ -5008,87 +5008,6 @@
         "updatedAt": "2026-11-15T07:37:46Z",
         "durationMs": 27445378000,
         "url": "https://github.com/dileepadev/flutter-links-site/actions/runs/20641392659"
-      },
-      "workflows": [
-        "dynamic/pages/pages-build-deployment"
-      ]
-    },
-    {
-      "repo": "burgerplus-web",
-      "url": "https://github.com/dileepadev/burgerplus-web",
-      "runs": 1,
-      "successRate": 100,
-      "medianDurationMs": 27570419000,
-      "lastRun": {
-        "repo": "burgerplus-web",
-        "id": 20611626453,
-        "name": "pages build and deployment",
-        "workflow": "dynamic/pages/pages-build-deployment",
-        "runNumber": 3,
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "branch": "main",
-        "sha": "3f729f5",
-        "createdAt": "2025-12-31T03:55:40Z",
-        "startedAt": "2025-12-31T03:55:40Z",
-        "updatedAt": "2026-11-15T06:22:39Z",
-        "durationMs": 27570419000,
-        "url": "https://github.com/dileepadev/burgerplus-web/actions/runs/20611626453"
-      },
-      "workflows": [
-        "dynamic/pages/pages-build-deployment"
-      ]
-    },
-    {
-      "repo": "hungryme-web",
-      "url": "https://github.com/dileepadev/hungryme-web",
-      "runs": 1,
-      "successRate": 100,
-      "medianDurationMs": 27571440000,
-      "lastRun": {
-        "repo": "hungryme-web",
-        "id": 20611406990,
-        "name": "pages build and deployment",
-        "workflow": "dynamic/pages/pages-build-deployment",
-        "runNumber": 3,
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "branch": "main",
-        "sha": "d3540c3",
-        "createdAt": "2025-12-31T03:37:37Z",
-        "startedAt": "2025-12-31T03:37:37Z",
-        "updatedAt": "2026-11-15T06:21:37Z",
-        "durationMs": 27571440000,
-        "url": "https://github.com/dileepadev/hungryme-web/actions/runs/20611406990"
-      },
-      "workflows": [
-        "dynamic/pages/pages-build-deployment"
-      ]
-    },
-    {
-      "repo": "railway-guider-web",
-      "url": "https://github.com/dileepadev/railway-guider-web",
-      "runs": 1,
-      "successRate": 100,
-      "medianDurationMs": 27570760000,
-      "lastRun": {
-        "repo": "railway-guider-web",
-        "id": 20611539799,
-        "name": "pages build and deployment",
-        "workflow": "dynamic/pages/pages-build-deployment",
-        "runNumber": 2,
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "branch": "main",
-        "sha": "6f5d47c",
-        "createdAt": "2025-12-31T03:48:45Z",
-        "startedAt": "2025-12-31T03:48:45Z",
-        "updatedAt": "2026-11-15T06:21:25Z",
-        "durationMs": 27570760000,
-        "url": "https://github.com/dileepadev/railway-guider-web/actions/runs/20611539799"
       },
       "workflows": [
         "dynamic/pages/pages-build-deployment"
@@ -5519,6 +5438,15 @@
       "workflows": []
     },
     {
+      "repo": "burgerplus-web",
+      "url": "https://github.com/dileepadev/burgerplus-web",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
       "repo": "cinewave-demo-agent-api",
       "url": "https://github.com/dileepadev/cinewave-demo-agent-api",
       "runs": 0,
@@ -5654,6 +5582,15 @@
       "workflows": []
     },
     {
+      "repo": "hungryme-web",
+      "url": "https://github.com/dileepadev/hungryme-web",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
       "repo": "learn-microsoft-foundry",
       "url": "https://github.com/dileepadev/learn-microsoft-foundry",
       "runs": 0,
@@ -5762,6 +5699,15 @@
       "workflows": []
     },
     {
+      "repo": "railway-guider-web",
+      "url": "https://github.com/dileepadev/railway-guider-web",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
       "repo": "relay-support-agents",
       "url": "https://github.com/dileepadev/relay-support-agents",
       "runs": 0,
@@ -5816,8 +5762,8 @@
       "cname": null,
       "status": "built",
       "buildType": "workflow",
-      "lastDeployedAt": "2026-11-24T18:12:55Z",
-      "pushedAt": "2026-11-24T18:12:34Z"
+      "lastDeployedAt": "2026-11-25T00:28:25Z",
+      "pushedAt": "2026-11-25T00:27:55Z"
     },
     {
       "repo": "learn-ai-engineering",
@@ -6637,10 +6583,37 @@
     {
       "kind": "run",
       "repo": "dileepadev.github.io",
-      "at": "2026-11-25T00:27:44Z",
+      "at": "2026-11-25T06:18:41Z",
       "title": "Refresh snapshot",
       "detail": "main",
       "state": "in_progress",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45559640585"
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-25T00:28:45Z",
+      "title": "Deploy to Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45518286524"
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-25T00:28:25Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-25T00:27:59Z",
+      "title": "Refresh snapshot",
+      "detail": "main",
+      "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45518253988"
     },
     {
@@ -6971,33 +6944,6 @@
       "kind": "deployment",
       "repo": "dileepadev.github.io",
       "at": "2026-11-22T18:12:17Z",
-      "title": "github-pages",
-      "detail": "main",
-      "state": "deployed",
-      "url": null
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-22T18:11:56Z",
-      "title": "Refresh snapshot",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45053665058"
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-22T12:14:31Z",
-      "title": "Deploy to Pages",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45021207660"
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-22T12:14:18Z",
       "title": "github-pages",
       "detail": "main",
       "state": "deployed",
@@ -7400,33 +7346,6 @@
       "url": "https://github.com/dileepadev/flutter-toolkit-site/actions/runs/20640404924"
     },
     {
-      "kind": "run",
-      "repo": "burgerplus-web",
-      "at": "2026-11-15T06:22:39Z",
-      "title": "pages build and deployment",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/burgerplus-web/actions/runs/20611626453"
-    },
-    {
-      "kind": "run",
-      "repo": "hungryme-web",
-      "at": "2026-11-15T06:21:37Z",
-      "title": "pages build and deployment",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/hungryme-web/actions/runs/20611406990"
-    },
-    {
-      "kind": "run",
-      "repo": "railway-guider-web",
-      "at": "2026-11-15T06:21:25Z",
-      "title": "pages build and deployment",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/railway-guider-web/actions/runs/20611539799"
-    },
-    {
       "kind": "release",
       "repo": "learn-ai-engineering",
       "at": "2026-11-12T18:03:52Z",
@@ -7713,6 +7632,33 @@
       "detail": "v2.1.0",
       "state": "released",
       "url": "https://github.com/dileepadev/links-dileepa-dev/releases/tag/v2.1.0"
+    },
+    {
+      "kind": "run",
+      "repo": "links-dileepa-dev",
+      "at": "2026-11-02T15:29:51Z",
+      "title": "Deploy Astro site to Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/links-dileepa-dev/actions/runs/41471968621"
+    },
+    {
+      "kind": "deployment",
+      "repo": "links-dileepa-dev",
+      "at": "2026-11-02T15:29:16Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "links-dileepa-dev",
+      "at": "2026-11-02T15:17:25Z",
+      "title": "Deploy Astro site to Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/links-dileepa-dev/actions/runs/41469969533"
     }
   ]
 }
