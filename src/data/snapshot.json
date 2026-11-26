@@ -1,16 +1,16 @@
 {
   "meta": {
-    "fetchedAt": "2026-11-25T18:12:32.895Z",
+    "fetchedAt": "2026-11-26T00:27:06.551Z",
     "login": "dileepadev",
     "source": "GitHub REST + GraphQL, public data only",
-    "durationMs": 8383,
+    "durationMs": 6940,
     "authenticated": true,
     "partial": false,
     "warnings": [],
     "rateLimit": {
       "limit": 5000,
       "remaining": 4799,
-      "resetAt": "2026-11-25T19:12:25.000Z"
+      "resetAt": "2026-11-26T01:27:00.000Z"
     }
   },
   "profile": {
@@ -29,13 +29,13 @@
   },
   "contributions": {
     "from": "2025-11-22T18:30:00Z",
-    "to": "2026-11-25T18:29:59Z",
-    "totalCommits": 2549,
+    "to": "2026-11-26T18:29:59Z",
+    "totalCommits": 2550,
     "totalPullRequests": 113,
     "totalIssues": 198,
     "totalRepositories": 61,
     "privateContributions": 223,
-    "calendarTotal": 3159,
+    "calendarTotal": 3160,
     "weeks": [
       [
         {
@@ -1979,8 +1979,13 @@
         },
         {
           "date": "2026-11-25",
-          "count": 5,
+          "count": 6,
           "weekday": 3
+        },
+        {
+          "date": "2026-11-26",
+          "count": 0,
+          "weekday": 4
         }
       ]
     ]
@@ -1993,10 +1998,10 @@
     "stars": 1,
     "languages": 21,
     "releases": 56,
-    "workflowRuns": 236,
+    "workflowRuns": 233,
     "deployments": 110,
     "liveSites": 34,
-    "reposWithCi": 24
+    "reposWithCi": 21
   },
   "languages": [
     {
@@ -2138,8 +2143,8 @@
       "stars": 0,
       "forks": 0,
       "watchers": null,
-      "openIssues": 34,
-      "size": 2999,
+      "openIssues": 32,
+      "size": 1668,
       "primaryLanguage": "Makefile",
       "languages": [
         {
@@ -2173,7 +2178,7 @@
       "license": "MIT",
       "defaultBranch": "main",
       "createdAt": "2026-11-07T10:36:19Z",
-      "pushedAt": "2026-11-25T15:11:32Z",
+      "pushedAt": "2026-11-25T18:14:42Z",
       "updatedAt": "2026-11-25T13:58:38Z",
       "hasPages": false,
       "pages": null
@@ -2190,7 +2195,7 @@
       "forks": 0,
       "watchers": null,
       "openIssues": 0,
-      "size": 36431,
+      "size": 36434,
       "primaryLanguage": "Astro",
       "languages": [
         {
@@ -2216,7 +2221,7 @@
       "license": "MIT",
       "defaultBranch": "main",
       "createdAt": "2025-12-24T15:24:10Z",
-      "pushedAt": "2026-11-25T12:17:03Z",
+      "pushedAt": "2026-11-25T18:12:34Z",
       "updatedAt": "2026-11-12T13:15:56Z",
       "hasPages": true,
       "pages": {
@@ -4755,23 +4760,23 @@
       "url": "https://github.com/dileepadev/dileepadev.github.io",
       "runs": 20,
       "successRate": 100,
-      "medianDurationMs": 27500,
+      "medianDurationMs": 33000,
       "lastRun": {
         "repo": "dileepadev.github.io",
-        "id": 45672677601,
+        "id": 45728798427,
         "name": "Refresh snapshot",
         "workflow": "refresh-data.yml",
-        "runNumber": 327,
+        "runNumber": 328,
         "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
         "branch": "main",
-        "sha": "8066f46",
-        "createdAt": "2026-11-25T18:12:07Z",
-        "startedAt": "2026-11-25T18:12:07Z",
-        "updatedAt": "2026-11-25T18:12:11Z",
-        "durationMs": 4000,
-        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45672677601"
+        "sha": "d40c76a",
+        "createdAt": "2026-11-26T00:26:54Z",
+        "startedAt": "2026-11-26T00:26:54Z",
+        "updatedAt": "2026-11-26T00:26:57Z",
+        "durationMs": 3000,
+        "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45728798427"
       },
       "workflows": [
         "refresh-data.yml",
@@ -4781,25 +4786,25 @@
     {
       "repo": "verity-rag",
       "url": "https://github.com/dileepadev/verity-rag",
-      "runs": 13,
+      "runs": 14,
       "successRate": 100,
-      "medianDurationMs": 30000,
+      "medianDurationMs": 26000,
       "lastRun": {
         "repo": "verity-rag",
-        "id": 45642376405,
+        "id": 45673032613,
         "name": "ci",
         "workflow": "ci.yml",
-        "runNumber": 11,
-        "event": "pull_request",
+        "runNumber": 12,
+        "event": "push",
         "status": "completed",
         "conclusion": "success",
-        "branch": "docs/48-animated-architecture",
-        "sha": "9a0f073",
-        "createdAt": "2026-11-25T15:11:40Z",
-        "startedAt": "2026-11-25T15:11:40Z",
-        "updatedAt": "2026-11-25T15:12:11Z",
-        "durationMs": 31000,
-        "url": "https://github.com/dileepadev/verity-rag/actions/runs/45642376405"
+        "branch": "main",
+        "sha": "73ee4e1",
+        "createdAt": "2026-11-25T18:14:08Z",
+        "startedAt": "2026-11-25T18:14:08Z",
+        "updatedAt": "2026-11-25T18:14:26Z",
+        "durationMs": 18000,
+        "url": "https://github.com/dileepadev/verity-rag/actions/runs/45673032613"
       },
       "workflows": [
         "ci.yml",
@@ -4940,87 +4945,6 @@
       },
       "workflows": [
         "checks.yml"
-      ]
-    },
-    {
-      "repo": "realtime-car-tracking-web-app",
-      "url": "https://github.com/dileepadev/realtime-car-tracking-web-app",
-      "runs": 2,
-      "successRate": 100,
-      "medianDurationMs": 27431922000,
-      "lastRun": {
-        "repo": "realtime-car-tracking-web-app",
-        "id": 20644552152,
-        "name": "pages build and deployment",
-        "workflow": "dynamic/pages/pages-build-deployment",
-        "runNumber": 3,
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "branch": "1.1.0-demo-web-build",
-        "sha": "2e76a5e",
-        "createdAt": "2026-01-01T19:47:50Z",
-        "startedAt": "2026-01-01T19:47:50Z",
-        "updatedAt": "2026-11-15T07:43:19Z",
-        "durationMs": 27431729000,
-        "url": "https://github.com/dileepadev/realtime-car-tracking-web-app/actions/runs/20644552152"
-      },
-      "workflows": [
-        "dynamic/pages/pages-build-deployment"
-      ]
-    },
-    {
-      "repo": "flutter-portfolio-site",
-      "url": "https://github.com/dileepadev/flutter-portfolio-site",
-      "runs": 1,
-      "successRate": 100,
-      "medianDurationMs": 27440408000,
-      "lastRun": {
-        "repo": "flutter-portfolio-site",
-        "id": 20642505739,
-        "name": "pages build and deployment",
-        "workflow": "dynamic/pages/pages-build-deployment",
-        "runNumber": 1,
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "branch": "web-build",
-        "sha": "9b32da9",
-        "createdAt": "2026-01-01T17:18:16Z",
-        "startedAt": "2026-01-01T17:18:16Z",
-        "updatedAt": "2026-11-15T07:38:24Z",
-        "durationMs": 27440408000,
-        "url": "https://github.com/dileepadev/flutter-portfolio-site/actions/runs/20642505739"
-      },
-      "workflows": [
-        "dynamic/pages/pages-build-deployment"
-      ]
-    },
-    {
-      "repo": "flutter-toolkit-site",
-      "url": "https://github.com/dileepadev/flutter-toolkit-site",
-      "runs": 1,
-      "successRate": 100,
-      "medianDurationMs": 27449406000,
-      "lastRun": {
-        "repo": "flutter-toolkit-site",
-        "id": 20640404924,
-        "name": "pages build and deployment",
-        "workflow": "dynamic/pages/pages-build-deployment",
-        "runNumber": 1,
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "branch": "web-build",
-        "sha": "275fa73",
-        "createdAt": "2026-01-01T14:37:52Z",
-        "startedAt": "2026-01-01T14:37:52Z",
-        "updatedAt": "2026-11-15T07:27:58Z",
-        "durationMs": 27449406000,
-        "url": "https://github.com/dileepadev/flutter-toolkit-site/actions/runs/20640404924"
-      },
-      "workflows": [
-        "dynamic/pages/pages-build-deployment"
       ]
     },
     {
@@ -5547,6 +5471,24 @@
       "workflows": []
     },
     {
+      "repo": "flutter-portfolio-site",
+      "url": "https://github.com/dileepadev/flutter-portfolio-site",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
+      "repo": "flutter-toolkit-site",
+      "url": "https://github.com/dileepadev/flutter-toolkit-site",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
       "repo": "foreman",
       "url": "https://github.com/dileepadev/foreman",
       "runs": 0,
@@ -5700,6 +5642,15 @@
       "workflows": []
     },
     {
+      "repo": "realtime-car-tracking-web-app",
+      "url": "https://github.com/dileepadev/realtime-car-tracking-web-app",
+      "runs": 0,
+      "successRate": null,
+      "medianDurationMs": null,
+      "lastRun": null,
+      "workflows": []
+    },
+    {
       "repo": "relay-support-agents",
       "url": "https://github.com/dileepadev/relay-support-agents",
       "runs": 0,
@@ -5754,8 +5705,8 @@
       "cname": null,
       "status": "built",
       "buildType": "workflow",
-      "lastDeployedAt": "2026-11-25T12:17:33Z",
-      "pushedAt": "2026-11-25T12:17:03Z"
+      "lastDeployedAt": "2026-11-25T18:13:04Z",
+      "pushedAt": "2026-11-25T18:12:34Z"
     },
     {
       "repo": "learn-ai-engineering",
@@ -6575,10 +6526,46 @@
     {
       "kind": "run",
       "repo": "dileepadev.github.io",
-      "at": "2026-11-25T18:12:11Z",
+      "at": "2026-11-26T00:26:57Z",
       "title": "Refresh snapshot",
       "detail": "main",
       "state": "in_progress",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45728798427"
+    },
+    {
+      "kind": "run",
+      "repo": "verity-rag",
+      "at": "2026-11-25T18:14:26Z",
+      "title": "ci",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/verity-rag/actions/runs/45673032613"
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-25T18:13:16Z",
+      "title": "Deploy to Pages",
+      "detail": "main",
+      "state": "success",
+      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45672774435"
+    },
+    {
+      "kind": "deployment",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-25T18:13:04Z",
+      "title": "github-pages",
+      "detail": "main",
+      "state": "deployed",
+      "url": null
+    },
+    {
+      "kind": "run",
+      "repo": "dileepadev.github.io",
+      "at": "2026-11-25T18:12:43Z",
+      "title": "Refresh snapshot",
+      "detail": "main",
+      "state": "success",
       "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45672677601"
     },
     {
@@ -6925,15 +6912,6 @@
     },
     {
       "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-23T12:16:38Z",
-      "title": "Refresh snapshot",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45172703845"
-    },
-    {
-      "kind": "run",
       "repo": "links-dileepa-dev",
       "at": "2026-11-23T09:01:48Z",
       "title": "Deploy Astro site to Pages",
@@ -6976,24 +6954,6 @@
       "detail": "main",
       "state": "success",
       "url": "https://github.com/dileepadev/links-dileepa-dev/actions/runs/22804308384"
-    },
-    {
-      "kind": "run",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-23T06:26:30Z",
-      "title": "Deploy to Pages",
-      "detail": "main",
-      "state": "success",
-      "url": "https://github.com/dileepadev/dileepadev.github.io/actions/runs/45124022204"
-    },
-    {
-      "kind": "deployment",
-      "repo": "dileepadev.github.io",
-      "at": "2026-11-23T06:26:13Z",
-      "title": "github-pages",
-      "detail": "main",
-      "state": "deployed",
-      "url": null
     },
     {
       "kind": "run",
@@ -7383,42 +7343,6 @@
       "url": "https://github.com/dileepadev/gnome-resource-monitor/actions/runs/43734689388"
     },
     {
-      "kind": "run",
-      "repo": "realtime-car-tracking-web-app",
-      "at": "2026-11-15T07:43:28Z",
-      "title": "pages build and deployment",
-      "detail": "1.1.0-demo-web-build",
-      "state": "success",
-      "url": "https://github.com/dileepadev/realtime-car-tracking-web-app/actions/runs/20644472431"
-    },
-    {
-      "kind": "run",
-      "repo": "realtime-car-tracking-web-app",
-      "at": "2026-11-15T07:43:19Z",
-      "title": "pages build and deployment",
-      "detail": "1.1.0-demo-web-build",
-      "state": "success",
-      "url": "https://github.com/dileepadev/realtime-car-tracking-web-app/actions/runs/20644552152"
-    },
-    {
-      "kind": "run",
-      "repo": "flutter-portfolio-site",
-      "at": "2026-11-15T07:38:24Z",
-      "title": "pages build and deployment",
-      "detail": "web-build",
-      "state": "success",
-      "url": "https://github.com/dileepadev/flutter-portfolio-site/actions/runs/20642505739"
-    },
-    {
-      "kind": "run",
-      "repo": "flutter-toolkit-site",
-      "at": "2026-11-15T07:27:58Z",
-      "title": "pages build and deployment",
-      "detail": "web-build",
-      "state": "success",
-      "url": "https://github.com/dileepadev/flutter-toolkit-site/actions/runs/20640404924"
-    },
-    {
       "kind": "release",
       "repo": "learn-ai-engineering",
       "at": "2026-11-12T18:03:52Z",
@@ -7651,6 +7575,33 @@
       "detail": "dev",
       "state": "success",
       "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/41506733388"
+    },
+    {
+      "kind": "run",
+      "repo": "api-dileepa-dev",
+      "at": "2026-11-02T19:06:38Z",
+      "title": "CI",
+      "detail": "dev",
+      "state": "success",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/41506748338"
+    },
+    {
+      "kind": "run",
+      "repo": "api-dileepa-dev",
+      "at": "2026-11-02T19:03:04Z",
+      "title": "CI",
+      "detail": "feat/v2.1.0",
+      "state": "success",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/41506115694"
+    },
+    {
+      "kind": "run",
+      "repo": "api-dileepa-dev",
+      "at": "2026-11-02T19:03:03Z",
+      "title": "CI",
+      "detail": "feat/v2.1.0",
+      "state": "success",
+      "url": "https://github.com/dileepadev/api-dileepa-dev/actions/runs/41506168360"
     }
   ]
 }
